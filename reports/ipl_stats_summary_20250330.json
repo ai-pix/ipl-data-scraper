@@ -1,0 +1,62 @@
+{
+    "scraping_date": "2025-03-30 22:51:11",
+    "stats_scraped": 10,
+    "successful_scrapes": 10,
+    "failed_scrapes": 0,
+    "batting_stats": {
+        "most-runs": {
+            "success": true,
+            "file": "batting_stats\\ipl_most-runs_20250330.csv"
+        },
+        "most-hundreds": {
+            "success": true,
+            "file": "batting_stats\\ipl_most-hundreds_20250330.csv"
+        },
+        "most-fifties": {
+            "success": true,
+            "file": "batting_stats\\ipl_most-fifties_20250330.csv"
+        },
+        "most-6s": {
+            "success": true,
+            "file": "batting_stats\\ipl_most-6s_20250330.csv"
+        },
+        "most-4s": {
+            "success": true,
+            "file": "batting_stats\\ipl_most-4s_20250330.csv"
+        }
+    },
+    "bowling_stats": {
+        "most-wickets": {
+            "success": true,
+            "file": "bowling_stats\\ipl_most-wickets_20250330.csv"
+        },
+        "most-maidens": {
+            "success": true,
+            "file": "bowling_stats\\ipl_most-maidens_20250330.csv"
+        },
+        "best-bowling-average": {
+            "success": true,
+            "file": "bowling_stats\\ipl_best-bowling-average_20250330.csv"
+        },
+        "best-bowling-strike-rate": {
+            "success": true,
+            "file": "bowling_stats\\ipl_best-bowling-strike-rate_20250330.csv"
+        },
+        "best-economy-rates": {
+            "success": true,
+            "file": "bowling_stats\\ipl_best-economy-rates_20250330.csv"
+        }
+    },
+    "top_players": {
+        "top_run_scorer": {
+            "name": "Nicholas Pooran Lucknow Super",
+            "team": "Giants",
+            "runs": 145
+        },
+        "top_wicket_taker": {
+            "name": "Nicholas Pooran Lucknow Super",
+            "team": "Giants",
+            "wickets": 145
+        }
+    }
+}
