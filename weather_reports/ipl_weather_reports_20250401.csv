@@ -1,0 +1,53 @@
+city,state,current_temp,current_condition,humidity,wind_speed,forecast,last_updated
+Delhi,Delhi,27.04°C,Clear sky,9%,3.41 m/s,"2025-04-02: 34.78°C, Clear sky, 5% humidity
+2025-04-03: 35.63°C, Scattered clouds, 4% humidity
+2025-04-04: 36.94°C, Clear sky, 4% humidity
+2025-04-05: 37.49°C, Clear sky, 5% humidity",2025-04-01
+Mumbai,Maharashtra,27.81°C,Overcast clouds,66%,2.56 m/s,"2025-04-02: 29.89°C, Broken clouds, 55% humidity
+2025-04-03: 27.47°C, Overcast clouds, 79% humidity
+2025-04-04: 27.72°C, Few clouds, 75% humidity
+2025-04-05: 28.58°C, Clear sky, 56% humidity",2025-04-01
+Bengaluru,Karnataka,23.26°C,Few clouds,52%,4.6 m/s,"2025-04-02: 30.09°C, Scattered clouds, 31% humidity
+2025-04-03: 30.67°C, Clear sky, 38% humidity
+2025-04-04: 30.54°C, Overcast clouds, 40% humidity
+2025-04-05: 27.15°C, Light rain, 52% humidity",2025-04-01
+Kolkata,West Bengal,26.16°C,Clear sky,81%,5.8 m/s,"2025-04-02: 37.96°C, Clear sky, 26% humidity
+2025-04-03: 38.88°C, Clear sky, 22% humidity
+2025-04-04: 38.95°C, Overcast clouds, 26% humidity
+2025-04-05: 39.37°C, Broken clouds, 26% humidity",2025-04-01
+Chennai,Tamil Nadu,26.73°C,Clear sky,64%,2.93 m/s,"2025-04-02: 31.27°C, Clear sky, 53% humidity
+2025-04-03: 31.39°C, Overcast clouds, 60% humidity
+2025-04-04: 32°C, Broken clouds, 59% humidity
+2025-04-05: 31.74°C, Scattered clouds, 59% humidity",2025-04-01
+Lucknow,Uttar Pradesh,24.29°C,Clear sky,9%,3.22 m/s,"2025-04-02: 38.59°C, Broken clouds, 3% humidity
+2025-04-03: 39.38°C, Broken clouds, 3% humidity
+2025-04-04: 40.91°C, Clear sky, 5% humidity
+2025-04-05: 41.84°C, Clear sky, 4% humidity",2025-04-01
+Hyderabad,Telangana,27.88°C,Clear sky,41%,3.51 m/s,"2025-04-02: 33.67°C, Few clouds, 23% humidity
+2025-04-03: 33.09°C, Scattered clouds, 34% humidity
+2025-04-04: 32.28°C, Scattered clouds, 38% humidity
+2025-04-05: 33.87°C, Broken clouds, 32% humidity",2025-04-01
+Jaipur,Rajasthan,22.2°C,Clear sky,12%,2.78 m/s,"2025-04-02: 34.46°C, Clear sky, 5% humidity
+2025-04-03: 36.02°C, Clear sky, 5% humidity
+2025-04-04: 36.79°C, Clear sky, 4% humidity
+2025-04-05: 37.93°C, Clear sky, 7% humidity",2025-04-01
+Guwahati,Assam,24.18°C,Clear sky,25%,1.56 m/s,"2025-04-02: 37.04°C, Clear sky, 13% humidity
+2025-04-03: 38.13°C, Clear sky, 16% humidity
+2025-04-04: 38.96°C, Clear sky, 17% humidity
+2025-04-05: 39.95°C, Scattered clouds, 21% humidity",2025-04-01
+Ahmedabad,Gujarat,28.46°C,Overcast clouds,8%,4.19 m/s,"2025-04-02: 36.9°C, Scattered clouds, 5% humidity
+2025-04-03: 37.94°C, Clear sky, 9% humidity
+2025-04-04: 37.61°C, Clear sky, 14% humidity
+2025-04-05: 38.87°C, Clear sky, 12% humidity",2025-04-01
+Dharamsala,Himachal Pradesh,10.47°C,Clear sky,34%,4.94 m/s,"2025-04-02: 20.28°C, Clear sky, 19% humidity
+2025-04-03: 20.93°C, Overcast clouds, 16% humidity
+2025-04-04: 21.53°C, Overcast clouds, 18% humidity
+2025-04-05: 22.69°C, Few clouds, 21% humidity",2025-04-01
+Visakhapatnam,Andhra Pradesh,25.95°C,Few clouds,79%,2.97 m/s,"2025-04-02: 31.45°C, Clear sky, 48% humidity
+2025-04-03: 32.12°C, Clear sky, 58% humidity
+2025-04-04: 32.58°C, Broken clouds, 56% humidity
+2025-04-05: 33.59°C, Broken clouds, 48% humidity",2025-04-01
+Mohali,Punjab,20.64°C,Clear sky,15%,2.71 m/s,"2025-04-02: 36.11°C, Clear sky, 4% humidity
+2025-04-03: 37.36°C, Clear sky, 4% humidity
+2025-04-04: 38.43°C, Few clouds, 4% humidity
+2025-04-05: 38.41°C, Clear sky, 6% humidity",2025-04-01
