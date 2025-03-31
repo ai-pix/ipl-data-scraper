@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Virat Kohli",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Faf du Plessis",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Glenn Maxwell",
+        "role": "All-rounder",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mohammed Siraj",
+        "role": "Bowler",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Rajat Patidar",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Dinesh Karthik",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Cameron Green",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Wanindu Hasaranga",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Faf Du Plessis",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Saurav Chauhan",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Suyash Prabhudessai",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Mahipal Lomror",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Manoj Bhandage",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Mayank Dagar",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Swapnil Singh",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Tom Curran",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Anuj Rawat",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Akash Deep",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Alzarri Joseph",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Himanshu Sharma",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Karn Sharma",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Lockie Ferguson",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Rajan Kumar",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Vijaykumar Vyshak",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Yash Dayal",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]

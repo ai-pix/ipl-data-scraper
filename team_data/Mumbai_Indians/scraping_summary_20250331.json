@@ -1,0 +1,17 @@
+{
+    "scraping_timestamp": "2025-03-31T14:55:06.897858",
+    "team_name": "Mumbai_Indians",
+    "team_url": "https://indianexpress.com/about/mumbai-indians/",
+    "status": "Success",
+    "overview_extracted": true,
+    "squad_size": 26,
+    "news_count": 15,
+    "support_staff_count": 0,
+    "extracted_data_paths": {
+        "team_folder": "team_data\\Mumbai_Indians",
+        "news_articles": "team_data\\Mumbai_Indians\\news",
+        "player_stats": "team_data\\Mumbai_Indians\\players",
+        "match_data": "team_data\\Mumbai_Indians\\matches",
+        "team_stats": "team_data\\Mumbai_Indians\\stats"
+    }
+}

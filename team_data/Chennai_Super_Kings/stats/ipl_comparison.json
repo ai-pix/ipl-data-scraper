@@ -1,0 +1,192 @@
+{
+    "top_batsmen": [
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 7,
+            "value": 106,
+            "stat_type": "most-runs"
+        },
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 6,
+            "value": 106,
+            "stat_type": "most-fifties"
+        },
+        {
+            "name": "Ajinkya Rahane Kolkata Knight",
+            "rank": 15,
+            "value": 74,
+            "stat_type": "most-fifties"
+        },
+        {
+            "name": "Ajinkya Rahane Kolkata Knight",
+            "rank": 13,
+            "value": 74,
+            "stat_type": "most-6s"
+        },
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 15,
+            "value": 106,
+            "stat_type": "most-6s"
+        },
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 14,
+            "value": 106,
+            "stat_type": "most-4s"
+        },
+        {
+            "name": "Ajinkya Rahane Kolkata Knight",
+            "rank": 15,
+            "value": 74,
+            "stat_type": "most-4s"
+        }
+    ],
+    "top_bowlers": [
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 7,
+            "value": 106,
+            "stat_type": "most-wickets"
+        },
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 7,
+            "value": 106,
+            "stat_type": "most-maidens"
+        },
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 6,
+            "value": 65,
+            "stat_type": "best-bowling-average"
+        },
+        {
+            "name": "Shardul Thakur Lucknow Super",
+            "rank": 18,
+            "value": 53,
+            "stat_type": "best-bowling-average"
+        },
+        {
+            "name": "Moeen Ali Kolkata Knight",
+            "rank": 21,
+            "value": 23,
+            "stat_type": "best-bowling-average"
+        },
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 7,
+            "value": 65,
+            "stat_type": "best-bowling-strike-rate"
+        },
+        {
+            "name": "Shardul Thakur Lucknow Super",
+            "rank": 16,
+            "value": 53,
+            "stat_type": "best-bowling-strike-rate"
+        },
+        {
+            "name": "Moeen Ali Kolkata Knight",
+            "rank": 27,
+            "value": 23,
+            "stat_type": "best-bowling-strike-rate"
+        },
+        {
+            "name": "Rachin Ravindra Chennai Super",
+            "rank": 7,
+            "value": 65,
+            "stat_type": "best-economy-rates"
+        },
+        {
+            "name": "Moeen Ali Kolkata Knight",
+            "rank": 19,
+            "value": 23,
+            "stat_type": "best-economy-rates"
+        }
+    ],
+    "rankings": {
+        "batting": {
+            "Rachin Ravindra Chennai Super": {
+                "most-runs": {
+                    "rank": 7,
+                    "value": 106
+                },
+                "most-fifties": {
+                    "rank": 6,
+                    "value": 106
+                },
+                "most-6s": {
+                    "rank": 15,
+                    "value": 106
+                },
+                "most-4s": {
+                    "rank": 14,
+                    "value": 106
+                }
+            },
+            "Ajinkya Rahane Kolkata Knight": {
+                "most-fifties": {
+                    "rank": 15,
+                    "value": 74
+                },
+                "most-6s": {
+                    "rank": 13,
+                    "value": 74
+                },
+                "most-4s": {
+                    "rank": 15,
+                    "value": 74
+                }
+            }
+        },
+        "bowling": {
+            "Rachin Ravindra Chennai Super": {
+                "most-wickets": {
+                    "rank": 7,
+                    "value": 106
+                },
+                "most-maidens": {
+                    "rank": 7,
+                    "value": 106
+                },
+                "best-bowling-average": {
+                    "rank": 6,
+                    "value": 65
+                },
+                "best-bowling-strike-rate": {
+                    "rank": 7,
+                    "value": 65
+                },
+                "best-economy-rates": {
+                    "rank": 7,
+                    "value": 65
+                }
+            },
+            "Shardul Thakur Lucknow Super": {
+                "best-bowling-average": {
+                    "rank": 18,
+                    "value": 53
+                },
+                "best-bowling-strike-rate": {
+                    "rank": 16,
+                    "value": 53
+                }
+            },
+            "Moeen Ali Kolkata Knight": {
+                "best-bowling-average": {
+                    "rank": 21,
+                    "value": 23
+                },
+                "best-bowling-strike-rate": {
+                    "rank": 27,
+                    "value": 23
+                },
+                "best-economy-rates": {
+                    "rank": 19,
+                    "value": 23
+                }
+            }
+        }
+    }
+}

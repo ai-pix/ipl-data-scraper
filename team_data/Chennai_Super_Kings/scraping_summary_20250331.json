@@ -1,0 +1,17 @@
+{
+    "scraping_timestamp": "2025-03-31T14:55:09.661910",
+    "team_name": "Chennai_Super_Kings",
+    "team_url": "https://indianexpress.com/about/chennai-super-kings/",
+    "status": "Success",
+    "overview_extracted": true,
+    "squad_size": 25,
+    "news_count": 11,
+    "support_staff_count": 0,
+    "extracted_data_paths": {
+        "team_folder": "team_data\\Chennai_Super_Kings",
+        "news_articles": "team_data\\Chennai_Super_Kings\\news",
+        "player_stats": "team_data\\Chennai_Super_Kings\\players",
+        "match_data": "team_data\\Chennai_Super_Kings\\matches",
+        "team_stats": "team_data\\Chennai_Super_Kings\\stats"
+    }
+}

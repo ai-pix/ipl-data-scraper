@@ -1,0 +1,17 @@
+{
+    "scraping_timestamp": "2025-03-31T14:55:05.452872",
+    "team_name": "Gujarat_Titans",
+    "team_url": "https://indianexpress.com/about/gujarat-titans/",
+    "status": "Success",
+    "overview_extracted": true,
+    "squad_size": 26,
+    "news_count": 8,
+    "support_staff_count": 0,
+    "extracted_data_paths": {
+        "team_folder": "team_data\\Gujarat_Titans",
+        "news_articles": "team_data\\Gujarat_Titans\\news",
+        "player_stats": "team_data\\Gujarat_Titans\\players",
+        "match_data": "team_data\\Gujarat_Titans\\matches",
+        "team_stats": "team_data\\Gujarat_Titans\\stats"
+    }
+}

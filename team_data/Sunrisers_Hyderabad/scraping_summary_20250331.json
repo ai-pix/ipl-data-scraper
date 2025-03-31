@@ -1,0 +1,17 @@
+{
+    "scraping_timestamp": "2025-03-31T14:55:09.152185",
+    "team_name": "Sunrisers_Hyderabad",
+    "team_url": "https://indianexpress.com/about/sunrisers-hyderabad/",
+    "status": "Success",
+    "overview_extracted": true,
+    "squad_size": 25,
+    "news_count": 12,
+    "support_staff_count": 0,
+    "extracted_data_paths": {
+        "team_folder": "team_data\\Sunrisers_Hyderabad",
+        "news_articles": "team_data\\Sunrisers_Hyderabad\\news",
+        "player_stats": "team_data\\Sunrisers_Hyderabad\\players",
+        "match_data": "team_data\\Sunrisers_Hyderabad\\matches",
+        "team_stats": "team_data\\Sunrisers_Hyderabad\\stats"
+    }
+}

@@ -1,0 +1,140 @@
+[
+    {
+        "name": "Shreyas Iyer",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Andre Russell",
+        "role": "All-rounder",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Sunil Narine",
+        "role": "All-rounder",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Venkatesh Iyer",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Rinku Singh",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Varun Chakravarthy",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mitchell Starc",
+        "role": "Bowler",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Rahmanullah Gurbaz",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Angkrish Raghuvanshi",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Manish Pandey",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Nitish Rana",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Sherfane Rutherford",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Anukul Roy",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Ramandeep Singh",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "KS Bharat",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "AM Ghazanfar",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Chetan Sakariya",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Dushmantha Chameera",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Harshit Rana",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Sakib Hussain",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Suyash Sharma",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Vaibhav Arora",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Varun Chakaravarthy",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]

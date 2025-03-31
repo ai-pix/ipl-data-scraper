@@ -1,0 +1,17 @@
+{
+    "scraping_timestamp": "2025-03-31T14:55:04.954726",
+    "team_name": "Delhi_Capitals",
+    "team_url": "https://indianexpress.com/about/delhi-capitals/",
+    "status": "Success",
+    "overview_extracted": true,
+    "squad_size": 26,
+    "news_count": 8,
+    "support_staff_count": 0,
+    "extracted_data_paths": {
+        "team_folder": "team_data\\Delhi_Capitals",
+        "news_articles": "team_data\\Delhi_Capitals\\news",
+        "player_stats": "team_data\\Delhi_Capitals\\players",
+        "match_data": "team_data\\Delhi_Capitals\\matches",
+        "team_stats": "team_data\\Delhi_Capitals\\stats"
+    }
+}

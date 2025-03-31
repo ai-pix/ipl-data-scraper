@@ -1,0 +1,146 @@
+[
+    {
+        "name": "KL Rahul",
+        "role": "Wicket-keeper",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Nicholas Pooran",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Ravi Bishnoi",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mohsin Khan",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Krunal Pandya",
+        "role": "All-rounder",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Marcus Stoinis",
+        "role": "All-rounder",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mayank Yadav",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Quinton de Kock",
+        "role": "Wicket-keeper",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Ayush Badoni",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Devdutt Padikkal",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Arshin Kulkarni",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Ashton Turner",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Deepak Hooda",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Krishnappa Gowtham",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Kyle Mayers",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Prerak Mankad",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Yudhvir Singh",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Quinton De Kock",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Amit Mishra",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Arshad Khan",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "M. Siddharth",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Matt Henry",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shamar Joseph",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Yash Thakur",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]

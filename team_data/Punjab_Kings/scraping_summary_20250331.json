@@ -1,0 +1,17 @@
+{
+    "scraping_timestamp": "2025-03-31T14:55:07.306611",
+    "team_name": "Punjab_Kings",
+    "team_url": "https://indianexpress.com/about/punjab-kings/",
+    "status": "Success",
+    "overview_extracted": true,
+    "squad_size": 24,
+    "news_count": 7,
+    "support_staff_count": 0,
+    "extracted_data_paths": {
+        "team_folder": "team_data\\Punjab_Kings",
+        "news_articles": "team_data\\Punjab_Kings\\news",
+        "player_stats": "team_data\\Punjab_Kings\\players",
+        "match_data": "team_data\\Punjab_Kings\\matches",
+        "team_stats": "team_data\\Punjab_Kings\\stats"
+    }
+}

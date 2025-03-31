@@ -1,0 +1,17 @@
+{
+    "scraping_timestamp": "2025-03-31T14:55:06.020463",
+    "team_name": "Kolkata_Knight_Riders",
+    "team_url": "https://indianexpress.com/about/kolkata-knight-riders/",
+    "status": "Success",
+    "overview_extracted": true,
+    "squad_size": 23,
+    "news_count": 11,
+    "support_staff_count": 0,
+    "extracted_data_paths": {
+        "team_folder": "team_data\\Kolkata_Knight_Riders",
+        "news_articles": "team_data\\Kolkata_Knight_Riders\\news",
+        "player_stats": "team_data\\Kolkata_Knight_Riders\\players",
+        "match_data": "team_data\\Kolkata_Knight_Riders\\matches",
+        "team_stats": "team_data\\Kolkata_Knight_Riders\\stats"
+    }
+}
