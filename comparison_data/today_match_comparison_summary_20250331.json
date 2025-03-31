@@ -1,0 +1,19 @@
+{
+    "match_date": "2025-03-31",
+    "team1": "Mumbai Indians",
+    "team2": "Kolkata Knight Riders",
+    "venue": "Mumbai",
+    "time": "7:30 PM",
+    "team_comparison_available": true,
+    "team1_key_players": [
+        "Rohit Sharma",
+        "Hardik Pandya",
+        "Jasprit Bumrah"
+    ],
+    "team2_key_players": [
+        "Shreyas Iyer",
+        "Sunil Narine",
+        "Andre Russell"
+    ],
+    "timestamp": "2025-03-31T23:16:01.305238"
+}

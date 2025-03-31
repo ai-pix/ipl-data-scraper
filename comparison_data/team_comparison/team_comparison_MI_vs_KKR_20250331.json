@@ -1,0 +1,79 @@
+{
+    "team1": "Mumbai Indians",
+    "team2": "Kolkata Knight Riders",
+    "team1_code": "MI",
+    "team2_code": "KKR",
+    "headers": [
+        "Metric",
+        "Team 1",
+        "Team 2"
+    ],
+    "timestamp": "2025-03-31T23:15:58.795997",
+    "comparison_data": [
+        {
+            "Metric": "Played",
+            "Team 1": "264",
+            "Team 2": "257"
+        },
+        {
+            "Metric": "Won",
+            "Team 1": "144",
+            "Team 2": "132"
+        },
+        {
+            "Metric": "Lost",
+            "Team 1": "119",
+            "Team 2": "120"
+        },
+        {
+            "Metric": "Tied",
+            "Team 1": "0",
+            "Team 2": "1"
+        },
+        {
+            "Metric": "No Result",
+            "Team 1": "1",
+            "Team 2": "4"
+        },
+        {
+            "Metric": "Highest Team Total",
+            "Team 1": "247/9",
+            "Team 2": "272/7"
+        },
+        {
+            "Metric": "Lowest Team Total",
+            "Team 1": "68/2",
+            "Team 2": "66/2"
+        },
+        {
+            "Metric": "Avg. Runs",
+            "Team 1": "161",
+            "Team 2": "156"
+        },
+        {
+            "Metric": "Avg. Wkts",
+            "Team 1": "6",
+            "Team 2": "5"
+        },
+        {
+            "Metric": "Most Runs",
+            "Team 1": "5479",
+            "Team 2": "3035"
+        },
+        {
+            "Metric": "Most Wickets",
+            "Team 1": "170",
+            "Team 2": "181"
+        },
+        {
+            "Metric": "Highest Individual Score",
+            "Team 1": "114",
+            "Team 2": "158"
+        },
+        {
+            "Metric": "Best Bowling",
+            "Team 1": "6/12",
+            "Team 2": "5/15"
+        }
+    ]
+}
