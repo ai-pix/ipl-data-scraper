@@ -1,0 +1,75 @@
+Match,No,Match Day,Date,Day,Start,Home,Away,Venue
+1,1,22-Mar-25,Sat,7:30 PM,Kolkata Knight Riders,Royal Challengers Bengaluru,Kolkata
+2,2,23-Mar-25,Sun,3:30 PM,Sunrisers Hyderabad,Rajasthan Royals,Hyderabad
+3,2,23-Mar-25,Sun,7:30 PM,Chennai Super Kings,Mumbai Indians,Chennai
+4,3,24-Mar-25,Mon,7:30 PM,Delhi Capitals,Lucknow Super Giants,Visakhapatnam
+5,4,25-Mar-25,Tue,7:30 PM,Gujarat Titans,Punjab Kings,Ahmedabad
+6,5,26-Mar-25,Wed,7:30 PM,Rajasthan Royals,Kolkata Knight Riders,Guwahati
+7,6,27-Mar-25,Thu,7:30 PM,Sunrisers Hyderabad,Lucknow Super Giants,Hyderabad
+8,7,28-Mar-25,Fri,7:30 PM,Chennai Super Kings,Royal Challengers Bengaluru,Chennai
+9,8,29-Mar-25,Sat,7:30 PM,Gujarat Titans,Mumbai Indians,Ahmedabad
+10,9,30-Mar-25,Sun,3:30 PM,Delhi Capitals,Sunrisers Hyderabad,Visakhapatnam
+11,9,30-Mar-25,Sun,7:30 PM,Rajasthan Royals,Chennai Super Kings,Guwahati
+12,10,31-Mar-25,Mon,7:30 PM,Mumbai Indians,Kolkata Knight Riders,Mumbai
+13,11,01-Apr-25,Tue,7:30 PM,Lucknow Super Giants,Punjab Kings,Lucknow
+14,12,02-Apr-25,Wed,7:30 PM,Royal Challengers Bengaluru,Gujarat Titans,Bengaluru
+15,13,03-Apr-25,Thu,7:30 PM,Kolkata Knight Riders,Sunrisers Hyderabad,Kolkata
+16,14,04-Apr-25,Fri,7:30 PM,Lucknow Super Giants,Mumbai Indians,Lucknow
+17,15,05-Apr-25,Sat,3:30 PM,Chennai Super Kings,Delhi Capitals,Chennai
+18,15,05-Apr-25,Sat,7:30 PM,Punjab Kings,Rajasthan Royals,New Chandigarh
+19,16,06-Apr-25,Sun,3:30 PM,Kolkata Knight Riders,Lucknow Super Giants,Kolkata
+20,16,06-Apr-25,Sun,7:30 PM,Sunrisers Hyderabad,Gujarat Titans,Hyderabad
+21,17,07-Apr-25,Mon,7:30 PM,Mumbai Indians,Royal Challengers Bengaluru,Mumbai
+22,18,08-Apr-25,Tue,7:30 PM,Punjab Kings,Chennai Super Kings,New Chandigarh
+23,19,09-Apr-25,Wed,7:30 PM,Gujarat Titans,Rajasthan Royals,Ahmedabad
+24,20,10-Apr-25,Thu,7:30 PM,Royal Challengers Bengaluru,Delhi Capitals,Bengaluru
+25,21,11-Apr-25,Fri,7:30 PM,Chennai Super Kings,Kolkata Knight Riders,Chennai
+26,22,12-Apr-25,Sat,3:30 PM,Lucknow Super Giants,Gujarat Titans,Lucknow
+27,22,12-Apr-25,Sat,7:30 PM,Sunrisers Hyderabad,Punjab Kings,Hyderabad
+28,23,13-Apr-25,Sun,3:30 PM,Rajasthan Royals,Royal Challengers Bengaluru,Jaipur
+29,23,13-Apr-25,Sun,7:30 PM,Delhi Capitals,Mumbai Indians,Delhi
+30,24,14-Apr-25,Mon,7:30 PM,Lucknow Super Giants,Chennai Super Kings,Lucknow
+31,25,15-Apr-25,Tue,7:30 PM,Punjab Kings,Kolkata Knight Riders,New Chandigarh
+32,26,16-Apr-25,Wed,7:30 PM,Delhi Capitals,Rajasthan Royals,Delhi
+33,27,17-Apr-25,Thu,7:30 PM,Mumbai Indians,Sunrisers Hyderabad,Mumbai
+34,28,18-Apr-25,Fri,7:30 PM,Royal Challengers Bengaluru,Punjab Kings,Bengaluru
+35,29,19-Apr-25,Sat,3:30 PM,Gujarat Titans,Delhi Capitals,Ahmedabad
+36,29,19-Apr-25,Sat,7:30 PM,Rajasthan Royals,Lucknow Super Giants,Jaipur
+37,30,20-Apr-25,Sun,3:30 PM,Punjab Kings,Royal Challengers Bengaluru,New Chandigarh
+38,30,20-Apr-25,Sun,7:30 PM,Mumbai Indians,Chennai Super Kings,Mumbai
+39,31,21-Apr-25,Mon,7:30 PM,Kolkata Knight Riders,Gujarat Titans,Kolkata
+40,32,22-Apr-25,Tue,7:30 PM,Lucknow Super Giants,Delhi Capitals,Lucknow
+41,33,23-Apr-25,Wed,7:30 PM,Sunrisers Hyderabad,Mumbai Indians,Hyderabad
+42,34,24-Apr-25,Thu,7:30 PM,Royal Challengers Bengaluru,Rajasthan Royals,Bengaluru
+43,35,25-Apr-25,Fri,7:30 PM,Chennai Super Kings,Sunrisers Hyderabad,Chennai
+44,36,26-Apr-25,Sat,7:30 PM,Kolkata Knight Riders,Punjab Kings,Kolkata
+45,37,27-Apr-25,Sun,3:30 PM,Mumbai Indians,Lucknow Super Giants,Mumbai
+46,37,27-Apr-25,Sun,7:30 PM,Delhi Capitals,Royal Challengers Bengaluru,Delhi
+47,38,28-Apr-25,Mon,7:30 PM,Rajasthan Royals,Gujarat Titans,Jaipur
+48,39,29-Apr-25,Tue,7:30 PM,Delhi Capitals,Kolkata Knight Riders,Delhi
+49,40,30-Apr-25,Wed,7:30 PM,Chennai Super Kings,Punjab Kings,Chennai
+50,41,01-May-25,Thu,7:30 PM,Rajasthan Royals,Mumbai Indians,Jaipur
+51,42,02-May-25,Fri,7:30 PM,Gujarat Titans,Sunrisers Hyderabad,Ahmedabad
+52,43,03-May-25,Sat,7:30 PM,Royal Challengers Bengaluru,Chennai Super Kings,Bengaluru
+53,44,04-May-25,Sun,3:30 PM,Kolkata Knight Riders,Rajasthan Royals,Kolkata
+54,44,04-May-25,Sun,7:30 PM,Punjab Kings,Lucknow Super Giants,Dharamshala
+55,45,05-May-25,Mon,7:30 PM,Sunrisers Hyderabad,Delhi Capitals,Hyderabad
+56,46,06-May-25,Tue,7:30 PM,Mumbai Indians,Gujarat Titans,Mumbai
+57,47,07-May-25,Wed,7:30 PM,Kolkata Knight Riders,Chennai Super Kings,Kolkata
+58,48,08-May-25,Thu,7:30 PM,Punjab Kings,Delhi Capitals,Dharamshala
+59,49,09-May-25,Fri,7:30 PM,Lucknow Super Giants,Royal Challengers Bengaluru,Lucknow
+60,50,10-May-25,Sat,7:30 PM,Sunrisers Hyderabad,Kolkata Knight Riders,Hyderabad
+61,51,11May--25,Sun,3:30 PM,Punjab Kings,Mumbai Indians,Dharamshala
+62,51,11-May-25,Sun,7:30 PM,Delhi Capitals,Gujarat Titans,Delhi
+63,52,12May--25,Mon,7:30 PM,Chennai Super Kings,Rajasthan Royals,Chennai
+64,53,13-May-25,Tue,7:30 PM,Royal Challengers Bengaluru,Sunrisers Hyderabad,Bengaluru
+65,54,14May--25,Wed,7:30 PM,Gujarat Titans,Lucknow Super Giants,Ahmedabad
+66,55,15-May-25,Thu,7:30 PM,Mumbai Indians,Delhi Capitals,Mumbai
+67,56,16-May-25,Fri,7:30 PM,Rajasthan Royals,Punjab Kings,Jaipur
+68,57,17May--25,Sat,7:30 PM,Royal Challengers Bengaluru,Kolkata Knight Riders,Bengaluru
+69,58,18-May-25,Sun,3:30 PM,Gujarat Titans,Chennai Super Kings,Ahmedabad
+70,58,18-May-25,Sun,7:30 PM,Lucknow Super Giants,Sunrisers Hyderabad,Lucknow
+71,60,20-May-25,Tue,7:30 PM,,Qualifier 1,Hyderabad
+72,61,21-May-25,Wed,7:30 PM,,Eliminator,Hyderabad
+73,63,23-May-25,Fri,7:30 PM,,Qualifier 2,Kolkata
+74,65,25-May-25,Sun,7:30 PM,,Final,Kolkata
