@@ -11,6 +11,7 @@ This project contains multiple tools to collect various types of IPL data:
 - Points table standings
 - Player statistics (batting & bowling)
 - Daily match information
+- Team comparison data for today's matches
 
 ## Features
 
@@ -44,6 +45,18 @@ This project contains multiple tools to collect various types of IPL data:
 ### 5. Today's Match Information (`todays_match.py`)
 - Shows information about today's IPL matches
 - Updates daily
+
+### 6. Team Comparison Scraper (`ipl_comparison_scraper.py`)
+- Scrapes comparison data for any two IPL teams
+- Provides detailed statistical comparisons
+
+### 7. Today's Match Comparison Scraper (`ipl_today_comparison_scraper.py`)
+- Automatically scrapes comparison data for today's scheduled IPL match
+- Uses dual approach (API + browser automation) for reliability
+- Provides comprehensive team comparison metrics (matches played, won, lost, runs, etc.)
+- Identifies key players for each team
+- Saves data in both JSON and CSV formats for easy analysis
+- Only focuses on teams playing today for better efficiency
 
 ## Installation
 
@@ -90,6 +103,18 @@ python todays_match.py
 ```
 Shows information about today's IPL matches.
 
+### Team Comparison Scraper
+```
+python ipl_comparison_scraper.py
+```
+Scrapes comparison data for any two IPL teams and saves it in the `comparison_data/team_comparison` directory.
+
+### Today's Match Comparison
+```
+python ipl_today_comparison_scraper.py
+```
+Automatically scrapes comparison data for today's IPL match and saves it in the `comparison_data/team_comparison` directory. This tool identifies which teams are playing today and only scrapes the comparison for those teams, making it highly efficient.
+
 ## Data Organization
 
 The project organizes data into specific directories:
@@ -100,7 +125,33 @@ The project organizes data into specific directories:
 - `team_data/` - Team information and details
 - `match_schedule/` - IPL match schedules
 - `match_data/` - Detailed match information
+- `comparison_data/` - Team and player comparison data
+  - `team_comparison/` - Team vs team comparison statistics
+  - `player_comparison/` - Player vs player comparison statistics
 - `debug_files/` - HTML files saved for debugging purposes
+
+## Today's Match Comparison Data Format
+
+The `ipl_today_comparison_scraper.py` script generates comparison data for today's match in the following format:
+
+```csv
+Metric,Team 1,Team 2
+Played,264,257
+Won,144,132
+Lost,119,120
+Tied,0,1
+No Result,1,4
+Highest Team Total,247/9,272/7
+Lowest Team Total,68/2,66/2
+Avg. Runs,161,156
+Avg. Wkts,6,5
+Most Runs,5479,3035
+Most Wickets,170,181
+Highest Individual Score,114,158
+Best Bowling,6/12,5/15
+```
+
+This data provides a comprehensive comparison between the two teams playing today's match, helping with match analysis and predictions.
 
 ## Contributing
 
