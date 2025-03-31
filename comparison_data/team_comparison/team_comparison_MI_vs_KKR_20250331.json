@@ -8,8 +8,8 @@
         "Team 1",
         "Team 2"
     ],
-    "timestamp": "2025-03-31T23:15:58.795997",
-    "comparison_data": [
+    "timestamp": "2025-03-31T23:30:20.904197",
+    "overall_data": [
         {
             "Metric": "Played",
             "Team 1": "264",
@@ -74,6 +74,58 @@
             "Metric": "Best Bowling",
             "Team 1": "6/12",
             "Team 2": "5/15"
+        }
+    ],
+    "head_to_head_data": [
+        {
+            "Metric": "Toss Won, Batting First, Match Won",
+            "Team 1": "4",
+            "Team 2": "1"
+        },
+        {
+            "Metric": "Toss Won, Bowling First, Match Won",
+            "Team 1": "9",
+            "Team 2": "4"
+        },
+        {
+            "Metric": "Tosses Won",
+            "Team 1": "20",
+            "Team 2": "15"
+        },
+        {
+            "Metric": "Elected To Bat",
+            "Team 1": "5",
+            "Team 2": "5"
+        },
+        {
+            "Metric": "Elected To Field",
+            "Team 1": "15",
+            "Team 2": "10"
+        },
+        {
+            "Metric": "Won Toss And Match",
+            "Team 1": "13",
+            "Team 2": "5"
+        },
+        {
+            "Metric": "Highest Total",
+            "Team 1": "210",
+            "Team 2": "232"
+        },
+        {
+            "Metric": "Lowest Total",
+            "Team 1": "68",
+            "Team 2": "67"
+        },
+        {
+            "Metric": "Avg. Runs",
+            "Team 1": "156.71",
+            "Team 2": "151"
+        },
+        {
+            "Metric": "Avg. Wkts",
+            "Team 1": "5.32",
+            "Team 2": "6.44"
         }
     ]
 }
