@@ -1,0 +1,234 @@
+{
+    "team_name": "chennai-super-kings",
+    "team_url": "https://www.iplt20.com/teams/chennai-super-kings",
+    "scraping_timestamp": "2025-03-31T17:34:28.871208",
+    "total_players": 25,
+    "successful_downloads": 25,
+    "players": [
+        {
+            "name": "Ruturaj Gaikwad",
+            "role": "Batter",
+            "url_id": "5443",
+            "image_id": "102",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/102.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Ruturaj_Gaikwad_Batter_102.png"
+        },
+        {
+            "name": "MS Dhoni",
+            "role": "WK-Batter",
+            "url_id": "1",
+            "image_id": "57",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/57.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\MS_Dhoni_WK-Batter_57.png"
+        },
+        {
+            "name": "Devon Conway",
+            "role": "Batter",
+            "url_id": "20572",
+            "image_id": "601",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/601.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Devon_Conway_Batter_601.png"
+        },
+        {
+            "name": "Rahul Tripathi",
+            "role": "Batter",
+            "url_id": "3838",
+            "image_id": "188",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/188.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Rahul_Tripathi_Batter_188.png"
+        },
+        {
+            "name": "Shaik Rasheed",
+            "role": "Batter",
+            "url_id": "5612",
+            "image_id": "778",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/778.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Shaik_Rasheed_Batter_778.png"
+        },
+        {
+            "name": "Vansh Bedi",
+            "role": "WK-Batter",
+            "url_id": "22006",
+            "image_id": "3558",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3558.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Vansh_Bedi_WK-Batter_3558.png"
+        },
+        {
+            "name": "Andre Siddarth",
+            "role": "Batter",
+            "url_id": "22022",
+            "image_id": "3157",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3157.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Andre_Siddarth_Batter_3157.png"
+        },
+        {
+            "name": "Rachin Ravindra",
+            "role": "All-Rounder",
+            "url_id": "20684",
+            "image_id": "724",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/724.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Rachin_Ravindra_All-Rounder_724.png"
+        },
+        {
+            "name": "Ravichandran Ashwin",
+            "role": "All-Rounder",
+            "url_id": "8",
+            "image_id": "45",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/45.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Ravichandran_Ashwin_All-Rounder_45.png"
+        },
+        {
+            "name": "Vijay Shankar",
+            "role": "All-Rounder",
+            "url_id": "1083",
+            "image_id": "61",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/61.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Vijay_Shankar_All-Rounder_61.png"
+        },
+        {
+            "name": "Sam Curran",
+            "role": "All-Rounder",
+            "url_id": "2939",
+            "image_id": "138",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/138.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Sam_Curran_All-Rounder_138.png"
+        },
+        {
+            "name": "Anshul Kamboj",
+            "role": "All-Rounder",
+            "url_id": "20702",
+            "image_id": "3106",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3106.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Anshul_Kamboj_All-Rounder_3106.png"
+        },
+        {
+            "name": "Deepak Hooda",
+            "role": "All-Rounder",
+            "url_id": "1556",
+            "image_id": "215",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/215.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Deepak_Hooda_All-Rounder_215.png"
+        },
+        {
+            "name": "Jamie Overton",
+            "role": "All-Rounder",
+            "url_id": "22109",
+            "image_id": "1216",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1216.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Jamie_Overton_All-Rounder_1216.png"
+        },
+        {
+            "name": "Kamlesh Nagarkoti",
+            "role": "All-Rounder",
+            "url_id": "3766",
+            "image_id": "146",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/146.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Kamlesh_Nagarkoti_All-Rounder_146.png"
+        },
+        {
+            "name": "Ramakrishna Ghosh",
+            "role": "All-Rounder",
+            "url_id": "22153",
+            "image_id": "3559",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3559.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Ramakrishna_Ghosh_All-Rounder_3559.png"
+        },
+        {
+            "name": "Ravindra Jadeja",
+            "role": "All-Rounder",
+            "url_id": "9",
+            "image_id": "46",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/46.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Ravindra_Jadeja_All-Rounder_46.png"
+        },
+        {
+            "name": "Shivam Dube",
+            "role": "All-Rounder",
+            "url_id": "5431",
+            "image_id": "211",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/211.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Shivam_Dube_All-Rounder_211.png"
+        },
+        {
+            "name": "Khaleel Ahmed",
+            "role": "Bowler",
+            "url_id": "2964",
+            "image_id": "8",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/8.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Khaleel_Ahmed_Bowler_8.png"
+        },
+        {
+            "name": "Noor Ahmad",
+            "role": "Bowler",
+            "url_id": "20590",
+            "image_id": "975",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/975.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Noor_Ahmad_Bowler_975.png"
+        },
+        {
+            "name": "Mukesh Choudhary",
+            "role": "Bowler",
+            "url_id": "20575",
+            "image_id": "970",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/970.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Mukesh_Choudhary_Bowler_970.png"
+        },
+        {
+            "name": "Gurjapneet Singh",
+            "role": "Bowler",
+            "url_id": "22032",
+            "image_id": "2256",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2256.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Gurjapneet_Singh_Bowler_2256.png"
+        },
+        {
+            "name": "Nathan Ellis",
+            "role": "Bowler",
+            "url_id": "17118",
+            "image_id": "633",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/633.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Nathan_Ellis_Bowler_633.png"
+        },
+        {
+            "name": "Shreyas Gopal",
+            "role": "Bowler",
+            "url_id": "20696",
+            "image_id": "192",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/192.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Shreyas_Gopal_Bowler_192.png"
+        },
+        {
+            "name": "Matheesha Pathirana",
+            "role": "Bowler",
+            "url_id": "20627",
+            "image_id": "1014",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1014.png",
+            "download_status": "Already exists",
+            "local_path": "player_images\\chennai-super-kings\\Matheesha_Pathirana_Bowler_1014.png"
+        }
+    ]
+}

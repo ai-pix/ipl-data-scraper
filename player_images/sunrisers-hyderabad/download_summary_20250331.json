@@ -1,0 +1,189 @@
+{
+    "team_name": "sunrisers-hyderabad",
+    "team_url": "https://www.iplt20.com/teams/sunrisers-hyderabad",
+    "scraping_timestamp": "2025-03-31T17:36:34.164360",
+    "total_players": 20,
+    "successful_downloads": 20,
+    "players": [
+        {
+            "name": "Ishan Kishan",
+            "role": "WK-Batter",
+            "url_id": "2975",
+            "image_id": "164",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/164.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Ishan_Kishan_WK-Batter_164.png"
+        },
+        {
+            "name": "Atharva Taide",
+            "role": "Batter",
+            "url_id": "20603",
+            "image_id": "1001",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1001.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Atharva_Taide_Batter_1001.png"
+        },
+        {
+            "name": "Abhinav Manohar",
+            "role": "Batter",
+            "url_id": "20589",
+            "image_id": "974",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/974.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Abhinav_Manohar_Batter_974.png"
+        },
+        {
+            "name": "Aniket Verma",
+            "role": "Batter",
+            "url_id": "22082",
+            "image_id": "3576",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3576.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Aniket_Verma_Batter_3576.png"
+        },
+        {
+            "name": "Sachin Baby",
+            "role": "Batter",
+            "url_id": "1115",
+            "image_id": "599",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/599.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Sachin_Baby_Batter_599.png"
+        },
+        {
+            "name": "Heinrich Klaasen",
+            "role": "WK-Batter",
+            "url_id": "3869",
+            "image_id": "202",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/202.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Heinrich_Klaasen_WK-Batter_202.png"
+        },
+        {
+            "name": "Travis Head",
+            "role": "Batter",
+            "url_id": "1020",
+            "image_id": "37",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/37.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Travis_Head_Batter_37.png"
+        },
+        {
+            "name": "Harshal Patel",
+            "role": "All-Rounder",
+            "url_id": "157",
+            "image_id": "114",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/114.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Harshal_Patel_All-Rounder_114.png"
+        },
+        {
+            "name": "Kamindu Mendis",
+            "role": "All-Rounder",
+            "url_id": "22077",
+            "image_id": "627",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/627.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Kamindu_Mendis_All-Rounder_627.png"
+        },
+        {
+            "name": "Wiaan Mulder",
+            "role": "All-Rounder",
+            "url_id": "22376",
+            "image_id": "630",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/630.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Wiaan_Mulder_All-Rounder_630.png"
+        },
+        {
+            "name": "Abhishek Sharma",
+            "role": "All-Rounder",
+            "url_id": "3760",
+            "image_id": "212",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/212.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Abhishek_Sharma_All-Rounder_212.png"
+        },
+        {
+            "name": "Nitish Kumar Reddy",
+            "role": "All-Rounder",
+            "url_id": "5711",
+            "image_id": "1944",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1944.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Nitish_Kumar_Reddy_All-Rounder_1944.png"
+        },
+        {
+            "name": "Pat Cummins",
+            "role": "Bowler",
+            "url_id": "488",
+            "image_id": "33",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/33.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Pat_Cummins_Bowler_33.png"
+        },
+        {
+            "name": "Mohammad Shami",
+            "role": "Bowler",
+            "url_id": "94",
+            "image_id": "47",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/47.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Mohammad_Shami_Bowler_47.png"
+        },
+        {
+            "name": "Rahul Chahar",
+            "role": "Bowler",
+            "url_id": "3763",
+            "image_id": "171",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/171.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Rahul_Chahar_Bowler_171.png"
+        },
+        {
+            "name": "Adam Zampa",
+            "role": "Bowler",
+            "url_id": "958",
+            "image_id": "24",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/24.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Adam_Zampa_Bowler_24.png"
+        },
+        {
+            "name": "Simarjeet Singh",
+            "role": "Bowler",
+            "url_id": "10789",
+            "image_id": "622",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/622.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Simarjeet_Singh_Bowler_622.png"
+        },
+        {
+            "name": "Zeeshan Ansari",
+            "role": "Bowler",
+            "url_id": "22007",
+            "image_id": "3575",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3575.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Zeeshan_Ansari_Bowler_3575.png"
+        },
+        {
+            "name": "Jaydev Unadkat",
+            "role": "Bowler",
+            "url_id": "86",
+            "image_id": "180",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/180.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Jaydev_Unadkat_Bowler_180.png"
+        },
+        {
+            "name": "Eshan Malinga",
+            "role": "Bowler",
+            "url_id": "22228",
+            "image_id": "3339",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3339.png",
+            "download_status": "Success",
+            "local_path": "player_images\\sunrisers-hyderabad\\Eshan_Malinga_Bowler_3339.png"
+        }
+    ]
+}

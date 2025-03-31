@@ -1,0 +1,189 @@
+{
+    "team_name": "rajasthan-royals",
+    "team_url": "https://www.iplt20.com/teams/rajasthan-royals",
+    "scraping_timestamp": "2025-03-31T17:36:08.502299",
+    "total_players": 20,
+    "successful_downloads": 20,
+    "players": [
+        {
+            "name": "Sanju Samson",
+            "role": "WK-Batter",
+            "url_id": "258",
+            "image_id": "190",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/190.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Sanju_Samson_WK-Batter_190.png"
+        },
+        {
+            "name": "Shubham Dubey",
+            "role": "Batter",
+            "url_id": "20688",
+            "image_id": "3112",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3112.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Shubham_Dubey_Batter_3112.png"
+        },
+        {
+            "name": "Vaibhav Suryavanshi",
+            "role": "Batter",
+            "url_id": "22203",
+            "image_id": "3498",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3498.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Vaibhav_Suryavanshi_Batter_3498.png"
+        },
+        {
+            "name": "Kunal Rathore",
+            "role": "WK-Batter",
+            "url_id": "5763",
+            "image_id": "1540",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1540.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Kunal_Rathore_WK-Batter_1540.png"
+        },
+        {
+            "name": "Shimron Hetmyer",
+            "role": "Batter",
+            "url_id": "1705",
+            "image_id": "210",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/210.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Shimron_Hetmyer_Batter_210.png"
+        },
+        {
+            "name": "Yashasvi Jaiswal",
+            "role": "Batter",
+            "url_id": "13538",
+            "image_id": "533",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/533.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Yashasvi_Jaiswal_Batter_533.png"
+        },
+        {
+            "name": "Dhruv Jurel",
+            "role": "WK-Batter",
+            "url_id": "20620",
+            "image_id": "1004",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1004.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Dhruv_Jurel_WK-Batter_1004.png"
+        },
+        {
+            "name": "Riyan Parag",
+            "role": "Batter",
+            "url_id": "4445",
+            "image_id": "189",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/189.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Riyan_Parag_Batter_189.png"
+        },
+        {
+            "name": "Nitish Rana",
+            "role": "All-Rounder",
+            "url_id": "2738",
+            "image_id": "148",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/148.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Nitish_Rana_All-Rounder_148.png"
+        },
+        {
+            "name": "Yudhvir Charak",
+            "role": "All-Rounder",
+            "url_id": "10842",
+            "image_id": "587",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/587.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Yudhvir_Charak_All-Rounder_587.png"
+        },
+        {
+            "name": "Jofra Archer",
+            "role": "Bowler",
+            "url_id": "3502",
+            "image_id": "181",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/181.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Jofra_Archer_Bowler_181.png"
+        },
+        {
+            "name": "Maheesh Theekshana",
+            "role": "Bowler",
+            "url_id": "20570",
+            "image_id": "629",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/629.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Maheesh_Theekshana_Bowler_629.png"
+        },
+        {
+            "name": "Wanindu Hasaranga",
+            "role": "Bowler",
+            "url_id": "3082",
+            "image_id": "377",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/377.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Wanindu_Hasaranga_Bowler_377.png"
+        },
+        {
+            "name": "Akash Madhwal",
+            "role": "Bowler",
+            "url_id": "20681",
+            "image_id": "1045",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1045.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Akash_Madhwal_Bowler_1045.png"
+        },
+        {
+            "name": "Kumar Kartikeya Singh",
+            "role": "Bowler",
+            "url_id": "20629",
+            "image_id": "1015",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1015.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Kumar_Kartikeya_Singh_Bowler_1015.png"
+        },
+        {
+            "name": "Tushar Deshpande",
+            "role": "Bowler",
+            "url_id": "3257",
+            "image_id": "539",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/539.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Tushar_Deshpande_Bowler_539.png"
+        },
+        {
+            "name": "Fazalhaq Farooqi",
+            "role": "Bowler",
+            "url_id": "20610",
+            "image_id": "1011",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1011.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Fazalhaq_Farooqi_Bowler_1011.png"
+        },
+        {
+            "name": "Kwena Maphaka",
+            "role": "Bowler",
+            "url_id": "20724",
+            "image_id": "801",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/801.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Kwena_Maphaka_Bowler_801.png"
+        },
+        {
+            "name": "Ashok Sharma",
+            "role": "Bowler",
+            "url_id": "20584",
+            "image_id": "980",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/980.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Ashok_Sharma_Bowler_980.png"
+        },
+        {
+            "name": "Sandeep Sharma",
+            "role": "Bowler",
+            "url_id": "1112",
+            "image_id": "220",
+            "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/220.png",
+            "download_status": "Success",
+            "local_path": "player_images\\rajasthan-royals\\Sandeep_Sharma_Bowler_220.png"
+        }
+    ]
+}

@@ -1,169 +1,116 @@
-# IPL Cricket Data Collection & Analysis
+# IPL Cricket Data Project
 
-A comprehensive Python toolkit for scraping, organizing, and analyzing Indian Premier League (IPL) cricket data from multiple sources.
+A comprehensive suite of Python scripts for scraping, analyzing, and visualizing data from the Indian Premier League (IPL) cricket tournament.
 
-## 🏏 Features
+## Overview
 
-### Statistics Collection
-- **Batting Statistics**: Runs, hundreds, fifties, fours, sixes, strike rates, and averages
-- **Bowling Statistics**: Wickets, maidens, economy rates, bowling averages, strike rates
-- **Team-specific Data**: Performance history, win percentages, player rosters
-- **Player Profiles**: Career statistics, performance trends, team history
+This project contains multiple tools to collect various types of IPL data:
+- Team information and squads
+- Player images
+- Match schedules
+- Points table standings
+- Player statistics (batting & bowling)
+- Daily match information
 
-### Data Organization
-- Organized folder structure for different data types
-- CSV exports for easy data manipulation in spreadsheets
-- JSON exports for programmatic access
-- HTML reports for visual presentation
+## Features
 
-### Analysis Tools
-- Performance comparisons between teams and players
-- Historical trend analysis
-- Match prediction support
-- Color-coded console output for better readability
-- Today's match information and predictions using local CSV schedule
+### 1. Player Images Scraper (`ipl_player_images_scraper.py`)
+- Downloads high-quality player images from all IPL teams
+- Organizes images by team in dedicated folders
+- Names files with player name, role, and unique ID
+- Generates detailed summary reports
 
-## 📁 Project Structure
+### 2. Points Table Scraper (`ipl_points_table_scraper.py`)
+- Extracts the current IPL standings table
+- Provides details on matches played, won, lost, points, and net run rate
+- Saves data in CSV format with timestamps
 
-```
-ipl_cric/
-├── batting_stats/       # Batting statistics CSV files
-├── bowling_stats/       # Bowling statistics CSV files
-├── debug_files/         # Raw HTML and extracted text for debugging
-├── matches/             # Today's match predictions and data
-├── reports/             # Summary reports in JSON and HTML formats
-├── team_data/           # Team-specific information
-│   ├── [Team_Name]/
-│   │   ├── news/        # Team news articles
-│   │   ├── players/     # Player information and statistics
-│   │   ├── matches/     # Team match history
-│   │   └── stats/       # Team performance statistics
-└── Ipl schedule.csv     # Schedule of IPL matches for the season
-```
+### 3. Player Statistics Scraper (`ipl_stats_scraper.py`)
+- Collects batting statistics:
+  - Most runs
+  - Most boundaries (4s and 6s)
+  - Most fifties and hundreds
+- Collects bowling statistics:
+  - Most wickets
+  - Best economy rates
+  - Best bowling average
+  - Best bowling strike rate
+  - Most maidens
 
-## 🔧 Requirements
+### 4. Team Information Scraper (`ipl_team_scraper.py`)
+- Extracts detailed team information
+- Collects squad lists and player details
 
+### 5. Today's Match Information (`todays_match.py`)
+- Shows information about today's IPL matches
+- Updates daily
+
+## Installation
+
+### Prerequisites
 - Python 3.6+
-- Required packages:
-  ```
-  requests
-  beautifulsoup4
-  pandas
-  colorama
-  matplotlib (for visualization)
-  ```
+- Required packages listed in `requirements.txt`
 
-## 📥 Installation
-
+### Setup
 1. Clone the repository
-   ```
-   git clone https://github.com/yourusername/ipl-cricket-data.git
-   cd ipl-cricket-data
-   ```
+2. Install required packages:
+```
+pip install -r requirements.txt
+```
 
-2. Install required packages
-   ```
-   pip install -r requirements.txt
-   ```
+## Usage
 
-## 🚀 Usage
+### Player Images Scraper
+```
+python ipl_player_images_scraper.py
+```
+Downloads player images from all IPL teams and saves them in the `player_images` directory.
+
+### Points Table Scraper
+```
+python ipl_points_table_scraper.py
+```
+Scrapes the current IPL points table and saves it in the `points_table` directory.
 
 ### Statistics Scraper
-
-Collect comprehensive IPL statistics from official sources:
-
 ```
 python ipl_stats_scraper.py
 ```
+Scrapes various player statistics and saves them in the `batting_stats` and `bowling_stats` directories.
 
 ### Team Information Scraper
-
-Gather detailed information about IPL teams:
-
 ```
 python ipl_team_scraper.py
 ```
+Scrapes team information and saves it in the `team_data` directory.
 
-### Today's Match Information
-
-Get details and predictions for today's IPL matches using the local schedule CSV:
-
+### Today's Match
 ```
 python todays_match.py
 ```
+Shows information about today's IPL matches.
 
-## 📊 Output Examples
+## Data Organization
 
-The scripts will generate:
+The project organizes data into specific directories:
+- `player_images/` - Player images organized by team
+- `points_table/` - IPL standings tables with timestamps
+- `batting_stats/` - Various batting statistics
+- `bowling_stats/` - Various bowling statistics
+- `team_data/` - Team information and details
+- `match_schedule/` - IPL match schedules
+- `match_data/` - Detailed match information
+- `debug_files/` - HTML files saved for debugging purposes
 
-1. CSV files with player and team statistics
-2. JSON data files for programmatic access
-3. HTML reports with visualizations and summaries
-4. Console output with color-coded information
-5. Daily match prediction files in CSV and JSON formats
-
-## 📈 Data Visualization
-
-The toolkit includes capabilities for generating:
-- Performance trend charts
-- Comparison visualizations
-- Team performance dashboards
-- Player statistics summaries
-
-## 🛠️ Advanced Usage
-
-### Custom Data Collection
-
-You can modify the scraping parameters in the configuration files to collect specific types of data:
-
-```python
-# Example: Configure the stats scraper to focus on specific statistics
-STATS_CONFIG = {
-    'batting': ['most-runs', 'most-hundreds', 'most-fifties'],
-    'bowling': ['most-wickets', 'best-economy-rates']
-}
-```
-
-### Using Local Schedule Data
-
-The application now uses the local CSV file (`Ipl schedule.csv`) instead of web scraping to retrieve match schedules, making it more reliable:
-
-```python
-# The schedule CSV file should have the following format:
-# Match,No,Match Day,Date,Day,Start,Home,Away,Venue
-# 12,10,31-Mar-25,Mon,7:30 PM,Mumbai Indians,Kolkata Knight Riders,Mumbai
-```
-
-### Data Analysis
-
-Use the collected data for custom analysis:
-
-```python
-import pandas as pd
-
-# Load batting statistics
-batting_stats = pd.read_csv('batting_stats/ipl_most-runs_20240401.csv')
-
-# Analyze top performers
-top_batsmen = batting_stats.sort_values(by='Runs', ascending=False).head(10)
-print(top_batsmen[['Player', 'Team', 'Runs', 'Avg', 'SR']])
-```
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📧 Contact
+## License
 
-For questions or feedback, please open an issue on the GitHub repository.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📆 Recent Updates
+## Acknowledgments
 
-- **March 31, 2025**: Updated the today's match functionality to use local CSV schedule data instead of web scraping, improving reliability
-- Added better date matching and flexible parsing for different date formats
-- Enhanced match prediction display with team win rates and title information
-- Improved error handling and debugging information
+- Data sourced from the official IPL website (https://www.iplt20.com/)
+- This project is for educational purposes only
