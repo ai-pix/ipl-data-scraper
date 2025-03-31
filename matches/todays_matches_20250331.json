@@ -1,0 +1,18 @@
+[
+    {
+        "team1": "Mumbai Indians",
+        "team2": "Kolkata Knight Riders",
+        "time": "7:30 PM",
+        "venue": "Mumbai",
+        "match_id": null,
+        "prediction": {
+            "prediction": "Kolkata Knight Riders",
+            "confidence": 50,
+            "reason": "Higher win percentage (51.6% vs 54.0%) and more IPL titles (4 vs 1)",
+            "team1_win_percent": 53.99239543726235,
+            "team2_win_percent": 51.574803149606296,
+            "team1_titles": 1,
+            "team2_titles": 4
+        }
+    }
+]
