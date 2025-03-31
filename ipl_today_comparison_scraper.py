@@ -407,6 +407,116 @@ def extract_comparison_data(driver):
             print(f"{Fore.RED}Error extracting with BeautifulSoup: {str(bs_error)}{Style.RESET_ALL}")
             return ["Metric", "Team 1", "Team 2"], []
 
+def extract_head_to_head_data(driver):
+    """
+    Extract head-to-head comparison data from the HEAD TO HEAD tab
+    """
+    try:
+        # First click on the HEAD TO HEAD tab
+        head_to_head_tab = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.ID, "pills-head_to_head-tab"))
+        )
+        head_to_head_tab.click()
+        print(f"{Fore.CYAN}Clicked on HEAD TO HEAD tab{Style.RESET_ALL}")
+        time.sleep(2)  # Wait for tab content to load
+        
+        # Look for the tab content that contains the head-to-head data
+        head_to_head_div = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "pills-head_to_head"))
+        )
+        
+        # Get all the comparison sections
+        sections = head_to_head_div.find_elements(By.CLASS_NAME, "section2")
+        
+        if not sections:
+            print(f"{Fore.YELLOW}No head-to-head sections found in the 'HEAD TO HEAD' tab{Style.RESET_ALL}")
+            return ["Metric", "Team 1", "Team 2"], []
+        
+        head_to_head_data = []
+        
+        # Extract the data from each section
+        for section in sections:
+            try:
+                # Find the metric name (in the center p element)
+                metric_name_element = section.find_element(By.CLASS_NAME, "section2_text")
+                metric_name = metric_name_element.text.strip() if metric_name_element else "Unknown Metric"
+                
+                # Find the left value (first team)
+                left_value_element = section.find_element(By.CLASS_NAME, "section2_progressBarPointleft")
+                left_value = left_value_element.text.strip() if left_value_element else "N/A"
+                
+                # Find the right value (second team)
+                right_value_element = section.find_element(By.CLASS_NAME, "section2_progressBarPointright")
+                right_value = right_value_element.text.strip() if right_value_element else "N/A"
+                
+                # Skip empty metrics
+                if metric_name and (metric_name != "Unknown Metric"):
+                    row_data = {
+                        "Metric": metric_name,
+                        "Team 1": left_value,
+                        "Team 2": right_value
+                    }
+                    head_to_head_data.append(row_data)
+            except Exception as section_error:
+                print(f"{Fore.YELLOW}Error extracting data from head-to-head section: {str(section_error)}{Style.RESET_ALL}")
+                continue
+        
+        print(f"{Fore.GREEN}Extracted {len(head_to_head_data)} head-to-head metrics from sections{Style.RESET_ALL}")
+        return ["Metric", "Team 1", "Team 2"], head_to_head_data
+        
+    except Exception as e:
+        print(f"{Fore.RED}Error extracting head-to-head data from page: {str(e)}{Style.RESET_ALL}")
+        
+        # Try alternative approach with BeautifulSoup
+        try:
+            html_content = driver.page_source
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Find the head-to-head tab content
+            tab_content = soup.select_one('#pills-head_to_head')
+            if not tab_content:
+                print(f"{Fore.RED}No HEAD TO HEAD tab content found in HTML{Style.RESET_ALL}")
+                return ["Metric", "Team 1", "Team 2"], []
+            
+            # Find all sections
+            sections = tab_content.select('.section2')
+            if not sections:
+                print(f"{Fore.RED}No head-to-head sections found in HTML{Style.RESET_ALL}")
+                return ["Metric", "Team 1", "Team 2"], []
+            
+            head_to_head_data = []
+            
+            # Extract data from each section
+            for section in sections:
+                try:
+                    metric_name_element = section.select_one('.section2_text')
+                    metric_name = metric_name_element.text.strip() if metric_name_element else "Unknown Metric"
+                    
+                    left_value_element = section.select_one('.section2_progressBarPointleft')
+                    left_value = left_value_element.text.strip() if left_value_element else "N/A"
+                    
+                    right_value_element = section.select_one('.section2_progressBarPointright')
+                    right_value = right_value_element.text.strip() if right_value_element else "N/A"
+                    
+                    # Skip empty metrics or sections without proper data
+                    if metric_name and metric_name != "Unknown Metric" and left_value != "N/A" and right_value != "N/A":
+                        row_data = {
+                            "Metric": metric_name,
+                            "Team 1": left_value,
+                            "Team 2": right_value
+                        }
+                        head_to_head_data.append(row_data)
+                except Exception as section_error:
+                    print(f"{Fore.YELLOW}Error extracting data from head-to-head section in BeautifulSoup: {str(section_error)}{Style.RESET_ALL}")
+                    continue
+            
+            print(f"{Fore.GREEN}Extracted {len(head_to_head_data)} head-to-head metrics with BeautifulSoup{Style.RESET_ALL}")
+            return ["Metric", "Team 1", "Team 2"], head_to_head_data
+            
+        except Exception as bs_error:
+            print(f"{Fore.RED}Error extracting head-to-head with BeautifulSoup: {str(bs_error)}{Style.RESET_ALL}")
+            return ["Metric", "Team 1", "Team 2"], []
+
 def scrape_team_comparison(driver, team1_name, team2_name):
     """
     Scrape comparison data for today's match teams
@@ -421,14 +531,22 @@ def scrape_team_comparison(driver, team1_name, team2_name):
             print(f"{Fore.RED}Failed to select teams for comparison{Style.RESET_ALL}")
             return None
         
-        # Step 2: Extract comparison data
-        headers, comparison_data = extract_comparison_data(driver)
+        # Step 2: Extract overall comparison data
+        headers, overall_data = extract_comparison_data(driver)
         
-        if not comparison_data:
-            print(f"{Fore.RED}No comparison data found for {team1_name} vs {team2_name}{Style.RESET_ALL}")
+        if not overall_data:
+            print(f"{Fore.RED}No overall comparison data found for {team1_name} vs {team2_name}{Style.RESET_ALL}")
             return None
+            
+        # Step 3: Extract head-to-head comparison data
+        h2h_headers, head_to_head_data = extract_head_to_head_data(driver)
         
-        # Step 3: Prepare result
+        if not head_to_head_data:
+            print(f"{Fore.YELLOW}No head-to-head data found for {team1_name} vs {team2_name}{Style.RESET_ALL}")
+        else:
+            print(f"{Fore.GREEN}Successfully extracted head-to-head data with {len(head_to_head_data)} metrics{Style.RESET_ALL}")
+        
+        # Step 4: Prepare result with both data sets
         result = {
             "team1": team1_name,
             "team2": team2_name,
@@ -436,10 +554,11 @@ def scrape_team_comparison(driver, team1_name, team2_name):
             "team2_code": get_team_code(team2_name),
             "headers": headers,
             "timestamp": datetime.datetime.now().isoformat(),
-            "comparison_data": comparison_data
+            "overall_data": overall_data,
+            "head_to_head_data": head_to_head_data
         }
         
-        # Step 4: Save as JSON and CSV
+        # Step 5: Save as JSON and CSV
         timestamp = datetime.datetime.now().strftime('%Y%m%d')
         filename = f"team_comparison_{get_team_code(team1_name)}_vs_{get_team_code(team2_name)}_{timestamp}"
         
@@ -448,12 +567,19 @@ def scrape_team_comparison(driver, team1_name, team2_name):
             json.dump(result, f, indent=4)
         print(f"{Fore.GREEN}Saved team comparison to {json_filepath}{Style.RESET_ALL}")
         
-        # Save as CSV
-        df = pd.DataFrame(comparison_data)
-        csv_filepath = os.path.join(TEAM_COMPARISON_FOLDER, f"{filename}.csv")
-        df.to_csv(csv_filepath, index=False)
-        print(f"{Fore.GREEN}Saved team comparison CSV to {csv_filepath}{Style.RESET_ALL}")
+        # Save overall data as CSV
+        df_overall = pd.DataFrame(overall_data)
+        csv_overall_filepath = os.path.join(TEAM_COMPARISON_FOLDER, f"{filename}_overall.csv")
+        df_overall.to_csv(csv_overall_filepath, index=False)
+        print(f"{Fore.GREEN}Saved overall team comparison CSV to {csv_overall_filepath}{Style.RESET_ALL}")
         
+        # Save head-to-head data as CSV if available
+        if head_to_head_data:
+            df_h2h = pd.DataFrame(head_to_head_data)
+            csv_h2h_filepath = os.path.join(TEAM_COMPARISON_FOLDER, f"{filename}_head_to_head.csv")
+            df_h2h.to_csv(csv_h2h_filepath, index=False)
+            print(f"{Fore.GREEN}Saved head-to-head team comparison CSV to {csv_h2h_filepath}{Style.RESET_ALL}")
+            
         return result
         
     except Exception as e:
@@ -605,10 +731,10 @@ def main():
     team2_code = get_team_code(today_match['team2'])
     
     # First try API method (faster and more reliable)
-    team_comparison = get_team_comparison_via_api(team1_code, team2_code)
+    api_comparison = get_team_comparison_via_api(team1_code, team2_code)
     
     # If API method failed, try browser automation
-    if not team_comparison:
+    if not api_comparison:
         print(f"{Fore.YELLOW}API method failed. Trying browser automation...{Style.RESET_ALL}")
         
         # Step 2: Setup WebDriver
@@ -625,12 +751,104 @@ def main():
             
         except Exception as e:
             print(f"{Fore.RED}Error in scraping process: {str(e)}{Style.RESET_ALL}")
+            team_comparison = None
         
         finally:
             # Close the driver if we opened it
             if driver:
                 driver.quit()
                 print(f"{Fore.CYAN}Closed WebDriver{Style.RESET_ALL}")
+    else:
+        # We got data from API but it doesn't include head-to-head
+        print(f"{Fore.YELLOW}API provided overall data but may not include head-to-head. Setting up browser automation for complete data...{Style.RESET_ALL}")
+        
+        # Setup WebDriver for head-to-head data
+        driver = setup_driver()
+        
+        if driver is None:
+            print(f"{Fore.RED}Failed to set up WebDriver for head-to-head data. Using API data only.{Style.RESET_ALL}")
+            # Convert API data structure to match browser automation structure
+            team_comparison = {
+                "team1": today_match['team1'],
+                "team2": today_match['team2'],
+                "team1_code": team1_code,
+                "team2_code": team2_code,
+                "headers": api_comparison.get("headers", ["Metric", "Team 1", "Team 2"]),
+                "timestamp": datetime.datetime.now().isoformat(),
+                "overall_data": api_comparison.get("comparison_data", []),
+                "head_to_head_data": []  # No head-to-head data from API
+            }
+        else:
+            try:
+                # Just get head-to-head data since we already have overall data from API
+                print(f"\n{Fore.CYAN}Scraping head-to-head data to complement API data...{Style.RESET_ALL}")
+                # Select teams first
+                teams_selected = select_teams_for_comparison(driver, today_match['team1'], today_match['team2'])
+                
+                if teams_selected:
+                    # Skip overall data extraction since we have it from API
+                    # Go directly to head-to-head extraction
+                    h2h_headers, head_to_head_data = extract_head_to_head_data(driver)
+                    
+                    if head_to_head_data:
+                        print(f"{Fore.GREEN}Successfully extracted head-to-head data with {len(head_to_head_data)} metrics{Style.RESET_ALL}")
+                        # Combine API overall data with browser head-to-head data
+                        team_comparison = {
+                            "team1": today_match['team1'],
+                            "team2": today_match['team2'],
+                            "team1_code": team1_code,
+                            "team2_code": team2_code,
+                            "headers": api_comparison.get("headers", ["Metric", "Team 1", "Team 2"]),
+                            "timestamp": datetime.datetime.now().isoformat(),
+                            "overall_data": api_comparison.get("comparison_data", []),
+                            "head_to_head_data": head_to_head_data
+                        }
+                    else:
+                        print(f"{Fore.YELLOW}Failed to extract head-to-head data. Using API data only.{Style.RESET_ALL}")
+                        # Use API data only
+                        team_comparison = {
+                            "team1": today_match['team1'],
+                            "team2": today_match['team2'],
+                            "team1_code": team1_code,
+                            "team2_code": team2_code,
+                            "headers": api_comparison.get("headers", ["Metric", "Team 1", "Team 2"]),
+                            "timestamp": datetime.datetime.now().isoformat(),
+                            "overall_data": api_comparison.get("comparison_data", []),
+                            "head_to_head_data": []  # No head-to-head data from API
+                        }
+                else:
+                    print(f"{Fore.RED}Failed to select teams for head-to-head comparison. Using API data only.{Style.RESET_ALL}")
+                    # Use API data only
+                    team_comparison = {
+                        "team1": today_match['team1'],
+                        "team2": today_match['team2'],
+                        "team1_code": team1_code,
+                        "team2_code": team2_code,
+                        "headers": api_comparison.get("headers", ["Metric", "Team 1", "Team 2"]),
+                        "timestamp": datetime.datetime.now().isoformat(),
+                        "overall_data": api_comparison.get("comparison_data", []),
+                        "head_to_head_data": []  # No head-to-head data from API
+                    }
+                    
+            except Exception as e:
+                print(f"{Fore.RED}Error in scraping head-to-head data: {str(e)}{Style.RESET_ALL}")
+                # Use API data only
+                team_comparison = {
+                    "team1": today_match['team1'],
+                    "team2": today_match['team2'],
+                    "team1_code": team1_code,
+                    "team2_code": team2_code,
+                    "headers": api_comparison.get("headers", ["Metric", "Team 1", "Team 2"]),
+                    "timestamp": datetime.datetime.now().isoformat(),
+                    "overall_data": api_comparison.get("comparison_data", []),
+                    "head_to_head_data": []  # No head-to-head data from API
+                }
+            
+            finally:
+                # Close the driver if we opened it
+                if driver:
+                    driver.quit()
+                    print(f"{Fore.CYAN}Closed WebDriver{Style.RESET_ALL}")
     
     # Step 4: Get key players for today's teams
     team1_players = get_key_player_names(today_match['team1'])
@@ -647,6 +865,8 @@ def main():
         "venue": today_match['venue'],
         "time": today_match['time'],
         "team_comparison_available": team_comparison is not None,
+        "overall_data_available": team_comparison is not None and len(team_comparison.get("overall_data", [])) > 0,
+        "head_to_head_data_available": team_comparison is not None and len(team_comparison.get("head_to_head_data", [])) > 0,
         "team1_key_players": team1_players,
         "team2_key_players": team2_players,
         "timestamp": datetime.datetime.now().isoformat()
@@ -663,7 +883,7 @@ def main():
     
     # If we got team comparison data, save it
     if team_comparison:
-        # Save as JSON and CSV
+        # Save as JSON 
         filename = f"team_comparison_{team1_code}_vs_{team2_code}_{timestamp}"
         
         json_filepath = os.path.join(TEAM_COMPARISON_FOLDER, f"{filename}.json")
@@ -671,12 +891,19 @@ def main():
             json.dump(team_comparison, f, indent=4)
         print(f"{Fore.GREEN}Saved team comparison to {json_filepath}{Style.RESET_ALL}")
         
-        # Save as CSV if we have comparison data
-        if team_comparison.get("comparison_data"):
-            df = pd.DataFrame(team_comparison["comparison_data"])
-            csv_filepath = os.path.join(TEAM_COMPARISON_FOLDER, f"{filename}.csv")
-            df.to_csv(csv_filepath, index=False)
-            print(f"{Fore.GREEN}Saved team comparison CSV to {csv_filepath}{Style.RESET_ALL}")
+        # Save overall data as CSV if available
+        if team_comparison.get("overall_data"):
+            df_overall = pd.DataFrame(team_comparison["overall_data"])
+            csv_overall_filepath = os.path.join(TEAM_COMPARISON_FOLDER, f"{filename}_overall.csv")
+            df_overall.to_csv(csv_overall_filepath, index=False)
+            print(f"{Fore.GREEN}Saved overall team comparison CSV to {csv_overall_filepath}{Style.RESET_ALL}")
+        
+        # Save head-to-head data as CSV if available
+        if team_comparison.get("head_to_head_data"):
+            df_h2h = pd.DataFrame(team_comparison["head_to_head_data"])
+            csv_h2h_filepath = os.path.join(TEAM_COMPARISON_FOLDER, f"{filename}_head_to_head.csv")
+            df_h2h.to_csv(csv_h2h_filepath, index=False)
+            print(f"{Fore.GREEN}Saved head-to-head team comparison CSV to {csv_h2h_filepath}{Style.RESET_ALL}")
     
     end_time = datetime.datetime.now()
     print(f"\n{Fore.CYAN}======================================{Style.RESET_ALL}")
