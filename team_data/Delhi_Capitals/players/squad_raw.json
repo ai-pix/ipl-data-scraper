@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Rishabh Pant",
+        "role": "Wicket-keeper",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "David Warner",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Axar Patel",
+        "role": "All-rounder",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Kuldeep Yadav",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Anrich Nortje",
+        "role": "Bowler",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Mitchell Marsh",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Khaleel Ahmed",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mukesh Kumar",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Prithvi Shaw",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Swastik Chikara",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Yash Dhull",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Gulbadin Naib",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Jake Fraser-McGurk",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Lalit Yadav",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Sumit Kumar",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Abishek Porel",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Kumar Kushagra",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Ricky Bhui",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shai Hope",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Tristan Stubbs",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Ishant Sharma",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Jhye Richardson",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Lizaad Williams",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Pravin Dubey",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Rasikh Salam",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Vicky Ostwal",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]

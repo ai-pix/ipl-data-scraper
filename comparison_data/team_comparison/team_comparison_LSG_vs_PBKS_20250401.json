@@ -1,0 +1,131 @@
+{
+    "team1": "Lucknow Super Giants",
+    "team2": "Punjab Kings",
+    "team1_code": "LSG",
+    "team2_code": "PBKS",
+    "headers": [
+        "Metric",
+        "Team 1",
+        "Team 2"
+    ],
+    "timestamp": "2025-04-01T22:38:08.860300",
+    "overall_data": [
+        {
+            "Metric": "Played",
+            "Team 1": "46",
+            "Team 2": "247"
+        },
+        {
+            "Metric": "Won",
+            "Team 1": "25",
+            "Team 2": "112"
+        },
+        {
+            "Metric": "Lost",
+            "Team 1": "20",
+            "Team 2": "134"
+        },
+        {
+            "Metric": "Tied",
+            "Team 1": "0",
+            "Team 2": "1"
+        },
+        {
+            "Metric": "No Result",
+            "Team 1": "1",
+            "Team 2": "0"
+        },
+        {
+            "Metric": "Highest Team Total",
+            "Team 1": "257/5",
+            "Team 2": "262/2"
+        },
+        {
+            "Metric": "Lowest Team Total",
+            "Team 1": "82/10",
+            "Team 2": "68/0"
+        },
+        {
+            "Metric": "Avg. Runs",
+            "Team 1": "172",
+            "Team 2": "161"
+        },
+        {
+            "Metric": "Avg. Wkts",
+            "Team 1": "6",
+            "Team 2": "6"
+        },
+        {
+            "Metric": "Most Runs",
+            "Team 1": "1410",
+            "Team 2": "2548"
+        },
+        {
+            "Metric": "Most Wickets",
+            "Team 1": "42",
+            "Team 2": "84"
+        },
+        {
+            "Metric": "Highest Individual Score",
+            "Team 1": "140",
+            "Team 2": "132"
+        },
+        {
+            "Metric": "Best Bowling",
+            "Team 1": "5/14",
+            "Team 2": "5/14"
+        }
+    ],
+    "head_to_head_data": [
+        {
+            "Metric": "Toss Won, Batting First, Match Won",
+            "Team 1": "1",
+            "Team 2": "0"
+        },
+        {
+            "Metric": "Toss Won, Bowling First, Match Won",
+            "Team 1": "0",
+            "Team 2": "1"
+        },
+        {
+            "Metric": "Tosses Won",
+            "Team 1": "1",
+            "Team 2": "4"
+        },
+        {
+            "Metric": "Elected To Bat",
+            "Team 1": "1",
+            "Team 2": "0"
+        },
+        {
+            "Metric": "Elected To Field",
+            "Team 1": "0",
+            "Team 2": "4"
+        },
+        {
+            "Metric": "Won Toss And Match",
+            "Team 1": "1",
+            "Team 2": "1"
+        },
+        {
+            "Metric": "Highest Total",
+            "Team 1": "257",
+            "Team 2": "201"
+        },
+        {
+            "Metric": "Lowest Total",
+            "Team 1": "153",
+            "Team 2": "133"
+        },
+        {
+            "Metric": "Avg. Runs",
+            "Team 1": "192",
+            "Team 2": "168.25"
+        },
+        {
+            "Metric": "Avg. Wkts",
+            "Team 1": "7.25",
+            "Team 2": "7.75"
+        }
+    ]
+}

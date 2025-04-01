@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Sanju Samson",
+        "role": "Wicket-keeper",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Shimron Hetmyer",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Yashasvi Jaiswal",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Trent Boult",
+        "role": "Bowler",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Ravichandran Ashwin",
+        "role": "All-rounder",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Yuzvendra Chahal",
+        "role": "Bowler",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Jos Buttler",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Dhruv Jurel",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Kunal Singh Rathore",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shubham Dubey",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Keshav Maharaj",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Riyan Parag",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Rovman Powell",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Donovan Ferreira",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Tom Kohler-Cadmore",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Abid Mushtaq",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Avesh Khan",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Kuldeep Sen",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Nandre Burger",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Navdeep Saini",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Sandeep Sharma",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Tanush Kotian",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]

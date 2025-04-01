@@ -1,0 +1,18 @@
+[
+    {
+        "team1": "Lucknow Super Giants",
+        "team2": "Punjab Kings",
+        "time": "7:30 PM",
+        "venue": "Lucknow",
+        "match_id": 13,
+        "prediction": {
+            "prediction": "Lucknow Super Giants",
+            "confidence": 50,
+            "reason": "Higher win percentage (54.3% vs 44.5%) and more IPL titles (5 vs 0)",
+            "team1_win_percent": 54.347826086956516,
+            "team2_win_percent": 44.534412955465584,
+            "team1_titles": 5,
+            "team2_titles": 0
+        }
+    }
+]

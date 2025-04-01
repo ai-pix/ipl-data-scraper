@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Shubman Gill",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mohammed Shami",
+        "role": "Bowler",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Rashid Khan",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Sai Sudharsan",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Wriddhiman Saha",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "David Miller",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Rahul Tewatia",
+        "role": "Wicket-keeper",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mohit Sharma",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Abhinav Manohar",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Kane Williamson",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Azmatullah Omarzai",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shahrukh Khan",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Vijay Shankar",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "BR Sharath",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Matthew Wade",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Darshan Nalkande",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Gurnoor Brar",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Jayant Yadav",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Josh Little",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Kartik Tyagi",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Manav Suthar",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Noor Ahmad",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Sai Kishore",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Sandeep Warrier",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Spencer Johnson",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Umesh Yadav",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]

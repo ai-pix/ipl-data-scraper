@@ -1,0 +1,152 @@
+[
+    {
+        "name": "MS Dhoni",
+        "role": "Wicket-keeper",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Ruturaj Gaikwad",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Ravindra Jadeja",
+        "role": "All-rounder",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Ajinkya Rahane",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Deepak Chahar",
+        "role": "Bowler",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Moeen Ali",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Shivam Dube",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Mitchell Santner",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Devon Conway",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Maheesh Theekshana",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Rachin Ravindra",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Shardul Thakur",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Daryl Mitchell",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Mustafizur Rahman",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Sameer Rizvi",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shaik Rasheed",
+        "role": "Batsman",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Ajay Mandal",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Nishant Sindhu",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Aravelly Avanish",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Mukesh Choudhary",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Prashant Solanki",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Rajvardhan Hangargekar",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Richard Gleeson",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Simarjeet Singh",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Tushar Deshpande",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]

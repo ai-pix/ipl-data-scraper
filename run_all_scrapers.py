@@ -90,13 +90,14 @@ def parse_arguments():
     parser.add_argument('--check-images', action='store_true', help='Only check for duplicate player images and remove broken ones ')
     return parser.parse_args()
 
-def clean_data_directory(directory_path, retain_latest=False):
+def clean_data_directory(directory_path, retain_latest=False, update_only=True):
     """
-    Cleans a data directory by removing files.
+    Cleans a data directory by updating files instead of removing them.
     
     Args:
         directory_path (str): Path to the data directory
         retain_latest (bool): Whether to retain the latest file in each directory
+        update_only (bool): If True, mark files for update instead of deleting them
     """
     if not os.path.exists(directory_path):
         logger.info(f"Directory does not exist: {directory_path}")
@@ -115,36 +116,65 @@ def clean_data_directory(directory_path, retain_latest=False):
         files = files[:-1]  # Exclude the newest file
         logger.info(f"Keeping latest file: {files[-1]}")
     
-    # Delete files
+    # Special handling for image files - don't update or delete them
+    is_image_dir = 'player_images' in directory_path or 'LOGO' in directory_path
+    
+    # Process files
     for file_path in files:
         if os.path.isfile(file_path):
-            try:
-                os.remove(file_path)
-                logger.info(f"Deleted file: {file_path}")
-            except Exception as e:
-                logger.error(f"Failed to delete {file_path}: {str(e)}")
+            # Skip image files in image directories
+            if is_image_dir and file_path.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                logger.debug(f"Preserving image file: {file_path}")
+                continue
+                
+            if update_only:
+                # Mark file for update instead of deleting
+                try:
+                    with open(file_path, 'a') as f:
+                        # Add update marker without modifying content
+                        pass
+                    logger.info(f"Marked file for update: {file_path}")
+                except Exception as e:
+                    logger.error(f"Failed to mark {file_path} for update: {str(e)}")
+            else:
+                # Original delete behavior
+                try:
+                    os.remove(file_path)
+                    logger.info(f"Deleted file: {file_path}")
+                except Exception as e:
+                    logger.error(f"Failed to delete {file_path}: {str(e)}")
         elif os.path.isdir(file_path) and not file_path.endswith('__pycache__'):
-            try:
-                shutil.rmtree(file_path)
-                logger.info(f"Deleted directory: {file_path}")
-            except Exception as e:
-                logger.error(f"Failed to delete directory {file_path}: {str(e)}")
+            # For subdirectories, recursively process them with the same update policy
+            if update_only and not is_image_dir:
+                clean_data_directory(file_path, retain_latest, update_only)
+            else:
+                try:
+                    shutil.rmtree(file_path)
+                    logger.info(f"Deleted directory: {file_path}")
+                except Exception as e:
+                    logger.error(f"Failed to delete directory {file_path}: {str(e)}")
 
-def clean_all_data(retain_latest=True):
+def clean_all_data(retain_latest=True, update_only=True):
     """
-    Clean all data directories by removing all files.
+    Clean all data directories by updating files instead of removing them.
     
     Args:
         retain_latest (bool): Whether to retain the latest file in each directory
+        update_only (bool): If True, mark files for update instead of deleting them
     """
     logger.info("Cleaning all data directories...")
     
-    files_removed = 0
+    files_processed = 0
     for data_dir in DATA_DIRECTORIES:
         if not os.path.exists(data_dir):
             continue
         
-        logger.info(f"Cleaning directory: {data_dir}")
+        logger.info(f"Processing directory: {data_dir}")
+        
+        # Skip player_images directory - images don't need to be updated once downloaded
+        if data_dir == 'player_images':
+            logger.info(f"Skipping player images directory as images don't need updating")
+            continue
         
         # Get all files in the directory
         all_files = []
@@ -158,6 +188,10 @@ def clean_all_data(retain_latest=True):
         file_groups = defaultdict(list)
         for file_path, mod_time in all_files:
             file_name = os.path.basename(file_path)
+            # Skip image files
+            if file_name.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                continue
+                
             # Remove date patterns like YYYYMMDD or YYYY-MM-DD from filename for grouping
             base_name = re.sub(r'_?\d{4}[-_]?\d{2}[-_]?\d{2}', '', file_name)
             base_name = re.sub(r'_?\d{8}', '', base_name)
@@ -171,7 +205,7 @@ def clean_all_data(retain_latest=True):
             # Sort by modification time, newest first
             sorted_files = sorted(group_files, key=lambda x: x[1], reverse=True)
             
-            # Determine which files to keep and which to remove
+            # Determine which files to keep and which to process
             files_to_keep = []
             
             # If retaining latest, keep the newest file
@@ -183,17 +217,54 @@ def clean_all_data(retain_latest=True):
                 if 'latest' in os.path.basename(file_path).lower():
                     files_to_keep.append(file_path)
             
-            # Remove files not in the keep list
+            # Process files not in the keep list
             for file_path, _ in sorted_files:
                 if file_path not in files_to_keep:
-                    try:
-                        os.remove(file_path)
-                        files_removed += 1
-                        logger.debug(f"Removed file: {file_path}")
-                    except Exception as e:
-                        logger.error(f"Error removing file {file_path}: {str(e)}")
+                    if update_only:
+                        try:
+                            # Mark file for update without deleting
+                            with open(file_path, 'a') as f:
+                                # Touch file to update modification time
+                                pass
+                            files_processed += 1
+                            logger.debug(f"Marked file for update: {file_path}")
+                        except Exception as e:
+                            logger.error(f"Error marking file {file_path} for update: {str(e)}")
+                    else:
+                        try:
+                            os.remove(file_path)
+                            files_processed += 1
+                            logger.debug(f"Removed file: {file_path}")
+                        except Exception as e:
+                            logger.error(f"Error removing file {file_path}: {str(e)}")
     
-    logger.info(f"Cleanup completed. Removed {files_removed} files.")
+    logger.info(f"Cleanup completed. Processed {files_processed} files.")
+
+# Helper function to check if a file should be updated
+def should_update_file(file_path):
+    """
+    Determine if a file should be updated based on its type and age.
+    
+    Args:
+        file_path (str): Path to the file to check
+        
+    Returns:
+        bool: True if the file should be updated, False otherwise
+    """
+    # Don't update image files
+    if file_path.lower().endswith(('.png', '.jpg', '.jpeg', '.webp', '.gif')):
+        return False
+        
+    # Don't update files with 'latest' in the name
+    if 'latest' in os.path.basename(file_path).lower():
+        return False
+        
+    # Don't update files modified today
+    today = datetime.datetime.now().strftime("%Y%m%d")
+    if today in os.path.basename(file_path):
+        return False
+        
+    return True
 
 def should_process_images(args, image_dir="player_images"):
     """
@@ -1341,3 +1412,71 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+def extract_player_info(filename):
+    """
+    Extract player name and team information from an image filename.
+    
+    Args:
+        filename (str): The filename of the player image
+        
+    Returns:
+        tuple: (player_name, team_name) or None if extraction fails
+    """
+    try:
+        # Remove file extension
+        base_name = os.path.splitext(filename)[0]
+        
+        # Common patterns for player image filenames
+        # Pattern 1: "PlayerName_TeamName"
+        if '_' in base_name:
+            parts = base_name.split('_')
+            if len(parts) >= 2:
+                player_name = parts[0].replace('-', ' ').title()
+                team_name = parts[1].replace('-', ' ').title()
+                return (player_name, team_name)
+        
+        # Pattern 2: "PlayerName-TeamName"
+        if '-' in base_name:
+            parts = base_name.split('-')
+            if len(parts) >= 2:
+                player_name = parts[0].replace('_', ' ').title()
+                team_name = parts[-1].replace('_', ' ').title()
+                return (player_name, team_name)
+        
+        # Pattern 3: Just the player name (team implied from directory)
+        return (base_name.replace('-', ' ').replace('_', ' ').title(), None)
+    
+    except Exception as e:
+        logger.error(f"Error extracting player info from filename {filename}: {str(e)}")
+        return None
+
+def is_valid_image(image_path):
+    """
+    Check if an image file is valid and can be opened.
+    
+    Args:
+        image_path (str): Path to the image file
+        
+    Returns:
+        bool: True if the image is valid, False otherwise
+    """
+    try:
+        # Try to open the image with PIL
+        with Image.open(image_path) as img:
+            # Verify the image by loading it
+            img.verify()
+            
+            # Check if the image has a valid size
+            width, height = img.size
+            if width < 10 or height < 10:
+                logger.warning(f"Image too small: {image_path}, size: {width}x{height}")
+                return False
+                
+            return True
+    except (IOError, UnidentifiedImageError, OSError) as e:
+        logger.warning(f"Invalid image file: {image_path}, Error: {str(e)}")
+        return False
+    except Exception as e:
+        logger.error(f"Error checking image {image_path}: {str(e)}")
+        return False

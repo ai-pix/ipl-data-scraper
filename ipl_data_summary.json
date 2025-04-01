@@ -1,0 +1,744 @@
+{
+  "generated_at": "2025-04-01 22:38:19",
+  "directories": {
+    "points_table": {
+      "file_count": 8,
+      "total_size_bytes": 17828,
+      "latest_file": "ipl_points_table_20250401.html",
+      "latest_file_date": "2025-04-01 22:36:38",
+      "file_types": {
+        ".csv": 4,
+        ".html": 4
+      },
+      "subdirectories": {},
+      "total_size_human": "17.41 KB"
+    },
+    "team_data": {
+      "file_count": 70,
+      "total_size_bytes": 135654,
+      "latest_file": "Chennai_Super_Kings\\scraping_summary_20250401.json",
+      "latest_file_date": "2025-04-01 22:36:47",
+      "file_types": {
+        ".json": 50,
+        ".csv": 20
+      },
+      "subdirectories": {
+        "Chennai_Super_Kings": {
+          "file_count": 1,
+          "total_size_bytes": 670,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:47",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 7309,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:47",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "7.14 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 4129,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:47",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "4.03 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 742,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:47",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "742.00 B"
+            }
+          },
+          "total_size_human": "670.00 B"
+        },
+        "Delhi_Capitals": {
+          "file_count": 1,
+          "total_size_bytes": 635,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:41",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 7406,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:41",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "7.23 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 4066,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:41",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "3.97 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 752,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:41",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "752.00 B"
+            }
+          },
+          "total_size_human": "635.00 B"
+        },
+        "Gujarat_Titans": {
+          "file_count": 1,
+          "total_size_bytes": 634,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:41",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 6683,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:41",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "6.53 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 4092,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:41",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "4.00 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 736,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:41",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "736.00 B"
+            }
+          },
+          "total_size_human": "634.00 B"
+        },
+        "Kolkata_Knight_Riders": {
+          "file_count": 1,
+          "total_size_bytes": 684,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:42",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 9219,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:42",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "9.00 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 3715,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:42",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "3.63 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 712,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:42",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "712.00 B"
+            }
+          },
+          "total_size_human": "684.00 B"
+        },
+        "Lucknow_Super_Giants": {
+          "file_count": 1,
+          "total_size_bytes": 677,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:43",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 9939,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:43",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "9.71 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 3866,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:43",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "3.78 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 772,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:43",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "772.00 B"
+            }
+          },
+          "total_size_human": "677.00 B"
+        },
+        "Mumbai_Indians": {
+          "file_count": 1,
+          "total_size_bytes": 635,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:43",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 9092,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:43",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "8.88 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 4168,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:43",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "4.07 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 757,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:43",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "757.00 B"
+            }
+          },
+          "total_size_human": "635.00 B"
+        },
+        "Punjab_Kings": {
+          "file_count": 1,
+          "total_size_bytes": 620,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:45",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 7181,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:45",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "7.01 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 3852,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:45",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "3.76 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 664,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:45",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "664.00 B"
+            }
+          },
+          "total_size_human": "620.00 B"
+        },
+        "Rajasthan_Royals": {
+          "file_count": 1,
+          "total_size_bytes": 649,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:45",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 9303,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:45",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "9.08 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 3530,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:45",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "3.45 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 668,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:45",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "668.00 B"
+            }
+          },
+          "total_size_human": "649.00 B"
+        },
+        "Royal_Challengers_Bengaluru": {
+          "file_count": 1,
+          "total_size_bytes": 726,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:46",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 7503,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:46",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "7.33 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 3987,
+              "latest_file": "squad_raw.json",
+              "latest_file_date": "2025-04-01 22:36:46",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "3.89 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 763,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:46",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "763.00 B"
+            }
+          },
+          "total_size_human": "726.00 B"
+        },
+        "Sunrisers_Hyderabad": {
+          "file_count": 1,
+          "total_size_bytes": 670,
+          "latest_file": "scraping_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:36:47",
+          "file_types": {
+            ".json": 1
+          },
+          "subdirectories": {
+            "news": {
+              "file_count": 2,
+              "total_size_bytes": 8647,
+              "latest_file": "news_articles_20250401.json",
+              "latest_file_date": "2025-04-01 22:36:47",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "8.44 KB"
+            },
+            "players": {
+              "file_count": 2,
+              "total_size_bytes": 4045,
+              "latest_file": "squad.csv",
+              "latest_file_date": "2025-04-01 22:36:47",
+              "file_types": {
+                ".csv": 1,
+                ".json": 1
+              },
+              "subdirectories": {},
+              "total_size_human": "3.95 KB"
+            },
+            "stats": {
+              "file_count": 2,
+              "total_size_bytes": 756,
+              "latest_file": "team_statistics.json",
+              "latest_file_date": "2025-04-01 22:36:47",
+              "file_types": {
+                ".json": 2
+              },
+              "subdirectories": {},
+              "total_size_human": "756.00 B"
+            }
+          },
+          "total_size_human": "670.00 B"
+        }
+      },
+      "total_size_human": "132.47 KB"
+    },
+    "batting_stats": {
+      "file_count": 10,
+      "total_size_bytes": 6364,
+      "latest_file": "ipl_most-4s_20250401.csv",
+      "latest_file_date": "2025-04-01 22:36:51",
+      "file_types": {
+        ".csv": 10
+      },
+      "subdirectories": {},
+      "total_size_human": "6.21 KB"
+    },
+    "bowling_stats": {
+      "file_count": 10,
+      "total_size_bytes": 10974,
+      "latest_file": "ipl_best-economy-rates_20250401.csv",
+      "latest_file_date": "2025-04-01 22:36:53",
+      "file_types": {
+        ".csv": 10
+      },
+      "subdirectories": {},
+      "total_size_human": "10.72 KB"
+    },
+    "pitch_reports": {
+      "file_count": 2,
+      "total_size_bytes": 171564,
+      "latest_file": "ipl_pitch_reports_20250401.csv",
+      "latest_file_date": "2025-04-01 22:37:27",
+      "file_types": {
+        ".csv": 2
+      },
+      "subdirectories": {},
+      "total_size_human": "167.54 KB"
+    },
+    "weather_reports": {
+      "file_count": 2,
+      "total_size_bytes": 8144,
+      "latest_file": "ipl_weather_reports_20250401.csv",
+      "latest_file_date": "2025-04-01 22:37:27",
+      "file_types": {
+        ".csv": 2
+      },
+      "subdirectories": {},
+      "total_size_human": "7.95 KB"
+    },
+    "comparison_data": {
+      "file_count": 5,
+      "total_size_bytes": 4744,
+      "latest_file": "team_comparison\\team_comparison_LSG_vs_PBKS_20250401_head_to_head.csv",
+      "latest_file_date": "2025-04-01 22:38:11",
+      "file_types": {
+        ".json": 3,
+        ".csv": 2
+      },
+      "subdirectories": {
+        "team_comparison": {
+          "file_count": 3,
+          "total_size_bytes": 3664,
+          "latest_file": "team_comparison_LSG_vs_PBKS_20250401_head_to_head.csv",
+          "latest_file_date": "2025-04-01 22:38:11",
+          "file_types": {
+            ".json": 1,
+            ".csv": 2
+          },
+          "subdirectories": {},
+          "total_size_human": "3.58 KB"
+        }
+      },
+      "total_size_human": "4.63 KB"
+    },
+    "combined_reports": {
+      "file_count": 4,
+      "total_size_bytes": 142620,
+      "latest_file": "ipl_venue_reports_20250401.html",
+      "latest_file_date": "2025-04-01 22:37:27",
+      "file_types": {
+        ".csv": 2,
+        ".html": 2
+      },
+      "subdirectories": {},
+      "total_size_human": "139.28 KB"
+    },
+    "reports": {
+      "file_count": 4,
+      "total_size_bytes": 12372,
+      "latest_file": "ipl_stats_report_20250401.html",
+      "latest_file_date": "2025-04-01 22:36:53",
+      "file_types": {
+        ".html": 2,
+        ".json": 2
+      },
+      "subdirectories": {},
+      "total_size_human": "12.08 KB"
+    },
+    "player_images": {
+      "file_count": 239,
+      "total_size_bytes": 6390362,
+      "latest_file": "overall_summary_20250401.json",
+      "latest_file_date": "2025-04-01 22:37:30",
+      "file_types": {
+        ".json": 12,
+        ".png": 227
+      },
+      "subdirectories": {
+        "chennai-super-kings": {
+          "file_count": 26,
+          "total_size_bytes": 490759,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:29",
+          "file_types": {
+            ".png": 25,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "479.26 KB"
+        },
+        "delhi-capitals": {
+          "file_count": 23,
+          "total_size_bytes": 561798,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:29",
+          "file_types": {
+            ".png": 22,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "548.63 KB"
+        },
+        "gujarat-titans": {
+          "file_count": 26,
+          "total_size_bytes": 804293,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:29",
+          "file_types": {
+            ".png": 25,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "785.44 KB"
+        },
+        "kolkata-knight-riders": {
+          "file_count": 22,
+          "total_size_bytes": 830509,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:29",
+          "file_types": {
+            ".png": 21,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "811.04 KB"
+        },
+        "lucknow-super-giants": {
+          "file_count": 25,
+          "total_size_bytes": 847701,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:29",
+          "file_types": {
+            ".png": 24,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "827.83 KB"
+        },
+        "mumbai-indians": {
+          "file_count": 24,
+          "total_size_bytes": 488674,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:30",
+          "file_types": {
+            ".png": 23,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "477.22 KB"
+        },
+        "punjab-kings": {
+          "file_count": 26,
+          "total_size_bytes": 643459,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:30",
+          "file_types": {
+            ".png": 25,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "628.38 KB"
+        },
+        "rajasthan-royals": {
+          "file_count": 21,
+          "total_size_bytes": 343966,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:30",
+          "file_types": {
+            ".png": 20,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "335.90 KB"
+        },
+        "royal-challengers-bangalore": {
+          "file_count": 23,
+          "total_size_bytes": 421270,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:30",
+          "file_types": {
+            ".png": 22,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "411.40 KB"
+        },
+        "sunrisers-hyderabad": {
+          "file_count": 21,
+          "total_size_bytes": 741665,
+          "latest_file": "download_summary_20250401.json",
+          "latest_file_date": "2025-04-01 22:37:30",
+          "file_types": {
+            ".png": 20,
+            ".json": 1
+          },
+          "subdirectories": {},
+          "total_size_human": "724.28 KB"
+        }
+      },
+      "total_size_human": "6.09 MB"
+    },
+    "matches": {
+      "file_count": 4,
+      "total_size_bytes": 1522,
+      "latest_file": "todays_matches_20250401.csv",
+      "latest_file_date": "2025-04-01 22:38:17",
+      "file_types": {
+        ".csv": 2,
+        ".json": 2
+      },
+      "subdirectories": {},
+      "total_size_human": "1.49 KB"
+    }
+  },
+  "overview": {
+    "total_files": 0,
+    "total_size_bytes": 0,
+    "file_types": {},
+    "total_size_human": "0.00 B"
+  }
+}

@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Rohit Sharma",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Jasprit Bumrah",
+        "role": "Bowler",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Hardik Pandya",
+        "role": "All-rounder",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Suryakumar Yadav",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Ishan Kishan",
+        "role": "Wicket-keeper",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Tilak Varma",
+        "role": "Batsman",
+        "nationality": "Indian",
+        "stats": {}
+    },
+    {
+        "name": "Tim David",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Jofra Archer",
+        "role": "Batsman",
+        "nationality": "Overseas",
+        "stats": {}
+    },
+    {
+        "name": "Anshul Kamboj",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Dewald Brevis",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Gerald Coetzee",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Mohammad Nabi",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Naman Dhir",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Nehal Wadhera",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Romario Shepherd",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shams Mulani",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shivalik Sharma",
+        "role": "All-Rounder",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Harvik Desai",
+        "role": "",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Akash Madhwal",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Arjun Tendulkar",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Kumar Kartikeya",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Kwena Maphaka",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Luke Wood",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Nuwan Thushara",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Piyush Chawla",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    },
+    {
+        "name": "Shreyas Gopal",
+        "role": "Bowler",
+        "nationality": "",
+        "stats": {}
+    }
+]
