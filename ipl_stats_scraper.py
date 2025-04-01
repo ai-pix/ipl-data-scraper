@@ -864,7 +864,8 @@ def move_existing_files():
             except Exception as e:
                 print(f"{Fore.RED}Error moving {filename}: {e}{Style.RESET_ALL}")
 
-if __name__ == "__main__":
+def main():
+    """Main function to execute the IPL statistics scraper"""
     print(f"{Fore.CYAN}======================================{Style.RESET_ALL}")
     print(f"{Fore.CYAN}      IPL STATISTICS SCRAPER         {Style.RESET_ALL}")
     print(f"{Fore.CYAN}======================================{Style.RESET_ALL}")
@@ -887,3 +888,6 @@ if __name__ == "__main__":
     
     print(f"\n{Fore.GREEN}All scraping tasks completed.{Style.RESET_ALL}")
     print(f"{Fore.CYAN}======================================{Style.RESET_ALL}")
+
+if __name__ == "__main__":
+    main()

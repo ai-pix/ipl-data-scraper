@@ -1,0 +1,275 @@
+2025-04-01 10:35:24,886 - INFO - Starting execution of all scrapers
+2025-04-01 10:35:24,886 - INFO - Running ipl_points_table_scraper...
+2025-04-01 10:35:26,182 - INFO - Attempting to scrape IPL points table...
+2025-04-01 10:35:26,182 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-01 10:35:26,182 - INFO - Initializing Chrome headless
+2025-04-01 10:35:34,451 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-01 10:35:34,470 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-01 10:35:34,483 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-01 10:35:34,580 - INFO - Found table with selector: table.ih-td-tab
+2025-04-01 10:35:34,583 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-01 10:35:34,586 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-01 10:35:41,427 - INFO - Points table saved to CSV: points_table\ipl_points_table_20250401.csv
+2025-04-01 10:35:41,440 - INFO - Points table saved to HTML: points_table\ipl_points_table_20250401.html
+2025-04-01 10:35:41,442 - INFO - Created latest version copies
+2025-04-01 10:35:41,449 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-01 10:35:43,450 - INFO - Running ipl_team_scraper...
+2025-04-01 10:35:54,967 - INFO - Successfully ran ipl_team_scraper
+2025-04-01 10:35:56,968 - INFO - Running ipl_stats_scraper...
+2025-04-01 10:35:56,980 - WARNING - Module ipl_stats_scraper does not have a main() function
+2025-04-01 10:35:58,982 - INFO - Running ipl_pitch_weather_scraper...
+2025-04-01 10:36:32,416 - INFO - Successfully ran ipl_pitch_weather_scraper
+2025-04-01 10:36:34,416 - INFO - Running ipl_player_images_scraper...
+2025-04-01 10:36:35,681 - INFO - Successfully ran ipl_player_images_scraper
+2025-04-01 10:36:37,682 - INFO - Running ipl_today_comparison_scraper...
+2025-04-01 10:36:38,135 - INFO - ====== WebDriver manager ======
+2025-04-01 10:36:39,414 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-01 10:37:22,005 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-01 10:37:24,006 - INFO - Running todays_match...
+2025-04-01 10:37:24,050 - INFO - Successfully ran todays_match
+2025-04-01 10:37:26,052 - INFO - Scraper execution completed in 121.17 seconds
+2025-04-01 10:37:26,052 - INFO - Successful: 6/7
+2025-04-01 10:37:26,052 - WARNING - Failed runs: ipl_stats_scraper
+2025-04-01 10:37:26,052 - WARNING - Not all scrapers were successful, skipping cleanup of old data
+2025-04-01 10:37:26,053 - INFO - IPL Cricket Data orchestration completed
+2025-04-01 10:41:29,217 - INFO - Starting execution of all scrapers
+2025-04-01 10:41:29,218 - INFO - Running ipl_points_table_scraper...
+2025-04-01 10:41:30,444 - INFO - Attempting to scrape IPL points table...
+2025-04-01 10:41:30,444 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-01 10:41:30,444 - INFO - Initializing Chrome headless
+2025-04-01 10:41:38,838 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-01 10:41:38,858 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-01 10:41:38,870 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-01 10:41:38,952 - INFO - Found table with selector: table.ih-td-tab
+2025-04-01 10:41:38,954 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-01 10:41:38,957 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-01 10:41:45,834 - INFO - Points table saved to CSV: points_table\ipl_points_table_20250401.csv
+2025-04-01 10:41:45,839 - INFO - Points table saved to HTML: points_table\ipl_points_table_20250401.html
+2025-04-01 10:41:45,841 - INFO - Created latest version copies
+2025-04-01 10:41:45,847 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-01 10:41:47,847 - INFO - Running ipl_team_scraper...
+2025-04-01 10:41:55,230 - INFO - Successfully ran ipl_team_scraper
+2025-04-01 10:41:57,231 - INFO - Running ipl_stats_scraper...
+2025-04-01 10:41:59,063 - INFO - Successfully ran ipl_stats_scraper
+2025-04-01 10:42:01,064 - INFO - Running ipl_pitch_weather_scraper...
+2025-04-01 10:42:31,419 - INFO - Successfully ran ipl_pitch_weather_scraper
+2025-04-01 10:42:33,421 - INFO - Running ipl_player_images_scraper...
+2025-04-01 10:42:34,640 - INFO - Successfully ran ipl_player_images_scraper
+2025-04-01 10:42:36,642 - INFO - Running ipl_today_comparison_scraper...
+2025-04-01 10:42:37,095 - INFO - ====== WebDriver manager ======
+2025-04-01 10:42:38,301 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-01 10:43:20,245 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-01 10:43:22,248 - INFO - Running todays_match...
+2025-04-01 10:43:22,281 - INFO - Successfully ran todays_match
+2025-04-01 10:43:24,282 - INFO - Scraper execution completed in 115.06 seconds
+2025-04-01 10:43:24,283 - INFO - Successful: 7/7
+2025-04-01 10:43:24,284 - INFO - All scrapers successful, cleaning old data files while retaining the latest
+2025-04-01 10:43:24,284 - INFO - Starting cleanup of all data directories
+2025-04-01 10:43:24,285 - INFO - Cleaning directory: points_table
+2025-04-01 10:43:24,287 - INFO - Keeping latest file: points_table\ipl_points_table_20250401.html
+2025-04-01 10:43:24,291 - INFO - Deleted file: points_table\ipl_points_table_20250331.csv
+2025-04-01 10:43:24,293 - INFO - Deleted file: points_table\ipl_points_table_20250401.csv
+2025-04-01 10:43:24,295 - INFO - Deleted file: points_table\ipl_points_table_latest.csv
+2025-04-01 10:43:24,297 - INFO - Deleted file: points_table\ipl_points_table_20250401.html
+2025-04-01 10:43:24,299 - INFO - Cleaning directory: team_data
+2025-04-01 10:43:24,305 - INFO - Keeping latest file: team_data\Sunrisers_Hyderabad
+2025-04-01 10:43:24,307 - INFO - Deleted directory: team_data\TBC_FinalEden_Gardens_KolkataMatch_starts
+2025-04-01 10:43:24,309 - INFO - Deleted directory: team_data\TBD_2nd_Place
+2025-04-01 10:43:24,310 - INFO - Deleted directory: team_data\TBD_4th_Place
+2025-04-01 10:43:24,312 - INFO - Deleted directory: team_data\TBD_Loser_Qualifier_1
+2025-04-01 10:43:24,313 - INFO - Deleted directory: team_data\TBD_3rd_Place
+2025-04-01 10:43:24,315 - INFO - Deleted directory: team_data\TBD_Winner_Eliminator
+2025-04-01 10:43:24,317 - INFO - Deleted directory: team_data\TBD_Winner_Qualifier_1
+2025-04-01 10:43:24,318 - INFO - Deleted directory: team_data\TBD_1st_Place
+2025-04-01 10:43:24,319 - INFO - Deleted directory: team_data\TBD_Winner_Qualifier_2
+2025-04-01 10:43:24,326 - INFO - Deleted directory: team_data\Delhi_Capitals
+2025-04-01 10:43:24,332 - INFO - Deleted directory: team_data\Gujarat_Titans
+2025-04-01 10:43:24,338 - INFO - Deleted directory: team_data\Kolkata_Knight_Riders
+2025-04-01 10:43:24,342 - INFO - Deleted directory: team_data\Lucknow_Super_Giants
+2025-04-01 10:43:24,347 - INFO - Deleted directory: team_data\Mumbai_Indians
+2025-04-01 10:43:24,352 - INFO - Deleted directory: team_data\Punjab_Kings
+2025-04-01 10:43:24,357 - INFO - Deleted directory: team_data\Rajasthan_Royals
+2025-04-01 10:43:24,362 - INFO - Deleted directory: team_data\Royal_Challengers_Bengaluru
+2025-04-01 10:43:24,367 - INFO - Deleted directory: team_data\Sunrisers_Hyderabad
+2025-04-01 10:43:24,367 - INFO - Cleaning directory: batting_stats
+2025-04-01 10:43:24,368 - INFO - Keeping latest file: batting_stats\ipl_most-6s_20250401.csv
+2025-04-01 10:43:24,369 - INFO - Deleted file: batting_stats\ipl_most-runs_20250330.csv
+2025-04-01 10:43:24,369 - INFO - Deleted file: batting_stats\ipl_most-hundreds_20250330.csv
+2025-04-01 10:43:24,369 - INFO - Deleted file: batting_stats\ipl_most-fifties_20250330.csv
+2025-04-01 10:43:24,369 - INFO - Deleted file: batting_stats\ipl_most-6s_20250330.csv
+2025-04-01 10:43:24,371 - INFO - Deleted file: batting_stats\ipl_most-4s_20250330.csv
+2025-04-01 10:43:24,371 - INFO - Deleted file: batting_stats\ipl_most-runs_20250401.csv
+2025-04-01 10:43:24,373 - INFO - Deleted file: batting_stats\ipl_most-hundreds_20250401.csv
+2025-04-01 10:43:24,374 - INFO - Deleted file: batting_stats\ipl_most-fifties_20250401.csv
+2025-04-01 10:43:24,374 - INFO - Deleted file: batting_stats\ipl_most-6s_20250401.csv
+2025-04-01 10:43:24,375 - INFO - Cleaning directory: bowling_stats
+2025-04-01 10:43:24,375 - INFO - Keeping latest file: bowling_stats\ipl_best-bowling-strike-rate_20250401.csv
+2025-04-01 10:43:24,376 - INFO - Deleted file: bowling_stats\ipl_most-wickets_20250330.csv
+2025-04-01 10:43:24,376 - INFO - Deleted file: bowling_stats\ipl_most-maidens_20250330.csv
+2025-04-01 10:43:24,377 - INFO - Deleted file: bowling_stats\ipl_best-bowling-strike-rate_20250330.csv
+2025-04-01 10:43:24,377 - INFO - Deleted file: bowling_stats\ipl_best-economy-rates_20250330.csv
+2025-04-01 10:43:24,378 - INFO - Deleted file: bowling_stats\ipl_best-bowling-average_20250330.csv
+2025-04-01 10:43:24,378 - INFO - Deleted file: bowling_stats\ipl_most-wickets_20250401.csv
+2025-04-01 10:43:24,379 - INFO - Deleted file: bowling_stats\ipl_most-maidens_20250401.csv
+2025-04-01 10:43:24,379 - INFO - Deleted file: bowling_stats\ipl_best-bowling-average_20250401.csv
+2025-04-01 10:43:24,380 - INFO - Deleted file: bowling_stats\ipl_best-bowling-strike-rate_20250401.csv
+2025-04-01 10:43:24,381 - INFO - Cleaning directory: pitch_reports
+2025-04-01 10:43:24,381 - INFO - Deleted file: pitch_reports\ipl_pitch_reports_20250401.csv
+2025-04-01 10:43:24,382 - INFO - Cleaning directory: weather_reports
+2025-04-01 10:43:24,382 - INFO - Keeping latest file: weather_reports\ipl_weather_reports_20250331.csv
+2025-04-01 10:43:24,383 - INFO - Deleted file: weather_reports\ipl_weather_reports_20250331.csv
+2025-04-01 10:43:24,383 - INFO - Cleaning directory: match_data
+2025-04-01 10:43:24,384 - INFO - No files found in match_data
+2025-04-01 10:43:24,384 - INFO - Cleaning directory: comparison_data
+2025-04-01 10:43:24,384 - INFO - Keeping latest file: comparison_data\team_comparison
+2025-04-01 10:43:24,385 - INFO - Deleted directory: comparison_data\player_comparison
+2025-04-01 10:43:24,385 - INFO - Deleted file: comparison_data\comparison_scraping_summary_20250331.json
+2025-04-01 10:43:24,386 - INFO - Deleted file: comparison_data\today_match_comparison_summary_20250331.json
+2025-04-01 10:43:24,389 - INFO - Deleted directory: comparison_data\team_comparison
+2025-04-01 10:43:24,389 - INFO - Cleaning directory: predictions
+2025-04-01 10:43:24,389 - INFO - No files found in predictions
+2025-04-01 10:43:24,389 - INFO - Cleaning directory: combined_reports
+2025-04-01 10:43:24,391 - INFO - Keeping latest file: combined_reports\ipl_venue_reports_20250401.csv
+2025-04-01 10:43:24,391 - INFO - Deleted file: combined_reports\ipl_venue_reports_20250331.csv
+2025-04-01 10:43:24,392 - INFO - Deleted file: combined_reports\ipl_venue_reports_20250331.html
+2025-04-01 10:43:24,392 - INFO - Deleted file: combined_reports\ipl_venue_reports_20250401.csv
+2025-04-01 10:43:24,393 - INFO - Cleaning directory: match_schedule
+2025-04-01 10:43:24,394 - INFO - No files found in match_schedule
+2025-04-01 10:43:24,394 - INFO - Cleaning directory: reports
+2025-04-01 10:43:24,394 - INFO - Keeping latest file: reports\ipl_stats_summary_20250401.json
+2025-04-01 10:43:24,395 - INFO - Deleted file: reports\ipl_stats_summary_20250330.json
+2025-04-01 10:43:24,395 - INFO - Deleted file: reports\ipl_stats_report_20250330.html
+2025-04-01 10:43:24,396 - INFO - Deleted file: reports\ipl_stats_summary_20250401.json
+2025-04-01 10:43:24,396 - INFO - Cleaning directory: debug_files
+2025-04-01 10:43:24,399 - INFO - Deleted file: debug_files\chennai-super-kings_player_images_page_20250401.html
+2025-04-01 10:43:24,400 - INFO - Deleted file: debug_files\Chennai_Super_Kings_page_20250331.html
+2025-04-01 10:43:24,400 - INFO - Deleted file: debug_files\Chennai_Super_Kings_page_20250401.html
+2025-04-01 10:43:24,401 - INFO - Deleted file: debug_files\csk_page_20250331.html
+2025-04-01 10:43:24,401 - INFO - Deleted file: debug_files\delhi-capitals_player_images_page_20250401.html
+2025-04-01 10:43:24,401 - INFO - Deleted file: debug_files\Delhi_Capitals_page_20250331.html
+2025-04-01 10:43:24,402 - INFO - Deleted file: debug_files\Delhi_Capitals_page_20250401.html
+2025-04-01 10:43:24,403 - INFO - Deleted file: debug_files\error_player_comparison_Jasprit Bumrah_vs_Kagiso Rabada_20250331_225433.html
+2025-04-01 10:43:24,403 - INFO - Deleted file: debug_files\error_player_comparison_MS Dhoni_vs_Virat Kohli_20250331_225409.html
+2025-04-01 10:43:24,404 - INFO - Deleted file: debug_files\error_player_comparison_Rohit Sharma_vs_KL Rahul_20250331_225429.html
+2025-04-01 10:43:24,404 - INFO - Deleted file: debug_files\error_player_comparison_Rohit_Sharma_vs_KL_Rahul_20250331_230140.html
+2025-04-01 10:43:24,406 - INFO - Deleted file: debug_files\error_player_list_CSK_20250331_225407.html
+2025-04-01 10:43:24,406 - INFO - Deleted file: debug_files\error_player_list_CSK_20250331_225426.html
+2025-04-01 10:43:24,407 - INFO - Deleted file: debug_files\error_team_comparison_SRH_vs_RR_20250331_225634.html
+2025-04-01 10:43:24,408 - INFO - Deleted file: debug_files\gujarat-titans_player_images_page_20250401.html
+2025-04-01 10:43:24,408 - INFO - Deleted file: debug_files\Gujarat_Titans_page_20250331.html
+2025-04-01 10:43:24,409 - INFO - Deleted file: debug_files\Gujarat_Titans_page_20250401.html
+2025-04-01 10:43:24,409 - INFO - Deleted file: debug_files\ipl_points_table_page_20250401.html
+2025-04-01 10:43:24,410 - INFO - Deleted file: debug_files\kolkata-knight-riders_player_images_page_20250401.html
+2025-04-01 10:43:24,410 - INFO - Deleted file: debug_files\Kolkata_Knight_Riders_page_20250331.html
+2025-04-01 10:43:24,411 - INFO - Deleted file: debug_files\Kolkata_Knight_Riders_page_20250401.html
+2025-04-01 10:43:24,412 - INFO - Deleted file: debug_files\lucknow-super-giants_player_images_page_20250401.html
+2025-04-01 10:43:24,413 - INFO - Deleted file: debug_files\Lucknow_Super_Giants_page_20250331.html
+2025-04-01 10:43:24,414 - INFO - Deleted file: debug_files\Lucknow_Super_Giants_page_20250401.html
+2025-04-01 10:43:24,415 - INFO - Deleted file: debug_files\mumbai-indians_player_images_page_20250401.html
+2025-04-01 10:43:24,415 - INFO - Deleted file: debug_files\Mumbai_Indians_page_20250331.html
+2025-04-01 10:43:24,416 - INFO - Deleted file: debug_files\Mumbai_Indians_page_20250401.html
+2025-04-01 10:43:24,417 - INFO - Deleted file: debug_files\page_best-bowling-average.html
+2025-04-01 10:43:24,417 - INFO - Deleted file: debug_files\page_best-bowling-strike-rate.html
+2025-04-01 10:43:24,418 - INFO - Deleted file: debug_files\page_best-economy-rates.html
+2025-04-01 10:43:24,419 - INFO - Deleted file: debug_files\page_most-4s.html
+2025-04-01 10:43:24,419 - INFO - Deleted file: debug_files\page_most-6s.html
+2025-04-01 10:43:24,420 - INFO - Deleted file: debug_files\page_most-fifties.html
+2025-04-01 10:43:24,421 - INFO - Deleted file: debug_files\page_most-hundreds.html
+2025-04-01 10:43:24,423 - INFO - Deleted file: debug_files\page_most-maidens.html
+2025-04-01 10:43:24,423 - INFO - Deleted file: debug_files\page_most-runs.html
+2025-04-01 10:43:24,424 - INFO - Deleted file: debug_files\page_most-wickets.html
+2025-04-01 10:43:24,425 - INFO - Deleted file: debug_files\pitch_Arun_Jaitley_Stadium_Delhi_cricbuzz.html
+2025-04-01 10:43:24,425 - INFO - Deleted file: debug_files\pitch_Barsapara_Cricket_Stadium_Guwahati_cricbuzz.html
+2025-04-01 10:43:24,426 - INFO - Deleted file: debug_files\pitch_Bharat_Ratna_Shri_Atal_Bihari_Vajpayee_Ekana_Cricket_Stadium_Lucknow_cricbuzz.html
+2025-04-01 10:43:24,427 - INFO - Deleted file: debug_files\pitch_Dr._Y.S._Rajasekhara_Reddy_ACA-VDCA_Cricket_Stadium_Visakhapatnam_cricbuzz.html
+2025-04-01 10:43:24,427 - INFO - Deleted file: debug_files\pitch_Eden_Gardens_Kolkata_cricbuzz.html
+2025-04-01 10:43:24,428 - INFO - Deleted file: debug_files\pitch_Himachal_Pradesh_Cricket_Association_Stadium_Dharamsala_cricbuzz.html
+2025-04-01 10:43:24,428 - INFO - Deleted file: debug_files\pitch_M._Chinnaswamy_Stadium_Bengaluru_cricbuzz.html
+2025-04-01 10:43:24,429 - INFO - Deleted file: debug_files\pitch_MA_Chidambaram_Stadium_Chennai_cricbuzz.html
+2025-04-01 10:43:24,430 - INFO - Deleted file: debug_files\pitch_Narendra_Modi_Stadium_Ahmedabad_cricbuzz.html
+2025-04-01 10:43:24,431 - INFO - Deleted file: debug_files\pitch_Punjab_Cricket_Association_IS_Bindra_Stadium_Mohali_cricbuzz.html
+2025-04-01 10:43:24,432 - INFO - Deleted file: debug_files\pitch_Rajiv_Gandhi_International_Stadium_Hyderabad_cricbuzz.html
+2025-04-01 10:43:24,432 - INFO - Deleted file: debug_files\pitch_Sawai_Mansingh_Stadium_Jaipur_cricbuzz.html
+2025-04-01 10:43:24,433 - INFO - Deleted file: debug_files\pitch_Wankhede_Stadium_Mumbai_cricbuzz.html
+2025-04-01 10:43:24,433 - INFO - Deleted file: debug_files\players_comparison_page_20250331_224649.html
+2025-04-01 10:43:24,434 - INFO - Deleted file: debug_files\players_comparison_page_initial_20250331_225357.html
+2025-04-01 10:43:24,434 - INFO - Deleted file: debug_files\players_comparison_page_initial_20250331_225416.html
+2025-04-01 10:43:24,434 - INFO - Deleted file: debug_files\players_comparison_page_initial_20250331_230128.html
+2025-04-01 10:43:24,435 - INFO - Deleted file: debug_files\players_comparison_page_initial_20250401_092847.html
+2025-04-01 10:43:24,435 - INFO - Deleted file: debug_files\players_comparison_page_initial_20250401_092903.html
+2025-04-01 10:43:24,436 - INFO - Deleted file: debug_files\players_comparison_page_initial_20250401_092918.html
+2025-04-01 10:43:24,436 - INFO - Deleted file: debug_files\points_table_page_20250331_161643.html
+2025-04-01 10:43:24,437 - INFO - Deleted file: debug_files\points_table_page_20250331_164036.html
+2025-04-01 10:43:24,438 - INFO - Deleted file: debug_files\points_table_page_exception_20250331_164513.html
+2025-04-01 10:43:24,439 - INFO - Deleted file: debug_files\points_table_page_few_rows_20250331_163659.html
+2025-04-01 10:43:24,439 - INFO - Deleted file: debug_files\points_table_page_no_data_20250331_161916.html
+2025-04-01 10:43:24,440 - INFO - Deleted file: debug_files\points_table_page_no_data_20250331_162156.html
+2025-04-01 10:43:24,440 - INFO - Deleted file: debug_files\points_table_page_no_data_20250331_162345.html
+2025-04-01 10:43:24,442 - INFO - Deleted file: debug_files\points_table_page_no_data_20250331_163417.html
+2025-04-01 10:43:24,443 - INFO - Deleted file: debug_files\punjab-kings_player_images_page_20250401.html
+2025-04-01 10:43:24,443 - INFO - Deleted file: debug_files\Punjab_Kings_page_20250331.html
+2025-04-01 10:43:24,444 - INFO - Deleted file: debug_files\Punjab_Kings_page_20250401.html
+2025-04-01 10:43:24,444 - INFO - Deleted file: debug_files\rajasthan-royals_player_images_page_20250401.html
+2025-04-01 10:43:24,445 - INFO - Deleted file: debug_files\Rajasthan_Royals_page_20250331.html
+2025-04-01 10:43:24,445 - INFO - Deleted file: debug_files\Rajasthan_Royals_page_20250401.html
+2025-04-01 10:43:24,446 - INFO - Deleted file: debug_files\royal-challengers-bangalore_player_images_page_20250401.html
+2025-04-01 10:43:24,447 - INFO - Deleted file: debug_files\Royal_Challengers_Bengaluru_page_20250331.html
+2025-04-01 10:43:24,448 - INFO - Deleted file: debug_files\Royal_Challengers_Bengaluru_page_20250401.html
+2025-04-01 10:43:24,449 - INFO - Deleted file: debug_files\sunrisers-hyderabad_player_images_page_20250401.html
+2025-04-01 10:43:24,450 - INFO - Deleted file: debug_files\Sunrisers_Hyderabad_page_20250331.html
+2025-04-01 10:43:24,450 - INFO - Deleted file: debug_files\Sunrisers_Hyderabad_page_20250401.html
+2025-04-01 10:43:24,451 - INFO - Deleted file: debug_files\teams_comparison_page_20250331.html
+2025-04-01 10:43:24,451 - INFO - Deleted file: debug_files\teams_comparison_page_20250331_224635.html
+2025-04-01 10:43:24,452 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_225304.html
+2025-04-01 10:43:24,452 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_225322.html
+2025-04-01 10:43:24,453 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_225339.html
+2025-04-01 10:43:24,453 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_225603.html
+2025-04-01 10:43:24,454 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_225620.html
+2025-04-01 10:43:24,457 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_230043.html
+2025-04-01 10:43:24,457 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_230058.html
+2025-04-01 10:43:24,458 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_230113.html
+2025-04-01 10:43:24,458 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_230609.html
+2025-04-01 10:43:24,459 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_231013.html
+2025-04-01 10:43:24,459 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_231535.html
+2025-04-01 10:43:24,459 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250331_232956.html
+2025-04-01 10:43:24,460 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_092800.html
+2025-04-01 10:43:24,461 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_092816.html
+2025-04-01 10:43:24,461 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_092831.html
+2025-04-01 10:43:24,462 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_093326.html
+2025-04-01 10:43:24,462 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_093607.html
+2025-04-01 10:43:24,463 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_093802.html
+2025-04-01 10:43:24,464 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_094051.html
+2025-04-01 10:43:24,465 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_095631.html
+2025-04-01 10:43:24,466 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_100012.html
+2025-04-01 10:43:24,466 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_100251.html
+2025-04-01 10:43:24,467 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_103648.html
+2025-04-01 10:43:24,467 - INFO - Deleted file: debug_files\teams_comparison_page_initial_20250401_104246.html
+2025-04-01 10:43:24,468 - INFO - Deleted file: debug_files\team_comparison_CSK_vs_MI_20250331_225314.html
+2025-04-01 10:43:24,468 - INFO - Deleted file: debug_files\team_comparison_CSK_vs_MI_20250331_225613.html
+2025-04-01 10:43:24,469 - INFO - Deleted file: debug_files\team_comparison_MI_vs_KKR_after_scroll_20250331_231034.html
+2025-04-01 10:43:24,469 - INFO - Deleted file: debug_files\team_comparison_MI_vs_KKR_after_scroll_20250331_231556.html
+2025-04-01 10:43:24,470 - INFO - Deleted file: debug_files\team_comparison_MI_vs_KKR_after_scroll_20250331_233017.html
+2025-04-01 10:43:24,471 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_093346.html
+2025-04-01 10:43:24,472 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_093628.html
+2025-04-01 10:43:24,473 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_093822.html
+2025-04-01 10:43:24,474 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_094113.html
+2025-04-01 10:43:24,474 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_095651.html
+2025-04-01 10:43:24,475 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_100032.html
+2025-04-01 10:43:24,475 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_100312.html
+2025-04-01 10:43:24,476 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_103709.html
+2025-04-01 10:43:24,477 - INFO - Deleted file: debug_files\team_comparison_PBKS_vs_LSG_after_scroll_20250401_104307.html
+2025-04-01 10:43:24,477 - INFO - Deleted file: debug_files\team_comparison_RCB_vs_KKR_20250331_225332.html
+2025-04-01 10:43:24,478 - INFO - Deleted file: debug_files\team_comparison_RCB_vs_KKR_20250331_225630.html
+2025-04-01 10:43:24,478 - INFO - Deleted file: debug_files\team_comparison_SRH_vs_RR_20250331_225349.html
+2025-04-01 10:43:24,489 - INFO - Deleted file: debug_files\text_best-bowling-average.txt
+2025-04-01 10:43:24,489 - INFO - Deleted file: debug_files\text_best-bowling-strike-rate.txt
+2025-04-01 10:43:24,490 - INFO - Deleted file: debug_files\text_best-economy-rates.txt
+2025-04-01 10:43:24,491 - INFO - Deleted file: debug_files\text_most-4s.txt
+2025-04-01 10:43:24,492 - INFO - Deleted file: debug_files\text_most-6s.txt
+2025-04-01 10:43:24,492 - INFO - Deleted file: debug_files\text_most-fifties.txt
+2025-04-01 10:43:24,493 - INFO - Deleted file: debug_files\text_most-hundreds.txt
+2025-04-01 10:43:24,494 - INFO - Deleted file: debug_files\text_most-maidens.txt
+2025-04-01 10:43:24,494 - INFO - Deleted file: debug_files\text_most-runs.txt
+2025-04-01 10:43:24,496 - INFO - Deleted file: debug_files\text_most-wickets.txt
+2025-04-01 10:43:24,497 - INFO - Data cleanup complete
+2025-04-01 10:43:24,497 - INFO - IPL Cricket Data orchestration completed
