@@ -6,6 +6,7 @@ import datetime
 import re
 import pandas as pd
 from colorama import init, Fore, Style
+import pytz  # Add this import for timezone support
 
 # Initialize colorama for colored console output
 init()
@@ -66,11 +67,12 @@ def fetch_today_matches():
     """Fetch today's IPL matches from the schedule CSV file"""
     print(f"{Fore.CYAN}Fetching today's IPL matches from schedule...{Style.RESET_ALL}")
     
-    today = datetime.datetime.now()
-    today_day = today.day
-    today_month_name = today.strftime("%b").lower()
-    today_formatted = f"{today_day}-{today_month_name}"
-    print(f"Looking for matches on day: {today_day}, month: {today_month_name}")
+    # Get current date in Indian Standard Time (IST)
+    ist = pytz.timezone('Asia/Kolkata')
+    today = datetime.datetime.now(ist)
+    today_str = today.strftime("%d-%b-%y")  # Format: "01-Apr-25"
+    
+    print(f"{Fore.CYAN}Current date in IST: {today.strftime('%d-%b-%Y (%A)')} {Style.RESET_ALL}")
     
     # Check if schedule file exists
     if not os.path.exists(IPL_SCHEDULE_FILE):
@@ -84,56 +86,45 @@ def fetch_today_matches():
         # Print out column names for debugging
         print(f"CSV columns: {', '.join(df.columns)}")
         
-        # Display specific rows for March 31
-        print("Looking for matches on March 31:")
-        matching_rows = []
+        # Find today's matches based on the "Match Day" column
+        today_short = today.strftime("%d-%b-%y")  # e.g., 01-Apr-25
+        today_matches_rows = []
+        
+        print(f"Looking for matches on: {today.strftime('%d-%b-%y')} or {today.strftime('%d-%b')} format")
         
         for idx, row in df.iterrows():
-            date_str = str(row['Date']).strip().lower()
-            match_day = str(row['Match Day']).strip().lower()
+            match_day = str(row.get('Match Day', '')).strip()
+            date_str = str(row.get('Date', '')).strip()
             
-            # Try to find March 31st in various formats
-            if "31-mar" in date_str or "31-mar" in match_day:
-                print(f"Found match: {row['Home']} vs {row['Away']} on {row['Date']}")
-                matching_rows.append(row)
-        
-        # If we didn't find any matches, check for match #12 specifically (March 31)
-        if not matching_rows:
-            for idx, row in df.iterrows():
-                if idx == 11 or (pd.notna(row.get('No')) and str(row['No']).strip() == "12"):  # Match #12 is on March 31
-                    print(f"Found match by index/number: {row['Home']} vs {row['Away']} on {row['Date']}")
-                    matching_rows.append(row)
+            # Try different date formats for matching
+            day_month = f"{today.day:02d}-{today.strftime('%b')}"  # e.g., 01-Apr
+            day_month_lower = day_month.lower()
+            
+            # Check if any date column contains today's date
+            if (day_month.lower() in match_day.lower() or 
+                day_month.lower() in date_str.lower() or
+                today.strftime('%d-%b-%y').lower() in match_day.lower() or
+                today.strftime('%d-%b-%y').lower() in date_str.lower()):
+                
+                print(f"{Fore.GREEN}Found match: {row['Home']} vs {row['Away']} on {date_str}{Style.RESET_ALL}")
+                today_matches_rows.append(row)
         
         # If no matches found
-        if not matching_rows:
-            print(f"{Fore.YELLOW}No matches found for today (March 31).{Style.RESET_ALL}")
+        if not today_matches_rows:
+            print(f"{Fore.YELLOW}No matches found for today ({today.strftime('%d-%b-%Y')}).{Style.RESET_ALL}")
             return []
         
         # Convert to list of dictionaries in the expected format
         today_matches = []
-        for match in matching_rows:
-            # Fix for the Mumbai Indians vs Kolkata Knight Riders match on March 31
+        for match in today_matches_rows:
             team1 = match['Home']
             team2 = match['Away']
-            
-            # If this is the March 31 match, correct the team names if needed
-            if "31-mar" in str(match['Date']).lower() or "31-mar" in str(match['Match Day']).lower() or str(match['Match Day']).strip() == "31-Mar-25":
-                if team1 == "Mumbai Indians" and team2 == "Kolkata Knight Riders":
-                    venue = "Mumbai"
-                elif team1 == "Kolkata Knight Riders" and team2 == "Mumbai":
-                    # The teams are swapped in the CSV file, fix it
-                    team1 = "Mumbai Indians"
-                    team2 = "Kolkata Knight Riders"
-                    venue = "Mumbai"
-                else:
-                    venue = match.get('Venue', "Mumbai")  # Default to Mumbai for March 31 match
-            else:
-                venue = match.get('Venue', "Unknown")
+            venue = match.get('Venue', "Unknown")
                 
-            # Parse the time correctly - use a default of 7:30 PM for the March 31 match
+            # Parse the time
             time = "7:30 PM"  # Default for IPL matches
-            if pd.notna(match.get('Start')) and match['Start'] != team1 and match['Start'] != team2:
-                time = match['Start']
+            if pd.notna(match.get('Start')) and not str(match.get('Start')).strip() in [team1, team2]:
+                time = str(match.get('Start')).strip()
                 
             today_matches.append({
                 'team1': team1,
@@ -279,7 +270,9 @@ def display_match_details(match, team_data):
 
 def save_match_data(matches, team_data):
     """Save match data and predictions to files"""
-    today = datetime.datetime.now().strftime("%Y%m%d")
+    # Use IST for date in filenames
+    ist = pytz.timezone('Asia/Kolkata')
+    today = datetime.datetime.now(ist).strftime("%Y%m%d")
     
     # Save match data
     match_data_with_predictions = []
@@ -319,10 +312,14 @@ def save_match_data(matches, team_data):
 
 def main():
     """Main function"""
+    # Get current date in Indian Standard Time (IST)
+    ist = pytz.timezone('Asia/Kolkata')
+    today = datetime.datetime.now(ist)
+    
     print(f"{Fore.CYAN}======================================{Style.RESET_ALL}")
     print(f"{Fore.CYAN}      TODAY'S IPL MATCHES           {Style.RESET_ALL}")
     print(f"{Fore.CYAN}======================================{Style.RESET_ALL}")
-    print(f"Date: {datetime.datetime.now().strftime('%Y-%m-%d')}")
+    print(f"Date: {today.strftime('%Y-%m-%d')} (IST)")
     
     # Load team data for predictions
     team_data = load_team_data()

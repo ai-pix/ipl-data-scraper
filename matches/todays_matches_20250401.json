@@ -1,0 +1,14 @@
+[
+    {
+        "team1": "Punjab Kings",
+        "team2": "Lucknow",
+        "time": "Lucknow Super Giants",
+        "venue": NaN,
+        "match_id": null,
+        "prediction": {
+            "prediction": "Insufficient data for prediction",
+            "confidence": 0,
+            "reason": "Missing team statistics"
+        }
+    }
+]
