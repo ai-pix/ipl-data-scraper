@@ -1,11 +1,11 @@
 {
-    "scraping_timestamp": "2025-04-01T22:36:47.302746",
+    "scraping_timestamp": "2025-04-01T22:48:31.386526",
     "team_name": "Sunrisers_Hyderabad",
     "team_url": "https://indianexpress.com/about/sunrisers-hyderabad/",
     "status": "Success",
     "overview_extracted": true,
     "squad_size": 25,
-    "news_count": 11,
+    "news_count": 12,
     "support_staff_count": 0,
     "extracted_data_paths": {
         "team_folder": "team_data\\Sunrisers_Hyderabad",

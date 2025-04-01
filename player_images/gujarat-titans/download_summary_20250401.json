@@ -1,7 +1,7 @@
 {
     "team_name": "gujarat-titans",
     "team_url": "https://www.iplt20.com/teams/gujarat-titans",
-    "scraping_timestamp": "2025-04-01T22:37:29.737410",
+    "scraping_timestamp": "2025-04-01T22:49:17.954549",
     "total_players": 25,
     "successful_downloads": 25,
     "players": [
@@ -11,7 +11,7 @@
             "url_id": "3761",
             "image_id": "62",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/62.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Shubman_Gill_Batter_62.png"
         },
         {
@@ -20,7 +20,7 @@
             "url_id": "509",
             "image_id": "182",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/182.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Jos_Buttler_WK-Batter_182.png"
         },
         {
@@ -29,7 +29,7 @@
             "url_id": "20694",
             "image_id": "3101",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3101.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Kumar_Kushagra_WK-Batter_3101.png"
         },
         {
@@ -38,7 +38,7 @@
             "url_id": "10788",
             "image_id": "534",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/534.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Anuj_Rawat_WK-Batter_534.png"
         },
         {
@@ -47,7 +47,7 @@
             "url_id": "5396",
             "image_id": "122",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/122.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Sherfane_Rutherford_Batter_122.png"
         },
         {
@@ -56,7 +56,7 @@
             "url_id": "3027",
             "image_id": "635",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/635.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Glenn_Phillips_Batter_635.png"
         },
         {
@@ -65,7 +65,7 @@
             "url_id": "5615",
             "image_id": "791",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/791.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Nishant_Sindhu_All-Rounder_791.png"
         },
         {
@@ -74,7 +74,7 @@
             "url_id": "2970",
             "image_id": "184",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/184.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Mahipal_Lomror_All-Rounder_184.png"
         },
         {
@@ -83,7 +83,7 @@
             "url_id": "2973",
             "image_id": "20",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/20.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Washington_Sundar_All-Rounder_20.png"
         },
         {
@@ -92,7 +92,7 @@
             "url_id": "20599",
             "image_id": "988",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/988.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Mohd__Arshad_Khan_All-Rounder_988.png"
         },
         {
@@ -101,7 +101,7 @@
             "url_id": "7123",
             "image_id": "544",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/544.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Sai_Kishore_All-Rounder_544.png"
         },
         {
@@ -110,7 +110,7 @@
             "url_id": "1740",
             "image_id": "165",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/165.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Jayant_Yadav_All-Rounder_165.png"
         },
         {
@@ -119,7 +119,7 @@
             "url_id": "22139",
             "image_id": "247",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/247.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Karim_Janat_All-Rounder_247.png"
         },
         {
@@ -128,7 +128,7 @@
             "url_id": "20592",
             "image_id": "976",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/976.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Sai_Sudharsan_All-Rounder_976.png"
         },
         {
@@ -137,7 +137,7 @@
             "url_id": "7779",
             "image_id": "590",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/590.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Shahrukh_Khan_All-Rounder_590.png"
         },
         {
@@ -146,7 +146,7 @@
             "url_id": "1664",
             "image_id": "116",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/116.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Kagiso_Rabada_Bowler_116.png"
         },
         {
@@ -155,7 +155,7 @@
             "url_id": "3840",
             "image_id": "63",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/63.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Mohammed_Siraj_Bowler_63.png"
         },
         {
@@ -164,7 +164,7 @@
             "url_id": "5105",
             "image_id": "150",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/150.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Prasidh_Krishna_Bowler_150.png"
         },
         {
@@ -173,7 +173,7 @@
             "url_id": "20692",
             "image_id": "2443",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2443.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Manav_Suthar_Bowler_2443.png"
         },
         {
@@ -182,7 +182,7 @@
             "url_id": "20686",
             "image_id": "2535",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2535.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Gerald_Coetzee_Bowler_2535.png"
         },
         {
@@ -191,7 +191,7 @@
             "url_id": "1094",
             "image_id": "1231",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1231.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Gurnoor_Singh_Brar_Bowler_1231.png"
         },
         {
@@ -200,7 +200,7 @@
             "url_id": "38",
             "image_id": "50",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/50.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Ishant_Sharma_Bowler_50.png"
         },
         {
@@ -209,7 +209,7 @@
             "url_id": "3835",
             "image_id": "204",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/204.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Kulwant_Khejroliya_Bowler_204.png"
         },
         {
@@ -218,7 +218,7 @@
             "url_id": "1749",
             "image_id": "120",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/120.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Rahul_Tewatia_Bowler_120.png"
         },
         {
@@ -227,7 +227,7 @@
             "url_id": "2885",
             "image_id": "218",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/218.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\gujarat-titans\\Rashid_Khan_Bowler_218.png"
         }
     ]

@@ -1,7 +1,7 @@
 {
     "team_name": "delhi-capitals",
     "team_url": "https://www.iplt20.com/teams/delhi-capitals",
-    "scraping_timestamp": "2025-04-01T22:37:29.623568",
+    "scraping_timestamp": "2025-04-01T22:49:03.366085",
     "total_players": 22,
     "successful_downloads": 22,
     "players": [
@@ -11,7 +11,7 @@
             "url_id": "1125",
             "image_id": "19",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/19.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\KL_Rahul_WK-Batter_19.png"
         },
         {
@@ -20,7 +20,7 @@
             "url_id": "20720",
             "image_id": "3115",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3115.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Jake_Fraser-McGurk_Batter_3115.png"
         },
         {
@@ -29,7 +29,7 @@
             "url_id": "276",
             "image_id": "131",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/131.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Karun_Nair_Batter_131.png"
         },
         {
@@ -38,7 +38,7 @@
             "url_id": "24",
             "image_id": "94",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/94.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Faf_du_Plessis_Batter_94.png"
         },
         {
@@ -47,7 +47,7 @@
             "url_id": "5652",
             "image_id": "2033",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2033.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Donovan_Ferreira_WK-Batter_2033.png"
         },
         {
@@ -56,7 +56,7 @@
             "url_id": "33333",
             "image_id": "1580",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1580.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Abishek_Porel_WK-Batter_1580.png"
         },
         {
@@ -65,7 +65,7 @@
             "url_id": "20631",
             "image_id": "1017",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1017.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Tristan_Stubbs_WK-Batter_1017.png"
         },
         {
@@ -74,7 +74,7 @@
             "url_id": "1113",
             "image_id": "110",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/110.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Axar_Patel_All-Rounder_110.png"
         },
         {
@@ -83,7 +83,7 @@
             "url_id": "20689",
             "image_id": "1229",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1229.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Sameer_Rizvi_All-Rounder_1229.png"
         },
         {
@@ -92,7 +92,7 @@
             "url_id": "20703",
             "image_id": "3109",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3109.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Ashutosh_Sharma_All-Rounder_3109.png"
         },
         {
@@ -101,7 +101,7 @@
             "url_id": "4447",
             "image_id": "127",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/127.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Darshan_Nalkande_All-Rounder_127.png"
         },
         {
@@ -110,7 +110,7 @@
             "url_id": "22053",
             "image_id": "3560",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3560.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Vipraj_Nigam_All-Rounder_3560.png"
         },
         {
@@ -119,7 +119,7 @@
             "url_id": "5811",
             "image_id": "1931",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1931.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Ajay_Mandal_All-Rounder_1931.png"
         },
         {
@@ -128,7 +128,7 @@
             "url_id": "22086",
             "image_id": "3562",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3562.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Manvanth_Kumar_All-Rounder_3562.png"
         },
         {
@@ -137,7 +137,7 @@
             "url_id": "22252",
             "image_id": "3563",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3563.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Tripurana_Vijay_All-Rounder_3563.png"
         },
         {
@@ -146,7 +146,7 @@
             "url_id": "22259",
             "image_id": "3561",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3561.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Madhav_Tiwari_All-Rounder_3561.png"
         },
         {
@@ -155,7 +155,7 @@
             "url_id": "490",
             "image_id": "31",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/31.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Mitchell_Starc_Bowler_31.png"
         },
         {
@@ -164,7 +164,7 @@
             "url_id": "3831",
             "image_id": "224",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/224.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\T__Natarajan_Bowler_224.png"
         },
         {
@@ -173,7 +173,7 @@
             "url_id": "1107",
             "image_id": "100",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/100.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Mohit_Sharma_Bowler_100.png"
         },
         {
@@ -182,7 +182,7 @@
             "url_id": "5622",
             "image_id": "1462",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1462.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Mukesh_Kumar_Bowler_1462.png"
         },
         {
@@ -191,7 +191,7 @@
             "url_id": "817",
             "image_id": "608",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/608.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Dushmantha_Chameera_Bowler_608.png"
         },
         {
@@ -200,7 +200,7 @@
             "url_id": "261",
             "image_id": "14",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/14.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\delhi-capitals\\Kuldeep_Yadav_Bowler_14.png"
         }
     ]

@@ -1,7 +1,7 @@
 {
     "team_name": "royal-challengers-bangalore",
     "team_url": "https://www.iplt20.com/teams/royal-challengers-bangalore",
-    "scraping_timestamp": "2025-04-01T22:37:30.621945",
+    "scraping_timestamp": "2025-04-01T22:50:38.903697",
     "total_players": 22,
     "successful_downloads": 22,
     "players": [
@@ -11,7 +11,7 @@
             "url_id": "5471",
             "image_id": "597",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/597.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Rajat_Patidar_Batter_597.png"
         },
         {
@@ -20,7 +20,7 @@
             "url_id": "164",
             "image_id": "2",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Virat_Kohli_Batter_2.png"
         },
         {
@@ -29,7 +29,7 @@
             "url_id": "5606",
             "image_id": "1220",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1220.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Phil_Salt_WK-Batter_1220.png"
         },
         {
@@ -38,7 +38,7 @@
             "url_id": "3185",
             "image_id": "1000",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1000.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Jitesh_Sharma_WK-Batter_1000.png"
         },
         {
@@ -47,7 +47,7 @@
             "url_id": "5430",
             "image_id": "200",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/200.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Devdutt_Padikkal_Batter_200.png"
         },
         {
@@ -56,7 +56,7 @@
             "url_id": "20711",
             "image_id": "3102",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3102.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Swastik_Chhikara_Batter_3102.png"
         },
         {
@@ -65,7 +65,7 @@
             "url_id": "3644",
             "image_id": "183",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/183.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Liam_Livingstone_All-Rounder_183.png"
         },
         {
@@ -74,7 +74,7 @@
             "url_id": "3183",
             "image_id": "17",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/17.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Krunal_Pandya_All-Rounder_17.png"
         },
         {
@@ -83,7 +83,7 @@
             "url_id": "3180",
             "image_id": "1483",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1483.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Swapnil_Singh_All-Rounder_1483.png"
         },
         {
@@ -92,7 +92,7 @@
             "url_id": "4524",
             "image_id": "636",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/636.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Tim_David_All-Rounder_636.png"
         },
         {
@@ -101,7 +101,7 @@
             "url_id": "20609",
             "image_id": "371",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/371.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Romario_Shepherd_All-Rounder_371.png"
         },
         {
@@ -110,7 +110,7 @@
             "url_id": "5645",
             "image_id": "1485",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1485.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Manoj_Bhandage_All-Rounder_1485.png"
         },
         {
@@ -119,7 +119,7 @@
             "url_id": "22074",
             "image_id": "869",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/869.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Jacob_Bethell_All-Rounder_869.png"
         },
         {
@@ -128,7 +128,7 @@
             "url_id": "857",
             "image_id": "36",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/36.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Josh_Hazlewood_Bowler_36.png"
         },
         {
@@ -137,7 +137,7 @@
             "url_id": "20577",
             "image_id": "172",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/172.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Rasikh_Dar_Bowler_172.png"
         },
         {
@@ -146,7 +146,7 @@
             "url_id": "5668",
             "image_id": "1932",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1932.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Suyash_Sharma_Bowler_1932.png"
         },
         {
@@ -155,7 +155,7 @@
             "url_id": "116",
             "image_id": "15",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/15.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Bhuvneshwar_Kumar_Bowler_15.png"
         },
         {
@@ -164,7 +164,7 @@
             "url_id": "20700",
             "image_id": "813",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/813.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Nuwan_Thushara_Bowler_813.png"
         },
         {
@@ -173,7 +173,7 @@
             "url_id": "3746",
             "image_id": "99",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/99.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Lungisani_Ngidi_Bowler_99.png"
         },
         {
@@ -182,7 +182,7 @@
             "url_id": "22136",
             "image_id": "3574",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3574.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Abhinandan_Singh_Bowler_3574.png"
         },
         {
@@ -191,7 +191,7 @@
             "url_id": "5856",
             "image_id": "1935",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1935.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Mohit_Rathee_Bowler_1935.png"
         },
         {
@@ -200,7 +200,7 @@
             "url_id": "20591",
             "image_id": "978",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/978.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\royal-challengers-bangalore\\Yash_Dayal_Bowler_978.png"
         }
     ]

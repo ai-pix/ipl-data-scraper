@@ -1,7 +1,7 @@
 {
     "team_name": "punjab-kings",
     "team_url": "https://www.iplt20.com/teams/punjab-kings",
-    "scraping_timestamp": "2025-04-01T22:37:30.335311",
+    "scraping_timestamp": "2025-04-01T22:50:12.783820",
     "total_players": 25,
     "successful_downloads": 25,
     "players": [
@@ -11,7 +11,7 @@
             "url_id": "1563",
             "image_id": "12",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/12.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Shreyas_Iyer_Batter_12.png"
         },
         {
@@ -20,7 +20,7 @@
             "url_id": "5859",
             "image_id": "1541",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1541.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Nehal_Wadhera_Batter_1541.png"
         },
         {
@@ -29,7 +29,7 @@
             "url_id": "4305",
             "image_id": "581",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/581.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Vishnu_Vinod_WK-Batter_581.png"
         },
         {
@@ -38,7 +38,7 @@
             "url_id": "22372",
             "image_id": "647",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/647.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Josh_Inglis_WK-Batter_647.png"
         },
         {
@@ -47,7 +47,7 @@
             "url_id": "22019",
             "image_id": "784",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/784.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Harnoor_Pannu_Batter_784.png"
         },
         {
@@ -56,7 +56,7 @@
             "url_id": "22145",
             "image_id": "3573",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3573.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Pyla_Avinash_Batter_3573.png"
         },
         {
@@ -65,7 +65,7 @@
             "url_id": "5436",
             "image_id": "137",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/137.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Prabhsimran_Singh_WK-Batter_137.png"
         },
         {
@@ -74,7 +74,7 @@
             "url_id": "3261",
             "image_id": "191",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/191.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Shashank_Singh_Batter_191.png"
         },
         {
@@ -83,7 +83,7 @@
             "url_id": "964",
             "image_id": "23",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/23.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Marcus_Stoinis_All-Rounder_23.png"
         },
         {
@@ -92,7 +92,7 @@
             "url_id": "282",
             "image_id": "28",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/28.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Glenn_Maxwell_All-Rounder_28.png"
         },
         {
@@ -101,7 +101,7 @@
             "url_id": "5441",
             "image_id": "130",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/130.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Harpreet_Brar_All-Rounder_130.png"
         },
         {
@@ -110,7 +110,7 @@
             "url_id": "17068",
             "image_id": "586",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/586.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Marco_Jansen_All-Rounder_586.png"
         },
         {
@@ -119,7 +119,7 @@
             "url_id": "20685",
             "image_id": "1354",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1354.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Azmatullah_Omarzai_All-Rounder_1354.png"
         },
         {
@@ -128,7 +128,7 @@
             "url_id": "22052",
             "image_id": "3571",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3571.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Priyansh_Arya_All-Rounder_3571.png"
         },
         {
@@ -137,7 +137,7 @@
             "url_id": "22076",
             "image_id": "2704",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2704.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Aaron_Hardie_All-Rounder_2704.png"
         },
         {
@@ -146,7 +146,7 @@
             "url_id": "22085",
             "image_id": "2813",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2813.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Musheer_Khan_All-Rounder_2813.png"
         },
         {
@@ -155,7 +155,7 @@
             "url_id": "20683",
             "image_id": "2146",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2146.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Suryansh_Shedge_All-Rounder_2146.png"
         },
         {
@@ -164,7 +164,7 @@
             "url_id": "4698",
             "image_id": "125",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/125.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Arshdeep_Singh_Bowler_125.png"
         },
         {
@@ -173,7 +173,7 @@
             "url_id": "111",
             "image_id": "10",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/10.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Yuzvendra_Chahal_Bowler_10.png"
         },
         {
@@ -182,7 +182,7 @@
             "url_id": "1097",
             "image_id": "2034",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2034.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Vyshak_Vijaykumar_Bowler_2034.png"
         },
         {
@@ -191,7 +191,7 @@
             "url_id": "5624",
             "image_id": "1550",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1550.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Yash_Thakur_Bowler_1550.png"
         },
         {
@@ -200,7 +200,7 @@
             "url_id": "3729",
             "image_id": "69",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/69.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Lockie_Ferguson_Bowler_69.png"
         },
         {
@@ -209,7 +209,7 @@
             "url_id": "20616",
             "image_id": "1005",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1005.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Kuldeep_Sen_Bowler_1005.png"
         },
         {
@@ -218,7 +218,7 @@
             "url_id": "22112",
             "image_id": "3572",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/3572.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Xavier_Bartlett_Bowler_3572.png"
         },
         {
@@ -227,7 +227,7 @@
             "url_id": "3188",
             "image_id": "548",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/548.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\punjab-kings\\Pravin_Dubey_Bowler_548.png"
         }
     ]

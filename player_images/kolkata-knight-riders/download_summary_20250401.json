@@ -1,7 +1,7 @@
 {
     "team_name": "kolkata-knight-riders",
     "team_url": "https://www.iplt20.com/teams/kolkata-knight-riders",
-    "scraping_timestamp": "2025-04-01T22:37:29.870098",
+    "scraping_timestamp": "2025-04-01T22:49:30.494651",
     "total_players": 21,
     "successful_downloads": 21,
     "players": [
@@ -11,7 +11,7 @@
             "url_id": "135",
             "image_id": "44",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/44.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Ajinkya_Rahane_Batter_44.png"
         },
         {
@@ -20,7 +20,7 @@
             "url_id": "3830",
             "image_id": "152",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/152.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Rinku_Singh_Batter_152.png"
         },
         {
@@ -29,7 +29,7 @@
             "url_id": "834",
             "image_id": "170",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/170.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Quinton_de_Kock_WK-Batter_170.png"
         },
         {
@@ -38,7 +38,7 @@
             "url_id": "20625",
             "image_id": "641",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/641.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Rahmanullah_Gurbaz_WK-Batter_641.png"
         },
         {
@@ -47,7 +47,7 @@
             "url_id": "20690",
             "image_id": "787",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/787.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Angkrish_Raghuvanshi_Batter_787.png"
         },
         {
@@ -56,7 +56,7 @@
             "url_id": "3333",
             "image_id": "329",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/329.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Rovman_Powell_Batter_329.png"
         },
         {
@@ -65,7 +65,7 @@
             "url_id": "123",
             "image_id": "16",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/16.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Manish_Pandey_Batter_16.png"
         },
         {
@@ -74,7 +74,7 @@
             "url_id": "20613",
             "image_id": "1009",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1009.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Luvnith_Sisodia_WK-Batter_1009.png"
         },
         {
@@ -83,7 +83,7 @@
             "url_id": "8540",
             "image_id": "584",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/584.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Venkatesh_Iyer_All-Rounder_584.png"
         },
         {
@@ -92,7 +92,7 @@
             "url_id": "3774",
             "image_id": "160",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/160.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Anukul_Roy_All-Rounder_160.png"
         },
         {
@@ -101,7 +101,7 @@
             "url_id": "1735",
             "image_id": "206",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/206.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Moeen_Ali_All-Rounder_206.png"
         },
         {
@@ -110,7 +110,7 @@
             "url_id": "20595",
             "image_id": "991",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/991.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Ramandeep_Singh_All-Rounder_991.png"
         },
         {
@@ -119,7 +119,7 @@
             "url_id": "177",
             "image_id": "141",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/141.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Andre_Russell_All-Rounder_141.png"
         },
         {
@@ -128,7 +128,7 @@
             "url_id": "5433",
             "image_id": "142",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/142.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Anrich_Nortje_Bowler_142.png"
         },
         {
@@ -137,7 +137,7 @@
             "url_id": "14859",
             "image_id": "583",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/583.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Vaibhav_Arora_Bowler_583.png"
         },
         {
@@ -146,7 +146,7 @@
             "url_id": "4951",
             "image_id": "87",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/87.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Mayank_Markande_Bowler_87.png"
         },
         {
@@ -155,7 +155,7 @@
             "url_id": "20699",
             "image_id": "2518",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/2518.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Spencer_Johnson_Bowler_2518.png"
         },
         {
@@ -164,7 +164,7 @@
             "url_id": "20626",
             "image_id": "1013",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/1013.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Harshit_Rana_Bowler_1013.png"
         },
         {
@@ -173,7 +173,7 @@
             "url_id": "203",
             "image_id": "156",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/156.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Sunil_Narine_Bowler_156.png"
         },
         {
@@ -182,7 +182,7 @@
             "url_id": "5432",
             "image_id": "140",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/140.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Varun_Chakaravarthy_Bowler_140.png"
         },
         {
@@ -191,7 +191,7 @@
             "url_id": "11062",
             "image_id": "592",
             "image_url": "https://documents.iplt20.com/ipl/IPLHeadshot2025/592.png",
-            "download_status": "Already exists",
+            "download_status": "Success",
             "local_path": "player_images\\kolkata-knight-riders\\Chetan_Sakariya_Bowler_592.png"
         }
     ]

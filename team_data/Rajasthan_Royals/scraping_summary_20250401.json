@@ -1,11 +1,11 @@
 {
-    "scraping_timestamp": "2025-04-01T22:36:45.560904",
+    "scraping_timestamp": "2025-04-01T22:48:29.592143",
     "team_name": "Rajasthan_Royals",
     "team_url": "https://indianexpress.com/about/rajasthan-royals/",
     "status": "Success",
     "overview_extracted": true,
     "squad_size": 22,
-    "news_count": 13,
+    "news_count": 12,
     "support_staff_count": 0,
     "extracted_data_paths": {
         "team_folder": "team_data\\Rajasthan_Royals",

@@ -16,6 +16,8 @@ Options:
     --skip-images    Skip updating player images (if they already exist)
     --only-clean     Only clean data without running scrapers
     --check-images   Only check for duplicate player images and remove broken ones 
+    --parallel       Run scrapers in parallel for faster execution (default: False)
+    --workers        Number of worker processes for parallel scraping (default: auto)
     --help           Show this help message and exit
 """
 
@@ -37,6 +39,8 @@ import csv
 import base64
 from PIL import Image, UnidentifiedImageError
 import io
+import multiprocessing
+from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # Configure logging
 logging.basicConfig(
@@ -58,6 +62,21 @@ SCRAPER_MODULES = [
     'ipl_player_images_scraper',     # Player images
     'ipl_today_comparison_scraper',  # Today's match data
     'todays_match'                   # Today's match predictions
+]
+
+# Group of scrapers that can be run in parallel safely (no dependencies between them)
+PARALLEL_SAFE_SCRAPERS = [
+    'ipl_stats_scraper',             # Player statistics
+    'ipl_pitch_weather_scraper',     # Pitch and weather data
+    'ipl_player_images_scraper',     # Player images
+]
+
+# Scrapers that should run sequentially (have dependencies or share resources)
+SEQUENTIAL_SCRAPERS = [
+    'ipl_points_table_scraper',      # Get team standings first
+    'ipl_team_scraper',              # Teams info (needs points table)
+    'ipl_today_comparison_scraper',  # Today's match data (needs team info)
+    'todays_match'                   # Today's match predictions (needs comparison data)
 ]
 
 # Data directories that can be cleaned
@@ -87,7 +106,9 @@ def parse_arguments():
     parser.add_argument('--clean-all', action='store_true', help='Delete all previously scraped data before running scrapers')
     parser.add_argument('--skip-images', action='store_true', help='Skip updating player images (if they already exist)')
     parser.add_argument('--only-clean', action='store_true', help='Only clean data without running scrapers')
-    parser.add_argument('--check-images', action='store_true', help='Only check for duplicate player images and remove broken ones ')
+    parser.add_argument('--check-images', action='store_true', help='Only check for duplicate player images and remove broken ones')
+    parser.add_argument('--parallel', action='store_true', help='Run scrapers in parallel for faster execution')
+    parser.add_argument('--workers', type=int, default=0, help='Number of worker processes for parallel scraping (default: auto)')
     return parser.parse_args()
 
 def clean_data_directory(directory_path, retain_latest=False, update_only=True):
@@ -320,9 +341,70 @@ def run_scraper(module_name, args):
         logger.error(traceback.format_exc())
         return False
 
+def run_scraper_parallel(module_name, args_dict):
+    """
+    Run a scraper module in a separate process.
+    This function is designed to be used with multiprocessing.
+    
+    Args:
+        module_name (str): Name of the module to import and run
+        args_dict (dict): Dictionary of arguments (converted from Namespace for pickling)
+        
+    Returns:
+        tuple: (module_name, success)
+    """
+    # Convert args_dict back to a Namespace object
+    class Args:
+        def __init__(self, **kwargs):
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+    
+    args = Args(**args_dict)
+    
+    # Configure process-specific logging
+    process_logger = logging.getLogger(f"{module_name}_process")
+    process_logger.setLevel(logging.INFO)
+    
+    # Skip player images scraper if requested or if images exist
+    if module_name == 'ipl_player_images_scraper' and not should_process_images(args):
+        process_logger.info(f"Skipping player images scraper")
+        return (module_name, True)
+    
+    process_logger.info(f"Starting scraper {module_name} in parallel process")
+    
+    try:
+        # Import the module
+        module = importlib.import_module(module_name)
+        
+        # Check if module has a main function
+        if hasattr(module, 'main'):
+            # Run the main function
+            start_time = time.time()
+            module.main()
+            duration = time.time() - start_time
+            process_logger.info(f"Successfully ran {module_name} in {duration:.2f} seconds")
+            return (module_name, True)
+        else:
+            process_logger.warning(f"Module {module_name} does not have a main() function")
+            return (module_name, False)
+            
+    except Exception as e:
+        process_logger.error(f"Error running {module_name}: {str(e)}")
+        process_logger.error(traceback.format_exc())
+        return (module_name, False)
+
 def run_all_scrapers(args):
+    """Run all scraper modules in sequence or parallel based on arguments."""
+    logger.info("Starting execution of scrapers")
+    
+    if args.parallel:
+        return run_scrapers_in_parallel(args)
+    else:
+        return run_scrapers_sequentially(args)
+
+def run_scrapers_sequentially(args):
     """Run all scraper modules in sequence."""
-    logger.info("Starting execution of all scrapers")
+    logger.info("Running scrapers sequentially")
     
     successful_runs = []
     failed_runs = []
@@ -342,7 +424,75 @@ def run_all_scrapers(args):
     duration = end_time - start_time
     
     # Report results
-    logger.info(f"Scraper execution completed in {duration:.2f} seconds")
+    logger.info(f"Sequential scraper execution completed in {duration:.2f} seconds")
+    logger.info(f"Successful: {len(successful_runs)}/{len(SCRAPER_MODULES)}")
+    
+    if failed_runs:
+        logger.warning(f"Failed runs: {', '.join(failed_runs)}")
+    
+    return len(failed_runs) == 0
+
+def run_scrapers_in_parallel(args):
+    """Run scraper modules in parallel where possible, sequential where necessary."""
+    logger.info("Running scrapers in parallel mode")
+    
+    # Convert Namespace args to dictionary for pickling in multiprocessing
+    args_dict = vars(args)
+    
+    successful_runs = []
+    failed_runs = []
+    overall_start_time = time.time()
+    
+    # Determine number of worker processes
+    num_workers = args.workers if args.workers > 0 else min(len(PARALLEL_SAFE_SCRAPERS), multiprocessing.cpu_count())
+    logger.info(f"Using {num_workers} worker processes for parallel execution")
+    
+    # First run sequential scrapers that must run first
+    logger.info("Running sequential scrapers first...")
+    for module_name in SEQUENTIAL_SCRAPERS[:2]:  # Run only points table and team scrapers first
+        if run_scraper(module_name, args):
+            successful_runs.append(module_name)
+        else:
+            failed_runs.append(module_name)
+        time.sleep(1)  # Brief delay between sequential scrapers
+    
+    # Run parallel safe scrapers
+    logger.info(f"Running {len(PARALLEL_SAFE_SCRAPERS)} scrapers in parallel...")
+    parallel_start_time = time.time()
+    
+    with ProcessPoolExecutor(max_workers=num_workers) as executor:
+        # Submit all parallel-safe scrapers
+        future_to_scraper = {
+            executor.submit(run_scraper_parallel, module_name, args_dict): module_name
+            for module_name in PARALLEL_SAFE_SCRAPERS
+        }
+        
+        # Process results as they complete
+        for future in as_completed(future_to_scraper):
+            module_name, success = future.result()
+            if success:
+                successful_runs.append(module_name)
+                logger.info(f"Parallel scraper {module_name} completed successfully")
+            else:
+                failed_runs.append(module_name)
+                logger.warning(f"Parallel scraper {module_name} failed")
+    
+    parallel_duration = time.time() - parallel_start_time
+    logger.info(f"Parallel scrapers completed in {parallel_duration:.2f} seconds")
+    
+    # Run remaining sequential scrapers (that depend on both sequential and parallel results)
+    logger.info("Running remaining sequential scrapers...")
+    for module_name in SEQUENTIAL_SCRAPERS[2:]:
+        if run_scraper(module_name, args):
+            successful_runs.append(module_name)
+        else:
+            failed_runs.append(module_name)
+        time.sleep(1)  # Brief delay between sequential scrapers
+    
+    overall_duration = time.time() - overall_start_time
+    
+    # Report results
+    logger.info(f"Parallel scraper execution completed in {overall_duration:.2f} seconds")
     logger.info(f"Successful: {len(successful_runs)}/{len(SCRAPER_MODULES)}")
     
     if failed_runs:
@@ -1386,7 +1536,7 @@ def main():
             logger.info("Cleaning all data directories before running scrapers")
             clean_all_data(retain_latest=True)  # Changed to True to always retain latest
         
-        # Run all scrapers
+        # Run all scrapers (either sequentially or in parallel)
         all_successful = run_all_scrapers(args)
         
         # Protect new data from cleanup: mark today's date for preservation

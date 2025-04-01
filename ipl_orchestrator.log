@@ -90,3 +90,58 @@
 2025-04-01 22:38:19,336 - INFO - Generating HTML data content...
 2025-04-01 22:38:19,357 - INFO - HTML data content saved to ipl_data_content.html
 2025-04-01 22:38:19,358 - INFO - IPL Cricket Data orchestration completed
+2025-04-01 22:48:04,382 - INFO - Starting execution of scrapers
+2025-04-01 22:48:04,382 - INFO - Running scrapers in parallel mode
+2025-04-01 22:48:04,383 - INFO - Using 3 worker processes for parallel execution
+2025-04-01 22:48:04,383 - INFO - Running sequential scrapers first...
+2025-04-01 22:48:04,383 - INFO - Running ipl_points_table_scraper...
+2025-04-01 22:48:06,114 - INFO - Attempting to scrape IPL points table...
+2025-04-01 22:48:06,114 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-01 22:48:06,115 - INFO - Initializing Chrome headless
+2025-04-01 22:48:15,319 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-01 22:48:15,346 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-01 22:48:15,356 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-01 22:48:15,472 - INFO - Found table with selector: table.ih-td-tab
+2025-04-01 22:48:15,475 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-01 22:48:15,489 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-01 22:48:22,306 - INFO - Points table saved to CSV: points_table\ipl_points_table_20250401.csv
+2025-04-01 22:48:22,316 - INFO - Points table saved to HTML: points_table\ipl_points_table_20250401.html
+2025-04-01 22:48:22,327 - INFO - Created latest version copies
+2025-04-01 22:48:22,341 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-01 22:48:23,342 - INFO - Running ipl_team_scraper...
+2025-04-01 22:48:31,960 - INFO - Successfully ran ipl_team_scraper
+2025-04-01 22:48:32,961 - INFO - Running 3 scrapers in parallel...
+2025-04-01 22:48:33,182 - INFO - Starting scraper ipl_stats_scraper in parallel process
+2025-04-01 22:48:33,192 - INFO - Starting scraper ipl_pitch_weather_scraper in parallel process
+2025-04-01 22:48:33,199 - INFO - Starting scraper ipl_player_images_scraper in parallel process
+2025-04-01 22:48:39,028 - INFO - Successfully ran ipl_stats_scraper in 4.43 seconds
+2025-04-01 22:48:39,029 - INFO - Parallel scraper ipl_stats_scraper completed successfully
+2025-04-01 22:49:06,512 - INFO - Successfully ran ipl_pitch_weather_scraper in 31.86 seconds
+2025-04-01 22:49:06,517 - INFO - Parallel scraper ipl_pitch_weather_scraper completed successfully
+2025-04-01 22:50:51,038 - INFO - Successfully ran ipl_player_images_scraper in 137.13 seconds
+2025-04-01 22:50:51,039 - INFO - Parallel scraper ipl_player_images_scraper completed successfully
+2025-04-01 22:50:51,234 - INFO - Parallel scrapers completed in 138.27 seconds
+2025-04-01 22:50:51,234 - INFO - Running remaining sequential scrapers...
+2025-04-01 22:50:51,235 - INFO - Running ipl_today_comparison_scraper...
+2025-04-01 22:51:33,608 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-01 22:51:34,616 - INFO - Running todays_match...
+2025-04-01 22:51:34,645 - INFO - Successfully ran todays_match
+2025-04-01 22:51:35,646 - INFO - Parallel scraper execution completed in 211.26 seconds
+2025-04-01 22:51:35,647 - INFO - Successful: 7/7
+2025-04-01 22:51:35,647 - INFO - Cleaning old data files (retaining files from the last 14 days)...
+2025-04-01 22:51:35,648 - INFO - Cleaning directory: points_table
+2025-04-01 22:51:35,650 - INFO - Cleaning directory: team_data
+2025-04-01 22:51:35,666 - INFO - Cleaning directory: batting_stats
+2025-04-01 22:51:35,668 - INFO - Cleaning directory: bowling_stats
+2025-04-01 22:51:35,668 - INFO - Cleaning directory: pitch_reports
+2025-04-01 22:51:35,668 - INFO - Cleaning directory: weather_reports
+2025-04-01 22:51:35,669 - INFO - Cleaning directory: comparison_data
+2025-04-01 22:51:35,670 - INFO - Cleaning directory: predictions
+2025-04-01 22:51:35,670 - INFO - Cleaning directory: combined_reports
+2025-04-01 22:51:35,670 - INFO - Cleaning directory: reports
+2025-04-01 22:51:35,671 - INFO - Cleanup completed. Removed 0 old files.
+2025-04-01 22:51:35,671 - INFO - Generating data summary...
+2025-04-01 22:51:35,709 - INFO - Data summary saved to ipl_data_summary.json
+2025-04-01 22:51:35,710 - INFO - Generating HTML data content...
+2025-04-01 22:51:35,731 - INFO - HTML data content saved to ipl_data_content.html
+2025-04-01 22:51:35,731 - INFO - IPL Cricket Data orchestration completed
