@@ -1,0 +1,11 @@
+Metric,Team 1,Team 2
+"Toss Won, Batting First, Match Won",0,1
+"Toss Won, Bowling First, Match Won",1,0
+Tosses Won,3,1
+Elected To Bat,0,1
+Elected To Field,3,0
+Won Toss And Match,1,1
+Highest Total,201,257
+Lowest Total,133,153
+Avg. Runs,168.25,192
+Avg. Wkts,7.75,7.25

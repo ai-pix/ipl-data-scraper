@@ -63,8 +63,8 @@ def setup_driver():
     print(f"{Fore.CYAN}Setting up Chrome WebDriver...{Style.RESET_ALL}")
     
     chrome_options = Options()
-    # Remove headless mode to make browser visible
-    # chrome_options.add_argument('--headless')
+    # Enable headless mode to make browser run in background
+    chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--window-size=1920,1080')
     chrome_options.add_argument('--disable-dev-shm-usage')
@@ -99,8 +99,7 @@ def setup_driver():
             
             edge_options = webdriver.EdgeOptions()
             for arg in chrome_options.arguments:
-                if '--headless' not in arg:  # Keep visible mode for Edge too
-                    edge_options.add_argument(arg)
+                edge_options.add_argument(arg)  # Apply all Chrome options including headless mode
             
             edge_service = EdgeService(EdgeChromiumDriverManager().install())
             driver = webdriver.Edge(service=edge_service, options=edge_options)
@@ -412,11 +411,24 @@ def extract_head_to_head_data(driver):
     Extract head-to-head comparison data from the HEAD TO HEAD tab
     """
     try:
-        # First click on the HEAD TO HEAD tab
+        # First find and scroll to the HEAD TO HEAD tab
         head_to_head_tab = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "pills-head_to_head-tab"))
+            EC.presence_of_element_located((By.ID, "pills-head_to_head-tab"))
         )
-        head_to_head_tab.click()
+        
+        # Scroll to make sure the tab is visible - important in headless mode
+        scroll_to_element(driver, head_to_head_tab)
+        time.sleep(1)  # Wait a bit after scrolling
+        
+        # Try different clicking methods
+        try:
+            # First try the normal click
+            head_to_head_tab.click()
+        except Exception as click_error:
+            print(f"{Fore.YELLOW}Standard click failed, trying JavaScript click: {str(click_error)}{Style.RESET_ALL}")
+            # If that fails, try JavaScript click
+            driver.execute_script("arguments[0].click();", head_to_head_tab)
+            
         print(f"{Fore.CYAN}Clicked on HEAD TO HEAD tab{Style.RESET_ALL}")
         time.sleep(2)  # Wait for tab content to load
         
