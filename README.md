@@ -1,67 +1,67 @@
-# IPL Cricket Data Project
+# IPL Cricket Data System
 
 A comprehensive suite of Python scripts for scraping, analyzing, and visualizing data from the Indian Premier League (IPL) cricket tournament.
 
 ## Overview
 
-This project contains multiple tools to collect various types of IPL data:
-- Team information and squads
-- Player images
-- Match schedules
-- Points table standings
+This project contains multiple scrapers to collect various types of IPL cricket data:
+- Team information and player squads
 - Player statistics (batting & bowling)
-- Daily match information
-- Team comparison data for today's matches
+- Player images
+- Pitch and weather reports for venues
+- Match schedules and points table standings
+- Daily match information and team comparisons
 
-## Features
+The system is designed to run either individual scrapers or orchestrate all scrapers with a single command, providing the most up-to-date IPL cricket data.
 
-### 1. Player Images Scraper (`ipl_player_images_scraper.py`)
+## Key Components
+
+### 1. Orchestration Script (`run_all_scrapers.py`)
+- Executes all scrapers in sequence with a single command
+- Handles dependencies between scrapers
+- Cleans up outdated files to save disk space
+- Generates detailed execution logs
+
+### 2. Player Images Scraper (`ipl_player_images_scraper.py`)
 - Downloads high-quality player images from all IPL teams
 - Organizes images by team in dedicated folders
-- Names files with player name, role, and unique ID
-- Generates detailed summary reports
+- Skips already downloaded images to save bandwidth
 
-### 2. Points Table Scraper (`ipl_points_table_scraper.py`)
+### 3. Points Table Scraper (`ipl_points_table_scraper.py`)
 - Extracts the current IPL standings table
 - Provides details on matches played, won, lost, points, and net run rate
-- Saves data in CSV format with timestamps
+- Saves data in both CSV and HTML formats with timestamps
 
-### 3. Player Statistics Scraper (`ipl_stats_scraper.py`)
-- Collects batting statistics:
-  - Most runs
-  - Most boundaries (4s and 6s)
-  - Most fifties and hundreds
-- Collects bowling statistics:
-  - Most wickets
-  - Best economy rates
-  - Best bowling average
-  - Best bowling strike rate
-  - Most maidens
+### 4. Player Statistics Scraper (`ipl_stats_scraper.py`)
+- Collects batting statistics (runs, hundreds, fifties, boundaries)
+- Collects bowling statistics (wickets, economy rates, averages)
+- Generates comprehensive HTML and JSON reports
 
-### 4. Team Information Scraper (`ipl_team_scraper.py`)
-- Extracts detailed team information
-- Collects squad lists and player details
+### 5. Team Information Scraper (`ipl_team_scraper.py`)
+- Extracts detailed team information for all 10 IPL teams
+- Collects complete squad lists with player details
+- Gathers team statistics and latest news
 
-### 5. Today's Match Information (`todays_match.py`)
-- Shows information about today's IPL matches
-- Updates daily
+### 6. Pitch & Weather Scraper (`ipl_pitch_weather_scraper.py`)
+- Collects detailed pitch reports for all IPL venues
+- Gathers real-time weather data using OpenWeatherMap API
+- Creates combined reports for match analysis
 
-### 6. Team Comparison Scraper (`ipl_comparison_scraper.py`)
-- Scrapes comparison data for any two IPL teams
-- Provides detailed statistical comparisons
+### 7. Today's Match Information (`todays_match.py`)
+- Identifies matches scheduled for the current day
+- Provides match timings, venues, and team information
+- Exports data in both JSON and CSV formats
 
-### 7. Today's Match Comparison Scraper (`ipl_today_comparison_scraper.py`)
-- Automatically scrapes comparison data for today's scheduled IPL match
-- Uses dual approach (API + browser automation) for reliability
-- Provides comprehensive team comparison metrics (matches played, won, lost, runs, etc.)
+### 8. Today's Match Comparison Scraper (`ipl_today_comparison_scraper.py`)
+- Automatically scrapes comparison data for today's scheduled IPL matches
+- Provides comprehensive team comparison metrics
 - Identifies key players for each team
-- Saves data in both JSON and CSV formats for easy analysis
-- Only focuses on teams playing today for better efficiency
 
 ## Installation
 
 ### Prerequisites
 - Python 3.6+
+- Chrome browser (for scrapers using browser automation)
 - Required packages listed in `requirements.txt`
 
 ### Setup
@@ -70,92 +70,62 @@ This project contains multiple tools to collect various types of IPL data:
 ```
 pip install -r requirements.txt
 ```
+3. Set up API keys:
+   - Create a file named `api_keys.py` in the project root
+   - Add your OpenWeatherMap API key: `OPENWEATHER_API_KEY = "your_api_key_here"`
 
 ## Usage
 
-### Player Images Scraper
+### Running All Scrapers (Recommended)
+```bash
+python run_all_scrapers.py
 ```
+This command executes all scrapers in sequence, handles dependencies, and cleans up outdated files.
+
+Command-line options:
+- `--clean-all`: Force cleanup of all data files regardless of scraper success
+- `--only-clean`: Only clean data without running scrapers
+- `--keep-days N`: Keep the last N days of data (default: 7)
+
+### Running Individual Scrapers
+
+Each scraper can be run independently:
+```bash
+python <scraper_filename>.py
+```
+
+For example:
+```bash
 python ipl_player_images_scraper.py
 ```
-Downloads player images from all IPL teams and saves them in the `player_images` directory.
-
-### Points Table Scraper
-```
-python ipl_points_table_scraper.py
-```
-Scrapes the current IPL points table and saves it in the `points_table` directory.
-
-### Statistics Scraper
-```
-python ipl_stats_scraper.py
-```
-Scrapes various player statistics and saves them in the `batting_stats` and `bowling_stats` directories.
-
-### Team Information Scraper
-```
-python ipl_team_scraper.py
-```
-Scrapes team information and saves it in the `team_data` directory.
-
-### Today's Match
-```
-python todays_match.py
-```
-Shows information about today's IPL matches.
-
-### Team Comparison Scraper
-```
-python ipl_comparison_scraper.py
-```
-Scrapes comparison data for any two IPL teams and saves it in the `comparison_data/team_comparison` directory.
-
-### Today's Match Comparison
-```
-python ipl_today_comparison_scraper.py
-```
-Automatically scrapes comparison data for today's IPL match and saves it in the `comparison_data/team_comparison` directory. This tool identifies which teams are playing today and only scrapes the comparison for those teams, making it highly efficient.
 
 ## Data Organization
 
 The project organizes data into specific directories:
 - `player_images/` - Player images organized by team
 - `points_table/` - IPL standings tables with timestamps
-- `batting_stats/` - Various batting statistics
-- `bowling_stats/` - Various bowling statistics
+- `batting_stats/` & `bowling_stats/` - Player statistics
 - `team_data/` - Team information and details
-- `match_schedule/` - IPL match schedules
-- `match_data/` - Detailed match information
-- `comparison_data/` - Team and player comparison data
-  - `team_comparison/` - Team vs team comparison statistics
-  - `player_comparison/` - Player vs player comparison statistics
-- `debug_files/` - HTML files saved for debugging purposes
+- `pitch_reports/` & `weather_reports/` - Venue information
+- `combined_reports/` - Integrated venue information
+- `matches/` - Today's match information
+- `comparison_data/` - Team comparison data for today's matches
+- `reports/` - Summary reports and analysis
+- `debug_files/` - Debugging information
 
-## Today's Match Comparison Data Format
+## Troubleshooting
 
-The `ipl_today_comparison_scraper.py` script generates comparison data for today's match in the following format:
+If you encounter issues:
 
-```csv
-Metric,Team 1,Team 2
-Played,264,257
-Won,144,132
-Lost,119,120
-Tied,0,1
-No Result,1,4
-Highest Team Total,247/9,272/7
-Lowest Team Total,68/2,66/2
-Avg. Runs,161,156
-Avg. Wkts,6,5
-Most Runs,5479,3035
-Most Wickets,170,181
-Highest Individual Score,114,158
-Best Bowling,6/12,5/15
-```
+1. Check the log files:
+   - `ipl_orchestrator.log` - Main log for the orchestration script
 
-This data provides a comprehensive comparison between the two teams playing today's match, helping with match analysis and predictions.
+2. Examine debug files in the `debug_files` directory
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+3. Common issues:
+   - Chrome driver errors: Update Chrome browser
+   - API rate limits: Add delays between requests
+   - Data parsing errors: Check if website structure has changed
 
 ## License
 
@@ -163,5 +133,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Data sourced from the official IPL website (https://www.iplt20.com/)
-- This project is for educational purposes only
+- Data sourced from the official IPL website (https://www.iplt20.com/) and other cricket statistic sites
+- Weather data provided by OpenWeatherMap API
+- This project is for educational and non-commercial purposes only
+
+## Project Status
+
+Last updated: April 1, 2025
+Current IPL season: 2025

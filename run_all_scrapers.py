@@ -15,6 +15,7 @@ Options:
     --clean-all      Delete all previously scraped data before running scrapers
     --skip-images    Skip updating player images (if they already exist)
     --only-clean     Only clean data without running scrapers
+    --check-images   Only check for duplicate player images and remove broken ones 
     --help           Show this help message and exit
 """
 
@@ -27,8 +28,13 @@ import argparse
 import importlib
 import datetime
 import glob
+import re
 from pathlib import Path
 import traceback
+from collections import defaultdict
+import json
+from PIL import Image, UnidentifiedImageError
+import io
 
 # Configure logging
 logging.basicConfig(
@@ -75,6 +81,7 @@ def parse_arguments():
     parser.add_argument('--clean-all', action='store_true', help='Delete all previously scraped data before running scrapers')
     parser.add_argument('--skip-images', action='store_true', help='Skip updating player images (if they already exist)')
     parser.add_argument('--only-clean', action='store_true', help='Only clean data without running scrapers')
+    parser.add_argument('--check-images', action='store_true', help='Only check for duplicate player images and remove broken ones ')
     return parser.parse_args()
 
 def clean_data_directory(directory_path, retain_latest=False):
@@ -227,11 +234,162 @@ def clean_old_data(all_successful):
     logger.info("All scrapers successful, cleaning old data files while retaining the latest")
     clean_all_data(retain_latest=True)
 
+def is_valid_image(file_path):
+    """
+    Check if an image file is valid/working by trying to open it with PIL.
+    
+    Args:
+        file_path (str): Path to the image file
+        
+    Returns:
+        bool: True if the image is valid, False otherwise
+    """
+    try:
+        with Image.open(file_path) as img:
+            # Try to load the image data to verify it's not corrupt
+            img.verify()
+            return True
+    except (UnidentifiedImageError, IOError, SyntaxError) as e:
+        logger.error(f"Invalid image {file_path}: {str(e)}")
+        return False
+
+def extract_player_info(file_name):
+    """
+    Extract player name and ID from file name.
+    
+    Args:
+        file_name (str): Name of the file (without directory path)
+        
+    Returns:
+        tuple: (player_name, player_id) or None if not extractable
+    """
+    # Remove file extension
+    base_name = os.path.splitext(file_name)[0]
+    
+    # Try to extract player name and ID
+    # Format is typically: PlayerName_Role_ID.ext or PlayerName__Role.ext
+    parts = base_name.split('_')
+    
+    if len(parts) < 2:
+        return None
+    
+    # Last part might be the ID for PNG files
+    player_id = parts[-1] if parts[-1].isdigit() else None
+    
+    # Remove ID and role parts to get the player name
+    if player_id:
+        # Player name is everything before the last two parts (role and ID)
+        player_name = '_'.join(parts[:-2])
+    else:
+        # If no ID, consider the first part as the player name
+        player_name = parts[0]
+    
+    return player_name, player_id
+
+def check_duplicate_images(image_dir="player_images"):
+    """
+    Check for duplicate player images, test which ones work, and delete broken ones.
+    
+    Args:
+        image_dir (str): Path to the player images directory
+        
+    Returns:
+        tuple: (duplicates_found, duplicates_resolved)
+    """
+    logger.info("Checking for duplicate player images...")
+    
+    if not os.path.exists(image_dir):
+        logger.warning(f"Image directory {image_dir} does not exist")
+        return 0, 0
+    
+    # First get all team directories
+    team_dirs = [d for d in os.listdir(image_dir) 
+                if os.path.isdir(os.path.join(image_dir, d)) and not d.startswith('.')]
+    
+    total_duplicates = 0
+    resolved_duplicates = 0
+    
+    for team in team_dirs:
+        team_path = os.path.join(image_dir, team)
+        
+        # Skip if not a directory or if it's a special directory
+        if not os.path.isdir(team_path) or team.startswith('.') or team == "overall_summary":
+            continue
+            
+        logger.info(f"Checking images for team: {team}")
+        
+        # Group files by player name
+        player_files = defaultdict(list)
+        
+        # Get all image files
+        image_files = [f for f in os.listdir(team_path) if os.path.isfile(os.path.join(team_path, f)) 
+                      and f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))]
+        
+        # Group files by player name
+        for img_file in image_files:
+            player_info = extract_player_info(img_file)
+            if player_info:
+                player_name, _ = player_info
+                player_files[player_name].append(img_file)
+        
+        # Check for duplicates
+        for player, files in player_files.items():
+            if len(files) > 1:
+                logger.info(f"Found duplicate images for player {player}: {files}")
+                total_duplicates += 1
+                
+                # Group files by extension
+                png_files = [f for f in files if f.lower().endswith('.png')]
+                jpg_files = [f for f in files if f.lower().endswith(('.jpg', '.jpeg'))]
+                webp_files = [f for f in files if f.lower().endswith('.webp')]
+                
+                # Check which files are valid
+                valid_files = []
+                
+                # Check all files and keep track of valid ones
+                for file_list in [png_files, jpg_files, webp_files]:
+                    for img_file in file_list:
+                        img_path = os.path.join(team_path, img_file)
+                        if is_valid_image(img_path):
+                            valid_files.append((img_file, os.path.getsize(img_path)))
+                
+                if not valid_files:
+                    logger.warning(f"No valid images found for player {player}")
+                    continue
+                
+                # Sort by file size (larger is likely better quality)
+                valid_files.sort(key=lambda x: x[1], reverse=True)
+                
+                # Keep the first (largest) valid file, delete the rest
+                to_keep = valid_files[0][0]
+                logger.info(f"Keeping image {to_keep} for player {player}")
+                
+                for img_file in files:
+                    if img_file != to_keep:
+                        try:
+                            os.remove(os.path.join(team_path, img_file))
+                            logger.info(f"Deleted duplicate image {img_file} for player {player}")
+                            resolved_duplicates += 1
+                        except OSError as e:
+                            logger.error(f"Error deleting {img_file}: {str(e)}")
+    
+    logger.info(f"Found {total_duplicates} players with duplicate images")
+    logger.info(f"Resolved {resolved_duplicates} duplicate images")
+    
+    return total_duplicates, resolved_duplicates
+
 def main():
     """Main function to orchestrate the execution of all scrapers."""
     args = parse_arguments()
     
     try:
+        # Handle check-images mode
+        if args.check_images:
+            logger.info("Running in check-images mode")
+            duplicates_found, duplicates_resolved = check_duplicate_images()
+            logger.info(f"Image check completed: found {duplicates_found} duplicates, resolved {duplicates_resolved}")
+            return
+            
         # Handle clean-only mode
         if args.only_clean:
             logger.info("Running in clean-only mode")

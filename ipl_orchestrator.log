@@ -273,3 +273,18 @@
 2025-04-01 10:43:24,496 - INFO - Deleted file: debug_files\text_most-wickets.txt
 2025-04-01 10:43:24,497 - INFO - Data cleanup complete
 2025-04-01 10:43:24,497 - INFO - IPL Cricket Data orchestration completed
+2025-04-01 10:55:04,253 - INFO - Running in check-images mode
+2025-04-01 10:55:04,253 - INFO - Checking for duplicate player images...
+2025-04-01 10:55:04,254 - INFO - Checking images for team: chennai-super-kings
+2025-04-01 10:55:04,255 - INFO - Checking images for team: delhi-capitals
+2025-04-01 10:55:04,256 - INFO - Checking images for team: gujarat-titans
+2025-04-01 10:55:04,258 - INFO - Checking images for team: kolkata-knight-riders
+2025-04-01 10:55:04,259 - INFO - Checking images for team: lucknow-super-giants
+2025-04-01 10:55:04,260 - INFO - Checking images for team: mumbai-indians
+2025-04-01 10:55:04,261 - INFO - Checking images for team: punjab-kings
+2025-04-01 10:55:04,262 - INFO - Checking images for team: rajasthan-royals
+2025-04-01 10:55:04,263 - INFO - Checking images for team: royal-challengers-bangalore
+2025-04-01 10:55:04,264 - INFO - Checking images for team: sunrisers-hyderabad
+2025-04-01 10:55:04,266 - INFO - Found 0 players with duplicate images
+2025-04-01 10:55:04,266 - INFO - Resolved 0 duplicate images
+2025-04-01 10:55:04,266 - INFO - Image check completed: found 0 duplicates, resolved 0
