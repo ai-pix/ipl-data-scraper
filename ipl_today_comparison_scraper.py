@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
@@ -75,34 +74,21 @@ def setup_driver():
     chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36')
     
     try:
-        # First try with ChromeDriverManager
-        try:
-            service = Service(ChromeDriverManager().install())
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            print(f"{Fore.GREEN}Chrome WebDriver setup successful with ChromeDriverManager{Style.RESET_ALL}")
-            return driver
-        except Exception as e:
-            print(f"{Fore.YELLOW}ChromeDriverManager setup failed: {str(e)}. Trying alternative methods...{Style.RESET_ALL}")
-        
-        # Try with default Chrome path
+        # Try with default Chrome driver
         try:
             driver = webdriver.Chrome(options=chrome_options)
             print(f"{Fore.GREEN}Chrome WebDriver setup successful with default path{Style.RESET_ALL}")
             return driver
         except Exception as e:
-            print(f"{Fore.YELLOW}Default Chrome WebDriver setup failed: {str(e)}. Trying with Edge...{Style.RESET_ALL}")
+            print(f"{Fore.YELLOW}Default Chrome WebDriver setup failed: {str(e)}{Style.RESET_ALL}")
         
         # Try with Edge WebDriver as fallback
         try:
-            from selenium.webdriver.edge.service import Service as EdgeService
-            from webdriver_manager.microsoft import EdgeChromiumDriverManager
-            
             edge_options = webdriver.EdgeOptions()
             for arg in chrome_options.arguments:
                 edge_options.add_argument(arg)  # Apply all Chrome options including headless mode
             
-            edge_service = EdgeService(EdgeChromiumDriverManager().install())
-            driver = webdriver.Edge(service=edge_service, options=edge_options)
+            driver = webdriver.Edge(options=edge_options)
             print(f"{Fore.GREEN}Edge WebDriver setup successful as fallback{Style.RESET_ALL}")
             return driver
         except Exception as e:
@@ -401,7 +387,6 @@ def extract_comparison_data(driver):
             
             print(f"{Fore.GREEN}Extracted {len(comparison_data)} comparison metrics with BeautifulSoup{Style.RESET_ALL}")
             return ["Metric", "Team 1", "Team 2"], comparison_data
-            
         except Exception as bs_error:
             print(f"{Fore.RED}Error extracting with BeautifulSoup: {str(bs_error)}{Style.RESET_ALL}")
             return ["Metric", "Team 1", "Team 2"], []
@@ -524,7 +509,6 @@ def extract_head_to_head_data(driver):
             
             print(f"{Fore.GREEN}Extracted {len(head_to_head_data)} head-to-head metrics with BeautifulSoup{Style.RESET_ALL}")
             return ["Metric", "Team 1", "Team 2"], head_to_head_data
-            
         except Exception as bs_error:
             print(f"{Fore.RED}Error extracting head-to-head with BeautifulSoup: {str(bs_error)}{Style.RESET_ALL}")
             return ["Metric", "Team 1", "Team 2"], []
