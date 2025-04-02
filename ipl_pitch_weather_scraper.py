@@ -734,6 +734,33 @@ def save_weather_reports_to_csv(weather_reports):
     return filename
 
 
+def save_weather_reports_to_json(weather_reports):
+    """
+    Save weather reports to a JSON file
+    
+    Args:
+        weather_reports (list): List of weather report dictionaries
+    
+    Returns:
+        str: Path to the JSON file
+    """
+    today = datetime.datetime.now().strftime('%Y%m%d')
+    filename = os.path.join(FOLDERS['weather_reports'], f'ipl_weather_reports_{today}.json')
+    
+    # Create a structured JSON object
+    json_data = {
+        "generated_date": datetime.datetime.now().isoformat(),
+        "weather_reports": weather_reports
+    }
+    
+    # Save to JSON file
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(json_data, f, indent=4)
+    
+    print(f"{Fore.GREEN}Weather reports saved to {filename}{Style.RESET_ALL}")
+    return filename
+
+
 def save_combined_reports_to_csv(venues, pitch_reports, weather_reports):
     """
     Save combined pitch and weather reports to a CSV file
