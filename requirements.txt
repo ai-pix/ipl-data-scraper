@@ -1,12 +1,17 @@
-requests>=2.25.1
-beautifulsoup4>=4.9.3
-pandas>=1.2.0
-colorama>=0.4.4
-selenium>=4.0.0
-lxml>=4.6.3
-matplotlib>=3.4.0
-tabulate>=0.8.9
-python-dateutil>=2.8.1
-tqdm>=4.61.0
-python-dotenv>=0.19.0
-pytz>=2021.1
+# Core dependencies
+python-dotenv==1.0.0
+google-generativeai==0.3.1
+aiohttp==3.9.1
+pathlib==1.0.1
+typing-extensions==4.8.0
+asyncio==3.4.3
+
+# For handling JSON and datetime operations
+python-dateutil==2.8.2
+
+# Note: logging is part of Python's standard library, so we don't need to install it
+
+# Frontend visualization libraries (referenced, not Python dependencies):
+# - Chart.js v4.4.1
+# - D3.js v7.8.5
+# - Plotly.js v2.27.1

@@ -1,0 +1,87 @@
+<!-- Venue and Pitch Conditions Slide Template -->
+<div class="slide" id="slide-{{slide_index}}">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">{{venue_name}} - Pitch & Weather Analysis</h2>
+        
+        <div class="venue-conditions">
+            <div class="condition-box">
+                <h3>Weather Forecast</h3>
+                <div class="weather-icon">
+                    {{weather_icon}}
+                </div>
+                <div class="weather-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Temperature</span>
+                        <span>{{temperature}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Humidity</span>
+                        <span>{{humidity}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Wind Speed</span>
+                        <span>{{wind_speed}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Chance of Rain</span>
+                        <span>{{rain_chance}}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="condition-box">
+                <h3>Pitch Analysis</h3>
+                <div class="pitch-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Surface</span>
+                        <span>{{pitch_surface}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Bounce</span>
+                        <span>{{pitch_bounce}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Avg. 1st Innings Score</span>
+                        <span>{{avg_first_innings}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Toss Decision</span>
+                        <span>{{toss_decision}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Favors</span>
+                        <span>{{pitch_favors}}</span>
+                    </div>
+                </div>
+                
+                <div class="pitch-summary">
+                    {{pitch_summary}}
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <h3 style="text-align: center; margin-bottom: 15px;">Venue Statistics</h3>
+            <div class="stat-bar-container">
+                <span class="team-name">Batting First Wins</span>
+                <div class="bar-container">
+                    <div class="bar" data-width="{{batting_first_win_percent}}"></div>
+                </div>
+                <span class="stat-value">{{batting_first_wins}}/{{total_games}}</span>
+            </div>
+            <div class="stat-bar-container">
+                <span class="team-name">Chasing Wins</span>
+                <div class="bar-container">
+                    <div class="bar" data-width="{{chasing_win_percent}}"></div>
+                </div>
+                <span class="stat-value">{{chasing_wins}}/{{total_games}}</span>
+            </div>
+        </div>
+        
+        <div class="gemini-analysis">
+            <h3>Match Insight</h3>
+            <p>{{gemini_venue_analysis}}</p>
+        </div>
+    </div>
+</div>

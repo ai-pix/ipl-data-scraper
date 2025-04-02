@@ -1,0 +1,68 @@
+<!-- Today's Match Slide Template -->
+<div class="slide" id="slide-{{slide_index}}">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Today's Match</h2>
+        <div class="team-comparison">
+            <div class="team-side">
+                <img src="{{team1_logo}}" alt="{{team1_name}} Logo" class="team-logo">
+                <h3>{{team1_name}}</h3>
+            </div>
+            <div class="vs-container">
+                <div class="vs-text">VS</div>
+                <div>
+                    <p><strong>Today</strong></p>
+                    <p><strong>Venue:</strong> {{venue}}</p>
+                    <p><strong>Time:</strong> {{match_time}}</p>
+                </div>
+            </div>
+            <div class="team-side">
+                <img src="{{team2_logo}}" alt="{{team2_name}} Logo" class="team-logo">
+                <h3>{{team2_name}}</h3>
+            </div>
+        </div>
+        
+        <div class="prediction-text">{{match_prediction}}</div>
+        
+        <div class="head-to-head">
+            <h3>Head to Head</h3>
+            <div class="head-to-head-stats">
+                <div>
+                    <div class="stat-value">{{team1_wins}}</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+                <div>
+                    <div class="stat-value">{{total_matches}}</div>
+                    <div class="stat-label">Matches Played</div>
+                </div>
+                <div>
+                    <div class="stat-value">{{team2_wins}}</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="detailed-comparison">
+            <div class="comparison-tabs">
+                <button class="comparison-tab active" data-tab="batting">Batting</button>
+                <button class="comparison-tab" data-tab="bowling">Bowling</button>
+                <button class="comparison-tab" data-tab="form">Recent Form</button>
+            </div>
+            
+            <div class="comparison-content active" id="batting">
+                <!-- Batting comparison -->
+                {{batting_comparison}}
+            </div>
+            
+            <div class="comparison-content" id="bowling">
+                <!-- Bowling comparison -->
+                {{bowling_comparison}}
+            </div>
+            
+            <div class="comparison-content" id="form">
+                <!-- Form comparison -->
+                {{form_comparison}}
+            </div>
+        </div>
+    </div>
+</div>

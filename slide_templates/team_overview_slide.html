@@ -1,0 +1,25 @@
+<!-- Team Overview Slide Template -->
+<div class="slide" id="slide-{{slide_index}}">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">{{team_name}} - Team Overview</h2>
+        
+        <div class="team-overview">
+            <div class="team-header">
+                <img src="{{team_logo}}" alt="{{team_name}} Logo" class="team-logo">
+                <h3>{{team_name}}</h3>
+            </div>
+
+            <div class="team-stats-grid">
+                {{team_stats}}
+            </div>
+
+            <div style="margin-top: 30px; width: 100%;">
+                <h3 style="text-align: center; margin-bottom: 15px;">Key Players</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    {{key_players}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

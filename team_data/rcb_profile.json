@@ -1,0 +1,66 @@
+{
+  "name": "Royal Challengers Bengaluru",
+  "abbr": "RCB",
+  "logo": "../team_data/rcb_logo.png",
+  "owner": "United Spirits Limited",
+  "captain": "Faf du Plessis",
+  "coach": "Andy Flower",
+  "home_ground": "M. Chinnaswamy Stadium, Bengaluru",
+  "statistics": {
+    "Titles": "0",
+    "Final Appearances": "3 (2009, 2011, 2016)",
+    "Win Rate": "47.9%",
+    "Highest Score": "263/5 vs PWI (2013)"
+  },
+  "batting_stats": {
+    "avg_score": 168,
+    "run_rate": 8.92,
+    "powerplay_avg": 52.3,
+    "death_overs_avg": 48.5
+  },
+  "bowling_stats": {
+    "economy_rate": 8.75,
+    "bowling_avg": 28.4,
+    "strike_rate": 19.5,
+    "dot_ball_percentage": 38.2
+  },
+  "form": {
+    "last5": 3,
+    "home_win_percentage": 58,
+    "away_win_percentage": 42
+  },
+  "key_players": [
+    {
+      "name": "Virat Kohli",
+      "role": "Batsman",
+      "key_stat1_name": "Runs",
+      "key_stat1_value": "7263 (most in IPL)",
+      "key_stat2_name": "Strike Rate",
+      "key_stat2_value": "130.02"
+    },
+    {
+      "name": "Faf du Plessis",
+      "role": "Batsman (Captain)",
+      "key_stat1_name": "Runs in IPL 2024",
+      "key_stat1_value": "168",
+      "key_stat2_name": "Strike Rate",
+      "key_stat2_value": "156.3"
+    },
+    {
+      "name": "Glenn Maxwell",
+      "role": "All-rounder",
+      "key_stat1_name": "Batting SR",
+      "key_stat1_value": "158.24",
+      "key_stat2_name": "Bowling Econ",
+      "key_stat2_value": "8.21"
+    },
+    {
+      "name": "Mohammed Siraj",
+      "role": "Bowler",
+      "key_stat1_name": "Wickets",
+      "key_stat1_value": "74",
+      "key_stat2_name": "Economy",
+      "key_stat2_value": "8.54"
+    }
+  ]
+}

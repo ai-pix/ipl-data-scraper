@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Cricket Analysis - 2025-04-03</title>
+    <style>
+        /* Reset and Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        /* Slide container */
+        .slide-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Slides */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateX(100%);
+            z-index: 1;
+        }
+        
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 2;
+        }
+        
+        .slide.prev {
+            transform: translateX(-100%);
+        }
+        
+        /* Slide content */
+        .slide-content {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            background-color: rgba(18, 18, 18, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-y: auto;
+            max-height: 90vh;
+            z-index: 1;
+        }
+        
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .slide-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #cccccc;
+        }
+        
+        /* Navigation controls */
+        .slide-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 10;
+        }
+        
+        .prev-btn, .next-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+        
+        .prev-btn:hover, .next-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Progress indicators */
+        .slide-indicators {
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 10;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .indicator.active {
+            background-color: #ffffff;
+            transform: scale(1.2);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--primary-color, rgba(0, 123, 255, 0.8));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Title slide */
+        .title-slide {
+            text-align: center;
+        }
+        
+        .title-slide h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--gradient-start, #3498db), var(--gradient-mid, #1abc9c), var(--gradient-end, #9b59b6));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
+        
+        .title-slide h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--accent-color, #f1c40f);
+        }
+        
+        /* Stats leaders */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+        
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .player-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .player-team {
+            color: #cccccc;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .player-stat {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color, #f1c40f);
+        }
+        
+        /* Team comparison */
+        .team-comparison {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .team-side {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+        
+        .team-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        
+        .vs-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .vs-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .prediction-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-color, #f1c40f);
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* Head to head comparison */
+        .head-to-head {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        
+        .head-to-head h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--accent-color, #f1c40f);
+        }
+        
+        .head-to-head-stats {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+        
+        /* Team overview */
+        .team-overview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .team-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .team-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .team-stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .team-stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color, #3498db);
+            margin-bottom: 5px;
+        }
+        
+        .team-stat-label {
+            font-size: 0.8rem;
+            color: #cccccc;
+        }
+        
+        /* Weather and pitch conditions */
+        .venue-conditions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .condition-box {
+            flex: 1;
+            min-width: 300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .condition-box h3 {
+            color: var(--accent-color, #f1c40f);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .weather-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .weather-details, .pitch-details {
+            margin-top: 15px;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .detail-label {
+            font-weight: 600;
+        }
+        
+        /* Player gallery */
+        .player-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        
+        .player-card {
+            width: 150px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .player-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .player-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .player-card-details {
+            padding: 10px;
+        }
+        
+        .player-card-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .player-card-team {
+            color: #cccccc;
+            font-size: 0.8rem;
+        }
+        
+        /* Background effects */
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px) brightness(0.3);
+            z-index: 0;
+        }
+        
+        /* Team-specific colors */
+        .team-colors {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            z-index: 0;
+        }
+        
+        /* Additional styles for new slide types */
+        .detailed-comparison {
+            margin-top: 20px;
+        }
+        
+        .comparison-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-tab {
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .comparison-tab.active {
+            background-color: rgba(52, 152, 219, 0.8);
+        }
+        
+        .comparison-content {
+            display: none;
+        }
+        
+        .comparison-content.active {
+            display: block;
+        }
+        
+        .stat-bar-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .team-name {
+            flex: 2;
+            font-weight: 600;
+        }
+        
+        .bar-container {
+            flex: 5;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .bar {
+            height: 100%;
+            background-color: var(--primary-color, #3498db);
+            border-radius: 10px;
+            transition: width 1s ease-out;
+        }
+        
+        .stat-value {
+            flex: 1;
+            text-align: right;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .slide-content {
+                padding: 20px;
+            }
+            
+            .slide-title {
+                font-size: 1.8rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 8px 10px;
+            }
+            
+            .team-comparison {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .vs-container {
+                margin: 10px 0;
+            }
+            
+            .head-to-head-stats {
+                flex-direction: column;
+            }
+        }
+        
+        /* Auto-advancing animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .highlight {
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        /* Team specific themes - will be customized by the generator */
+        /* 
+                :root {
+                    --primary-color: #3A225D;
+                    --secondary-color: #FF822A;
+                    --accent-color: #f1c40f;
+                    --gradient-start: #3A225D;
+                    --gradient-mid: #333333;
+                    --gradient-end: #FF822A;
+                }
+                 */
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slides will be dynamically generated here -->
+        <!-- Title Slide Template -->
+<div class="slide active" id="slide-0">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <div class="title-slide">
+            <h1>IPL Cricket Pre-Match Analysis</h1>
+            <h2>Kolkata Knight Riders vs Sunrisers Hyderabad</h2>
+            <p>03 April 2025</p>
+        </div>
+    </div>
+</div><!-- Points Table Slide Template -->
+<div class="slide" id="slide-1">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">IPL Points Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>POS</th>
+                    <th></th>
+                    <th>Team</th>
+                    <th>P</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>NR</th>
+                    <th>NRR</th>
+                    <th>For</th>
+                    <th>Against</th>
+                    <th>Pts</th>
+                    <th>Form</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</div><!-- Today's Match Slide Template -->
+<div class="slide" id="slide-2">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Today's Match</h2>
+        <div class="team-comparison">
+            <div class="team-side">
+                <img src="../team_data/kkr_logo.png" alt="Kolkata Knight Riders Logo" class="team-logo">
+                <h3>Kolkata Knight Riders</h3>
+            </div>
+            <div class="vs-container">
+                <div class="vs-text">VS</div>
+                <div>
+                    <p><strong>Today</strong></p>
+                    <p><strong>Venue:</strong> Kolkata</p>
+                    <p><strong>Time:</strong> 7:30 PM</p>
+                </div>
+            </div>
+            <div class="team-side">
+                <img src="../team_data/srh_logo.png" alt="Sunrisers Hyderabad Logo" class="team-logo">
+                <h3>Sunrisers Hyderabad</h3>
+            </div>
+        </div>
+        
+        <div class="prediction-text">Given Kolkata's historical losing streak against Hyderabad, and with unknown pitch and weather conditions offering no further insights, Sunrisers Hyderabad likely has a slight psychological advantage going into the match, although past performance doesn't guarantee future results.
+</div>
+        
+        <div class="head-to-head">
+            <h3>Head to Head</h3>
+            <div class="head-to-head-stats">
+                <div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+                <div>
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Matches Played</div>
+                </div>
+                <div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="detailed-comparison">
+            <div class="comparison-tabs">
+                <button class="comparison-tab active" data-tab="batting">Batting</button>
+                <button class="comparison-tab" data-tab="bowling">Bowling</button>
+                <button class="comparison-tab" data-tab="form">Recent Form</button>
+            </div>
+            
+            <div class="comparison-content active" id="batting">
+                <!-- Batting comparison -->
+                <!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Avg. Score</span>
+    <div class="bar-container">
+        <div class="bar" data-width="97.70114942528735"></div>
+    </div>
+    <span class="stat-value">170</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Avg. Score</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">174</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Run Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="97.84946236559139"></div>
+    </div>
+    <span class="stat-value">9.1</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Run Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">9.3</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Powerplay Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="94.09722222222221"></div>
+    </div>
+    <span class="stat-value">54.2</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Powerplay Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">57.6</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Death Overs Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="97.36842105263158"></div>
+    </div>
+    <span class="stat-value">51.8</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Death Overs Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">53.2</span>
+</div>
+            </div>
+            
+            <div class="comparison-content" id="bowling">
+                <!-- Bowling comparison -->
+                <!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Economy Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="2.3255813953488293"></div>
+    </div>
+    <span class="stat-value">8.4</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Economy Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">8.6</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Bowling Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="4.395604395604393"></div>
+    </div>
+    <span class="stat-value">26.1</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Bowling Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">27.3</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Strike Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="2.6178010471204183"></div>
+    </div>
+    <span class="stat-value">18.6</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Strike Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">19.1</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Dot Ball %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">39.5</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Dot Ball %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="95.69620253164555"></div>
+    </div>
+    <span class="stat-value">37.8</span>
+</div>
+            </div>
+            
+            <div class="comparison-content" id="form">
+                <!-- Form comparison -->
+                <!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Last 5 Matches</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">4</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Last 5 Matches</span>
+    <div class="bar-container">
+        <div class="bar" data-width="75.0"></div>
+    </div>
+    <span class="stat-value">3</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Home Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">62</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Home Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="88.70967741935483"></div>
+    </div>
+    <span class="stat-value">55</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Away Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="95.83333333333334"></div>
+    </div>
+    <span class="stat-value">46</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Sunrisers Hyderabad Away Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">48</span>
+</div>
+            </div>
+        </div>
+    </div>
+</div><!-- Venue and Pitch Conditions Slide Template -->
+<div class="slide" id="slide-3">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Kolkata - Pitch & Weather Analysis</h2>
+        
+        <div class="venue-conditions">
+            <div class="condition-box">
+                <h3>Weather Forecast</h3>
+                <div class="weather-icon">
+                    ☀️
+                </div>
+                <div class="weather-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Temperature</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Humidity</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Wind Speed</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Chance of Rain</span>
+                        <span>N/A</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="condition-box">
+                <h3>Pitch Analysis</h3>
+                <div class="pitch-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Surface</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Bounce</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Avg. 1st Innings Score</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Toss Decision</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Favors</span>
+                        <span>N/A</span>
+                    </div>
+                </div>
+                
+                <div class="pitch-summary">
+                    Okay, let's break down the typical cricket pitch conditions at the Eden Gardens in Kolkata for IPL matches.
+
+**General Characteristics:**
+
+The Eden Gardens is a historically significant cricket ground, and its pitch behavior has evolved over the years. In recent IPL seasons, it's generally considered to be a relatively *good batting pitch* with something for the bowlers too. However, the exact nature can vary depending on factors like weather, preparation, and the time of the season.
+
+**Specific Details:**
+
+*   **Surface:**
+    *   Traditionally, the pitch has been known for being a *red-soil surface*.
+    *   In recent years, there have been attempts to introduce *black-soil elements* to the pitch to give it a more consistent bounce and reduce the wear and tear during the tournament.
+    *   The presence of grass is variable. A thin covering of grass can help to bind the surface together initially, offering some seam movement for the quicker bowlers. However, often the ground staff tries to keep grass minimal for good ball flight.
+
+*   **Bounce:**
+    *   The bounce has become more *consistent* with the introduction of black soil.
+    *   Early on, there can be some extra bounce available, especially for the faster bowlers hitting the hard length.
+    *   The *bounce tends to settle down* as the match progresses.
+
+*   **Average First Innings Score:**
+    *   The average first innings score in recent IPL seasons at Eden Gardens hovers around *160-175*.
+    *   In high-scoring seasons or if the pitch is exceptionally flat, this number can easily exceed 180-190.
+    *   It's important to note that this is an average, and individual match scores can vary widely depending on the quality of the batting sides and how well they adapt to the conditions.
+
+*   **Toss Decision Preference:**
+    *   Traditionally, teams used to *prefer chasing* at Eden Gardens due to the perception of dew affecting the second innings.
+    *   However, in recent years, the impact of dew hasn't been as significant in some seasons. Sometimes the chasing team also crumbles under the pressure.
+    *   It is now slightly on the *batting first* side, if the team has an in-form batting line-up that can take advantage of the conditions upfront.
+    *   Overall, the toss decision is often *match-specific* and depends on factors such as the strength of the bowling attack, the weather forecast (particularly dew), and the team's confidence in their batting.
+
+*   **Favors Batsmen or Bowlers?**
+    *   *Initially, the pitch slightly favors the batsmen*.
+    *   Good batsmen can get value for their shots and score freely if they are well set.
+    *   *As the match progresses, spinners can come into play*, especially in the second innings.
+    *   The pitch tends to get slower and drier, offering turn and grip for the slow bowlers.
+    *   *Seam bowlers can get some assistance early on* with the new ball, especially if there's a bit of moisture in the surface or cloud cover. Reverse swing might also come into play later in the innings.
+
+**Key Takeaways:**
+
+*   **Batting Friendly:** It's generally a good batting surface.
+*   **Consistent Bounce:** The bounce is usually consistent.
+*   **Spin Comes Into Play:** Spin becomes a factor as the match goes on.
+*   **Toss Dependent:** Toss preference is influenced by dew and team composition, with a recent slight lean towards batting first.
+*   **All-Round Skills Required:** Success at Eden Gardens requires a balanced team with both good batting and bowling capabilities, rather than being heavily skewed towards one discipline.
+
+**Important Considerations:**
+
+*   **Weather:**  The weather plays a vital role. Humidity can affect the pitch's moisture content, while dew can influence the second innings.
+*   **Pitch Preparation:** The curator's choices about grass covering and watering schedules are crucial.
+*   **IPL Season:** The time of year (early, mid, or late season) can impact the wear and tear of the pitch and how it behaves.
+*   **Team Compositions:**  A strong spin attack or a team with aggressive opening batsmen can heavily influence how the pitch plays.
+
+**Therefore, keep an eye on pre-match reports and expert opinions to get the most up-to-date information about the pitch conditions for a specific IPL match at Eden Gardens.**
+
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <h3 style="text-align: center; margin-bottom: 15px;">Venue Statistics</h3>
+            <div class="stat-bar-container">
+                <span class="team-name">Batting First Wins</span>
+                <div class="bar-container">
+                    <div class="bar" data-width="0"></div>
+                </div>
+                <span class="stat-value">0/0</span>
+            </div>
+            <div class="stat-bar-container">
+                <span class="team-name">Chasing Wins</span>
+                <div class="bar-container">
+                    <div class="bar" data-width="0"></div>
+                </div>
+                <span class="stat-value">0/0</span>
+            </div>
+        </div>
+        
+        <div class="gemini-analysis">
+            <h3>Match Insight</h3>
+            <p>Okay, given the *unknown* pitch and weather conditions in Kolkata, we can only offer a generalized and speculative analysis:
+
+**General Influence Factors:**
+
+*   **Unknown Pitch:**
+    *   **Batting Friendly:** High scores, pacers with variations may be effective, spinners may struggle.
+    *   **Bowling Friendly (Seam/Swing):** Early movement will trouble batsmen, swing bowlers become crucial, slower balls are useful.
+    *   **Bowling Friendly (Spin):** Turn and bounce come into play, spinners become key, batsmen need to be watchful and good at playing spin.
+    *   **Balanced:** A mix of pace and spin throughout the game, requires adaptability from both sides.
+*   **Unknown Weather:**
+    *   **Hot & Humid:** Fatigue will be a factor, impact on fielding and running between the wickets, dew might affect the second innings.
+    *   **Overcast/Chance of Rain:** Could aid swing bowling early on. DLS method might come into play if rain interrupts.
+    *   **Normal:** Usual gameplay.
+
+**Potential Team Advantage (Based on Hypothetical Scenarios):**
+
+*   **If Pitch is Batting Friendly & Weather is Hot/Humid:** A team with strong, aggressive top-order batsmen and power hitters in the middle order will thrive. Dew in the second innings will further benefit the chasing team.
+*   **If Pitch Aids Seam/Swing & Weather is Overcast:** A team with quality swing bowlers and batsmen who are technically sound against pace will have the upper hand.
+*   **If Pitch Favors Spin & Weather is Normal:** A team with quality spinners (both finger and wrist spinners) will dominate. Batsmen who are good at rotating strike and playing the long game will be key.
+*   **If the pitch is balanced,** A team with a good mix of both might benefit the most and win the game.
+
+**Key Players to Watch (General):**
+
+*   **Opening Batsmen:** Vital for setting the tone, regardless of conditions.
+*   **Quality Spinners:** Always valuable on Indian pitches, especially if there's any turn.
+*   **Death Over Specialists:** Bowlers who can bowl yorkers and slower balls effectively.
+*   **All-rounders:** Provide balance and flexibility to the team.
+
+**In Conclusion:**
+
+Without specific information, it's impossible to give a definitive prediction. A close watch on the pitch report before the match and an understanding of the weather forecast will be crucial in determining the team with the advantage.
+</p>
+        </div>
+    </div>
+</div><!-- Team Overview Slide Template -->
+<div class="slide" id="slide-4">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Kolkata Knight Riders - Team Overview</h2>
+        
+        <div class="team-overview">
+            <div class="team-header">
+                <img src="../team_data/kkr_logo.png" alt="Kolkata Knight Riders Logo" class="team-logo">
+                <h3>Kolkata Knight Riders</h3>
+            </div>
+
+            <div class="team-stats-grid">
+                
+            <div class="team-stat-card">
+                <div class="team-stat-value">2 (2012, 2014)</div>
+                <div class="team-stat-label">Titles</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">3 (2012, 2014, 2021)</div>
+                <div class="team-stat-label">Final Appearances</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">51.3%</div>
+                <div class="team-stat-label">Win Rate</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">245/6 vs KXIP (2018)</div>
+                <div class="team-stat-label">Highest Score</div>
+            </div>
+            
+            </div>
+
+            <div style="margin-top: 30px; width: 100%;">
+                <h3 style="text-align: center; margin-bottom: 15px;">Key Players</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Shreyas Iyer</p>
+    <p>Batsman (Captain)</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Runs in IPL 2023: <strong>404</strong></p>
+        <p style="font-size: 0.9rem;">Strike Rate: <strong>146.5</strong></p>
+    </div>
+</div><!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Andre Russell</p>
+    <p>All-rounder</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Batting SR: <strong>170.3</strong></p>
+        <p style="font-size: 0.9rem;">Wickets: <strong>96</strong></p>
+    </div>
+</div><!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Sunil Narine</p>
+    <p>All-rounder</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Wickets: <strong>163</strong></p>
+        <p style="font-size: 0.9rem;">Economy: <strong>6.73</strong></p>
+    </div>
+</div><!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Varun Chakravarthy</p>
+    <p>Bowler</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Wickets: <strong>69</strong></p>
+        <p style="font-size: 0.9rem;">Economy: <strong>7.82</strong></p>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Team Overview Slide Template -->
+<div class="slide" id="slide-5">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Sunrisers Hyderabad - Team Overview</h2>
+        
+        <div class="team-overview">
+            <div class="team-header">
+                <img src="../team_data/srh_logo.png" alt="Sunrisers Hyderabad Logo" class="team-logo">
+                <h3>Sunrisers Hyderabad</h3>
+            </div>
+
+            <div class="team-stats-grid">
+                
+            <div class="team-stat-card">
+                <div class="team-stat-value">1 (2016)</div>
+                <div class="team-stat-label">Titles</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">2 (2016, 2018)</div>
+                <div class="team-stat-label">Final Appearances</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">49.5%</div>
+                <div class="team-stat-label">Win Rate</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">277/3 vs MI (2024)</div>
+                <div class="team-stat-label">Highest Score</div>
+            </div>
+            
+            </div>
+
+            <div style="margin-top: 30px; width: 100%;">
+                <h3 style="text-align: center; margin-bottom: 15px;">Key Players</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Pat Cummins</p>
+    <p>Bowler (Captain)</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Wickets: <strong>45</strong></p>
+        <p style="font-size: 0.9rem;">Economy: <strong>8.21</strong></p>
+    </div>
+</div><!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Travis Head</p>
+    <p>Batsman</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Strike Rate: <strong>184.2</strong></p>
+        <p style="font-size: 0.9rem;">Avg: <strong>45.7</strong></p>
+    </div>
+</div><!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Bhuvneshwar Kumar</p>
+    <p>Bowler</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Wickets: <strong>170</strong></p>
+        <p style="font-size: 0.9rem;">Economy: <strong>7.35</strong></p>
+    </div>
+</div><!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Heinrich Klaasen</p>
+    <p>Wicketkeeper-Batsman</p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">Strike Rate: <strong>181.3</strong></p>
+        <p style="font-size: 0.9rem;">6s in IPL 2023: <strong>27</strong></p>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Player Stats Slide Template -->
+<div class="slide" id="slide-6">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Top Run Scorers</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div><!-- Player Stats Slide Template -->
+<div class="slide" id="slide-7">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Top Wicket Takers</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div><!-- Player Stats Slide Template -->
+<div class="slide" id="slide-8">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Most Sixes</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div><!-- Player Stats Slide Template -->
+<div class="slide" id="slide-9">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Best Economy Rates</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div>
+
+        <div class="slide-controls">
+            <button class="prev-btn">Previous</button>
+            <button class="next-btn">Next</button>
+        </div>
+        
+        <div class="slide-indicators">
+            <!-- Indicators will be dynamically generated here -->
+            <div class="indicator active" data-slide="0"></div>
+<div class="indicator" data-slide="1"></div>
+<div class="indicator" data-slide="2"></div>
+<div class="indicator" data-slide="3"></div>
+<div class="indicator" data-slide="4"></div>
+<div class="indicator" data-slide="5"></div>
+<div class="indicator" data-slide="6"></div>
+<div class="indicator" data-slide="7"></div>
+<div class="indicator" data-slide="8"></div>
+<div class="indicator" data-slide="9"></div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+            let slideshowInterval;
+            let isAutoSliding = true;
+            const slideDuration = 10000; // 10 seconds per slide
+            
+            // Set dynamic backgrounds for slides
+            slides.forEach((slide, index) => {
+                // Background gradients will be populated by the generator
+                const colors = [
+                    'linear-gradient(45deg, #1a237e, #283593)', 
+                    'linear-gradient(45deg, #004d40, #00695c)',
+                    'linear-gradient(45deg, #b71c1c, #c62828)',
+                    'linear-gradient(45deg, #4a148c, #6a1b9a)',
+                    'linear-gradient(45deg, #e65100, #ef6c00)',
+                    'linear-gradient(45deg, #880e4f, #ad1457)'
+                ];
+                // The line below will be replaced by the actual gradients
+                // 
+            'linear-gradient(45deg, #1a237e, #283593)', 
+            'linear-gradient(45deg, #004d40, #00695c)',
+            'linear-gradient(45deg, #b71c1c, #c62828)',
+            'linear-gradient(45deg, #4a148c, #6a1b9a)',
+            'linear-gradient(45deg, #e65100, #ef6c00)',
+            'linear-gradient(45deg, #880e4f, #ad1457)'
+        
+                
+                slide.querySelector('.slide-bg').style.background = colors[index % colors.length];
+            });
+            
+            // Function to show a specific slide
+            function showSlide(n) {
+                // Validate slide index
+                if (n >= slides.length) {
+                    currentSlide = 0;
+                } else if (n < 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide = n;
+                }
+                
+                // Update slide classes
+                slides.forEach((slide, index) => {
+                    if (index < currentSlide) {
+                        slide.className = 'slide prev';
+                    } else if (index === currentSlide) {
+                        slide.className = 'slide active';
+                    } else {
+                        slide.className = 'slide';
+                    }
+                });
+                
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentSlide);
+                });
+                
+                // Reset slideshow timer when manually changing slides
+                resetSlideshow();
+            }
+            
+            // Function to go to the next slide
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+            
+            // Function to go to the previous slide
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+            
+            // Function to start automatic slideshow
+            function startSlideshow() {
+                isAutoSliding = true;
+                slideshowInterval = setInterval(nextSlide, slideDuration);
+            }
+            
+            // Function to reset slideshow timer
+            function resetSlideshow() {
+                clearInterval(slideshowInterval);
+                startSlideshow();
+            }
+            
+            // Function to pause slideshow
+            function pauseSlideshow() {
+                isAutoSliding = false;
+                clearInterval(slideshowInterval);
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+            });
+            
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+            });
+            
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    showSlide(index);
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === 'Escape') {
+                    if (isAutoSliding) {
+                        pauseSlideshow();
+                    } else {
+                        startSlideshow();
+                    }
+                }
+            });
+            
+            // Pause slideshow when user interacts with the page
+            document.addEventListener('mousemove', function() {
+                pauseSlideshow();
+                
+                // Resume after inactivity
+                clearTimeout(window.resumeTimeout);
+                window.resumeTimeout = setTimeout(startSlideshow, 30000); // Resume after 30 seconds of inactivity
+            });
+            
+            // Touch swipe functionality
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            document.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    nextSlide(); // Swipe left
+                } else if (touchEndX > touchStartX + 50) {
+                    prevSlide(); // Swipe right
+                }
+            }
+            
+            // Apply bar widths from data attributes
+            document.querySelectorAll('.bar[data-width]').forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                if (width) {
+                    bar.style.width = width + '%';
+                }
+            });
+            
+            // Start slideshow
+            startSlideshow();
+
+            // Add custom scripts if needed
+            /* Custom scripts will be inserted here */
+            // 
+        // JavaScript for comparison tabs
+        const tabBtns = document.querySelectorAll('.comparison-tab');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+                
+                // Update active tab button
+                tabBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update active content
+                const contents = document.querySelectorAll('.comparison-content');
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tabName) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        });
+    </script>
+</body>
+</html>

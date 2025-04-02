@@ -13,3 +13,73 @@
 2025-04-02 11:26:42,125 - ERROR - Error loading weather CSV data: name 'pd' is not defined
 2025-04-02 11:26:42,125 - WARNING - No weather data files found
 2025-04-02 11:26:42,132 - INFO - Slides HTML generated successfully: ipl_slides\ipl_slides_20250402.html
+2025-04-02 23:56:11,195 [INFO] Gemini API initialized successfully
+2025-04-02 23:56:11,301 [INFO] Loaded 7 templates
+2025-04-02 23:56:11,331 [INFO] Loaded 3 partial templates
+2025-04-02 23:56:11,331 [ERROR] Error generating slides: 'list' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\ravih\OneDrive\Documents\Python Projects\ipl cric\ipl_slides_generator.py", line 927, in <module>
+    num_matches = generate_slides_for_today()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ravih\OneDrive\Documents\Python Projects\ipl cric\ipl_slides_generator.py", line 895, in generate_slides_for_today
+    for match in schedule_data.get("matches", []):
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+2025-04-02 23:57:33,747 [INFO] Gemini API initialized successfully
+2025-04-02 23:57:33,751 [INFO] Loaded 7 templates
+2025-04-02 23:57:33,752 [INFO] Loaded 3 partial templates
+2025-04-02 23:57:35,908 [ERROR] Error getting Gemini analysis: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-02 23:57:36,263 [ERROR] Error getting Gemini analysis: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-02 23:57:37,603 [ERROR] Error getting Gemini analysis: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-02 23:57:37,953 [ERROR] Error getting Gemini analysis: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-02 23:57:37,954 [WARNING] No team data found for Royal Challengers Bengaluru
+2025-04-02 23:57:37,954 [WARNING] No team data found for Gujarat Titans
+2025-04-02 23:57:37,961 [INFO] Generated slides at ipl_slides\ipl_prematch_Royal_Challengers_Bengaluru_Gujarat_Titans_20250402.html
+2025-04-02 23:57:37,963 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 00:15:56,097 [INFO] Gemini API initialized successfully with gemini-1.0-pro model
+2025-04-03 00:15:56,097 [INFO] Loaded 7 templates
+2025-04-03 00:15:56,097 [INFO] Loaded 3 partial templates
+2025-04-03 00:15:58,012 [ERROR] Error getting Gemini analysis: 404 models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:15:58,357 [ERROR] Error getting Gemini analysis: 404 models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:15:59,674 [ERROR] Error getting Gemini analysis: 404 models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:16:00,029 [ERROR] Error getting Gemini analysis: 404 models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:16:00,029 [WARNING] No team data found for Kolkata Knight Riders
+2025-04-03 00:16:00,029 [WARNING] No team data found for Sunrisers Hyderabad
+2025-04-03 00:16:00,045 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 00:16:00,045 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 00:20:30,666 [INFO] Gemini API initialized successfully with gemini-flash model
+2025-04-03 00:20:30,668 [INFO] Loaded 7 templates
+2025-04-03 00:20:30,668 [INFO] Loaded 3 partial templates
+2025-04-03 00:20:32,686 [ERROR] Error getting Gemini analysis: 404 models/gemini-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:20:33,036 [ERROR] Error getting Gemini analysis: 404 models/gemini-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:20:34,297 [ERROR] Error getting Gemini analysis: 404 models/gemini-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:20:34,691 [ERROR] Error getting Gemini analysis: 404 models/gemini-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:20:34,691 [WARNING] No team data found for Kolkata Knight Riders
+2025-04-03 00:20:34,691 [WARNING] No team data found for Sunrisers Hyderabad
+2025-04-03 00:20:34,696 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 00:20:34,696 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 00:22:20,841 [WARNING] Failed to initialize models/gemini-pro model: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:22:21,405 [INFO] Gemini API initialized successfully with models/gemini-1.5-flash model
+2025-04-03 00:22:21,405 [ERROR] Error generating slides: 'IPLSlidesGenerator' object has no attribute 'load_templates'
+Traceback (most recent call last):
+  File "C:\Users\ravih\OneDrive\Documents\Python Projects\ipl cric\ipl_slides_generator.py", line 898, in <module>
+    num_matches = generate_slides_for_today()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ravih\OneDrive\Documents\Python Projects\ipl cric\ipl_slides_generator.py", line 853, in generate_slides_for_today
+    generator = IPLSlidesGenerator()
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ravih\OneDrive\Documents\Python Projects\ipl cric\ipl_slides_generator.py", line 148, in __init__
+    self.templates = self.load_templates()
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'IPLSlidesGenerator' object has no attribute 'load_templates'
+2025-04-03 00:23:32,725 [WARNING] Failed to initialize models/gemini-pro model: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 00:23:33,345 [INFO] Gemini API initialized successfully with models/gemini-1.5-flash model
+2025-04-03 00:23:33,345 [INFO] Loaded 7 templates
+2025-04-03 00:23:33,345 [INFO] Loaded 3 partial templates
+2025-04-03 00:23:43,345 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 00:23:43,345 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 00:34:40,559 [INFO] Gemini API initialized successfully with gemini-2.0-flash model
+2025-04-03 00:34:40,562 [INFO] Loaded 7 templates
+2025-04-03 00:34:40,562 [INFO] Loaded 3 partial templates
+2025-04-03 00:34:54,192 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 00:34:54,193 [INFO] Successfully generated slides for 1 match(es)

@@ -1,0 +1,66 @@
+{
+  "name": "Kolkata Knight Riders",
+  "abbr": "KKR",
+  "logo": "../team_data/kkr_logo.png",
+  "owner": "Knight Riders Group",
+  "captain": "Shreyas Iyer",
+  "coach": "Chandrakant Pandit",
+  "home_ground": "Eden Gardens, Kolkata",
+  "statistics": {
+    "Titles": "2 (2012, 2014)",
+    "Final Appearances": "3 (2012, 2014, 2021)",
+    "Win Rate": "51.3%",
+    "Highest Score": "245/6 vs KXIP (2018)"
+  },
+  "batting_stats": {
+    "avg_score": 170,
+    "run_rate": 9.1,
+    "powerplay_avg": 54.2,
+    "death_overs_avg": 51.8
+  },
+  "bowling_stats": {
+    "economy_rate": 8.4,
+    "bowling_avg": 26.1,
+    "strike_rate": 18.6,
+    "dot_ball_percentage": 39.5
+  },
+  "form": {
+    "last5": 4,
+    "home_win_percentage": 62,
+    "away_win_percentage": 46
+  },
+  "key_players": [
+    {
+      "name": "Shreyas Iyer",
+      "role": "Batsman (Captain)",
+      "key_stat1_name": "Runs in IPL 2023",
+      "key_stat1_value": "404",
+      "key_stat2_name": "Strike Rate",
+      "key_stat2_value": "146.5"
+    },
+    {
+      "name": "Andre Russell",
+      "role": "All-rounder",
+      "key_stat1_name": "Batting SR",
+      "key_stat1_value": "170.3",
+      "key_stat2_name": "Wickets",
+      "key_stat2_value": "96"
+    },
+    {
+      "name": "Sunil Narine",
+      "role": "All-rounder",
+      "key_stat1_name": "Wickets",
+      "key_stat1_value": "163",
+      "key_stat2_name": "Economy",
+      "key_stat2_value": "6.73"
+    },
+    {
+      "name": "Varun Chakravarthy",
+      "role": "Bowler",
+      "key_stat1_name": "Wickets",
+      "key_stat1_value": "69",
+      "key_stat2_name": "Economy",
+      "key_stat2_value": "7.82"
+    }
+  ]
+}

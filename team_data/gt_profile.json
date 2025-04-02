@@ -1,0 +1,66 @@
+{
+  "name": "Gujarat Titans",
+  "abbr": "GT",
+  "logo": "../team_data/gt_logo.png",
+  "owner": "CVC Capital Partners",
+  "captain": "Shubman Gill",
+  "coach": "Ashish Nehra",
+  "home_ground": "Narendra Modi Stadium, Ahmedabad",
+  "statistics": {
+    "Titles": "1 (2022)",
+    "Final Appearances": "2 (2022, 2023)",
+    "Win Rate": "62.5%",
+    "Highest Score": "227/2 vs MI (2023)"
+  },
+  "batting_stats": {
+    "avg_score": 163,
+    "run_rate": 8.65,
+    "powerplay_avg": 48.4,
+    "death_overs_avg": 50.8
+  },
+  "bowling_stats": {
+    "economy_rate": 8.35,
+    "bowling_avg": 25.7,
+    "strike rate": 18.2,
+    "dot_ball_percentage": 40.1
+  },
+  "form": {
+    "last5": 2,
+    "home_win_percentage": 68,
+    "away_win_percentage": 55
+  },
+  "key_players": [
+    {
+      "name": "Shubman Gill",
+      "role": "Batsman (Captain)",
+      "key_stat1_name": "Runs in IPL 2023",
+      "key_stat1_value": "890",
+      "key_stat2_name": "Strike Rate",
+      "key_stat2_value": "157.8"
+    },
+    {
+      "name": "Rashid Khan",
+      "role": "Bowler",
+      "key_stat1_name": "Wickets",
+      "key_stat1_value": "159",
+      "key_stat2_name": "Economy",
+      "key_stat2_value": "6.64"
+    },
+    {
+      "name": "Rahul Tewatia",
+      "role": "All-rounder",
+      "key_stat1_name": "Batting SR",
+      "key_stat1_value": "141.2",
+      "key_stat2_name": "Bowling Econ",
+      "key_stat2_value": "8.75"
+    },
+    {
+      "name": "Mohammed Shami",
+      "role": "Bowler",
+      "key_stat1_name": "Wickets in IPL 2023",
+      "key_stat1_value": "28",
+      "key_stat2_name": "Economy",
+      "key_stat2_value": "8.03"
+    }
+  ]
+}
