@@ -8,9 +8,9 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
-import time
 import json
 import datetime
+import time
 import requests
 from colorama import init, Fore, Style
 
@@ -699,6 +699,40 @@ def get_team_comparison_via_api(team1_code, team2_code):
     except Exception as e:
         print(f"{Fore.RED}Error in API comparison method: {str(e)}{Style.RESET_ALL}")
         return None
+
+def save_team_comparison_data(team_comparison, team1_name, team2_name):
+    """
+    Save team comparison data to JSON file
+    
+    Args:
+        team_comparison (dict): Team comparison data dictionary
+        team1_name (str): Name of the first team
+        team2_name (str): Name of the second team
+    
+    Returns:
+        str: Path to the saved JSON file
+    """
+    timestamp = datetime.datetime.now().strftime('%Y%m%d')
+    
+    # Create a normalized filename
+    team1_short = team1_name.replace(' ', '_')[:3].upper()
+    team2_short = team2_name.replace(' ', '_')[:3].upper()
+    filename = os.path.join(TEAM_COMPARISON_FOLDER, f"{team1_short}_vs_{team2_short}_{timestamp}.json")
+    
+    # Add metadata to the JSON output
+    output_data = {
+        "generated_at": datetime.datetime.now().isoformat(),
+        "team1": team1_name,
+        "team2": team2_name,
+        "comparison_data": team_comparison
+    }
+    
+    # Save to JSON file
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, indent=4)
+    
+    print(f"{Fore.GREEN}Team comparison data saved to {filename}{Style.RESET_ALL}")
+    return filename
 
 def main():
     """

@@ -526,9 +526,9 @@ def clean_player_team_data(df):
     
     return df
 
-def save_to_csv(df, stat_type, filename=None):
+def save_to_json(df, stat_type, filename=None):
     """
-    Save the DataFrame to a CSV file
+    Save the DataFrame to a JSON file
     
     Args:
         df (pandas.DataFrame): DataFrame to save
@@ -548,10 +548,19 @@ def save_to_csv(df, stat_type, filename=None):
     if filename is None:
         # Generate a filename with the current date
         today = datetime.datetime.now().strftime('%Y%m%d')
-        filename = os.path.join(folder, f'ipl_{stat_type}_{today}.csv')
+        filename = os.path.join(folder, f'ipl_{stat_type}_{today}.json')
     
-    # Save to CSV
-    df.to_csv(filename, index=False)
+    # Convert DataFrame to JSON format
+    json_data = {
+        "stat_type": stat_type,
+        "generated_date": datetime.datetime.now().isoformat(),
+        "data": df.to_dict(orient='records')
+    }
+    
+    # Save to JSON file
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(json_data, f, indent=4)
+    
     print(f"{Fore.GREEN}Data saved to {filename}{Style.RESET_ALL}")
     
     # Display a preview of the data
@@ -763,7 +772,7 @@ def scrape_all_stats():
         df = scrape_ipl_stats(url, stat_type)
         saved_file = None
         if df is not None:
-            saved_file = save_to_csv(df, stat_type)
+            saved_file = save_to_json(df, stat_type)
             results[stat_type] = {'success': True, 'file': saved_file}
         else:
             results[stat_type] = {'success': False, 'file': None}
@@ -804,28 +813,28 @@ def extract_data_from_existing_csv():
             hundreds_df = batting_df[['Player', 'Team', 'Mat', 'Inns', '100s']].copy()
             hundreds_df = hundreds_df.sort_values(by='100s', ascending=False).reset_index(drop=True)
             hundreds_df['Rank'] = range(1, len(hundreds_df) + 1)
-            save_to_csv(hundreds_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '100s']], 'most-hundreds')
+            save_to_json(hundreds_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '100s']], 'most-hundreds')
         
         # Most fifties
         if '50s' in batting_df.columns:
             fifties_df = batting_df[['Player', 'Team', 'Mat', 'Inns', '50s']].copy()
             fifties_df = fifties_df.sort_values(by='50s', ascending=False).reset_index(drop=True)
             fifties_df['Rank'] = range(1, len(fifties_df) + 1)
-            save_to_csv(fifties_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '50s']], 'most-fifties')
+            save_to_json(fifties_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '50s']], 'most-fifties')
         
         # Most sixes
         if '6s' in batting_df.columns:
             sixes_df = batting_df[['Player', 'Team', 'Mat', 'Inns', '6s']].copy()
             sixes_df = sixes_df.sort_values(by='6s', ascending=False).reset_index(drop=True)
             sixes_df['Rank'] = range(1, len(sixes_df) + 1)
-            save_to_csv(sixes_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '6s']], 'most-6s')
+            save_to_json(sixes_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '6s']], 'most-6s')
         
         # Most fours
         if '4s' in batting_df.columns:
             fours_df = batting_df[['Player', 'Team', 'Mat', 'Inns', '4s']].copy()
             fours_df = fours_df.sort_values(by='4s', ascending=False).reset_index(drop=True)
             fours_df['Rank'] = range(1, len(fours_df) + 1)
-            save_to_csv(fours_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '4s']], 'most-4s')
+            save_to_json(fours_df[['Rank', 'Player', 'Team', 'Mat', 'Inns', '4s']], 'most-4s')
         
         return True
     

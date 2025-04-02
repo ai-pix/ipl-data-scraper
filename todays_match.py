@@ -63,8 +63,54 @@ def load_team_data():
     
     return team_data
 
+def convert_schedule_to_json():
+    """Convert the CSV schedule to a clean JSON format for easier parsing"""
+    try:
+        json_schedule = []
+        with open(IPL_SCHEDULE_FILE, 'r') as f:
+            # Skip header
+            header = f.readline().strip().split(',')
+            
+            for line in f:
+                parts = line.strip().split(',')
+                if len(parts) < 9:  # Skip incomplete rows
+                    continue
+                
+                # Create a clean structured match entry
+                match = {
+                    "match_number": parts[0].strip(),
+                    "match_id": parts[1].strip(),
+                    "date": parts[2].strip(),
+                    "day": parts[3].strip(),
+                    "time": parts[4].strip(),
+                    "home_team": parts[5].strip(),
+                    "away_team": parts[6].strip(),
+                    "venue": parts[7].strip()
+                }
+                
+                # Add captains if available
+                if len(parts) > 9:
+                    match["home_captain"] = parts[8].strip()
+                    match["away_captain"] = parts[9].strip() if len(parts) > 10 else ""
+                
+                json_schedule.append(match)
+        
+        # Write to JSON file
+        json_file = "ipl_schedule.json"
+        with open(json_file, 'w') as f:
+            json.dump(json_schedule, f, indent=4)
+        
+        print(f"{Fore.GREEN}Converted schedule to JSON: {json_file}{Style.RESET_ALL}")
+        return json_file
+    
+    except Exception as e:
+        print(f"{Fore.RED}Error converting schedule to JSON: {e}{Style.RESET_ALL}")
+        import traceback
+        traceback.print_exc()
+        return None
+
 def fetch_today_matches():
-    """Fetch today's IPL matches from the schedule CSV file"""
+    """Fetch today's IPL matches from the schedule"""
     print(f"{Fore.CYAN}Fetching today's IPL matches from schedule...{Style.RESET_ALL}")
     
     # Get current date in Indian Standard Time (IST)
@@ -75,85 +121,103 @@ def fetch_today_matches():
     print(f"{Fore.CYAN}Current date in IST: {today.strftime('%d-%b-%Y (%A)')} {Style.RESET_ALL}")
     print(f"{Fore.CYAN}Looking for matches with date: {today_date_format} {Style.RESET_ALL}")
     
-    # Check if schedule file exists
-    if not os.path.exists(IPL_SCHEDULE_FILE):
-        print(f"{Fore.RED}Schedule file not found: {IPL_SCHEDULE_FILE}{Style.RESET_ALL}")
+    # First, convert CSV to JSON for reliable parsing
+    json_file = convert_schedule_to_json()
+    if not json_file:
+        print(f"{Fore.RED}Failed to convert schedule to JSON.{Style.RESET_ALL}")
         return []
     
     try:
-        # Read schedule CSV
-        df = pd.read_csv(IPL_SCHEDULE_FILE)
+        # Load the JSON schedule
+        with open(json_file, 'r') as f:
+            schedule = json.load(f)
         
-        # Print out column names and first few records for debugging
-        print(f"CSV columns: {', '.join(df.columns)}")
+        print(f"Loaded {len(schedule)} matches from JSON schedule")
         
-        # Manually hardcoded match for April 1, 2025 (DIRECT OVERRIDE)
-        if today.day == 1 and today.month == 4 and today.year == 2025:
-            print(f"{Fore.YELLOW}Today is April 1, 2025. Using direct match data override.{Style.RESET_ALL}")
+        # Find matches for today
+        today_matches = []
+        for match in schedule:
+            date_str = match.get('date', '').strip()
             
-            # Direct override for Match #13 (bypassing any CSV parsing issues)
-            today_match = [{
-                'team1': "Lucknow Super Giants",
-                'team2': "Punjab Kings",
-                'time': "7:30 PM",
-                'venue': "Lucknow",
-                'match_id': 13
-            }]
+            # Try different date formats
+            match_found = False
+            for fmt in ["%d-%b-%y", "%d-%b-%Y", "%d/%m/%Y"]:
+                try:
+                    match_date = datetime.datetime.strptime(date_str, fmt)
+                    if (match_date.day == today.day and 
+                        match_date.month == today.month and 
+                        match_date.year == today.year):
+                        match_found = True
+                        break
+                except ValueError:
+                    continue
             
-            print(f"{Fore.GREEN}Match details (override): {today_match[0]['team1']} vs {today_match[0]['team2']} at {today_match[0]['venue']}, {today_match[0]['time']}{Style.RESET_ALL}")
-            
-            return today_match
-        
-        # Find row with the appropriate date 
-        for idx, row in df.iterrows():
-            date_str = str(row.get('Date', '')).lower().strip()
-            day_str = str(row.get('Day', '')).lower().strip()
-            
-            # Look for current day in the date string or day column
-            day_match = today.day == int(re.search(r'(\d+)', date_str).group(1)) if re.search(r'(\d+)', date_str) else False
-            month_match = today.strftime("%b").lower() in date_str
-            
-            if day_match and month_match:
-                print(f"{Fore.GREEN}Found match for today (Row {idx}): {row['Home']} vs {row['Away']} on {row['Date']}{Style.RESET_ALL}")
+            if match_found:
+                print(f"{Fore.GREEN}Found match for today: {match['home_team']} vs {match['away_team']}{Style.RESET_ALL}")
                 
-                # Extract data properly
-                team1 = row['Home']
-                team2 = row['Away']
-                venue = row['Venue']
-                time = row['Start'] if 'Start' in row and pd.notna(row['Start']) else "7:30 PM"
+                # Create standardized match entry
+                match_entry = {
+                    'team1': match['home_team'],
+                    'team2': match['away_team'],
+                    'time': match['time'],
+                    'venue': match['venue'],
+                    'match_id': match['match_id']
+                }
                 
-                return [{
-                    'team1': team1,
-                    'team2': team2,
-                    'time': time,
-                    'venue': venue,
-                    'match_id': row.get('No', None)
-                }]
+                # Debug output
+                print(f"Match details:")
+                for k, v in match_entry.items():
+                    print(f"  {k}: {v}")
+                
+                today_matches.append(match_entry)
         
-        # If we reach here, no match was found
-        print(f"{Fore.YELLOW}No matches found for today. Using fallback data for April 1, 2025{Style.RESET_ALL}")
+        if today_matches:
+            return today_matches
         
-        return [{
-            'team1': "Lucknow Super Giants",
-            'team2': "Punjab Kings",
-            'time': "7:30 PM",
-            'venue': "Lucknow",
-            'match_id': 13
-        }]
+        # If no matches today, find upcoming match
+        print(f"{Fore.YELLOW}No matches found for today. Looking for upcoming matches.{Style.RESET_ALL}")
+        
+        next_match = None
+        min_days = float('inf')
+        
+        for match in schedule:
+            date_str = match.get('date', '').strip()
+            
+            # Try to parse date
+            match_date = None
+            for fmt in ["%d-%b-%y", "%d-%b-%Y", "%d/%m/%Y"]:
+                try:
+                    match_date = datetime.datetime.strptime(date_str, fmt)
+                    break
+                except ValueError:
+                    continue
+            
+            if match_date and match_date > today.replace(tzinfo=None):
+                days_diff = (match_date - today.replace(tzinfo=None)).days
+                if days_diff < min_days:
+                    min_days = days_diff
+                    next_match = {
+                        'team1': match['home_team'],
+                        'team2': match['away_team'],
+                        'time': match['time'],
+                        'venue': match['venue'],
+                        'match_id': match['match_id'],
+                        'match_date': match_date.strftime("%d-%b-%Y")
+                    }
+        
+        if next_match:
+            print(f"{Fore.YELLOW}Showing upcoming match on {next_match['match_date']}{Style.RESET_ALL}")
+            return [next_match]
+        
+        # No matches found
+        print(f"{Fore.RED}No upcoming matches found in the schedule.{Style.RESET_ALL}")
+        return []
         
     except Exception as e:
-        print(f"{Fore.RED}Error reading schedule file: {e}{Style.RESET_ALL}")
+        print(f"{Fore.RED}Error reading schedule: {e}{Style.RESET_ALL}")
         import traceback
         traceback.print_exc()
-        
-        # Failsafe - Always return correct data for April 1, 2025
-        return [{
-            'team1': "Lucknow Super Giants",
-            'team2': "Punjab Kings",
-            'time': "7:30 PM",
-            'venue': "Lucknow",
-            'match_id': 13
-        }]
+        return []
 
 
 def convert_team_name(team_name):
@@ -281,47 +345,92 @@ def display_match_details(match, team_data):
     
     print(f"{Fore.CYAN}{'='*50}{Style.RESET_ALL}")
 
-def save_match_data(matches, team_data):
-    """Save match data and predictions to files"""
-    # Use IST for date in filenames
-    ist = pytz.timezone('Asia/Kolkata')
-    today = datetime.datetime.now(ist).strftime("%Y%m%d")
+def save_matches_to_json(matches, filename=None):
+    """Save matches to a JSON file"""
+    if not matches:
+        print(f"{Fore.YELLOW}No matches to save.{Style.RESET_ALL}")
+        return None
     
-    # Save match data
-    match_data_with_predictions = []
-    
-    for match in matches:
-        # Add prediction to match data
-        match_with_prediction = match.copy()
-        match_with_prediction['prediction'] = predict_match_outcome(match['team1'], match['team2'], team_data)
-        match_data_with_predictions.append(match_with_prediction)
-    
-    # Save as JSON
-    json_filename = os.path.join(FOLDERS['matches'], f'todays_matches_{today}.json')
-    with open(json_filename, 'w', encoding='utf-8') as f:
-        json.dump(match_data_with_predictions, f, indent=4)
-    
-    # Save as CSV
-    csv_data = []
-    for match in match_data_with_predictions:
-        prediction = match['prediction']
-        csv_data.append({
-            'Team1': match['team1'],
-            'Team2': match['team2'],
-            'Time': match['time'],
-            'Venue': match['venue'],
-            'Predicted_Winner': prediction.get('prediction', 'Unknown'),
-            'Confidence': prediction.get('confidence', 0),
-            'Reason': prediction.get('reason', 'Unknown')
-        })
-    
-    df = pd.DataFrame(csv_data)
-    csv_filename = os.path.join(FOLDERS['matches'], f'todays_matches_{today}.csv')
-    df.to_csv(csv_filename, index=False)
-    
-    print(f"\n{Fore.GREEN}Match data saved to:{Style.RESET_ALL}")
-    print(f"- JSON: {json_filename}")
-    print(f"- CSV: {csv_filename}")
+    try:
+        # Create output directory if it doesn't exist
+        output_dir = "matches"
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            print(f"{Fore.GREEN}Created output directory: {output_dir}{Style.RESET_ALL}")
+        
+        # Generate default filename if none provided
+        if filename is None:
+            today = datetime.datetime.now().strftime('%Y%m%d')
+            filename = os.path.join(output_dir, f"todays_matches_{today}.json")
+        
+        # Create structured JSON object
+        json_data = {
+            "generated_date": datetime.datetime.now().isoformat(),
+            "matches": matches
+        }
+        
+        # Write to JSON file
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, indent=4)
+            
+        print(f"{Fore.GREEN}Matches saved to {filename}{Style.RESET_ALL}")
+        return filename
+        
+    except Exception as e:
+        print(f"{Fore.RED}Error saving matches to JSON: {e}{Style.RESET_ALL}")
+        import traceback
+        traceback.print_exc()
+        return None
+
+def process_csv_row(row, idx):
+    """Process a CSV row to extract match data in a consistent format"""
+    try:
+        # Print full row data for debugging
+        print(f"\n{Fore.CYAN}Full row data for debugging:{Style.RESET_ALL}")
+        for key, value in row.items():
+            print(f"  {key}: {value}")
+            
+        # The CSV column structure from inspection is:
+        # Match,No,Match Day,Date,Day,Start,Home,Away,Venue,Home Captain,Away Captain
+        
+        # Extract data directly from the correct columns
+        home_team = str(row['Home']).strip()
+        away_team = str(row['Away']).strip()
+        venue = str(row['Venue']).strip()
+        
+        # Get time from Start column
+        time_val = "7:30 PM"  # Default
+        if 'Start' in row and pd.notna(row['Start']):
+            time_val = str(row['Start']).strip()
+            
+        match_id = row.get('No', idx)
+        
+        # Print extracted values
+        print(f"\n{Fore.GREEN}Correctly extracted match data:{Style.RESET_ALL}")
+        print(f"  Home team: {home_team}")
+        print(f"  Away team: {away_team}")
+        print(f"  Time: {time_val}")
+        print(f"  Venue: {venue}")
+        print(f"  Match ID: {match_id}")
+        
+        return {
+            'team1': home_team,
+            'team2': away_team,
+            'time': time_val,
+            'venue': venue,
+            'match_id': match_id
+        }
+    except Exception as e:
+        print(f"{Fore.RED}Error processing row: {e}{Style.RESET_ALL}")
+        import traceback
+        traceback.print_exc()
+        return {
+            'team1': f"Error: {str(e)}",
+            'team2': "Unknown",
+            'time': "Unknown",
+            'venue': "Unknown",
+            'match_id': idx
+        }
 
 def main():
     """Main function"""
@@ -347,12 +456,18 @@ def main():
     
     print(f"\n{Fore.GREEN}Found {len(matches)} IPL matches for today:{Style.RESET_ALL}")
     
+    # Print raw match data for debugging
+    for i, match in enumerate(matches):
+        print(f"\nRaw match data #{i+1}:")
+        for key, value in match.items():
+            print(f"  {key}: {value}")
+    
     # Display match details and predictions
     for match in matches:
         display_match_details(match, team_data)
     
     # Save match data
-    save_match_data(matches, team_data)
+    save_matches_to_json(matches)
     
     print(f"\n{Fore.CYAN}======================================{Style.RESET_ALL}")
     print(f"{Fore.GREEN}Analysis complete!{Style.RESET_ALL}")

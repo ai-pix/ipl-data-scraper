@@ -1,0 +1,126 @@
+{
+    "stat_type": "most-6s",
+    "generated_date": "2025-04-02T08:49:28.591977",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Nicholas Pooran Lucknow Super",
+            "Team": "Giants",
+            "Mat": "2",
+            "Inns": "2",
+            "6s": 145
+        },
+        {
+            "Rank": 2,
+            "Player": "Aniket Verma Sunrisers",
+            "Team": "Hyderabad",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 117
+        },
+        {
+            "Rank": 3,
+            "Player": "Shreyas Iyer Punjab",
+            "Team": "Kings",
+            "Mat": "1",
+            "Inns": "1",
+            "6s": 97
+        },
+        {
+            "Rank": 4,
+            "Player": "Sai Sudharsan Gujarat",
+            "Team": "Titans",
+            "Mat": "2",
+            "Inns": "2",
+            "6s": 137
+        },
+        {
+            "Rank": 5,
+            "Player": "Mitchell Marsh Lucknow Super",
+            "Team": "Giants",
+            "Mat": "2",
+            "Inns": "2",
+            "6s": 124
+        },
+        {
+            "Rank": 6,
+            "Player": "Suryakumar Yadav Mumbai",
+            "Team": "Indians",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 104
+        },
+        {
+            "Rank": 7,
+            "Player": "Travis Head Sunrisers",
+            "Team": "Hyderabad",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 136
+        },
+        {
+            "Rank": 8,
+            "Player": "Ishan Kishan Sunrisers",
+            "Team": "Hyderabad",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 108
+        },
+        {
+            "Rank": 9,
+            "Player": "Dhruv Jurel Rajasthan",
+            "Team": "Royals",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 106
+        },
+        {
+            "Rank": 10,
+            "Player": "Quinton de Kock Kolkata Knight",
+            "Team": "Riders",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 102
+        },
+        {
+            "Rank": 11,
+            "Player": "Ajinkya Rahane Kolkata Knight",
+            "Team": "Riders",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 85
+        },
+        {
+            "Rank": 12,
+            "Player": "Ashutosh Sharma Delhi",
+            "Team": "Capitals",
+            "Mat": "1",
+            "Inns": "1",
+            "6s": 66
+        },
+        {
+            "Rank": 13,
+            "Player": "Faf du Plessis Delhi",
+            "Team": "Capitals",
+            "Mat": "2",
+            "Inns": "2",
+            "6s": 79
+        },
+        {
+            "Rank": 14,
+            "Player": "Sherfane Rutherford Gujarat",
+            "Team": "Titans",
+            "Mat": "2",
+            "Inns": "2",
+            "6s": 64
+        },
+        {
+            "Rank": 15,
+            "Player": "Nitish Rana Rajasthan",
+            "Team": "Royals",
+            "Mat": "3",
+            "Inns": "3",
+            "6s": 100
+        }
+    ]
+}

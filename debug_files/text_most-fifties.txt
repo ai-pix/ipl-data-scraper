@@ -200,19 +200,19 @@ SR
 
 1
 
-Nicholas Pooran
-Lucknow Super Giants
+Shreyas Iyer
+Punjab Kings
 
 
 2
 2
-145
-75
-72.50
-258.92
+149
+97*
+-
+206.94
 0
 2
-12
+8
 13
 
 
@@ -238,16 +238,35 @@ Gujarat Titans
 
 3
 
+Nicholas Pooran
+Lucknow Super Giants
+
+
+3
+3
+189
+75
+63.00
+219.76
+0
+2
+17
+15
+
+
+
+4
+
 Mitchell Marsh
 Lucknow Super Giants
 
 
-2
-2
+3
+3
 124
 72
-62.00
-185.07
+41.33
+182.35
 0
 2
 13
@@ -255,7 +274,7 @@ Lucknow Super Giants
 
 
 
-4
+5
 
 Ruturaj Gaikwad
 Chennai Super Kings
@@ -271,25 +290,6 @@ Chennai Super Kings
 2
 13
 4
-
-
-
-5
-
-Shreyas Iyer
-Punjab Kings
-
-
-1
-1
-97
-97*
--
-230.95
-0
-1
-5
-9
 
 
 
@@ -409,6 +409,25 @@ Delhi Capitals
 
 12
 
+Prabhsimran Singh
+Punjab Kings
+
+
+2
+2
+74
+69
+37.00
+176.19
+0
+1
+10
+3
+
+
+
+13
+
 Travis Head
 Sunrisers Hyderabad
 
@@ -426,7 +445,7 @@ Sunrisers Hyderabad
 
 
 
-13
+14
 
 Aniket Verma
 Sunrisers Hyderabad
@@ -445,7 +464,7 @@ Sunrisers Hyderabad
 
 
 
-14
+15
 
 Rachin Ravindra
 Chennai Super Kings
@@ -461,25 +480,6 @@ Chennai Super Kings
 1
 7
 4
-
-
-
-15
-
-Dhruv Jurel
-Rajasthan Royals
-
-
-3
-3
-106
-70
-35.33
-151.42
-0
-1
-10
-6
 
 
 
@@ -588,16 +588,16 @@ Shardul Thakur
 Lucknow Super Giants
 
 
-2
-6
+3
+9
 0
-53
+92
 6
 1
 0
-8.83
+15.33
 
-										8.83											
+										10.22											
 4/34
  
 
@@ -644,6 +644,26 @@ Royal Challengers Bengaluru
 
 7
 
+Digvesh Singh
+Lucknow Super Giants
+
+
+3
+12
+0
+101
+5
+0
+0
+20.20
+
+										8.41											
+2/30
+ 
+
+
+8
+
 Wanindu Hasaranga
 Rajasthan Royals
 
@@ -662,7 +682,27 @@ Rajasthan Royals
  
 
 
+9
+
+Arshdeep Singh
+Punjab Kings
+
+
+2
 8
+0
+79
+5
+1
+0
+15.80
+
+										9.87											
+3/43
+ 
+
+
+10
 
 Ashwani Kumar
 Mumbai Indians
@@ -682,7 +722,7 @@ Mumbai Indians
  
 
 
-9
+11
 
 Matheesha Pathirana
 Chennai Super Kings
@@ -702,7 +742,7 @@ Chennai Super Kings
  
 
 
-10
+12
 
 Sai Kishore
 Gujarat Titans
@@ -722,7 +762,7 @@ Gujarat Titans
  
 
 
-11
+13
 
 Vignesh Puthur
 Mumbai Indians
@@ -742,7 +782,7 @@ Mumbai Indians
  
 
 
-12
+14
 
 Deepak Chahar
 Mumbai Indians
@@ -762,7 +802,7 @@ Mumbai Indians
  
 
 
-13
+15
 
 Hardik Pandya
 Mumbai Indians
@@ -782,46 +822,6 @@ Mumbai Indians
  
 
 
-14
-
-Varun Chakaravarthy
-Kolkata Knight Riders
-
-
-3
-11
-0
-72
-3
-0
-0
-24.00
-
-										6.54											
-2/17
- 
-
-
-15
-
-Yash Dayal
-Royal Challengers Bengaluru
-
-
-2
-6
-0
-43
-3
-0
-0
-14.33
-
-										7.16											
-2/18
- 
-
-
  
 
 
@@ -834,7 +834,7 @@ In the 2023 edition, RCB captain Faf du Plessis had led the charts with eight ha
 
 
 
-AdvertisementPoints TableTeamPLWDLPTSRCB22004DC22004LSG21012GT21012PBKS11002MI31022CSK31022SRH31022RR31022KKR31022Advertisement 
+AdvertisementPoints TableTeamPLWDLPTSRCB22004PBKS22004DC22004GT21012MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
 
 
 
@@ -900,7 +900,7 @@ Elections
 Fitness
  
 
-Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIESHockey legend Vandana Katariya retires – ‘What use was my life if I couldn’t help the team?’‘Will maintain decency in shows’: Podcaster Ranveer Allahbadia files undertaking in Supreme CourtSC stays e-auction of Sector 39 mandi shops, seeks UT’s reply‘For education, shopping or picnic’: Omar Abdullah launches free bus service for women across J-KFather, friends of stabbing victim join in as protest demanding justice for Aditya intensifies in PUWaqf bill showdown: INDIA bloc holds meeting to formulate joint strategyMaharashtra approves e-bike taxi service in cities with more than 1 lakh population‘Unjust tax’: Opp slams BMC’s plan to levy user fee for waste managementIndians in foreign jails: Over 10,000 nationals imprisoned abroad, highest in Saudi Arabia, says MEAIPL 2025: After years of struggling at home, RCB have compiled a team that can ace Chinnaswamy conditionsUS court rejects Khalistani separatist’s claim of serving summons on NSA Ajit Doval during DC visitSunderbans firecracker unit blast: 2 brothers booked, probe on into family’s fireworks licenceRussia rejects Ukraine proposals from US in ‘current form’ after Trump says he is ‘angry’ with PutinCIDCO hikes property transfer fees in Navi MumbaiYSRCP urges PM Modi to address ‘security lapses’ at TirumalaHyderabad Cricket Association and Sunrisers Hyderabad reach an agreement on ticket row after “in-depth” discussions 
+Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIESBombay HC extends interim stay on order directing FIR against ex-Sebi chiefIPL 2025: Punjab Kings show swagger with all-round display against lacklustre Lucknow Super GiantsBrief spell of rain brings respite from heat in PuneMumbai: Driver, friend held for woman’s murder in Dharashiv; police say he stayed at house with body for 2 daysFrom 2008 to 2025: Full list of players to play in all IPL seasons71-year-old woman booked for ‘offering namaz’ at District Magistrate’s office in UPAhead of fiscal year end, Maharashtra issues 521 Government Resolutions‘Offence heinous’: Bombay HC rejects bail of school bus driver booked for sexual assault of 8-yr-old girlPep Guardiola gives Erling Haaland injury timeframe as Man City looks to adapt without star strikerTripura CM Saha rules out human right violations against families living beyond barbed-wire fencingConsequences to be ‘catastrophic’: Russia after Trump’s Iran bombing threatFire at Noida Sector 18, people jump from commercial building to save themselves‘I don’t necessarily think his red-ball career is over’: Australia chief selector Bailey on Marsh’s possible Test returnAzim Premji University students flag ‘poor-quality food’ in campus cafeteria, demand role in decision-makingFrom diesel to milk to tolls, here’s all that is getting costlier in Karnataka from this month onMaharashtra: Naxal-hit Gadchiroli to get mining authority under CM 
 
 
 

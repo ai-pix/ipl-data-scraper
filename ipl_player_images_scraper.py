@@ -337,6 +337,8 @@ def main():
     print(f"Scraping finished at: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Total time taken: {end_time - start_time}")
     print(f"{Fore.CYAN}======================================{Style.RESET_ALL}")
+    
+    return overall_summary_file
 
 if __name__ == "__main__":
     main()

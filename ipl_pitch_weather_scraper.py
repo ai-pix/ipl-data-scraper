@@ -670,26 +670,30 @@ def fetch_weather_data(city, state, country="India"):
     }
 
 
-def save_pitch_reports_to_csv(pitch_reports):
+def save_pitch_reports_to_json(pitch_reports):
     """
-    Save pitch reports to a CSV file
+    Save pitch reports to a JSON file
     
     Args:
         pitch_reports (list): List of pitch report dictionaries
     
     Returns:
-        str: Path to the CSV file
+        str: Path to the JSON file
     """
     today = datetime.datetime.now().strftime('%Y%m%d')
-    filename = os.path.join(FOLDERS['pitch_reports'], f'ipl_pitch_reports_{today}.csv')
+    filename = os.path.join(FOLDERS['pitch_reports'], f'ipl_pitch_reports_{today}.json')
     
-    # Create DataFrame
-    df = pd.DataFrame(pitch_reports)
+    # Create a structured JSON object
+    json_data = {
+        "generated_date": datetime.datetime.now().isoformat(),
+        "pitch_reports": pitch_reports
+    }
     
-    # Save to CSV
-    df.to_csv(filename, index=False)
+    # Save to JSON file
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(json_data, f, indent=4)
+    
     print(f"{Fore.GREEN}Pitch reports saved to {filename}{Style.RESET_ALL}")
-    
     return filename
 
 
@@ -1175,7 +1179,7 @@ def main():
     weather_reports = get_weather_reports()
     
     # Save reports to CSV
-    pitch_csv = save_pitch_reports_to_csv(pitch_reports)
+    pitch_csv = save_pitch_reports_to_json(pitch_reports)
     weather_csv = save_weather_reports_to_csv(weather_reports)
     
     # Save combined reports

@@ -1,0 +1,126 @@
+{
+    "stat_type": "most-fifties",
+    "generated_date": "2025-04-02T08:49:28.145155",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Shreyas Iyer Punjab",
+            "Team": "Kings",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 149
+        },
+        {
+            "Rank": 2,
+            "Player": "Sai Sudharsan Gujarat",
+            "Team": "Titans",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 137
+        },
+        {
+            "Rank": 3,
+            "Player": "Nicholas Pooran Lucknow Super",
+            "Team": "Giants",
+            "Mat": "3",
+            "Inns": "3",
+            "50s": 189
+        },
+        {
+            "Rank": 4,
+            "Player": "Mitchell Marsh Lucknow Super",
+            "Team": "Giants",
+            "Mat": "3",
+            "Inns": "3",
+            "50s": 124
+        },
+        {
+            "Rank": 5,
+            "Player": "Ruturaj Gaikwad Chennai Super",
+            "Team": "Kings",
+            "Mat": "3",
+            "Inns": "3",
+            "50s": 116
+        },
+        {
+            "Rank": 6,
+            "Player": "Ashutosh Sharma Delhi",
+            "Team": "Capitals",
+            "Mat": "1",
+            "Inns": "1",
+            "50s": 66
+        },
+        {
+            "Rank": 7,
+            "Player": "Jos Buttler Gujarat",
+            "Team": "Titans",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 93
+        },
+        {
+            "Rank": 8,
+            "Player": "Virat Kohli Royal Challengers",
+            "Team": "Bengaluru",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 90
+        },
+        {
+            "Rank": 9,
+            "Player": "Phil Salt Royal Challengers",
+            "Team": "Bengaluru",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 88
+        },
+        {
+            "Rank": 10,
+            "Player": "Rajat Patidar Royal Challengers",
+            "Team": "Bengaluru",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 85
+        },
+        {
+            "Rank": 11,
+            "Player": "Faf du Plessis Delhi",
+            "Team": "Capitals",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 79
+        },
+        {
+            "Rank": 12,
+            "Player": "Prabhsimran Singh Punjab",
+            "Team": "Kings",
+            "Mat": "2",
+            "Inns": "2",
+            "50s": 74
+        },
+        {
+            "Rank": 13,
+            "Player": "Travis Head Sunrisers",
+            "Team": "Hyderabad",
+            "Mat": "3",
+            "Inns": "3",
+            "50s": 136
+        },
+        {
+            "Rank": 14,
+            "Player": "Aniket Verma Sunrisers",
+            "Team": "Hyderabad",
+            "Mat": "3",
+            "Inns": "3",
+            "50s": 117
+        },
+        {
+            "Rank": 15,
+            "Player": "Rachin Ravindra Chennai Super",
+            "Team": "Kings",
+            "Mat": "3",
+            "Inns": "3",
+            "50s": 106
+        }
+    ]
+}
