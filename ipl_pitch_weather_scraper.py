@@ -534,7 +534,7 @@ def fetch_cricbuzz_pitch_report(venue):
 
 def fetch_weather_data(city, state, country="India"):
     """
-    Fetch weather data for a specific location
+    Fetch weather data for a specific location for today's date only
     
     Args:
         city (str): City name
@@ -542,9 +542,9 @@ def fetch_weather_data(city, state, country="India"):
         country (str, optional): Country name. Defaults to "India".
     
     Returns:
-        dict: Weather data
+        dict: Weather data for today only
     """
-    print(f"{Fore.CYAN}Fetching weather data for {city}, {state}...{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}Fetching today's weather data for {city}, {state}...{Style.RESET_ALL}")
     
     api_key = OPENWEATHER_API_KEY
     if not api_key:
@@ -556,7 +556,6 @@ def fetch_weather_data(city, state, country="India"):
             "current_condition": "API key not configured",
             "humidity": "API key not configured",
             "wind_speed": "API key not configured",
-            "forecast": "API key not configured",
             "last_updated": datetime.datetime.now().strftime('%Y-%m-%d')
         }
     
@@ -584,58 +583,11 @@ def fetch_weather_data(city, state, country="India"):
             
             weather_data = response.json()
             
-            # Get forecast - also try without state
-            forecast_url = f"https://api.openweathermap.org/data/2.5/forecast?q={alt_city}&appid={api_key}&units=metric"
-            forecast_response = requests.get(forecast_url)
-            forecast_response.raise_for_status()
-            
-            forecast_data = forecast_response.json()
-            
-            # Process current weather
+            # Process current weather only
             current_temp = weather_data.get("main", {}).get("temp", "N/A")
             current_condition = weather_data.get("weather", [{}])[0].get("description", "N/A").capitalize()
             humidity = weather_data.get("main", {}).get("humidity", "N/A")
             wind_speed = weather_data.get("wind", {}).get("speed", "N/A")
-            
-            # Process forecast (next 5 days, once per day)
-            forecast_list = forecast_data.get("list", [])
-            forecast = []
-            
-            # Get one forecast entry per day (at noon)
-            current_date = datetime.datetime.now().date()
-            for i in range(1, 6):  # Next 5 days
-                target_date = current_date + datetime.timedelta(days=i)
-                target_datetime_str = f"{target_date.strftime('%Y-%m-%d')} 12:00:00"
-                
-                # Find the closest forecast entry to noon for each day
-                closest_entry = None
-                min_time_diff = float('inf')
-                
-                for entry in forecast_list:
-                    entry_dt = datetime.datetime.fromtimestamp(entry["dt"])
-                    entry_date = entry_dt.date()
-                    
-                    if entry_date == target_date:
-                        # Calculate time difference from noon
-                        noon = datetime.datetime.combine(entry_date, datetime.time(12, 0))
-                        time_diff = abs((entry_dt - noon).total_seconds())
-                        
-                        if time_diff < min_time_diff:
-                            min_time_diff = time_diff
-                            closest_entry = entry
-                
-                if closest_entry:
-                    forecast_date = datetime.datetime.fromtimestamp(closest_entry["dt"]).strftime('%Y-%m-%d')
-                    forecast_temp = closest_entry["main"]["temp"]
-                    forecast_condition = closest_entry["weather"][0]["description"].capitalize()
-                    forecast_humidity = closest_entry["main"]["humidity"]
-                    
-                    forecast.append({
-                        "date": forecast_date,
-                        "temp": forecast_temp,
-                        "condition": forecast_condition,
-                        "humidity": forecast_humidity
-                    })
             
             # If we get here, we found a working city name
             print(f"{Fore.GREEN}Successfully fetched weather for {alt_city}{Style.RESET_ALL}")
@@ -647,7 +599,6 @@ def fetch_weather_data(city, state, country="India"):
                 "current_condition": current_condition,
                 "humidity": f"{humidity}%",
                 "wind_speed": f"{wind_speed} m/s",
-                "forecast": forecast,
                 "last_updated": datetime.datetime.now().strftime('%Y-%m-%d')
             }
             
@@ -665,7 +616,6 @@ def fetch_weather_data(city, state, country="India"):
         "current_condition": "Error",
         "humidity": "Error",
         "wind_speed": "Error",
-        "forecast": "Error",
         "last_updated": datetime.datetime.now().strftime('%Y-%m-%d')
     }
 
@@ -858,11 +808,13 @@ def save_combined_reports_to_csv(venues, pitch_reports, weather_reports):
                 font-size: 18px;
             }}
             .section {{
+
                 margin-bottom: 15px;
                 border-bottom: 1px solid #eee;
                 padding-bottom: 10px;
             }}
             .forecast {{
+
                 white-space: pre-line;
                 background-color: #f9f9f9;
                 padding: 10px;
@@ -1097,6 +1049,72 @@ def save_combined_reports_to_csv(venues, pitch_reports, weather_reports):
     return filename, html_file
 
 
+def save_combined_reports_to_json(venues, pitch_reports, weather_reports):
+    """
+    Save combined pitch and weather reports to a JSON file
+    
+    Args:
+        venues (list): List of venue dictionaries
+        pitch_reports (list): List of pitch report dictionaries
+        weather_reports (list): List of weather report dictionaries
+    
+    Returns:
+        str: Path to the JSON file
+    """
+    today = datetime.datetime.now().strftime('%Y%m%d')
+    filename = os.path.join(FOLDERS['combined_reports'], f'ipl_venue_reports_{today}.json')
+    
+    # Create a dictionary to quickly lookup reports by city
+    pitch_dict = {report["city"]: report for report in pitch_reports}
+    weather_dict = {report["city"]: report for report in weather_reports}
+    
+    # Combine the data
+    combined_reports = []
+    for venue in venues:
+        venue_name = venue["name"]
+        city = venue["city"]
+        
+        combined_report = {
+            "venue": venue_name,
+            "city": city,
+            "state": venue["state"]
+        }
+        
+        # Add pitch data
+        pitch_data = pitch_dict.get(city, {})
+        if pitch_data:
+            combined_report["pitch_report"] = pitch_data.get("pitch_report", "Not available")
+            combined_report["average_score"] = pitch_data.get("average_score", "Not available")
+            combined_report["highest_score"] = pitch_data.get("highest_score", "Not available")
+            combined_report["lowest_score"] = pitch_data.get("lowest_score", "Not available")
+            combined_report["pitch_characteristics"] = pitch_data.get("characteristics", "Not available")
+        
+        # Add weather data
+        weather_data = weather_dict.get(city, {})
+        if weather_data:
+            combined_report["current_temp"] = weather_data.get("current_temp", "Not available")
+            combined_report["current_condition"] = weather_data.get("current_condition", "Not available")
+            combined_report["humidity"] = weather_data.get("humidity", "Not available")
+            combined_report["wind_speed"] = weather_data.get("wind_speed", "Not available")
+        
+        combined_report["last_updated"] = datetime.datetime.now().strftime('%Y-%m-%d')
+        
+        combined_reports.append(combined_report)
+    
+    # Create a structured JSON object
+    json_data = {
+        "generated_date": datetime.datetime.now().isoformat(),
+        "combined_reports": combined_reports
+    }
+    
+    # Save to JSON file
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(json_data, f, indent=4)
+    
+    print(f"{Fore.GREEN}Combined JSON reports saved to {filename}{Style.RESET_ALL}")
+    return filename
+
+
 def scrape_pitch_reports():
     """
     Scrape pitch reports for all IPL venues using direct Cricbuzz URLs
@@ -1197,28 +1215,29 @@ def main():
     # Scrape pitch reports
     pitch_reports = scrape_pitch_reports()
     
-    # Display detailed pitch reports in terminal
-    print(f"\n{Fore.CYAN}===== Detailed Pitch Reports ====={Style.RESET_ALL}")
-    for pitch_data in pitch_reports:
-        display_pitch_report_terminal(pitch_data["venue"], pitch_data)
-    
-    # Get weather reports
+    # Get weather reports for today's date only
     weather_reports = get_weather_reports()
     
-    # Save reports to CSV
-    pitch_csv = save_pitch_reports_to_json(pitch_reports)
-    weather_csv = save_weather_reports_to_csv(weather_reports)
+    # Save reports to JSON
+    pitch_json = save_pitch_reports_to_json(pitch_reports)
+    weather_json = save_weather_reports_to_json(weather_reports)
     
-    # Save combined reports
+    # Save combined reports to JSON
+    combined_json = save_combined_reports_to_json(IPL_VENUES, pitch_reports, weather_reports)
+    
+    # Keep CSV and HTML versions for backward compatibility
     combined_csv, combined_html = save_combined_reports_to_csv(IPL_VENUES, pitch_reports, weather_reports)
     
     print(f"\n{Fore.GREEN}All tasks completed.{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}Weather reports saved to JSON format for today's date only.{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}Combined reports are now also available in JSON format.{Style.RESET_ALL}")
     print(f"{Fore.CYAN}======================================{Style.RESET_ALL}")
     
     return {
-        "pitch_reports": pitch_csv,
-        "weather_reports": weather_csv,
-        "combined_reports": combined_csv,
+        "pitch_reports": pitch_json,
+        "weather_reports": weather_json,
+        "combined_reports_json": combined_json,
+        "combined_reports_csv": combined_csv,
         "combined_html": combined_html
     }
 

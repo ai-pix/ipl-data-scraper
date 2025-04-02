@@ -1,11 +1,11 @@
 {
-    "scraping_timestamp": "2025-04-02T08:49:19.369538",
+    "scraping_timestamp": "2025-04-02T10:41:04.193455",
     "team_name": "Lucknow_Super_Giants",
     "team_url": "https://indianexpress.com/about/lucknow-super-giants/",
     "status": "Success",
     "overview_extracted": true,
     "squad_size": 24,
-    "news_count": 13,
+    "news_count": 12,
     "support_staff_count": 0,
     "extracted_data_paths": {
         "team_folder": "team_data\\Lucknow_Super_Giants",

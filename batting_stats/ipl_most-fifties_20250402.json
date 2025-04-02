@@ -1,14 +1,14 @@
 {
     "stat_type": "most-fifties",
-    "generated_date": "2025-04-02T08:49:28.145155",
+    "generated_date": "2025-04-02T10:41:12.479423",
     "data": [
         {
             "Rank": 1,
-            "Player": "Shreyas Iyer Punjab",
-            "Team": "Kings",
+            "Player": "Nicholas Pooran Lucknow Super",
+            "Team": "Giants",
             "Mat": "2",
             "Inns": "2",
-            "50s": 149
+            "50s": 145
         },
         {
             "Rank": 2,
@@ -20,27 +20,27 @@
         },
         {
             "Rank": 3,
-            "Player": "Nicholas Pooran Lucknow Super",
-            "Team": "Giants",
-            "Mat": "3",
-            "Inns": "3",
-            "50s": 189
-        },
-        {
-            "Rank": 4,
             "Player": "Mitchell Marsh Lucknow Super",
             "Team": "Giants",
-            "Mat": "3",
-            "Inns": "3",
+            "Mat": "2",
+            "Inns": "2",
             "50s": 124
         },
         {
-            "Rank": 5,
+            "Rank": 4,
             "Player": "Ruturaj Gaikwad Chennai Super",
             "Team": "Kings",
             "Mat": "3",
             "Inns": "3",
             "50s": 116
+        },
+        {
+            "Rank": 5,
+            "Player": "Shreyas Iyer Punjab",
+            "Team": "Kings",
+            "Mat": "1",
+            "Inns": "1",
+            "50s": 97
         },
         {
             "Rank": 6,
@@ -92,14 +92,6 @@
         },
         {
             "Rank": 12,
-            "Player": "Prabhsimran Singh Punjab",
-            "Team": "Kings",
-            "Mat": "2",
-            "Inns": "2",
-            "50s": 74
-        },
-        {
-            "Rank": 13,
             "Player": "Travis Head Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -107,7 +99,7 @@
             "50s": 136
         },
         {
-            "Rank": 14,
+            "Rank": 13,
             "Player": "Aniket Verma Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -115,9 +107,17 @@
             "50s": 117
         },
         {
-            "Rank": 15,
+            "Rank": 14,
             "Player": "Rachin Ravindra Chennai Super",
             "Team": "Kings",
+            "Mat": "3",
+            "Inns": "3",
+            "50s": 106
+        },
+        {
+            "Rank": 15,
+            "Player": "Dhruv Jurel Rajasthan",
+            "Team": "Royals",
             "Mat": "3",
             "Inns": "3",
             "50s": 106

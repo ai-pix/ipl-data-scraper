@@ -1,17 +1,25 @@
 {
     "stat_type": "most-maidens",
-    "generated_date": "2025-04-02T08:49:29.715728",
+    "generated_date": "2025-04-02T10:41:14.171228",
     "data": [
         {
             "Rank": 1,
             "Player": "Nicholas Pooran Lucknow Super",
             "Team": "Giants",
-            "Mat": "2",
-            "Inns": "2",
-            "Maidens": 145
+            "Mat": "3",
+            "Inns": "3",
+            "Maidens": 189
         },
         {
             "Rank": 2,
+            "Player": "Shreyas Iyer Punjab",
+            "Team": "Kings",
+            "Mat": "2",
+            "Inns": "2",
+            "Maidens": 149
+        },
+        {
+            "Rank": 3,
             "Player": "Sai Sudharsan Gujarat",
             "Team": "Titans",
             "Mat": "2",
@@ -19,7 +27,7 @@
             "Maidens": 137
         },
         {
-            "Rank": 3,
+            "Rank": 4,
             "Player": "Travis Head Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -27,15 +35,15 @@
             "Maidens": 136
         },
         {
-            "Rank": 4,
+            "Rank": 5,
             "Player": "Mitchell Marsh Lucknow Super",
             "Team": "Giants",
-            "Mat": "2",
-            "Inns": "2",
+            "Mat": "3",
+            "Inns": "3",
             "Maidens": 124
         },
         {
-            "Rank": 5,
+            "Rank": 6,
             "Player": "Aniket Verma Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -43,7 +51,7 @@
             "Maidens": 117
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Player": "Ruturaj Gaikwad Chennai Super",
             "Team": "Kings",
             "Mat": "3",
@@ -51,7 +59,7 @@
             "Maidens": 116
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Player": "Ishan Kishan Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -59,7 +67,7 @@
             "Maidens": 108
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Player": "Dhruv Jurel Rajasthan",
             "Team": "Royals",
             "Mat": "3",
@@ -67,7 +75,7 @@
             "Maidens": 106
         },
         {
-            "Rank": 9,
+            "Rank": 10,
             "Player": "Rachin Ravindra Chennai Super",
             "Team": "Kings",
             "Mat": "3",
@@ -75,7 +83,7 @@
             "Maidens": 106
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Player": "Suryakumar Yadav Mumbai",
             "Team": "Indians",
             "Mat": "3",
@@ -83,7 +91,7 @@
             "Maidens": 104
         },
         {
-            "Rank": 11,
+            "Rank": 12,
             "Player": "Quinton de Kock Kolkata Knight",
             "Team": "Riders",
             "Mat": "3",
@@ -91,7 +99,7 @@
             "Maidens": 102
         },
         {
-            "Rank": 12,
+            "Rank": 13,
             "Player": "Nitish Rana Rajasthan",
             "Team": "Royals",
             "Mat": "3",
@@ -99,20 +107,12 @@
             "Maidens": 100
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Player": "Sanju Samson Rajasthan",
             "Team": "Royals",
             "Mat": "3",
             "Inns": "3",
             "Maidens": 99
-        },
-        {
-            "Rank": 14,
-            "Player": "Shreyas Iyer Punjab",
-            "Team": "Kings",
-            "Mat": "1",
-            "Inns": "1",
-            "Maidens": 97
         },
         {
             "Rank": 15,

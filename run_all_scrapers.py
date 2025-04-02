@@ -61,7 +61,8 @@ SCRAPER_MODULES = [
     'ipl_pitch_weather_scraper',     # Pitch and weather data
     'ipl_player_images_scraper',     # Player images
     'ipl_today_comparison_scraper',  # Today's match data
-    'todays_match'                   # Today's match predictions
+    'todays_match',                  # Today's match predictions
+    'ipl_slides_generator'           # Generate IPL slides
 ]
 
 # Group of scrapers that can be run in parallel safely (no dependencies between them)

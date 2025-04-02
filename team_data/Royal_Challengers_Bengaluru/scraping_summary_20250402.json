@@ -1,11 +1,11 @@
 {
-    "scraping_timestamp": "2025-04-02T08:49:23.982321",
+    "scraping_timestamp": "2025-04-02T10:41:08.637106",
     "team_name": "Royal_Challengers_Bengaluru",
     "team_url": "https://indianexpress.com/about/royal-challengers-bangalore/",
     "status": "Success",
     "overview_extracted": true,
     "squad_size": 25,
-    "news_count": 10,
+    "news_count": 11,
     "support_staff_count": 0,
     "extracted_data_paths": {
         "team_folder": "team_data\\Royal_Challengers_Bengaluru",

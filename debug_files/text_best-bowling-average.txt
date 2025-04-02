@@ -90,7 +90,7 @@ Newsletters The Indian Express Newsletter. (Opens in new window)
 
 
 
-EditionIndiaInternational .(Open in new tab) Tuesday, Apr 01, 2025
+EditionIndiaInternational .(Open in new tab) Wednesday, Apr 02, 2025
 
  ePaper .Opens in new window 
  Today’s Paper .Opens in new window
@@ -204,20 +204,39 @@ Nicholas Pooran
 Lucknow Super Giants
 
 
-2
-2
-145
+3
+3
+189
 75
-72.50
-258.92
+63.00
+219.76
 0
 2
-12
+17
+15
+
+
+
+2
+
+Shreyas Iyer
+Punjab Kings
+
+
+2
+2
+149
+97*
+-
+206.94
+0
+2
+8
 13
 
 
 
-2
+3
 
 Sai Sudharsan
 Gujarat Titans
@@ -236,7 +255,7 @@ Gujarat Titans
 
 
 
-3
+4
 
 Travis Head
 Sunrisers Hyderabad
@@ -255,18 +274,18 @@ Sunrisers Hyderabad
 
 
 
-4
+5
 
 Mitchell Marsh
 Lucknow Super Giants
 
 
-2
-2
+3
+3
 124
 72
-62.00
-185.07
+41.33
+182.35
 0
 2
 13
@@ -274,7 +293,7 @@ Lucknow Super Giants
 
 
 
-5
+6
 
 Aniket Verma
 Sunrisers Hyderabad
@@ -293,7 +312,7 @@ Sunrisers Hyderabad
 
 
 
-6
+7
 
 Ruturaj Gaikwad
 Chennai Super Kings
@@ -312,7 +331,7 @@ Chennai Super Kings
 
 
 
-7
+8
 
 Ishan Kishan
 Sunrisers Hyderabad
@@ -331,7 +350,7 @@ Sunrisers Hyderabad
 
 
 
-8
+9
 
 Dhruv Jurel
 Rajasthan Royals
@@ -350,7 +369,7 @@ Rajasthan Royals
 
 
 
-9
+10
 
 Rachin Ravindra
 Chennai Super Kings
@@ -369,7 +388,7 @@ Chennai Super Kings
 
 
 
-10
+11
 
 Suryakumar Yadav
 Mumbai Indians
@@ -388,7 +407,7 @@ Mumbai Indians
 
 
 
-11
+12
 
 Quinton de Kock
 Kolkata Knight Riders
@@ -407,7 +426,7 @@ Kolkata Knight Riders
 
 
 
-12
+13
 
 Nitish Rana
 Rajasthan Royals
@@ -426,7 +445,7 @@ Rajasthan Royals
 
 
 
-13
+14
 
 Sanju Samson
 Rajasthan Royals
@@ -442,25 +461,6 @@ Rajasthan Royals
 1
 10
 5
-
-
-
-14
-
-Shreyas Iyer
-Punjab Kings
-
-
-1
-1
-97
-97*
--
-230.95
-0
-1
-5
-9
 
 
 
@@ -584,26 +584,6 @@ Royal Challengers Bengaluru
 
 4
 
-Shardul Thakur
-Lucknow Super Giants
-
-
-2
-6
-0
-53
-6
-1
-0
-8.83
-
-										8.83											
-4/34
- 
-
-
-5
-
 Noor Ahmad
 Chennai Super Kings
 
@@ -622,7 +602,7 @@ Chennai Super Kings
  
 
 
-6
+5
 
 Mitchell Starc
 Delhi Capitals
@@ -642,7 +622,7 @@ Delhi Capitals
  
 
 
-7
+6
 
 Moeen Ali
 Kolkata Knight Riders
@@ -662,7 +642,7 @@ Kolkata Knight Riders
  
 
 
-8
+7
 
 Hardik Pandya
 Mumbai Indians
@@ -682,7 +662,7 @@ Mumbai Indians
  
 
 
-9
+8
 
 Vignesh Puthur
 Mumbai Indians
@@ -702,7 +682,7 @@ Mumbai Indians
  
 
 
-10
+9
 
 Wanindu Hasaranga
 Rajasthan Royals
@@ -722,7 +702,7 @@ Rajasthan Royals
  
 
 
-11
+10
 
 Zeeshan Ansari
 Sunrisers Hyderabad
@@ -742,7 +722,7 @@ Sunrisers Hyderabad
  
 
 
-12
+11
 
 Yash Dayal
 Royal Challengers Bengaluru
@@ -762,7 +742,47 @@ Royal Challengers Bengaluru
  
 
 
+12
+
+Shardul Thakur
+Lucknow Super Giants
+
+
+3
+9
+0
+92
+6
+1
+0
+15.33
+
+										10.22											
+4/34
+ 
+
+
 13
+
+Arshdeep Singh
+Punjab Kings
+
+
+2
+8
+0
+79
+5
+1
+0
+15.80
+
+										9.87											
+3/43
+ 
+
+
+14
 
 Khaleel Ahmed
 Chennai Super Kings
@@ -782,7 +802,7 @@ Chennai Super Kings
  
 
 
-14
+15
 
 Matheesha Pathirana
 Chennai Super Kings
@@ -802,26 +822,6 @@ Chennai Super Kings
  
 
 
-15
-
-Sai Kishore
-Gujarat Titans
-
-
-2
-8
-0
-67
-4
-1
-0
-16.75
-
-										8.37											
-3/30
- 
-
-
  
 
 
@@ -835,7 +835,7 @@ Coming to last season in 2023 Mark Wood has been sensational with his average. H
 
 
 
-AdvertisementPoints TableTeamPLWDLPTSRCB22004DC22004LSG21012GT21012PBKS11002MI31022CSK31022SRH31022RR31022KKR31022Advertisement 
+AdvertisementPoints TableTeamPLWDLPTSRCB22004PBKS22004DC22004GT21012MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
 
 
 
@@ -901,7 +901,7 @@ Elections
 Fitness
  
 
-Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIES2020 Delhi riots: Court asks Delhi Police to file FIR against BJP’s Kapil Mishra Hockey legend Vandana Katariya retires – ‘What use was my life if I couldn’t help the team?’‘Will maintain decency in shows’: Podcaster Ranveer Allahbadia files undertaking in Supreme CourtSC stays e-auction of Sector 39 mandi shops, seeks UT’s reply‘For education, shopping or picnic’: Omar Abdullah launches free bus service for women across J-KFather, friends of stabbing victim join in as protest demanding justice for Aditya intensifies in PUWaqf bill showdown: INDIA bloc holds meeting to formulate joint strategyMaharashtra approves e-bike taxi service in cities with more than 1 lakh population‘Unjust tax’: Opp slams BMC’s plan to levy user fee for waste managementIndians in foreign jails: Over 10,000 nationals imprisoned abroad, highest in Saudi Arabia, says MEAIPL 2025: After years of struggling at home, RCB have compiled a team that can ace Chinnaswamy conditionsUS court rejects Khalistani separatist’s claim of serving summons on NSA Ajit Doval during DC visitSunderbans firecracker unit blast: 2 brothers booked, probe on into family’s fireworks licenceRussia rejects Ukraine proposals from US in ‘current form’ after Trump says he is ‘angry’ with PutinCIDCO hikes property transfer fees in Navi MumbaiYSRCP urges PM Modi to address ‘security lapses’ at Tirumala 
+Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIES‘Mere liye gym hi kaafi hai’: Gautami Kapoor joins the banter, playfully repeats Ekta Kapoor’s words on Ram’s transformation; expert on natural vs. medical interventionsAllies to go with Waqf Bill despite ‘concerns’, NDA numbers far ahead: 293 to 241OnePlus 13T teased, brand calls it ‘small, beautiful and powerful’Karate Kid Legends trailer unites Jackie Chan, Ralph Macchio in action-packed legacy-quelWho is Susan Crawford? Wisconsin Supreme Court winner has fought for union and abortion rightsRishabh Pant’s dismissal vs PBKS was particularly disappointing, says Piyush ChawlaPune hit-and-run: SUV driver arrested day after man was killed in accidentBrain health alert: Chewing gum may be releasing microplastics, says study. Can it impact your memory?There are happier ways to get out of bed: listen to the musicians of the airDaily Briefing: The Waqf Bill showdown and Trump’s tariff warsLee Dong Wook and Lee Da Hee break marriage myth in Divorce Insurance streaming on Prime Video: ‘Don’t go all-in’Taiwan says 76 Chinese warplanes detected as China launches surprise drills codenamed ‘Strait Thunder’Himachal Pradesh braces for warmer summer; more heat wave days likely: MeTVal Kilmer, star of Batman and Top Gun, dies at 65 after battling cancer‘Roads are meant for walking’: CM Adityanath on namaz rowRCB vs GT head-to-head, IPL 2025: Will poor home record hurt Royal Challengers Bengaluru vs Gujarat Titans at M Chinnaswamy Stadium? 
 
 
 

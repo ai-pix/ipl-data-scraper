@@ -1,5 +1,5 @@
 {
-    "scraping_timestamp": "2025-04-02T08:50:09.370390",
+    "scraping_timestamp": "2025-04-02T10:41:53.307072",
     "total_teams": 10,
     "total_players": 227,
     "total_successful_downloads": 227,
@@ -7,7 +7,7 @@
         {
             "team_name": "chennai-super-kings",
             "team_url": "https://www.iplt20.com/teams/chennai-super-kings",
-            "scraping_timestamp": "2025-04-02T08:50:08.283349",
+            "scraping_timestamp": "2025-04-02T10:41:52.272737",
             "total_players": 25,
             "successful_downloads": 25,
             "players": [
@@ -241,7 +241,7 @@
         {
             "team_name": "delhi-capitals",
             "team_url": "https://www.iplt20.com/teams/delhi-capitals",
-            "scraping_timestamp": "2025-04-02T08:50:08.389394",
+            "scraping_timestamp": "2025-04-02T10:41:52.385586",
             "total_players": 22,
             "successful_downloads": 22,
             "players": [
@@ -448,7 +448,7 @@
         {
             "team_name": "gujarat-titans",
             "team_url": "https://www.iplt20.com/teams/gujarat-titans",
-            "scraping_timestamp": "2025-04-02T08:50:08.521246",
+            "scraping_timestamp": "2025-04-02T10:41:52.509860",
             "total_players": 25,
             "successful_downloads": 25,
             "players": [
@@ -682,7 +682,7 @@
         {
             "team_name": "kolkata-knight-riders",
             "team_url": "https://www.iplt20.com/teams/kolkata-knight-riders",
-            "scraping_timestamp": "2025-04-02T08:50:08.619516",
+            "scraping_timestamp": "2025-04-02T10:41:52.618052",
             "total_players": 21,
             "successful_downloads": 21,
             "players": [
@@ -880,7 +880,7 @@
         {
             "team_name": "lucknow-super-giants",
             "team_url": "https://www.iplt20.com/teams/lucknow-super-giants",
-            "scraping_timestamp": "2025-04-02T08:50:08.723707",
+            "scraping_timestamp": "2025-04-02T10:41:52.730449",
             "total_players": 24,
             "successful_downloads": 24,
             "players": [
@@ -1105,7 +1105,7 @@
         {
             "team_name": "mumbai-indians",
             "team_url": "https://www.iplt20.com/teams/mumbai-indians",
-            "scraping_timestamp": "2025-04-02T08:50:08.861388",
+            "scraping_timestamp": "2025-04-02T10:41:52.874988",
             "total_players": 23,
             "successful_downloads": 23,
             "players": [
@@ -1321,7 +1321,7 @@
         {
             "team_name": "punjab-kings",
             "team_url": "https://www.iplt20.com/teams/punjab-kings",
-            "scraping_timestamp": "2025-04-02T08:50:09.000171",
+            "scraping_timestamp": "2025-04-02T10:41:52.981026",
             "total_players": 25,
             "successful_downloads": 25,
             "players": [
@@ -1555,7 +1555,7 @@
         {
             "team_name": "rajasthan-royals",
             "team_url": "https://www.iplt20.com/teams/rajasthan-royals",
-            "scraping_timestamp": "2025-04-02T08:50:09.114333",
+            "scraping_timestamp": "2025-04-02T10:41:53.087012",
             "total_players": 20,
             "successful_downloads": 20,
             "players": [
@@ -1744,7 +1744,7 @@
         {
             "team_name": "royal-challengers-bangalore",
             "team_url": "https://www.iplt20.com/teams/royal-challengers-bangalore",
-            "scraping_timestamp": "2025-04-02T08:50:09.272685",
+            "scraping_timestamp": "2025-04-02T10:41:53.195538",
             "total_players": 22,
             "successful_downloads": 22,
             "players": [
@@ -1951,7 +1951,7 @@
         {
             "team_name": "sunrisers-hyderabad",
             "team_url": "https://www.iplt20.com/teams/sunrisers-hyderabad",
-            "scraping_timestamp": "2025-04-02T08:50:09.370390",
+            "scraping_timestamp": "2025-04-02T10:41:53.307072",
             "total_players": 20,
             "successful_downloads": 20,
             "players": [

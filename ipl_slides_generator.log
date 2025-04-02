@@ -1,0 +1,15 @@
+2025-04-02 10:38:08,677 - INFO - Generating IPL slides HTML...
+2025-04-02 10:38:08,687 - WARNING - No prediction file found
+2025-04-02 10:38:08,687 - INFO - Slides HTML generated successfully: ipl_slides\ipl_slides_20250402.html
+2025-04-02 10:38:08,691 - INFO - IPL slides created successfully at ipl_slides\ipl_slides_20250402.html
+2025-04-02 10:38:08,853 - INFO - Opened slides in browser
+2025-04-02 11:14:33,049 - INFO - Generating IPL slides HTML...
+2025-04-02 11:14:33,059 - WARNING - No prediction file found
+2025-04-02 11:14:33,060 - WARNING - No weather data files found
+2025-04-02 11:14:33,065 - INFO - Slides HTML generated successfully: ipl_slides\ipl_slides_20250402.html
+2025-04-02 11:26:42,112 - INFO - Generating IPL slides HTML...
+2025-04-02 11:26:42,124 - WARNING - No prediction file found
+2025-04-02 11:26:42,125 - INFO - Loading weather data from CSV file: weather_reports\ipl_weather_reports_20250402.csv
+2025-04-02 11:26:42,125 - ERROR - Error loading weather CSV data: name 'pd' is not defined
+2025-04-02 11:26:42,125 - WARNING - No weather data files found
+2025-04-02 11:26:42,132 - INFO - Slides HTML generated successfully: ipl_slides\ipl_slides_20250402.html

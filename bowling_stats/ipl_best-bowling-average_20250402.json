@@ -1,18 +1,27 @@
 {
     "stat_type": "best-bowling-average",
-    "generated_date": "2025-04-02T08:49:30.218595",
+    "generated_date": "2025-04-02T10:41:14.413199",
     "data": [
         {
             "Rank": 1,
             "Player": "Nicholas Pooran Lucknow Super",
             "Team": "Giants",
-            "Mat": "2",
-            "Inns": "2",
-            "Wkts": "145",
+            "Mat": "3",
+            "Inns": "3",
+            "Wkts": "189",
             "Avg": "75"
         },
         {
             "Rank": 2,
+            "Player": "Shreyas Iyer Punjab",
+            "Team": "Kings",
+            "Mat": "2",
+            "Inns": "2",
+            "Wkts": "149",
+            "Avg": "97"
+        },
+        {
+            "Rank": 3,
             "Player": "Sai Sudharsan Gujarat",
             "Team": "Titans",
             "Mat": "2",
@@ -21,7 +30,7 @@
             "Avg": "74"
         },
         {
-            "Rank": 3,
+            "Rank": 4,
             "Player": "Travis Head Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -30,16 +39,16 @@
             "Avg": "67"
         },
         {
-            "Rank": 4,
+            "Rank": 5,
             "Player": "Mitchell Marsh Lucknow Super",
             "Team": "Giants",
-            "Mat": "2",
-            "Inns": "2",
+            "Mat": "3",
+            "Inns": "3",
             "Wkts": "124",
             "Avg": "72"
         },
         {
-            "Rank": 5,
+            "Rank": 6,
             "Player": "Aniket Verma Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -48,7 +57,7 @@
             "Avg": "74"
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Player": "Ruturaj Gaikwad Chennai Super",
             "Team": "Kings",
             "Mat": "3",
@@ -57,7 +66,7 @@
             "Avg": "63"
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Player": "Ishan Kishan Sunrisers",
             "Team": "Hyderabad",
             "Mat": "3",
@@ -66,7 +75,7 @@
             "Avg": "106"
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Player": "Dhruv Jurel Rajasthan",
             "Team": "Royals",
             "Mat": "3",
@@ -75,7 +84,7 @@
             "Avg": "70"
         },
         {
-            "Rank": 9,
+            "Rank": 10,
             "Player": "Rachin Ravindra Chennai Super",
             "Team": "Kings",
             "Mat": "3",
@@ -84,7 +93,7 @@
             "Avg": "65"
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Player": "Suryakumar Yadav Mumbai",
             "Team": "Indians",
             "Mat": "3",
@@ -93,7 +102,7 @@
             "Avg": "48"
         },
         {
-            "Rank": 11,
+            "Rank": 12,
             "Player": "Quinton de Kock Kolkata Knight",
             "Team": "Riders",
             "Mat": "3",
@@ -102,7 +111,7 @@
             "Avg": "97"
         },
         {
-            "Rank": 12,
+            "Rank": 13,
             "Player": "Nitish Rana Rajasthan",
             "Team": "Royals",
             "Mat": "3",
@@ -111,22 +120,13 @@
             "Avg": "81"
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Player": "Sanju Samson Rajasthan",
             "Team": "Royals",
             "Mat": "3",
             "Inns": "3",
             "Wkts": "99",
             "Avg": "66"
-        },
-        {
-            "Rank": 14,
-            "Player": "Shreyas Iyer Punjab",
-            "Team": "Kings",
-            "Mat": "1",
-            "Inns": "1",
-            "Wkts": "97",
-            "Avg": "97"
         },
         {
             "Rank": 15,
@@ -166,15 +166,6 @@
         },
         {
             "Rank": 19,
-            "Player": "Shardul Thakur Lucknow Super",
-            "Team": "Giants",
-            "Mat": "2",
-            "Inns": "6",
-            "Wkts": "0",
-            "Avg": "53"
-        },
-        {
-            "Rank": 20,
             "Player": "Noor Ahmad Chennai Super",
             "Team": "Kings",
             "Mat": "3",
@@ -183,7 +174,7 @@
             "Avg": "82"
         },
         {
-            "Rank": 21,
+            "Rank": 20,
             "Player": "Moeen Ali Kolkata Knight",
             "Team": "Riders",
             "Mat": "1",
@@ -192,7 +183,7 @@
             "Avg": "23"
         },
         {
-            "Rank": 22,
+            "Rank": 21,
             "Player": "Hardik Pandya Mumbai",
             "Team": "Indians",
             "Mat": "2",
@@ -201,7 +192,7 @@
             "Avg": "39"
         },
         {
-            "Rank": 23,
+            "Rank": 22,
             "Player": "Vignesh Puthur Mumbai",
             "Team": "Indians",
             "Mat": "2",
@@ -210,7 +201,7 @@
             "Avg": "53"
         },
         {
-            "Rank": 24,
+            "Rank": 23,
             "Player": "Wanindu Hasaranga Rajasthan",
             "Team": "Royals",
             "Mat": "2",
@@ -219,7 +210,7 @@
             "Avg": "69"
         },
         {
-            "Rank": 25,
+            "Rank": 24,
             "Player": "Zeeshan Ansari Sunrisers",
             "Team": "Hyderabad",
             "Mat": "1",
@@ -228,7 +219,7 @@
             "Avg": "42"
         },
         {
-            "Rank": 26,
+            "Rank": 25,
             "Player": "Yash Dayal Royal Challengers",
             "Team": "Bengaluru",
             "Mat": "2",
@@ -237,7 +228,25 @@
             "Avg": "43"
         },
         {
+            "Rank": 26,
+            "Player": "Shardul Thakur Lucknow Super",
+            "Team": "Giants",
+            "Mat": "3",
+            "Inns": "9",
+            "Wkts": "0",
+            "Avg": "92"
+        },
+        {
             "Rank": 27,
+            "Player": "Arshdeep Singh Punjab",
+            "Team": "Kings",
+            "Mat": "2",
+            "Inns": "8",
+            "Wkts": "0",
+            "Avg": "79"
+        },
+        {
+            "Rank": 28,
             "Player": "Khaleel Ahmed Chennai Super",
             "Team": "Kings",
             "Mat": "3",
@@ -246,22 +255,13 @@
             "Avg": "95"
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Player": "Matheesha Pathirana Chennai Super",
             "Team": "Kings",
             "Mat": "2",
             "Inns": "8",
             "Wkts": "0",
             "Avg": "64"
-        },
-        {
-            "Rank": 29,
-            "Player": "Sai Kishore Gujarat",
-            "Team": "Titans",
-            "Mat": "2",
-            "Inns": "8",
-            "Wkts": "0",
-            "Avg": "67"
         }
     ]
 }
