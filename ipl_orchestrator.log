@@ -244,3 +244,277 @@
 2025-04-02 10:42:45,387 - INFO - Generating HTML data content...
 2025-04-02 10:42:45,406 - INFO - HTML data content saved to ipl_data_content.html
 2025-04-02 10:42:45,406 - INFO - IPL Cricket Data orchestration completed
+2025-04-03 14:44:16,414 - INFO - Starting execution of scrapers
+2025-04-03 14:44:16,414 - INFO - Running scrapers sequentially
+2025-04-03 14:44:16,414 - INFO - Running ipl_points_table_scraper...
+2025-04-03 14:44:17,566 - INFO - Attempting to scrape IPL points table...
+2025-04-03 14:44:17,566 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-03 14:44:17,566 - INFO - Initializing Chrome headless
+2025-04-03 14:44:25,719 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-03 14:44:25,740 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-03 14:44:25,753 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-03 14:44:25,896 - INFO - Found table with selector: table.ih-td-tab
+2025-04-03 14:44:25,898 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-03 14:44:25,901 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-03 14:44:34,721 - INFO - Points table saved to JSON: points_table\ipl_points_table_20250403.json
+2025-04-03 14:44:34,731 - INFO - Created latest version copy
+2025-04-03 14:44:34,736 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-03 14:44:36,737 - INFO - Running ipl_team_scraper...
+2025-04-03 14:44:57,671 - INFO - Successfully ran ipl_team_scraper
+2025-04-03 14:44:59,672 - INFO - Running ipl_stats_scraper...
+2025-04-03 14:45:03,921 - INFO - Successfully ran ipl_stats_scraper
+2025-04-03 14:45:05,922 - INFO - Running ipl_pitch_weather_scraper...
+2025-04-03 14:45:37,573 - INFO - Successfully ran ipl_pitch_weather_scraper
+2025-04-03 14:45:39,574 - INFO - Running ipl_player_images_scraper...
+2025-04-03 14:45:41,159 - INFO - Successfully ran ipl_player_images_scraper
+2025-04-03 14:45:43,160 - INFO - Running ipl_today_comparison_scraper...
+2025-04-03 14:46:25,838 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-03 14:46:27,839 - INFO - Running todays_match...
+2025-04-03 14:46:27,858 - INFO - Successfully ran todays_match
+2025-04-03 14:46:29,859 - INFO - Running ipl_slides_generator...
+2025-04-03 14:46:30,448 - WARNING - Module ipl_slides_generator does not have a main() function
+2025-04-03 14:46:32,449 - INFO - Sequential scraper execution completed in 136.04 seconds
+2025-04-03 14:46:32,450 - INFO - Successful: 7/8
+2025-04-03 14:46:32,450 - WARNING - Failed runs: ipl_slides_generator
+2025-04-03 14:46:32,451 - WARNING - Not all scrapers were successful. Skipping old data cleanup.
+2025-04-03 14:46:32,451 - INFO - Generating data summary...
+2025-04-03 14:46:32,501 - INFO - Data summary saved to ipl_data_summary.json
+2025-04-03 14:46:32,501 - INFO - Generating HTML data content...
+2025-04-03 14:46:32,579 - INFO - HTML data content saved to ipl_data_content.html
+2025-04-03 14:46:32,580 - INFO - IPL Cricket Data orchestration completed
+2025-04-03 14:49:34,546 - INFO - Starting execution of scrapers
+2025-04-03 14:49:34,547 - INFO - Running scrapers sequentially
+2025-04-03 14:49:34,547 - INFO - Running ipl_points_table_scraper...
+2025-04-03 14:49:35,831 - INFO - Attempting to scrape IPL points table...
+2025-04-03 14:49:35,831 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-03 14:49:35,831 - INFO - Initializing Chrome headless
+2025-04-03 14:49:42,883 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-03 14:49:42,904 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-03 14:49:42,915 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-03 14:49:43,002 - INFO - Found table with selector: table.ih-td-tab
+2025-04-03 14:49:43,004 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-03 14:49:43,008 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-03 14:49:49,535 - INFO - Points table saved to JSON: points_table\ipl_points_table_20250403.json
+2025-04-03 14:49:49,545 - INFO - Created latest version copy
+2025-04-03 14:49:49,551 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-03 14:49:51,553 - INFO - Running ipl_team_scraper...
+2025-04-03 14:49:56,662 - INFO - Successfully ran ipl_team_scraper
+2025-04-03 14:49:58,663 - INFO - Running ipl_stats_scraper...
+2025-04-03 14:50:00,337 - INFO - Successfully ran ipl_stats_scraper
+2025-04-03 14:50:02,338 - INFO - Running ipl_pitch_weather_scraper...
+2025-04-03 14:50:31,899 - INFO - Successfully ran ipl_pitch_weather_scraper
+2025-04-03 14:50:33,900 - INFO - Running ipl_player_images_scraper...
+2025-04-03 14:50:35,053 - INFO - Successfully ran ipl_player_images_scraper
+2025-04-03 14:50:37,054 - INFO - Running ipl_today_comparison_scraper...
+2025-04-03 14:51:19,506 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-03 14:51:21,508 - INFO - Running todays_match...
+2025-04-03 14:51:21,525 - INFO - Successfully ran todays_match
+2025-04-03 14:51:23,526 - INFO - Running ipl_slides_generator...
+2025-04-03 14:51:26,551 - INFO - Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 14:51:26,552 - INFO - Loaded 9 templates
+2025-04-03 14:51:26,553 - INFO - Loaded 3 partial templates
+2025-04-03 14:51:43,606 - WARNING - No highest-strike-rates stats files found in batting_stats
+2025-04-03 14:51:43,619 - INFO - Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 14:51:43,619 - INFO - Successfully generated slides for 1 match(es)
+2025-04-03 14:51:43,620 - INFO - Successfully ran ipl_slides_generator
+2025-04-03 14:51:45,620 - INFO - Sequential scraper execution completed in 131.07 seconds
+2025-04-03 14:51:45,620 - INFO - Successful: 8/8
+2025-04-03 14:51:45,620 - INFO - Cleaning old data files (retaining files from the last 14 days)...
+2025-04-03 14:51:45,620 - INFO - Cleaning directory: points_table
+2025-04-03 14:51:45,621 - INFO - Cleaning directory: team_data
+2025-04-03 14:51:45,632 - INFO - Cleaning directory: batting_stats
+2025-04-03 14:51:45,633 - INFO - Cleaning directory: bowling_stats
+2025-04-03 14:51:45,635 - INFO - Cleaning directory: pitch_reports
+2025-04-03 14:51:45,635 - INFO - Cleaning directory: weather_reports
+2025-04-03 14:51:45,636 - INFO - Cleaning directory: comparison_data
+2025-04-03 14:51:45,637 - INFO - Cleaning directory: predictions
+2025-04-03 14:51:45,637 - INFO - Cleaning directory: combined_reports
+2025-04-03 14:51:45,638 - INFO - Cleaning directory: reports
+2025-04-03 14:51:45,638 - INFO - Cleanup completed. Removed 0 old files.
+2025-04-03 14:51:45,639 - INFO - Generating data summary...
+2025-04-03 14:51:45,677 - INFO - Data summary saved to ipl_data_summary.json
+2025-04-03 14:51:45,677 - INFO - Generating HTML data content...
+2025-04-03 14:51:45,695 - INFO - HTML data content saved to ipl_data_content.html
+2025-04-03 14:51:45,696 - INFO - IPL Cricket Data orchestration completed
+2025-04-03 14:57:27,692 - INFO - Starting execution of scrapers
+2025-04-03 14:57:27,692 - INFO - Running scrapers sequentially
+2025-04-03 14:57:27,692 - INFO - Running ipl_points_table_scraper...
+2025-04-03 14:57:28,879 - INFO - Attempting to scrape IPL points table...
+2025-04-03 14:57:28,880 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-03 14:57:28,880 - INFO - Initializing Chrome headless
+2025-04-03 14:57:35,762 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-03 14:57:35,789 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-03 14:57:35,801 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-03 14:57:35,889 - INFO - Found table with selector: table.ih-td-tab
+2025-04-03 14:57:35,891 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-03 14:57:35,894 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-03 14:57:42,434 - INFO - Points table saved to JSON: points_table\ipl_points_table_20250403.json
+2025-04-03 14:57:42,469 - INFO - Created latest version copy
+2025-04-03 14:57:42,482 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-03 14:57:44,483 - INFO - Running ipl_team_scraper...
+2025-04-03 14:57:48,829 - INFO - Successfully ran ipl_team_scraper
+2025-04-03 14:57:50,843 - INFO - Running ipl_stats_scraper...
+2025-04-03 14:57:53,824 - INFO - Successfully ran ipl_stats_scraper
+2025-04-03 14:57:55,825 - INFO - Running ipl_pitch_weather_scraper...
+2025-04-03 14:58:26,678 - INFO - Successfully ran ipl_pitch_weather_scraper
+2025-04-03 14:58:28,679 - INFO - Running ipl_player_images_scraper...
+2025-04-03 14:58:30,047 - INFO - Successfully ran ipl_player_images_scraper
+2025-04-03 14:58:32,048 - INFO - Running ipl_today_comparison_scraper...
+2025-04-03 14:59:14,502 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-03 14:59:16,503 - INFO - Running todays_match...
+2025-04-03 14:59:16,522 - INFO - Successfully ran todays_match
+2025-04-03 14:59:18,523 - INFO - Running ipl_slides_generator...
+2025-04-03 14:59:21,525 - INFO - Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 14:59:21,528 - INFO - Loaded 9 templates
+2025-04-03 14:59:21,528 - INFO - Loaded 3 partial templates
+2025-04-03 14:59:34,454 - WARNING - No highest-strike-rates stats files found in batting_stats
+2025-04-03 14:59:34,459 - INFO - Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 14:59:34,459 - INFO - Successfully generated slides for 1 match(es)
+2025-04-03 14:59:34,459 - INFO - Successfully ran ipl_slides_generator
+2025-04-03 14:59:36,460 - INFO - Sequential scraper execution completed in 128.77 seconds
+2025-04-03 14:59:36,460 - INFO - Successful: 8/8
+2025-04-03 14:59:36,460 - INFO - Cleaning old data files (retaining files from the last 14 days)...
+2025-04-03 14:59:36,460 - INFO - Cleaning directory: points_table
+2025-04-03 14:59:36,461 - INFO - Cleaning directory: team_data
+2025-04-03 14:59:36,471 - INFO - Cleaning directory: batting_stats
+2025-04-03 14:59:36,472 - INFO - Cleaning directory: bowling_stats
+2025-04-03 14:59:36,473 - INFO - Cleaning directory: pitch_reports
+2025-04-03 14:59:36,474 - INFO - Cleaning directory: weather_reports
+2025-04-03 14:59:36,475 - INFO - Cleaning directory: comparison_data
+2025-04-03 14:59:36,476 - INFO - Cleaning directory: predictions
+2025-04-03 14:59:36,476 - INFO - Cleaning directory: combined_reports
+2025-04-03 14:59:36,477 - INFO - Cleaning directory: reports
+2025-04-03 14:59:36,477 - INFO - Cleanup completed. Removed 0 old files.
+2025-04-03 14:59:36,477 - INFO - Generating data summary...
+2025-04-03 14:59:36,523 - INFO - Data summary saved to ipl_data_summary.json
+2025-04-03 14:59:36,523 - INFO - Generating HTML data content...
+2025-04-03 14:59:36,542 - INFO - HTML data content saved to ipl_data_content.html
+2025-04-03 14:59:36,542 - INFO - IPL Cricket Data orchestration completed
+2025-04-03 15:17:26,746 - INFO - Starting execution of scrapers
+2025-04-03 15:17:26,746 - INFO - Running scrapers sequentially
+2025-04-03 15:17:26,746 - INFO - Running ipl_points_table_scraper...
+2025-04-03 15:17:27,870 - INFO - Attempting to scrape IPL points table...
+2025-04-03 15:17:27,871 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-03 15:17:27,871 - INFO - Initializing Chrome headless
+2025-04-03 15:17:34,934 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-03 15:17:34,955 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-03 15:17:34,966 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-03 15:17:35,040 - INFO - Found table with selector: table.ih-td-tab
+2025-04-03 15:17:35,042 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-03 15:17:35,044 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-03 15:17:41,491 - INFO - Points table saved to JSON: points_table\ipl_points_table_20250403.json
+2025-04-03 15:17:41,500 - INFO - Created latest version copy
+2025-04-03 15:17:41,505 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-03 15:17:43,506 - INFO - Running ipl_team_scraper...
+2025-04-03 15:17:48,405 - INFO - Successfully ran ipl_team_scraper
+2025-04-03 15:17:50,406 - INFO - Running ipl_stats_scraper...
+2025-04-03 15:17:52,488 - INFO - Successfully ran ipl_stats_scraper
+2025-04-03 15:17:54,490 - INFO - Running ipl_pitch_weather_scraper...
+2025-04-03 15:18:36,304 - INFO - Successfully ran ipl_pitch_weather_scraper
+2025-04-03 15:18:38,305 - INFO - Running ipl_player_images_scraper...
+2025-04-03 15:18:39,370 - INFO - Successfully ran ipl_player_images_scraper
+2025-04-03 15:18:41,371 - INFO - Running ipl_today_comparison_scraper...
+2025-04-03 15:19:24,488 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-03 15:19:26,489 - INFO - Running todays_match...
+2025-04-03 15:19:26,507 - INFO - Successfully ran todays_match
+2025-04-03 15:19:28,508 - INFO - Running ipl_slides_generator...
+2025-04-03 15:19:31,496 - INFO - Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 15:19:31,502 - INFO - Loaded 9 templates
+2025-04-03 15:19:31,505 - INFO - Loaded 3 partial templates
+2025-04-03 15:19:38,409 - ERROR - Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 21
+}
+]
+2025-04-03 15:19:38,411 - WARNING - No highest-strike-rates stats files found in batting_stats
+2025-04-03 15:19:38,417 - INFO - Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 15:19:38,417 - INFO - Successfully generated slides for 1 match(es)
+2025-04-03 15:19:38,417 - INFO - Successfully ran ipl_slides_generator
+2025-04-03 15:19:40,418 - INFO - Sequential scraper execution completed in 133.67 seconds
+2025-04-03 15:19:40,418 - INFO - Successful: 8/8
+2025-04-03 15:19:40,420 - INFO - Cleaning old data files (retaining files from the last 14 days)...
+2025-04-03 15:19:40,420 - INFO - Cleaning directory: points_table
+2025-04-03 15:19:40,423 - INFO - Cleaning directory: team_data
+2025-04-03 15:19:40,452 - INFO - Cleaning directory: batting_stats
+2025-04-03 15:19:40,454 - INFO - Cleaning directory: bowling_stats
+2025-04-03 15:19:40,455 - INFO - Cleaning directory: pitch_reports
+2025-04-03 15:19:40,456 - INFO - Cleaning directory: weather_reports
+2025-04-03 15:19:40,457 - INFO - Cleaning directory: comparison_data
+2025-04-03 15:19:40,458 - INFO - Cleaning directory: predictions
+2025-04-03 15:19:40,458 - INFO - Cleaning directory: combined_reports
+2025-04-03 15:19:40,459 - INFO - Cleaning directory: reports
+2025-04-03 15:19:40,459 - INFO - Cleanup completed. Removed 0 old files.
+2025-04-03 15:19:40,460 - INFO - Generating data summary...
+2025-04-03 15:19:40,498 - INFO - Data summary saved to ipl_data_summary.json
+2025-04-03 15:19:40,498 - INFO - Generating HTML data content...
+2025-04-03 15:19:40,516 - INFO - HTML data content saved to ipl_data_content.html
+2025-04-03 15:19:40,516 - INFO - IPL Cricket Data orchestration completed
+2025-04-03 15:24:09,018 - INFO - Starting execution of scrapers
+2025-04-03 15:24:09,020 - INFO - Running scrapers sequentially
+2025-04-03 15:24:09,020 - INFO - Running ipl_points_table_scraper...
+2025-04-03 15:24:10,177 - INFO - Attempting to scrape IPL points table...
+2025-04-03 15:24:10,177 - INFO - Attempt 1: Using official IPL site with headless browser
+2025-04-03 15:24:10,177 - INFO - Initializing Chrome headless
+2025-04-03 15:24:17,979 - INFO - Page title: IPL 2024 Points Table | Team Standings & Rankings | IPLT20
+2025-04-03 15:24:17,996 - INFO - Trying selector: table.ih-td-tab tbody tr
+2025-04-03 15:24:18,005 - INFO - Selector table.ih-td-tab tbody tr found!
+2025-04-03 15:24:18,084 - INFO - Found table with selector: table.ih-td-tab
+2025-04-03 15:24:18,085 - INFO - Found headers: ['POS', '', 'TEAM', 'P', 'W', 'L', 'NR', 'NRR', 'FOR', 'AGAINST', 'PTS', 'RECENT FORM']
+2025-04-03 15:24:18,087 - INFO - Successfully scraped IPL points table with 10 team entries
+2025-04-03 15:24:24,520 - INFO - Points table saved to JSON: points_table\ipl_points_table_20250403.json
+2025-04-03 15:24:24,530 - INFO - Created latest version copy
+2025-04-03 15:24:24,535 - INFO - Successfully ran ipl_points_table_scraper
+2025-04-03 15:24:26,536 - INFO - Running ipl_team_scraper...
+2025-04-03 15:24:31,874 - INFO - Successfully ran ipl_team_scraper
+2025-04-03 15:24:33,875 - INFO - Running ipl_stats_scraper...
+2025-04-03 15:24:36,225 - INFO - Successfully ran ipl_stats_scraper
+2025-04-03 15:24:38,225 - INFO - Running ipl_pitch_weather_scraper...
+2025-04-03 15:25:08,380 - INFO - Successfully ran ipl_pitch_weather_scraper
+2025-04-03 15:25:10,380 - INFO - Running ipl_player_images_scraper...
+2025-04-03 15:25:11,571 - INFO - Successfully ran ipl_player_images_scraper
+2025-04-03 15:25:13,572 - INFO - Running ipl_today_comparison_scraper...
+2025-04-03 15:25:55,687 - INFO - Successfully ran ipl_today_comparison_scraper
+2025-04-03 15:25:57,687 - INFO - Running todays_match...
+2025-04-03 15:25:57,705 - INFO - Successfully ran todays_match
+2025-04-03 15:25:59,744 - INFO - Running ipl_slides_generator...
+2025-04-03 15:26:02,747 - INFO - Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 15:26:02,748 - INFO - Loaded 9 templates
+2025-04-03 15:26:02,749 - INFO - Loaded 3 partial templates
+2025-04-03 15:26:09,522 - ERROR - Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 50
+}
+]
+2025-04-03 15:26:09,525 - WARNING - No highest-strike-rates stats files found in batting_stats
+2025-04-03 15:26:09,530 - INFO - Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 15:26:09,530 - INFO - Successfully generated slides for 1 match(es)
+2025-04-03 15:26:09,530 - INFO - Successfully ran ipl_slides_generator
+2025-04-03 15:26:11,531 - INFO - Sequential scraper execution completed in 122.51 seconds
+2025-04-03 15:26:11,531 - INFO - Successful: 8/8
+2025-04-03 15:26:11,531 - INFO - Cleaning old data files (keeping only files from today's run)...
+2025-04-03 15:26:11,531 - INFO - Cleaning directory: points_table
+2025-04-03 15:26:11,533 - INFO - Cleaning directory: team_data
+2025-04-03 15:26:11,562 - INFO - Cleaning directory: batting_stats
+2025-04-03 15:26:11,564 - INFO - Cleaning directory: bowling_stats
+2025-04-03 15:26:11,566 - INFO - Cleaning directory: pitch_reports
+2025-04-03 15:26:11,567 - INFO - Cleaning directory: weather_reports
+2025-04-03 15:26:11,568 - INFO - Cleaning directory: comparison_data
+2025-04-03 15:26:11,571 - INFO - Cleaning directory: predictions
+2025-04-03 15:26:11,572 - INFO - Cleaning directory: combined_reports
+2025-04-03 15:26:11,574 - INFO - Cleaning directory: reports
+2025-04-03 15:26:11,575 - INFO - Cleanup completed. Removed 149 old files.
+2025-04-03 15:26:11,576 - INFO - Generating data summary...
+2025-04-03 15:26:11,621 - INFO - Data summary saved to ipl_data_summary.json
+2025-04-03 15:26:11,621 - INFO - Generating HTML data content...
+2025-04-03 15:26:11,644 - INFO - HTML data content saved to ipl_data_content.html
+2025-04-03 15:26:11,645 - INFO - IPL Cricket Data orchestration completed

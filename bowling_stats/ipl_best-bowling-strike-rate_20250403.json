@@ -1,0 +1,96 @@
+{
+    "stat_type": "best-bowling-strike-rate",
+    "generated_date": "2025-04-03T15:24:35.951934",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Yuzvendra Chahal",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 23,
+            "SR": 12.68
+        },
+        {
+            "Rank": 2,
+            "Player": "Wanindu Hasaranga",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 21,
+            "SR": 12.0
+        },
+        {
+            "Rank": 3,
+            "Player": "Kuldeep Yadav",
+            "Team": "Delhi Capitals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 20,
+            "SR": 12.5
+        },
+        {
+            "Rank": 4,
+            "Player": "Kagiso Rabada",
+            "Team": "Punjab Kings",
+            "Mat": 13,
+            "Inns": 13,
+            "Wkts": 18,
+            "SR": 13.67
+        },
+        {
+            "Rank": 5,
+            "Player": "T Natarajan",
+            "Team": "Sunrisers Hyderabad",
+            "Mat": 12,
+            "Inns": 12,
+            "Wkts": 18,
+            "SR": 14.33
+        },
+        {
+            "Rank": 6,
+            "Player": "Umran Malik",
+            "Team": "Sunrisers Hyderabad",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 17,
+            "SR": 15.33
+        },
+        {
+            "Rank": 7,
+            "Player": "Rashid Khan",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 15,
+            "SR": 16.8
+        },
+        {
+            "Rank": 8,
+            "Player": "Mohammed Shami",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 16,
+            "SR": 17.38
+        },
+        {
+            "Rank": 9,
+            "Player": "Harshal Patel",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 15,
+            "Inns": 15,
+            "Wkts": 14,
+            "SR": 17.21
+        },
+        {
+            "Rank": 10,
+            "Player": "Prasidh Krishna",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 15,
+            "SR": 19.47
+        }
+    ]
+}

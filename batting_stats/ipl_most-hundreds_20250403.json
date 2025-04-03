@@ -1,0 +1,46 @@
+{
+    "stat_type": "most-hundreds",
+    "generated_date": "2025-04-03T15:24:34.382782",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "KL Rahul",
+            "Team": "Lucknow Super Giants",
+            "Mat": 14,
+            "Inns": 14,
+            "100s": 2
+        },
+        {
+            "Rank": 2,
+            "Player": "Shubman Gill",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "100s": 1
+        },
+        {
+            "Rank": 3,
+            "Player": "Quinton de Kock",
+            "Team": "Lucknow Super Giants",
+            "Mat": 14,
+            "Inns": 14,
+            "100s": 1
+        },
+        {
+            "Rank": 4,
+            "Player": "Rajat Patidar",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 8,
+            "Inns": 8,
+            "100s": 1
+        },
+        {
+            "Rank": 5,
+            "Player": "Jos Buttler",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "100s": 1
+        }
+    ]
+}

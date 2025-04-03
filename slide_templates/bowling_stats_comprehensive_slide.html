@@ -1,0 +1,121 @@
+<!-- Comprehensive Bowling Stats Slide Template -->
+<div class="slide" id="slide-{{slide_index}}">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">IPL Bowling Statistics</h2>
+        
+        <div class="stats-tabs">
+            <button class="stats-tab active" data-tab="most-wickets">Most Wickets</button>
+            <button class="stats-tab" data-tab="best-economy">Best Economy</button>
+            <button class="stats-tab" data-tab="best-average">Best Average</button>
+            <button class="stats-tab" data-tab="best-strike-rate">Best Strike Rate</button>
+            <button class="stats-tab" data-tab="most-maidens">Most Maidens</button>
+        </div>
+        
+        <div class="stats-content active" id="most-wickets">
+            <h3>Top Wicket Takers</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Wkts</th>
+                            <th class="stat-col">Econ</th>
+                            <th class="stat-col">Avg</th>
+                            <th class="stat-col">SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{most_wickets_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="best-economy">
+            <h3>Best Economy Rate</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Econ</th>
+                            <th class="stat-col">Overs</th>
+                            <th class="stat-col">Wkts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{best_economy_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="best-average">
+            <h3>Best Bowling Average</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Avg</th>
+                            <th class="stat-col">Wkts</th>
+                            <th class="stat-col">Runs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{best_average_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="best-strike-rate">
+            <h3>Best Strike Rate</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">SR</th>
+                            <th class="stat-col">Wkts</th>
+                            <th class="stat-col">Balls</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{best_strike_rate_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-maidens">
+            <h3>Most Maiden Overs</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Maidens</th>
+                            <th class="stat-col">Overs</th>
+                            <th class="stat-col">Wkts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{most_maidens_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

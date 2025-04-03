@@ -1,0 +1,96 @@
+{
+    "stat_type": "best-economy-rates",
+    "generated_date": "2025-04-03T15:24:36.215366",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Jasprit Bumrah",
+            "Team": "Mumbai Indians",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 56,
+            "Econ": 7.18
+        },
+        {
+            "Rank": 2,
+            "Player": "Sunil Narine",
+            "Team": "Kolkata Knight Riders",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 52,
+            "Econ": 7.24
+        },
+        {
+            "Rank": 3,
+            "Player": "Rashid Khan",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 56,
+            "Econ": 7.46
+        },
+        {
+            "Rank": 4,
+            "Player": "Yuzvendra Chahal",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 56,
+            "Econ": 7.61
+        },
+        {
+            "Rank": 5,
+            "Player": "Ravichandran Ashwin",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 56,
+            "Econ": 7.83
+        },
+        {
+            "Rank": 6,
+            "Player": "Washington Sundar",
+            "Team": "Sunrisers Hyderabad",
+            "Mat": 9,
+            "Inns": 9,
+            "Overs": 36,
+            "Econ": 8.08
+        },
+        {
+            "Rank": 7,
+            "Player": "Wanindu Hasaranga",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 56,
+            "Econ": 8.15
+        },
+        {
+            "Rank": 8,
+            "Player": "Axar Patel",
+            "Team": "Delhi Capitals",
+            "Mat": 13,
+            "Inns": 13,
+            "Overs": 52,
+            "Econ": 8.18
+        },
+        {
+            "Rank": 9,
+            "Player": "Prasidh Krishna",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 56,
+            "Econ": 8.29
+        },
+        {
+            "Rank": 10,
+            "Player": "Mohammed Shami",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Overs": 56,
+            "Econ": 8.39
+        }
+    ]
+}

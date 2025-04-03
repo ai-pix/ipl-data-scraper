@@ -90,7 +90,7 @@ Newsletters The Indian Express Newsletter. (Opens in new window)
 
 
 
-EditionIndiaInternational .(Open in new tab) Tuesday, Apr 01, 2025
+EditionIndiaInternational .(Open in new tab) Thursday, Apr 03, 2025
 
  ePaper .Opens in new window 
  Today’s Paper .Opens in new window
@@ -120,7 +120,7 @@ Sign In .Opens in new window
 
 
 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -204,16 +204,16 @@ Nicholas Pooran
 Lucknow Super Giants
 
 
-2
-2
-145
+3
+3
+189
 75
-72.50
-258.92
+63.00
+219.76
 0
 2
-12
-13
+17
+15
 
 
 
@@ -223,20 +223,58 @@ Sai Sudharsan
 Gujarat Titans
 
 
-2
-2
-137
+3
+3
+186
 74
-68.50
-167.07
+62.00
+157.62
 0
 2
+16
 9
-8
 
 
 
 3
+
+Jos Buttler
+Gujarat Titans
+
+
+3
+3
+166
+73*
+83.00
+172.91
+0
+2
+14
+9
+
+
+
+4
+
+Shreyas Iyer
+Punjab Kings
+
+
+2
+2
+149
+97*
+-
+206.94
+0
+2
+8
+13
+
+
+
+5
 
 Travis Head
 Sunrisers Hyderabad
@@ -255,18 +293,18 @@ Sunrisers Hyderabad
 
 
 
-4
+6
 
 Mitchell Marsh
 Lucknow Super Giants
 
 
-2
-2
+3
+3
 124
 72
-62.00
-185.07
+41.33
+182.35
 0
 2
 13
@@ -274,7 +312,7 @@ Lucknow Super Giants
 
 
 
-5
+7
 
 Aniket Verma
 Sunrisers Hyderabad
@@ -293,7 +331,7 @@ Sunrisers Hyderabad
 
 
 
-6
+8
 
 Ruturaj Gaikwad
 Chennai Super Kings
@@ -312,7 +350,7 @@ Chennai Super Kings
 
 
 
-7
+9
 
 Ishan Kishan
 Sunrisers Hyderabad
@@ -331,7 +369,7 @@ Sunrisers Hyderabad
 
 
 
-8
+10
 
 Dhruv Jurel
 Rajasthan Royals
@@ -350,7 +388,7 @@ Rajasthan Royals
 
 
 
-9
+11
 
 Rachin Ravindra
 Chennai Super Kings
@@ -369,7 +407,7 @@ Chennai Super Kings
 
 
 
-10
+12
 
 Suryakumar Yadav
 Mumbai Indians
@@ -388,7 +426,26 @@ Mumbai Indians
 
 
 
-11
+13
+
+Phil Salt
+Royal Challengers Bengaluru
+
+
+3
+3
+102
+56
+34.00
+170.00
+0
+1
+15
+4
+
+
+
+14
 
 Quinton de Kock
 Kolkata Knight Riders
@@ -407,7 +464,7 @@ Kolkata Knight Riders
 
 
 
-12
+15
 
 Nitish Rana
 Rajasthan Royals
@@ -423,63 +480,6 @@ Rajasthan Royals
 1
 12
 5
-
-
-
-13
-
-Sanju Samson
-Rajasthan Royals
-
-
-3
-3
-99
-66
-33.00
-154.68
-0
-1
-10
-5
-
-
-
-14
-
-Shreyas Iyer
-Punjab Kings
-
-
-1
-1
-97
-97*
--
-230.95
-0
-1
-5
-9
-
-
-
-15
-
-Jos Buttler
-Gujarat Titans
-
-
-2
-2
-93
-54
-46.50
-163.15
-0
-1
-9
-3
 
 
 
@@ -564,26 +564,6 @@ Delhi Capitals
 
 3
 
-Josh Hazlewood
-Royal Challengers Bengaluru
-
-
-2
-8
-0
-43
-5
-1
-0
-8.60
-
-										5.37											
-3/21
- 
-
-
-4
-
 Moeen Ali
 Kolkata Knight Riders
 
@@ -599,6 +579,26 @@ Kolkata Knight Riders
 
 										5.75											
 2/23
+ 
+
+
+4
+
+Bhuvneshwar Kumar
+Royal Challengers Bengaluru
+
+
+2
+7
+0
+43
+2
+0
+0
+21.50
+
+										6.14											
+1/20
  
 
 
@@ -664,26 +664,6 @@ Kolkata Knight Riders
 
 8
 
-Bhuvneshwar Kumar
-Royal Challengers Bengaluru
-
-
-1
-3
-0
-20
-1
-0
-0
-20.00
-
-										6.66											
-1/20
- 
-
-
-9
-
 Noor Ahmad
 Chennai Super Kings
 
@@ -702,43 +682,63 @@ Chennai Super Kings
  
 
 
-10
-
-Liam Livingstone
-Royal Challengers Bengaluru
-
-
-2
-6
-0
-42
-2
-0
-0
-21.00
-
-										7.00											
-2/28
- 
-
-
-11
+9
 
 Yash Dayal
 Royal Challengers Bengaluru
 
 
-2
-6
+3
+9
 0
-43
+63
 3
 0
 0
+21.00
+
+										7.00											
+2/18
+ 
+
+
+10
+
+Josh Hazlewood
+Royal Challengers Bengaluru
+
+
+3
+11.5
+0
+86
+6
+1
+0
 14.33
 
-										7.16											
-2/18
+										7.26											
+3/21
+ 
+
+
+11
+
+Sai Kishore
+Gujarat Titans
+
+
+3
+12
+0
+89
+6
+1
+0
+14.83
+
+										7.41											
+3/30
  
 
 
@@ -764,6 +764,46 @@ Mumbai Indians
 
 13
 
+Liam Livingstone
+Royal Challengers Bengaluru
+
+
+3
+7
+0
+54
+2
+0
+0
+27.00
+
+										7.71											
+2/28
+ 
+
+
+14
+
+Prasidh Krishna
+Gujarat Titans
+
+
+3
+11
+0
+85
+3
+0
+0
+28.33
+
+										7.72											
+2/18
+ 
+
+
+15
+
 Mitchell Santner
 Mumbai Indians
 
@@ -782,46 +822,6 @@ Mumbai Indians
  
 
 
-14
-
-Khaleel Ahmed
-Chennai Super Kings
-
-
-3
-12
-0
-95
-6
-1
-0
-15.83
-
-										7.91											
-3/29
- 
-
-
-15
-
-Ashwani Kumar
-Mumbai Indians
-
-
-1
-3
-0
-24
-4
-1
-0
-6.00
-
-										8.00											
-4/24
- 
-
-
  
 
 
@@ -835,7 +835,7 @@ Coming to last season in 2023, Punjab Kings all-rounder Mathew Short has been se
 
 
 
-AdvertisementPoints TableTeamPLWDLPTSRCB22004PBKS22004DC22004GT21012MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
+AdvertisementPoints TableTeamPLWDLPTSPBKS22004DC22004RCB32014GT32014MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
 
 
 
@@ -855,8 +855,8 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -868,7 +868,7 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
 
 
 
@@ -901,7 +901,7 @@ Elections
 Fitness
  
 
-Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIES‘I don’t necessarily think his red-ball career is over’: Australia chief selector Bailey on Marsh’s possible Test returnAzim Premji University students flag ‘poor-quality food’ in campus cafeteria, demand role in decision-makingFrom diesel to milk to tolls, here’s all that is getting costlier in Karnataka from this month onMaharashtra: Naxal-hit Gadchiroli to get mining authority under CM‘Liberation day’ tariffs set to take effect immediately, Trump ‘perfecting’ plan with advisers: USPunjab and Haryana HC: Decision on pay revision for Hafed staff after 26 years and relief to NDPS convict after 22 yearsMumbai: 39-yr-old man killed in Sewri hit-and-run incidentTripura govt facilitated purchase of farming materials worth Rs 24.46 crore by flood victims: Minister Ratan Lal NathMumbai: Lured by cheap gold from Customs auction, Kurla trader duped of Rs 1 crore; 5 bookedBurdened by Rs 500 crore extra interest on grain procurement advance, Punjab’s hopes rest on April 10 meeting with banksHockey legend Vandana Katariya retires – ‘What use was my life if I couldn’t help the team?’‘Will maintain decency in shows’: Podcaster Ranveer Allahbadia files undertaking in Supreme CourtSC stays e-auction of Sector 39 mandi shops, seeks UT’s reply‘For education, shopping or picnic’: Omar Abdullah launches free bus service for women across J-KFather, friends of stabbing victim join in as protest demanding justice for Aditya intensifies in PUWaqf bill showdown: INDIA bloc holds meeting to formulate joint strategy 
+Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIESWaqf amendment bill ‘assault’ on Constitution: Sonia GandhiKarjat Jamkhed’s first MIDC area runs into protests, farmers say not consulted before land acquisition‘A different approach’: Kane Williamson breaks down one mistake that cost RCB match vs Gujarat Titans‘Tumhare andar shaitan hai, usko maaro’: Ashwini Kalsekar calls out those who blame alcohol for their actionsGold Today Rate, 03 April: Check 18, 22 and 24 carat gold prices Chennai, Mumbai, Delhi, Kolkata and other citiesEx-Army sniper dupes Delhi advocate with false promises of jobs and marriage; arrested‘Even star kids will stop receiving offers if…’: Mohit Malik opens up about working with Rasha Thadani and Aaman DevganSam Altman praises India’s AI adoption rate as Ghibli-style ChatGPT images go viralAfter Trump’s tariff announcement, India’s jewellery exports to US likely to be worst hit: Here’s whySalman Khan questions his peers for not promoting his films, gives shout-out to Sunny Deol’s Jaat: ‘Maybe they think…’Supreme Court judges to make their assets public, amid row over cash at Justice Yashwant Varma’s houseJEE Main 2025 Session 2 Admit Cards: Hall tickets released for exams till April 9 at jeemain.nta.nic.inNizam-era airstrip in Telangana’s Adilabad gets Air Force’s ‘in-principle’ approval for setting up civil airportPunjabi woman in Australia sees elderly mother being assaulted via CCTV; brother, sister-in-law heldJagjit Singh told Rekha Bhardwaj there’s no ‘chamak’ in her voice: ‘I cried throughout my ride back home’Karnataka HC strikes down rape case against head of Ramachandrapura Math, cites FIR delay and cognisance issues 
 
 
 

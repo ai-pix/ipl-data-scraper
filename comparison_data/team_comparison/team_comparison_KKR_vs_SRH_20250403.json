@@ -1,0 +1,141 @@
+{
+    "team1": "Kolkata Knight Riders",
+    "team2": "Sunrisers Hyderabad",
+    "team1_code": "KKR",
+    "team2_code": "SRH",
+    "headers": [
+        "Metric",
+        "Team 1",
+        "Team 2"
+    ],
+    "timestamp": "2025-04-03T15:25:49.354980",
+    "overall_data": [
+        {
+            "Metric": "Played",
+            "Team 1": "258",
+            "Team 2": "186"
+        },
+        {
+            "Metric": "Won",
+            "Team 1": "132",
+            "Team 2": "88"
+        },
+        {
+            "Metric": "Lost",
+            "Team 1": "121",
+            "Team 2": "96"
+        },
+        {
+            "Metric": "Tied",
+            "Team 1": "1",
+            "Team 2": "1"
+        },
+        {
+            "Metric": "No Result",
+            "Team 1": "4",
+            "Team 2": "1"
+        },
+        {
+            "Metric": "Highest Team Total",
+            "Team 1": "272/7",
+            "Team 2": "287/3"
+        },
+        {
+            "Metric": "Lowest Team Total",
+            "Team 1": "66/2",
+            "Team 2": "72/1"
+        },
+        {
+            "Metric": "Avg. Runs",
+            "Team 1": "156",
+            "Team 2": "160"
+        },
+        {
+            "Metric": "Avg. Wkts",
+            "Team 1": "5",
+            "Team 2": "5"
+        },
+        {
+            "Metric": "Most Runs",
+            "Team 1": "3035",
+            "Team 2": "4014"
+        },
+        {
+            "Metric": "Most Wickets",
+            "Team 1": "181",
+            "Team 2": "157"
+        },
+        {
+            "Metric": "Highest Individual Score",
+            "Team 1": "158",
+            "Team 2": "126"
+        },
+        {
+            "Metric": "Best Bowling",
+            "Team 1": "5/15",
+            "Team 2": "5/19"
+        }
+    ],
+    "head_to_head_data": [
+        {
+            "Metric": "Played",
+            "Team 1": "28",
+            "Team 2": "28"
+        },
+        {
+            "Metric": "Won",
+            "Team 1": "19",
+            "Team 2": "9"
+        },
+        {
+            "Metric": "Highest Total",
+            "Team 1": "208",
+            "Team 2": "228"
+        },
+        {
+            "Metric": "Lowest Total",
+            "Team 1": "48",
+            "Team 2": "113"
+        },
+        {
+            "Metric": "Tosses Won",
+            "Team 1": "12",
+            "Team 2": "16"
+        },
+        {
+            "Metric": "Elected To Bat",
+            "Team 1": "4",
+            "Team 2": "7"
+        },
+        {
+            "Metric": "Elected To Field",
+            "Team 1": "8",
+            "Team 2": "9"
+        },
+        {
+            "Metric": "Won Toss And Match",
+            "Team 1": "6",
+            "Team 2": "3"
+        },
+        {
+            "Metric": "Toss Won, Batting First, Match Won",
+            "Team 1": "3",
+            "Team 2": "0"
+        },
+        {
+            "Metric": "Toss Won, Bowling First, Match Won",
+            "Team 1": "3",
+            "Team 2": "3"
+        },
+        {
+            "Metric": "Avg. Runs",
+            "Team 1": "155.86",
+            "Team 2": "157.57"
+        },
+        {
+            "Metric": "Avg. Wkts",
+            "Team 1": "5.57",
+            "Team 2": "6.32"
+        }
+    ]
+}

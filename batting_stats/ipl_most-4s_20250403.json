@@ -1,0 +1,86 @@
+{
+    "stat_type": "most-4s",
+    "generated_date": "2025-04-03T15:24:34.987921",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Virat Kohli",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 15,
+            "Inns": 15,
+            "4s": 52
+        },
+        {
+            "Rank": 2,
+            "Player": "Shubman Gill",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 44
+        },
+        {
+            "Rank": 3,
+            "Player": "Jos Buttler",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 45
+        },
+        {
+            "Rank": 4,
+            "Player": "Faf du Plessis",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 43
+        },
+        {
+            "Rank": 5,
+            "Player": "KL Rahul",
+            "Team": "Lucknow Super Giants",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 42
+        },
+        {
+            "Rank": 6,
+            "Player": "Ruturaj Gaikwad",
+            "Team": "Chennai Super Kings",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 42
+        },
+        {
+            "Rank": 7,
+            "Player": "Yashasvi Jaiswal",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 41
+        },
+        {
+            "Rank": 8,
+            "Player": "David Warner",
+            "Team": "Delhi Capitals",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 40
+        },
+        {
+            "Rank": 9,
+            "Player": "Suryakumar Yadav",
+            "Team": "Mumbai Indians",
+            "Mat": 13,
+            "Inns": 13,
+            "4s": 39
+        },
+        {
+            "Rank": 10,
+            "Player": "Sanju Samson",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "4s": 38
+        }
+    ]
+}

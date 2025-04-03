@@ -90,7 +90,7 @@ Newsletters The Indian Express Newsletter. (Opens in new window)
 
 
 
-EditionIndiaInternational .(Open in new tab) Wednesday, Apr 02, 2025
+EditionIndiaInternational .(Open in new tab) Thursday, Apr 03, 2025
 
  ePaper .Opens in new window 
  Today’s Paper .Opens in new window
@@ -120,7 +120,7 @@ Sign In .Opens in new window
 
 
 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -238,24 +238,62 @@ Lucknow Super Giants
 
 3
 
-Phil Salt
-Royal Challengers Bengaluru
+Sai Sudharsan
+Gujarat Titans
 
 
-2
-2
-88
-56
-44.00
-187.23
-0
-1
-14
 3
+3
+186
+74
+62.00
+157.62
+0
+2
+16
+9
 
 
 
 4
+
+Phil Salt
+Royal Challengers Bengaluru
+
+
+3
+3
+102
+56
+34.00
+170.00
+0
+1
+15
+4
+
+
+
+5
+
+Jos Buttler
+Gujarat Titans
+
+
+3
+3
+166
+73*
+83.00
+172.91
+0
+2
+14
+9
+
+
+
+6
 
 Mitchell Marsh
 Lucknow Super Giants
@@ -274,7 +312,7 @@ Lucknow Super Giants
 
 
 
-5
+7
 
 Ruturaj Gaikwad
 Chennai Super Kings
@@ -293,7 +331,7 @@ Chennai Super Kings
 
 
 
-6
+8
 
 Nitish Rana
 Rajasthan Royals
@@ -312,7 +350,7 @@ Rajasthan Royals
 
 
 
-7
+9
 
 Ishan Kishan
 Sunrisers Hyderabad
@@ -331,7 +369,26 @@ Sunrisers Hyderabad
 
 
 
-8
+10
+
+Rajat Patidar
+Royal Challengers Bengaluru
+
+
+3
+3
+97
+51
+32.33
+161.66
+0
+1
+11
+4
+
+
+
+11
 
 Prabhsimran Singh
 Punjab Kings
@@ -350,7 +407,7 @@ Punjab Kings
 
 
 
-9
+12
 
 Dhruv Jurel
 Rajasthan Royals
@@ -369,7 +426,7 @@ Rajasthan Royals
 
 
 
-10
+13
 
 Sanju Samson
 Rajasthan Royals
@@ -385,63 +442,6 @@ Rajasthan Royals
 1
 10
 5
-
-
-
-11
-
-Sai Sudharsan
-Gujarat Titans
-
-
-2
-2
-137
-74
-68.50
-167.07
-0
-2
-9
-8
-
-
-
-12
-
-Jos Buttler
-Gujarat Titans
-
-
-2
-2
-93
-54
-46.50
-163.15
-0
-1
-9
-3
-
-
-
-13
-
-Rajat Patidar
-Royal Challengers Bengaluru
-
-
-2
-2
-85
-51
-42.50
-177.08
-0
-1
-9
-4
 
 
 
@@ -564,6 +564,46 @@ Delhi Capitals
 
 3
 
+Josh Hazlewood
+Royal Challengers Bengaluru
+
+
+3
+11.5
+0
+86
+6
+1
+0
+14.33
+
+										7.26											
+3/21
+ 
+
+
+4
+
+Sai Kishore
+Gujarat Titans
+
+
+3
+12
+0
+89
+6
+1
+0
+14.83
+
+										7.41											
+3/30
+ 
+
+
+5
+
 Khaleel Ahmed
 Chennai Super Kings
 
@@ -582,7 +622,7 @@ Chennai Super Kings
  
 
 
-4
+6
 
 Shardul Thakur
 Lucknow Super Giants
@@ -602,7 +642,7 @@ Lucknow Super Giants
  
 
 
-5
+7
 
 Kuldeep Yadav
 Delhi Capitals
@@ -622,27 +662,7 @@ Delhi Capitals
  
 
 
-6
-
-Josh Hazlewood
-Royal Challengers Bengaluru
-
-
-2
 8
-0
-43
-5
-1
-0
-8.60
-
-										5.37											
-3/21
- 
-
-
-7
 
 Digvesh Singh
 Lucknow Super Giants
@@ -662,7 +682,27 @@ Lucknow Super Giants
  
 
 
-8
+9
+
+Mohammed Siraj
+Gujarat Titans
+
+
+3
+12
+0
+107
+5
+1
+0
+21.40
+
+										8.91											
+3/19
+ 
+
+
+10
 
 Wanindu Hasaranga
 Rajasthan Royals
@@ -682,7 +722,7 @@ Rajasthan Royals
  
 
 
-9
+11
 
 Arshdeep Singh
 Punjab Kings
@@ -702,7 +742,7 @@ Punjab Kings
  
 
 
-10
+12
 
 Ashwani Kumar
 Mumbai Indians
@@ -722,7 +762,7 @@ Mumbai Indians
  
 
 
-11
+13
 
 Matheesha Pathirana
 Chennai Super Kings
@@ -742,27 +782,7 @@ Chennai Super Kings
  
 
 
-12
-
-Sai Kishore
-Gujarat Titans
-
-
-2
-8
-0
-67
-4
-1
-0
-16.75
-
-										8.37											
-3/30
- 
-
-
-13
+14
 
 Vignesh Puthur
 Mumbai Indians
@@ -782,7 +802,7 @@ Mumbai Indians
  
 
 
-14
+15
 
 Deepak Chahar
 Mumbai Indians
@@ -802,26 +822,6 @@ Mumbai Indians
  
 
 
-15
-
-Hardik Pandya
-Mumbai Indians
-
-
-2
-6
-0
-39
-3
-0
-0
-13.00
-
-										6.50											
-2/29
- 
-
-
  
 
 
@@ -834,7 +834,7 @@ In the 2023 season, Gujarat Titans Shubman Gill led the table with 85 boundaries
 
 
 
-AdvertisementPoints TableTeamPLWDLPTSRCB22004PBKS22004DC22004GT21012MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
+AdvertisementPoints TableTeamPLWDLPTSPBKS22004DC22004RCB32014GT32014MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
 
 
 
@@ -854,8 +854,8 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -867,7 +867,7 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
 
 
 
@@ -900,7 +900,7 @@ Elections
 Fitness
  
 
-Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIES‘Roads are meant for walking’: CM Adityanath on namaz rowRCB vs GT head-to-head, IPL 2025: Will poor home record hurt Royal Challengers Bengaluru vs Gujarat Titans at M Chinnaswamy Stadium?‘Cow remains’ in Paonta Sahib: 10 held in joint ops by Himachal, Uttarakhand copsIn Haryana, consumers to feel pinch as power regulator hikes tariffApoorva Mukhija, aka The Rebel Kid, deletes all her Instagram posts following India’s Got Latent controversy, Ranveer Allahbadia’s ‘rebirth’Know all about ‘lactose-free’ goat milk ghee enriched with ‘high levels of vitamins A and D’Sikandar box office collection day 3: Salman Khan’s film plummets by 32 percent as negative word-of-mouth kicks in, hits Rs 75 croreOpenAI completes deal that values company at $300 billionEmpuraan box office collection day 6: Mohanlal and Prithviraj Sukumaran’s film rages towards Rs 250 crore mark despite controversyWatching videos of Muhammad Ali and Mike Tyson when he was 15 inspired Nishant Dev to become a pro boxerMeta’s head of AI research to depart in MayRCB vs GT Predicted Playing 11, IPL 2025: Players list, Royal Challengers Bengaluru vs Gujarat Titans, Impact Sub and Full SquadsVisa bids $100 million to replace Mastercard as Apple’s new credit card partnerBTS 2025 world tour plans: HYBE CEO reveals why comeback can’t be rushed despite financial hitKnowledge Nugget | New income tax regime from April 1 – What all you need to know for UPSC Exam?Sharmila Tagore ‘hurt’ by BCCI’s decision to retire trophy named after Mansoor Ali Khan Pataudi: ‘If they don’t want to remember Tiger’s legacy…’ 
+Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIESVijay Deverakonda reveals how Sandeep Reddy Vanga helped him rope in Ranbir Kapoor for Kingdom teaser; Jr NTR insisted on multiple takesWoman’s headless body found in Faridabad, police lodge murder caseHaryana identifies 849 ‘high-risk’ drug smugglers, to tighten action against peddling networksFire breaks out at boys’ hostel in Pune’s SPPU, no injuriesPakistani immigrant’s kindness gives Indian student a life-changing opportunity in CanadaUS President Donald Trump’s tariff speech omits crypto, Bitcoin price dropsJEE Main 2025 April Session Day 2 Exam Analysis: How was your paper?‘Certain chapters in my life…’: Ayesha Jhulka on heartbreak, career sacrifices, and moving forward after breakup with Armaan Kohli; expert on healthy ways to cope with betrayalChatGPT free users will soon be able to use Deep Research: Here’s what you can do with it‘Young Bengal was the crucible within which the Indian left first took shape’: Author Rosinka ChaudhuriDid Kim Sae Ron try to break up with Kim Soo Hyun? Alleged chat shows her frustration: ‘Oppa, when you miss me…’Bengal BJP demands CM’s resignation, CPI(M) slams TMC as SC upholds dismissal of over 25,000 teachersBengaluru police arrest 2 men for allegedly raping Bihar womanRajya Sabha Waqf Bill battle tighter, but NDA may edge out Oppn 130-106IPL 2025, KKR vs SRH Live Cricket Score Streaming Online: Kolkata Knight Riders vs Sunrisers Hyderabad Match Live Free – When and Where to Watch?Woman argues with Florida airport ground staff, removes clothes in frustration 
 
 
 

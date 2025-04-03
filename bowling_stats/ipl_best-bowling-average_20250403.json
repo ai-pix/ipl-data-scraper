@@ -1,0 +1,96 @@
+{
+    "stat_type": "best-bowling-average",
+    "generated_date": "2025-04-03T15:24:35.710865",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Jasprit Bumrah",
+            "Team": "Mumbai Indians",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 15,
+            "Avg": 16.73
+        },
+        {
+            "Rank": 2,
+            "Player": "Yuzvendra Chahal",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 23,
+            "Avg": 16.09
+        },
+        {
+            "Rank": 3,
+            "Player": "Wanindu Hasaranga",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 21,
+            "Avg": 16.33
+        },
+        {
+            "Rank": 4,
+            "Player": "Kuldeep Yadav",
+            "Team": "Delhi Capitals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 20,
+            "Avg": 17.55
+        },
+        {
+            "Rank": 5,
+            "Player": "Rashid Khan",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 15,
+            "Avg": 18.87
+        },
+        {
+            "Rank": 6,
+            "Player": "Kagiso Rabada",
+            "Team": "Punjab Kings",
+            "Mat": 13,
+            "Inns": 13,
+            "Wkts": 18,
+            "Avg": 19.89
+        },
+        {
+            "Rank": 7,
+            "Player": "Ravichandran Ashwin",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 12,
+            "Avg": 21.75
+        },
+        {
+            "Rank": 8,
+            "Player": "Umran Malik",
+            "Team": "Sunrisers Hyderabad",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 17,
+            "Avg": 23.12
+        },
+        {
+            "Rank": 9,
+            "Player": "Mohammed Shami",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 16,
+            "Avg": 24.31
+        },
+        {
+            "Rank": 10,
+            "Player": "Avesh Khan",
+            "Team": "Lucknow Super Giants",
+            "Mat": 13,
+            "Inns": 13,
+            "Wkts": 14,
+            "Avg": 25.21
+        }
+    ]
+}

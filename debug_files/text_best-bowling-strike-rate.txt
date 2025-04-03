@@ -90,7 +90,7 @@ Newsletters The Indian Express Newsletter. (Opens in new window)
 
 
 
-EditionIndiaInternational .(Open in new tab) Wednesday, Apr 02, 2025
+EditionIndiaInternational .(Open in new tab) Thursday, Apr 03, 2025
 
  ePaper .Opens in new window 
  Today’s Paper .Opens in new window
@@ -120,7 +120,7 @@ Sign In .Opens in new window
 
 
 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -219,6 +219,44 @@ Lucknow Super Giants
 
 2
 
+Sai Sudharsan
+Gujarat Titans
+
+
+3
+3
+186
+74
+62.00
+157.62
+0
+2
+16
+9
+
+
+
+3
+
+Jos Buttler
+Gujarat Titans
+
+
+3
+3
+166
+73*
+83.00
+172.91
+0
+2
+14
+9
+
+
+
+4
+
 Shreyas Iyer
 Punjab Kings
 
@@ -236,26 +274,7 @@ Punjab Kings
 
 
 
-3
-
-Sai Sudharsan
-Gujarat Titans
-
-
-2
-2
-137
-74
-68.50
-167.07
-0
-2
-9
-8
-
-
-
-4
+5
 
 Travis Head
 Sunrisers Hyderabad
@@ -274,7 +293,7 @@ Sunrisers Hyderabad
 
 
 
-5
+6
 
 Mitchell Marsh
 Lucknow Super Giants
@@ -293,7 +312,7 @@ Lucknow Super Giants
 
 
 
-6
+7
 
 Aniket Verma
 Sunrisers Hyderabad
@@ -312,7 +331,7 @@ Sunrisers Hyderabad
 
 
 
-7
+8
 
 Ruturaj Gaikwad
 Chennai Super Kings
@@ -331,7 +350,7 @@ Chennai Super Kings
 
 
 
-8
+9
 
 Ishan Kishan
 Sunrisers Hyderabad
@@ -350,7 +369,7 @@ Sunrisers Hyderabad
 
 
 
-9
+10
 
 Dhruv Jurel
 Rajasthan Royals
@@ -369,7 +388,7 @@ Rajasthan Royals
 
 
 
-10
+11
 
 Rachin Ravindra
 Chennai Super Kings
@@ -388,7 +407,7 @@ Chennai Super Kings
 
 
 
-11
+12
 
 Suryakumar Yadav
 Mumbai Indians
@@ -407,7 +426,26 @@ Mumbai Indians
 
 
 
-12
+13
+
+Phil Salt
+Royal Challengers Bengaluru
+
+
+3
+3
+102
+56
+34.00
+170.00
+0
+1
+15
+4
+
+
+
+14
 
 Quinton de Kock
 Kolkata Knight Riders
@@ -426,7 +464,7 @@ Kolkata Knight Riders
 
 
 
-13
+15
 
 Nitish Rana
 Rajasthan Royals
@@ -442,44 +480,6 @@ Rajasthan Royals
 1
 12
 5
-
-
-
-14
-
-Sanju Samson
-Rajasthan Royals
-
-
-3
-3
-99
-66
-33.00
-154.68
-0
-1
-10
-5
-
-
-
-15
-
-Jos Buttler
-Gujarat Titans
-
-
-2
-2
-93
-54
-46.50
-163.15
-0
-1
-9
-3
 
 
 
@@ -704,26 +704,6 @@ Delhi Capitals
 
 10
 
-Josh Hazlewood
-Royal Challengers Bengaluru
-
-
-2
-8
-0
-43
-5
-1
-0
-8.60
-
-										9.60											
-3/21
- 
-
-
-11
-
 Arshdeep Singh
 Punjab Kings
 
@@ -742,7 +722,47 @@ Punjab Kings
  
 
 
+11
+
+Josh Hazlewood
+Royal Challengers Bengaluru
+
+
+3
+11.5
+0
+86
+6
+1
+0
+14.33
+
+										11.83											
+3/21
+ 
+
+
 12
+
+Sai Kishore
+Gujarat Titans
+
+
+3
+12
+0
+89
+6
+1
+0
+14.83
+
+										12.00											
+3/30
+ 
+
+
+13
 
 Khaleel Ahmed
 Chennai Super Kings
@@ -762,7 +782,7 @@ Chennai Super Kings
  
 
 
-13
+14
 
 Matheesha Pathirana
 Chennai Super Kings
@@ -779,26 +799,6 @@ Chennai Super Kings
 
 										12.00											
 2/28
- 
-
-
-14
-
-Sai Kishore
-Gujarat Titans
-
-
-2
-8
-0
-67
-4
-1
-0
-16.75
-
-										12.00											
-3/30
  
 
 
@@ -835,7 +835,7 @@ Coming to last season in 2023, Mark Wood has been sensational with his average. 
 
 
 
-AdvertisementPoints TableTeamPLWDLPTSRCB22004PBKS22004DC22004GT21012MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
+AdvertisementPoints TableTeamPLWDLPTSPBKS22004DC22004RCB32014GT32014MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
 
 
 
@@ -855,8 +855,8 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -868,7 +868,7 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
 
 
 
@@ -901,7 +901,7 @@ Elections
 Fitness
  
 
-Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIESExplained: SAFEMA & Tiger Memon; How 14 properties belonging to 1993 Bombay blasts accused were handed to govtMohali accident: Sole survivor suffered excessive blood loss, condition critical, say doctorsWhite House to hold meeting on TikTokSFI seeks donation for ‘68 poor MLAs’; raises HPU budget cutIn a Meerut locality, a love story gone wrong and a body in a drumExclusive: BJP ally TDP to seek one key change in Waqf Bill, on inclusion of non-Muslims in boardsLSG mentor Zaheer Khan slams Lucknow curator after loss: ‘Looked like it was Punjab curator out here’Screenwriter Anjum Rajabali says producers ‘treat stars like nawabs’: Big stars have 12-13 spotboys, even their drivers are paid, but no surety writers will get their feeWaqf Amendment Bill Live Updates: Stage set for stormy Lok Sabha session as Centre tables Waqf Bill todayAjay Devgn put on a moustache, turban and auditioned to play Bhagat Singh; feared that he would be a misfit to play a 23-year-oldMicrodosing on Ozempic: Is it a workable weight loss option?Deva: Dreadful, dull, and degrading to minorities, Shahid Kapoor’s remake is a mess of megalomaniacal proportionsIndian 1:1 tutoring platform Filo driving academic success in US classrooms: Johns Hopkins studyMass layoffs at FDA, CDC, other US health agencies as Trump begins to restructure health deptToday in Politics: Lok Sabha to take up Waqf Bill for passage, eight hours for debateBrad Pitt’s F1 unleashes 10 minutes of adrenaline-fueled Daytona racing footage at CinemaCon 
+Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIESPunjabi woman in Australia sees elderly mother being assaulted via CCTV; brother, sister-in-law heldJagjit Singh told Rekha Bhardwaj there’s no ‘chamak’ in her voice: ‘I cried throughout my ride back home’Karnataka HC strikes down rape case against head of Ramachandrapura Math, cites FIR delay and cognisance issuesTyeb Mehta’s ‘Trussed Bull’ sold for 61.8 crore, becomes second most expensive work of Indian art sold at an auctionJio extends ‘unlimited offer’ with free JioHostar subscription until April 15Malaika Arora opens up on new tattoo after Arjun Kapoor breakup, says she last got inked after divorce from Arbaaz KhanAsian markets decline following Donald Trump’s tariff announcements‘Tainted beyond repair’: Supreme Court upholds Calcutta HC order cancelling appointment of over 25,000 staff in Bengal schoolsPSEB Class 5th, 8th Results 2025: How much I need to pass the exam?‘Why kill Rashmika Mandanna’s character so early in Sikandar, what complex did you have?’: Gaiety Galaxy owner questions Salman KhanFIDE Women’s World Chess Championship all you need to know: China vs China as Ju Wenjun battles Tan Zhongyi41 min to Manipur at 2 am in Parliament, Congress urges: ‘President’s Rule necessary but not sufficient’2 more FIRs lodged against Kenyan diplomat’s son in Delhi after students allege molestationNo AC, fad diets, excuses: Sikandar actor Salman Khan’s trainer reveals actor’s hardcore fitness secretsFree rides for RCB fans: Bengaluru auto driver’s kind act wins the InternetBombay High Court imposes Rs. 25,000 cost on Anil Ambani for seeking urgent hearing in I-T notice case 
 
 
 

@@ -3,26 +3,31 @@
     <div class="slide-bg"></div>
     <div class="slide-content">
         <h2 class="slide-title">IPL Points Table</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>POS</th>
-                    <th></th>
-                    <th>Team</th>
-                    <th>P</th>
-                    <th>W</th>
-                    <th>L</th>
-                    <th>NR</th>
-                    <th>NRR</th>
-                    <th>For</th>
-                    <th>Against</th>
-                    <th>Pts</th>
-                    <th>Form</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{points_table_rows}}
-            </tbody>
-        </table>
+        <div class="points-table-container">
+            <table class="points-table">
+                <thead>
+                    <tr>
+                        <th class="pos-col">POS</th>
+                        <th class="logo-col"></th>
+                        <th class="team-col">Team</th>
+                        <th class="stat-col" title="Matches Played">P</th>
+                        <th class="stat-col" title="Matches Won">W</th>
+                        <th class="stat-col" title="Matches Lost">L</th>
+                        <th class="stat-col" title="No Result">NR</th>
+                        <th class="stat-col" title="Net Run Rate">NRR</th>
+                        <th class="pts-col" title="Points">PTS</th>
+                        <th class="form-col" title="Recent Form">Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{points_table_rows}}
+                </tbody>
+            </table>
+        </div>
+        <div class="table-legend">
+            <div class="legend-item"><span class="legend-box qualification"></span> Qualification Zone</div>
+            <div class="legend-item"><span class="legend-box playoff"></span> Playoff Zone</div>
+            <div class="legend-item"><span class="legend-box elimination"></span> Elimination Zone</div>
+        </div>
     </div>
 </div>

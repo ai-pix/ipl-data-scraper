@@ -90,7 +90,7 @@ Newsletters The Indian Express Newsletter. (Opens in new window)
 
 
 
-EditionIndiaInternational .(Open in new tab) Wednesday, Apr 02, 2025
+EditionIndiaInternational .(Open in new tab) Thursday, Apr 03, 2025
 
  ePaper .Opens in new window 
  Today’s Paper .Opens in new window
@@ -120,7 +120,7 @@ Sign In .Opens in new window
 
 
 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -219,6 +219,44 @@ Lucknow Super Giants
 
 2
 
+Sai Sudharsan
+Gujarat Titans
+
+
+3
+3
+186
+74
+62.00
+157.62
+0
+2
+16
+9
+
+
+
+3
+
+Jos Buttler
+Gujarat Titans
+
+
+3
+3
+166
+73*
+83.00
+172.91
+0
+2
+14
+9
+
+
+
+4
+
 Shreyas Iyer
 Punjab Kings
 
@@ -236,26 +274,7 @@ Punjab Kings
 
 
 
-3
-
-Sai Sudharsan
-Gujarat Titans
-
-
-2
-2
-137
-74
-68.50
-167.07
-0
-2
-9
-8
-
-
-
-4
+5
 
 Travis Head
 Sunrisers Hyderabad
@@ -274,7 +293,7 @@ Sunrisers Hyderabad
 
 
 
-5
+6
 
 Mitchell Marsh
 Lucknow Super Giants
@@ -293,7 +312,7 @@ Lucknow Super Giants
 
 
 
-6
+7
 
 Aniket Verma
 Sunrisers Hyderabad
@@ -312,7 +331,7 @@ Sunrisers Hyderabad
 
 
 
-7
+8
 
 Ruturaj Gaikwad
 Chennai Super Kings
@@ -331,7 +350,7 @@ Chennai Super Kings
 
 
 
-8
+9
 
 Ishan Kishan
 Sunrisers Hyderabad
@@ -350,7 +369,7 @@ Sunrisers Hyderabad
 
 
 
-9
+10
 
 Dhruv Jurel
 Rajasthan Royals
@@ -369,7 +388,7 @@ Rajasthan Royals
 
 
 
-10
+11
 
 Rachin Ravindra
 Chennai Super Kings
@@ -388,7 +407,7 @@ Chennai Super Kings
 
 
 
-11
+12
 
 Suryakumar Yadav
 Mumbai Indians
@@ -407,7 +426,26 @@ Mumbai Indians
 
 
 
-12
+13
+
+Phil Salt
+Royal Challengers Bengaluru
+
+
+3
+3
+102
+56
+34.00
+170.00
+0
+1
+15
+4
+
+
+
+14
 
 Quinton de Kock
 Kolkata Knight Riders
@@ -426,7 +464,7 @@ Kolkata Knight Riders
 
 
 
-13
+15
 
 Nitish Rana
 Rajasthan Royals
@@ -442,44 +480,6 @@ Rajasthan Royals
 1
 12
 5
-
-
-
-14
-
-Sanju Samson
-Rajasthan Royals
-
-
-3
-3
-99
-66
-33.00
-154.68
-0
-1
-10
-5
-
-
-
-15
-
-Jos Buttler
-Gujarat Titans
-
-
-2
-2
-93
-54
-46.50
-163.15
-0
-1
-9
-3
 
 
 
@@ -564,6 +564,46 @@ Delhi Capitals
 
 3
 
+Josh Hazlewood
+Royal Challengers Bengaluru
+
+
+3
+11.5
+0
+86
+6
+1
+0
+14.33
+
+										7.26											
+3/21
+ 
+
+
+4
+
+Sai Kishore
+Gujarat Titans
+
+
+3
+12
+0
+89
+6
+1
+0
+14.83
+
+										7.41											
+3/30
+ 
+
+
+5
+
 Khaleel Ahmed
 Chennai Super Kings
 
@@ -582,7 +622,7 @@ Chennai Super Kings
  
 
 
-4
+6
 
 Shardul Thakur
 Lucknow Super Giants
@@ -602,7 +642,7 @@ Lucknow Super Giants
  
 
 
-5
+7
 
 Kuldeep Yadav
 Delhi Capitals
@@ -622,27 +662,7 @@ Delhi Capitals
  
 
 
-6
-
-Josh Hazlewood
-Royal Challengers Bengaluru
-
-
-2
 8
-0
-43
-5
-1
-0
-8.60
-
-										5.37											
-3/21
- 
-
-
-7
 
 Digvesh Singh
 Lucknow Super Giants
@@ -662,7 +682,27 @@ Lucknow Super Giants
  
 
 
-8
+9
+
+Mohammed Siraj
+Gujarat Titans
+
+
+3
+12
+0
+107
+5
+1
+0
+21.40
+
+										8.91											
+3/19
+ 
+
+
+10
 
 Wanindu Hasaranga
 Rajasthan Royals
@@ -682,7 +722,7 @@ Rajasthan Royals
  
 
 
-9
+11
 
 Arshdeep Singh
 Punjab Kings
@@ -702,7 +742,7 @@ Punjab Kings
  
 
 
-10
+12
 
 Ashwani Kumar
 Mumbai Indians
@@ -722,7 +762,7 @@ Mumbai Indians
  
 
 
-11
+13
 
 Matheesha Pathirana
 Chennai Super Kings
@@ -742,27 +782,7 @@ Chennai Super Kings
  
 
 
-12
-
-Sai Kishore
-Gujarat Titans
-
-
-2
-8
-0
-67
-4
-1
-0
-16.75
-
-										8.37											
-3/30
- 
-
-
-13
+14
 
 Vignesh Puthur
 Mumbai Indians
@@ -782,7 +802,7 @@ Mumbai Indians
  
 
 
-14
+15
 
 Deepak Chahar
 Mumbai Indians
@@ -802,26 +822,6 @@ Mumbai Indians
  
 
 
-15
-
-Hardik Pandya
-Mumbai Indians
-
-
-2
-6
-0
-39
-3
-0
-0
-13.00
-
-										6.50											
-2/29
- 
-
-
  
 
 
@@ -835,7 +835,7 @@ Kohli also holds the record for most runs scored in a single IPL season: 973 in 
 
 
 
-AdvertisementPoints TableTeamPLWDLPTSRCB22004PBKS22004DC22004GT21012MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
+AdvertisementPoints TableTeamPLWDLPTSPBKS22004DC22004RCB32014GT32014MI31022LSG31022CSK31022SRH31022RR31022KKR31022Advertisement 
 
 
 
@@ -855,8 +855,8 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
-TrendingIPL Live ScoreExpress ArchivesMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
+TrendingWaqf Amendment Bill LiveUS Tariffs LIVEMini CrosswordPremiumExpress Shorts🎙️ PodcastHealth & Wellness 
 
 
 
@@ -868,7 +868,7 @@ Sign In
 
 
 
-e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb Stories 
+e-paperPremiumIndiaElections 2024BollywoodOpinionPolitical PulseExplainedScienceCricketSportsWorldBusinessEntertainmentJobsHealthLifestyleTechnologyEducationMovie ReviewEyeTrendingCitiesNewslettersWebSeriesPhotosVideosAudioWeb StoriesRSS 
 
 
 
@@ -901,7 +901,7 @@ Elections
 Fitness
  
 
-Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIES‘Mere liye gym hi kaafi hai’: Gautami Kapoor joins the banter, playfully repeats Ekta Kapoor’s words on Ram’s transformation; expert on natural vs. medical interventionsAllies to go with Waqf Bill despite ‘concerns’, NDA numbers far ahead: 293 to 241OnePlus 13T teased, brand calls it ‘small, beautiful and powerful’Karate Kid Legends trailer unites Jackie Chan, Ralph Macchio in action-packed legacy-quelWho is Susan Crawford? Wisconsin Supreme Court winner has fought for union and abortion rightsRishabh Pant’s dismissal vs PBKS was particularly disappointing, says Piyush ChawlaPune hit-and-run: SUV driver arrested day after man was killed in accidentBrain health alert: Chewing gum may be releasing microplastics, says study. Can it impact your memory?There are happier ways to get out of bed: listen to the musicians of the airDaily Briefing: The Waqf Bill showdown and Trump’s tariff warsLee Dong Wook and Lee Da Hee break marriage myth in Divorce Insurance streaming on Prime Video: ‘Don’t go all-in’Taiwan says 76 Chinese warplanes detected as China launches surprise drills codenamed ‘Strait Thunder’Himachal Pradesh braces for warmer summer; more heat wave days likely: MeTVal Kilmer, star of Batman and Top Gun, dies at 65 after battling cancer‘Roads are meant for walking’: CM Adityanath on namaz rowRCB vs GT head-to-head, IPL 2025: Will poor home record hurt Royal Challengers Bengaluru vs Gujarat Titans at M Chinnaswamy Stadium? 
+Trending NewsSikandar Box Office CollectionStock AnalysisLive Cricket ScoreScreen VideosInternational VideosIndian Express Live TVIPL 2025 Points TableIPL 2025 Team Ranking IPL 2025 ScheduleIPL Orange Cap 2025IPL Purple Cap 2025IPL 2025LSG vs PBKS Live ScoreIPL LSG vs PBKS Live StreamingLATEST STORIESAkshay Kumar addresses using ‘F word’ in Kesari 2 trailer, reveals his father was born opposite Jallianwala Bagh: ‘Agar goli maar di hoti…’Airport manager refused to let Terence Lewis’ flight take off because wife wanted picture with him; Priyanka Chopra played the photographerExamining implications of US reciprocal tariffs on India: CentreSuspension of bike taxis like Rapido brings relief to Bengaluru autorickshaw drivers, upsets passengers43% placement, 1.6 crore beneficiaries under three phases of PM Kaushal Vikas YojanaUPSC Issue at a Glance | Beyond the Ghibli trend: A glimpse into Indian Painting stylesVijay Deverakonda reveals how Sandeep Reddy Vanga helped him rope in Ranbir Kapoor for Kingdom teaser; Jr NTR insisted on multiple takesWoman’s headless body found in Faridabad, police lodge murder caseHaryana identifies 849 ‘high-risk’ drug smugglers, to tighten action against peddling networksFire breaks out at boys’ hostel in Pune’s SPPU, no injuriesPakistani immigrant’s kindness gives Indian student a life-changing opportunity in CanadaUS President Donald Trump’s tariff speech omits crypto, Bitcoin price dropsJEE Main 2025 April Session Day 2 Exam Analysis: How was your paper?‘Certain chapters in my life…’: Ayesha Jhulka on heartbreak, career sacrifices, and moving forward after breakup with Armaan Kohli; expert on healthy ways to cope with betrayalChatGPT free users will soon be able to use Deep Research: Here’s what you can do with it‘Young Bengal was the crucible within which the Indian left first took shape’: Author Rosinka Chaudhuri 
 
 
 

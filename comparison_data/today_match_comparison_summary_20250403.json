@@ -1,0 +1,21 @@
+{
+    "match_date": "2025-04-03",
+    "team1": "Kolkata Knight Riders",
+    "team2": "Sunrisers Hyderabad",
+    "venue": "Kolkata",
+    "time": "7:30 PM",
+    "team_comparison_available": true,
+    "overall_data_available": true,
+    "head_to_head_data_available": true,
+    "team1_key_players": [
+        "Shreyas Iyer",
+        "Sunil Narine",
+        "Andre Russell"
+    ],
+    "team2_key_players": [
+        "Aiden Markram",
+        "Heinrich Klaasen",
+        "Bhuvneshwar Kumar"
+    ],
+    "timestamp": "2025-04-03T15:25:51.612142"
+}

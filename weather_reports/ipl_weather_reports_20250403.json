@@ -1,0 +1,122 @@
+{
+    "generated_date": "2025-04-03T15:25:08.372568",
+    "weather_reports": [
+        {
+            "city": "Chennai",
+            "state": "Tamil Nadu",
+            "current_temp": "30.15\u00b0C",
+            "current_condition": "Overcast clouds",
+            "humidity": "64%",
+            "wind_speed": "5.4 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Kolkata",
+            "state": "West Bengal",
+            "current_temp": "39.35\u00b0C",
+            "current_condition": "Broken clouds",
+            "humidity": "17%",
+            "wind_speed": "3.55 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Delhi",
+            "state": "Delhi",
+            "current_temp": "37.61\u00b0C",
+            "current_condition": "Clear sky",
+            "humidity": "4%",
+            "wind_speed": "0.98 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Bengaluru",
+            "state": "Karnataka",
+            "current_temp": "28.72\u00b0C",
+            "current_condition": "Broken clouds",
+            "humidity": "66%",
+            "wind_speed": "3.9 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "current_temp": "28.48\u00b0C",
+            "current_condition": "Clear sky",
+            "humidity": "79%",
+            "wind_speed": "5.86 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Jaipur",
+            "state": "Rajasthan",
+            "current_temp": "36.78\u00b0C",
+            "current_condition": "Scattered clouds",
+            "humidity": "9%",
+            "wind_speed": "3.41 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Lucknow",
+            "state": "Uttar Pradesh",
+            "current_temp": "38.83\u00b0C",
+            "current_condition": "Clear sky",
+            "humidity": "5%",
+            "wind_speed": "4.53 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "current_temp": "40.44\u00b0C",
+            "current_condition": "Clear sky",
+            "humidity": "7%",
+            "wind_speed": "4.3 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Hyderabad",
+            "state": "Telangana",
+            "current_temp": "30.05\u00b0C",
+            "current_condition": "Broken clouds",
+            "humidity": "42%",
+            "wind_speed": "2.77 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Guwahati",
+            "state": "Assam",
+            "current_temp": "38.77\u00b0C",
+            "current_condition": "Scattered clouds",
+            "humidity": "10%",
+            "wind_speed": "6.46 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Mohali",
+            "state": "Punjab",
+            "current_temp": "36.84\u00b0C",
+            "current_condition": "Scattered clouds",
+            "humidity": "5%",
+            "wind_speed": "4.83 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Visakhapatnam",
+            "state": "Andhra Pradesh",
+            "current_temp": "30.81\u00b0C",
+            "current_condition": "Few clouds",
+            "humidity": "60%",
+            "wind_speed": "5.4 m/s",
+            "last_updated": "2025-04-03"
+        },
+        {
+            "city": "Dharamsala",
+            "state": "Himachal Pradesh",
+            "current_temp": "19.5\u00b0C",
+            "current_condition": "Overcast clouds",
+            "humidity": "20%",
+            "wind_speed": "3.49 m/s",
+            "last_updated": "2025-04-03"
+        }
+    ]
+}

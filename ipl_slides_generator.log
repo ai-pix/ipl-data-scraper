@@ -83,3 +83,145 @@ AttributeError: 'IPLSlidesGenerator' object has no attribute 'load_templates'
 2025-04-03 00:34:40,562 [INFO] Loaded 3 partial templates
 2025-04-03 00:34:54,192 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
 2025-04-03 00:34:54,193 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 09:34:19,349 [WARNING] Failed to initialize Gemini API: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-03 09:34:19,349 [ERROR] Failed to initialize Gemini model. AI analysis will be unavailable.
+2025-04-03 09:34:19,421 [INFO] Loaded 7 templates
+2025-04-03 09:34:19,441 [INFO] Loaded 3 partial templates
+2025-04-03 09:34:19,500 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 09:34:19,500 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 09:35:18,371 [WARNING] GEMINI_API_KEY not found in environment variables. Gemini API features will be disabled.
+2025-04-03 09:35:18,373 [INFO] Loaded 7 templates
+2025-04-03 09:35:18,373 [INFO] Loaded 3 partial templates
+2025-04-03 09:35:18,379 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 09:35:18,379 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 09:41:56,058 [WARNING] GEMINI_API_KEY not found in environment variables. Gemini API features will be disabled.
+2025-04-03 09:41:56,059 [INFO] Loaded 7 templates
+2025-04-03 09:41:56,060 [INFO] Loaded 3 partial templates
+2025-04-03 09:41:56,066 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 09:41:56,066 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 10:45:34,787 [WARNING] Failed to initialize Gemini API: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-03 10:45:34,788 [ERROR] Failed to initialize Gemini model. AI analysis will be unavailable.
+2025-04-03 10:45:34,789 [INFO] Loaded 7 templates
+2025-04-03 10:45:34,790 [INFO] Loaded 3 partial templates
+2025-04-03 10:45:34,796 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 10:45:34,796 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 10:46:27,524 [INFO] Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 10:46:27,531 [INFO] Loaded 7 templates
+2025-04-03 10:46:27,534 [INFO] Loaded 3 partial templates
+2025-04-03 10:46:34,013 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 26
+}
+]
+2025-04-03 10:46:35,298 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 25
+}
+]
+2025-04-03 10:46:35,302 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 10:46:35,302 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 10:47:13,777 [INFO] Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 10:47:13,783 [INFO] Loaded 7 templates
+2025-04-03 10:47:13,786 [INFO] Loaded 3 partial templates
+2025-04-03 10:47:18,864 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2025-04-03 10:47:20,147 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 40
+}
+]
+2025-04-03 10:47:20,482 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 39
+}
+]
+2025-04-03 10:47:20,486 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 10:47:20,486 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 10:49:24,027 [INFO] Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 10:49:24,029 [INFO] Loaded 7 templates
+2025-04-03 10:49:24,029 [INFO] Loaded 3 partial templates
+2025-04-03 10:49:31,585 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 28
+}
+]
+2025-04-03 10:49:41,922 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 10:49:41,923 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 10:57:02,682 [INFO] Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 10:57:02,684 [INFO] Loaded 7 templates
+2025-04-03 10:57:02,685 [INFO] Loaded 3 partial templates
+2025-04-03 10:57:09,409 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 50
+}
+]
+2025-04-03 10:57:09,412 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 10:57:09,413 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 11:35:06,837 [INFO] Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 11:35:06,839 [INFO] Loaded 9 templates
+2025-04-03 11:35:06,840 [INFO] Loaded 3 partial templates
+2025-04-03 11:35:18,564 [WARNING] No highest-strike-rates stats files found in batting_stats
+2025-04-03 11:35:18,611 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 11:35:18,612 [INFO] Successfully generated slides for 1 match(es)
+2025-04-03 13:40:36,552 [INFO] Gemini API initialized successfully with model gemini-1.5-pro
+2025-04-03 13:40:36,563 [INFO] Loaded 9 templates
+2025-04-03 13:40:36,564 [INFO] Loaded 3 partial templates
+2025-04-03 13:40:42,525 [ERROR] Error getting Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 17
+}
+]
+2025-04-03 13:40:42,527 [WARNING] No highest-strike-rates stats files found in batting_stats
+2025-04-03 13:40:42,533 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
+2025-04-03 13:40:42,533 [INFO] Successfully generated slides for 1 match(es)

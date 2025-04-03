@@ -1,0 +1,116 @@
+{
+    "stat_type": "most-wickets",
+    "generated_date": "2025-04-03T15:24:35.253743",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Yuzvendra Chahal",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 23,
+            "Econ": 7.61,
+            "Avg": 16.09,
+            "SR": 12.68
+        },
+        {
+            "Rank": 2,
+            "Player": "Wanindu Hasaranga",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 21,
+            "Econ": 8.15,
+            "Avg": 16.33,
+            "SR": 12.0
+        },
+        {
+            "Rank": 3,
+            "Player": "Kuldeep Yadav",
+            "Team": "Delhi Capitals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 20,
+            "Econ": 8.43,
+            "Avg": 17.55,
+            "SR": 12.5
+        },
+        {
+            "Rank": 4,
+            "Player": "T Natarajan",
+            "Team": "Sunrisers Hyderabad",
+            "Mat": 12,
+            "Inns": 12,
+            "Wkts": 18,
+            "Econ": 9.42,
+            "Avg": 22.56,
+            "SR": 14.33
+        },
+        {
+            "Rank": 5,
+            "Player": "Kagiso Rabada",
+            "Team": "Punjab Kings",
+            "Mat": 13,
+            "Inns": 13,
+            "Wkts": 18,
+            "Econ": 8.72,
+            "Avg": 19.89,
+            "SR": 13.67
+        },
+        {
+            "Rank": 6,
+            "Player": "Umran Malik",
+            "Team": "Sunrisers Hyderabad",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 17,
+            "Econ": 9.03,
+            "Avg": 23.12,
+            "SR": 15.33
+        },
+        {
+            "Rank": 7,
+            "Player": "Mohammed Shami",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 16,
+            "Econ": 8.39,
+            "Avg": 24.31,
+            "SR": 17.38
+        },
+        {
+            "Rank": 8,
+            "Player": "Jasprit Bumrah",
+            "Team": "Mumbai Indians",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 15,
+            "Econ": 7.18,
+            "Avg": 25.73,
+            "SR": 21.53
+        },
+        {
+            "Rank": 9,
+            "Player": "Prasidh Krishna",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Wkts": 15,
+            "Econ": 8.29,
+            "Avg": 26.87,
+            "SR": 19.47
+        },
+        {
+            "Rank": 10,
+            "Player": "Harshal Patel",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 15,
+            "Inns": 15,
+            "Wkts": 14,
+            "Econ": 9.47,
+            "Avg": 27.21,
+            "SR": 17.21
+        }
+    ]
+}

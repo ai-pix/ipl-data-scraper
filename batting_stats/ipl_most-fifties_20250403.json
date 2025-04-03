@@ -1,0 +1,86 @@
+{
+    "stat_type": "most-fifties",
+    "generated_date": "2025-04-03T15:24:34.596112",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Virat Kohli",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 15,
+            "Inns": 15,
+            "50s": 6
+        },
+        {
+            "Rank": 2,
+            "Player": "KL Rahul",
+            "Team": "Lucknow Super Giants",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 4
+        },
+        {
+            "Rank": 3,
+            "Player": "Jos Buttler",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 4
+        },
+        {
+            "Rank": 4,
+            "Player": "Faf du Plessis",
+            "Team": "Royal Challengers Bangalore",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 4
+        },
+        {
+            "Rank": 5,
+            "Player": "Suryakumar Yadav",
+            "Team": "Mumbai Indians",
+            "Mat": 13,
+            "Inns": 13,
+            "50s": 4
+        },
+        {
+            "Rank": 6,
+            "Player": "David Warner",
+            "Team": "Delhi Capitals",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 4
+        },
+        {
+            "Rank": 7,
+            "Player": "Shubman Gill",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 3
+        },
+        {
+            "Rank": 8,
+            "Player": "Sanju Samson",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 3
+        },
+        {
+            "Rank": 9,
+            "Player": "Ruturaj Gaikwad",
+            "Team": "Chennai Super Kings",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 3
+        },
+        {
+            "Rank": 10,
+            "Player": "Yashasvi Jaiswal",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "50s": 3
+        }
+    ]
+}

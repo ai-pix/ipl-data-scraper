@@ -1,0 +1,144 @@
+<!-- Comprehensive Batting Stats Slide Template -->
+<div class="slide" id="slide-{{slide_index}}">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">IPL Batting Statistics</h2>
+        
+        <div class="stats-tabs">
+            <button class="stats-tab active" data-tab="most-runs">Most Runs</button>
+            <button class="stats-tab" data-tab="most-sixes">Most Sixes</button>
+            <button class="stats-tab" data-tab="most-fours">Most Fours</button>
+            <button class="stats-tab" data-tab="highest-sr">Highest SR</button>
+            <button class="stats-tab" data-tab="most-fifties">Most 50s</button>
+            <button class="stats-tab" data-tab="most-hundreds">Most 100s</button>
+        </div>
+        
+        <div class="stats-content active" id="most-runs">
+            <h3>Top Run Scorers</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">Avg</th>
+                            <th class="stat-col">SR</th>
+                            <th class="stat-col">4s</th>
+                            <th class="stat-col">6s</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{most_runs_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-sixes">
+            <h3>Most Sixes</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">6s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{most_sixes_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-fours">
+            <h3>Most Fours</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">4s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{most_fours_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="highest-sr">
+            <h3>Highest Strike Rate</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">SR</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">Balls</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{highest_sr_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-fifties">
+            <h3>Most Fifties</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">50s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">HS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{most_fifties_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-hundreds">
+            <h3>Most Hundreds</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">100s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">HS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{most_hundreds_rows}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

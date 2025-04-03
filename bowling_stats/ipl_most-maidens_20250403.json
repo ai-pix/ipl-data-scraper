@@ -1,0 +1,86 @@
+{
+    "stat_type": "most-maidens",
+    "generated_date": "2025-04-03T15:24:35.456361",
+    "data": [
+        {
+            "Rank": 1,
+            "Player": "Mohammed Shami",
+            "Team": "Gujarat Titans",
+            "Mat": 14,
+            "Inns": 14,
+            "Maidens": 3
+        },
+        {
+            "Rank": 2,
+            "Player": "Jasprit Bumrah",
+            "Team": "Mumbai Indians",
+            "Mat": 14,
+            "Inns": 14,
+            "Maidens": 2
+        },
+        {
+            "Rank": 3,
+            "Player": "Mukesh Choudhary",
+            "Team": "Chennai Super Kings",
+            "Mat": 13,
+            "Inns": 13,
+            "Maidens": 2
+        },
+        {
+            "Rank": 4,
+            "Player": "Prasidh Krishna",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Maidens": 2
+        },
+        {
+            "Rank": 5,
+            "Player": "Trent Boult",
+            "Team": "Rajasthan Royals",
+            "Mat": 14,
+            "Inns": 14,
+            "Maidens": 2
+        },
+        {
+            "Rank": 6,
+            "Player": "Avesh Khan",
+            "Team": "Lucknow Super Giants",
+            "Mat": 13,
+            "Inns": 13,
+            "Maidens": 1
+        },
+        {
+            "Rank": 7,
+            "Player": "Umesh Yadav",
+            "Team": "Kolkata Knight Riders",
+            "Mat": 12,
+            "Inns": 12,
+            "Maidens": 1
+        },
+        {
+            "Rank": 8,
+            "Player": "Khaleel Ahmed",
+            "Team": "Delhi Capitals",
+            "Mat": 10,
+            "Inns": 10,
+            "Maidens": 1
+        },
+        {
+            "Rank": 9,
+            "Player": "Anrich Nortje",
+            "Team": "Delhi Capitals",
+            "Mat": 6,
+            "Inns": 6,
+            "Maidens": 1
+        },
+        {
+            "Rank": 10,
+            "Player": "Dushmantha Chameera",
+            "Team": "Lucknow Super Giants",
+            "Mat": 12,
+            "Inns": 12,
+            "Maidens": 1
+        }
+    ]
+}
