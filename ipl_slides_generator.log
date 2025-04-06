@@ -225,3 +225,23 @@ message: "API key not valid. Please pass a valid API key."
 2025-04-03 13:40:42,527 [WARNING] No highest-strike-rates stats files found in batting_stats
 2025-04-03 13:40:42,533 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Sunrisers_Hyderabad_20250403.html
 2025-04-03 13:40:42,533 [INFO] Successfully generated slides for 1 match(es)
+2025-04-06 22:28:22,201 [INFO] Gemini API initialized successfully with model gemini-2.0-flash
+2025-04-06 22:28:22,209 [INFO] Loaded 10 templates
+2025-04-06 22:28:22,210 [INFO] Loaded 3 partial templates
+2025-04-06 22:28:27,363 [WARNING] No team data found for Kolkata Knight Riders, using default data
+2025-04-06 22:28:27,363 [WARNING] Player images directory not found: player_images\kkr
+2025-04-06 22:28:27,363 [WARNING] No player images found for Kolkata Knight Riders, skipping player gallery slide
+2025-04-06 22:28:27,365 [WARNING] No team data found for Lucknow Super Giants, using default data
+2025-04-06 22:28:27,365 [WARNING] Player images directory not found: player_images\lsg
+2025-04-06 22:28:27,365 [WARNING] No player images found for Lucknow Super Giants, skipping player gallery slide
+2025-04-06 22:28:27,367 [WARNING] No highest-strike-rates stats files found in batting_stats
+2025-04-06 22:28:27,386 [INFO] Generated slides at ipl_slides\ipl_prematch_Kolkata_Knight_Riders_Lucknow_Super_Giants_20250406.html
+2025-04-06 22:28:32,972 [WARNING] No team data found for Sunrisers Hyderabad, using default data
+2025-04-06 22:28:32,972 [WARNING] Player images directory not found: player_images\srh
+2025-04-06 22:28:32,972 [WARNING] No player images found for Sunrisers Hyderabad, skipping player gallery slide
+2025-04-06 22:28:32,973 [WARNING] No team data found for Gujarat Titans, using default data
+2025-04-06 22:28:32,973 [WARNING] Player images directory not found: player_images\gt
+2025-04-06 22:28:32,973 [WARNING] No player images found for Gujarat Titans, skipping player gallery slide
+2025-04-06 22:28:32,975 [WARNING] No highest-strike-rates stats files found in batting_stats
+2025-04-06 22:28:32,987 [INFO] Generated slides at ipl_slides\ipl_prematch_Sunrisers_Hyderabad_Gujarat_Titans_20250406.html
+2025-04-06 22:28:32,988 [INFO] Successfully generated slides for 2 match(es)

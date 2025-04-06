@@ -1,0 +1,3558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Cricket Analysis - 2025-04-06</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0078ff;
+            --secondary-color: #ff3d00;
+            --accent-color: #ffcc00;
+            --dark-bg: #0a1929;
+            --card-bg: rgba(16, 32, 56, 0.85);
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: rgba(255, 255, 255, 0.15);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --gradient-overlay: linear-gradient(135deg, rgba(10, 25, 41, 0.85), rgba(10, 25, 41, 0.95));
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow: hidden;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1905&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-overlay);
+            z-index: -1;
+        }
+
+        /* Slide container */
+        .slide-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Slides */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateX(100%);
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 2;
+        }
+
+        .slide.prev {
+            transform: translateX(-100%);
+        }
+
+        /* Slide content */
+        .slide-content {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            overflow-y: auto;
+            max-height: 90vh;
+            z-index: 1;
+        }
+
+        .slide-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--text-primary);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        /* Navigation controls */
+        .slide-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 10;
+        }
+
+        .prev-btn, .next-btn {
+            background-color: var(--primary-color);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .prev-btn::before {
+            content: '←';
+            font-size: 18px;
+        }
+
+        .next-btn::after {
+            content: '→';
+            font-size: 18px;
+        }
+
+        .prev-btn:hover, .next-btn:hover {
+            background-color: #0066dd;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 120, 255, 0.4);
+        }
+
+        .prev-btn:active, .next-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 10px rgba(0, 120, 255, 0.3);
+        }
+
+        /* Progress indicators */
+        .slide-indicators {
+            position: absolute;
+            bottom: 90px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .indicator:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .indicator.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(0, 120, 255, 0.5);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: background-color 0.2s ease;
+        }
+
+        /* Points Table Specific Styling */
+        .points-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent, rgba(0, 0, 0, 0.2));
+            padding: 5px;
+        }
+
+        .points-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: rgba(16, 32, 56, 0.7);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .points-table thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .points-table th {
+            background: linear-gradient(to bottom, var(--primary-color), rgba(0, 100, 255, 0.8));
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+            padding: 16px 12px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .points-table td {
+            padding: 14px 12px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .points-table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.04);
+        }
+
+        .points-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Column specific styling */
+        .pos-col {
+            width: 50px;
+            font-weight: 600;
+        }
+
+        .logo-col {
+            width: 60px;
+        }
+
+        .team-col {
+            width: 180px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .stat-col {
+            width: 60px;
+        }
+
+        .pts-col {
+            width: 70px;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .form-col {
+            width: 120px;
+        }
+
+        /* Team position styling */
+        .points-table tr:nth-child(-n+4) {
+            background-color: rgba(46, 204, 113, 0.1);
+        }
+
+        .points-table tr:nth-child(n+5):nth-child(-n+6) {
+            background-color: rgba(241, 196, 15, 0.1);
+        }
+
+        .points-table tr:nth-child(n+7) {
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+
+        /* Legend */
+        .table-legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 25px;
+            font-size: 0.9rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px 15px;
+            border-radius: 30px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .legend-box {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .qualification {
+            background-color: rgba(46, 204, 113, 0.7);
+        }
+
+        .playoff {
+            background-color: rgba(241, 196, 15, 0.7);
+        }
+
+        .elimination {
+            background-color: rgba(231, 76, 60, 0.7);
+        }
+
+        /* Form indicators */
+        .form-win, .form-loss, .form-draw, .form-nr {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 3px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .form-win {
+            background-color: rgba(46, 204, 113, 0.9);
+            color: white;
+        }
+
+        .form-loss {
+            background-color: rgba(231, 76, 60, 0.9);
+            color: white;
+        }
+
+        .form-draw {
+            background-color: rgba(241, 196, 15, 0.9);
+            color: black;
+        }
+
+        .form-nr {
+            background-color: rgba(149, 165, 166, 0.9);
+            color: white;
+        }
+
+        .form-win:hover, .form-loss:hover, .form-draw:hover, .form-nr:hover {
+            transform: scale(1.15);
+        }
+
+        /* Small team logo */
+        .team-logo-small {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+            transition: transform 0.2s ease;
+        }
+
+        .team-logo-small:hover {
+            transform: scale(1.2);
+        }
+
+        /* Comprehensive Stats Slides Styling */
+        .stats-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .stats-tab {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            border-radius: 25px;
+        }
+
+        .stats-tab:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .stats-tab:hover::before {
+            opacity: 0.2;
+        }
+
+        .stats-tab.active {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 120, 255, 0.3);
+        }
+
+        .stats-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .stats-content.active {
+            display: block;
+        }
+
+        .stats-content h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .stats-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .stats-table-container {
+            max-height: 450px;
+            overflow-y: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            margin-top: 15px;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent, rgba(0, 0, 0, 0.2));
+            padding: 5px;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: rgba(16, 32, 56, 0.7);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .stats-table th {
+            background: linear-gradient(to bottom, var(--primary-color), rgba(0, 100, 255, 0.8));
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+            padding: 16px 12px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .stats-table td {
+            padding: 14px 12px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .stats-table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.04);
+        }
+
+        .stats-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Top 3 players highlighting */
+        .stats-table tr:nth-child(1) td {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1)); /* Gold */
+            font-weight: bold;
+            border-left: 3px solid rgba(212, 175, 55, 0.8);
+        }
+
+        .stats-table tr:nth-child(2) td {
+            background: linear-gradient(to right, rgba(192, 192, 192, 0.2), rgba(192, 192, 192, 0.1)); /* Silver */
+            border-left: 3px solid rgba(192, 192, 192, 0.8);
+        }
+
+        .stats-table tr:nth-child(3) td {
+            background: linear-gradient(to right, rgba(205, 127, 50, 0.2), rgba(205, 127, 50, 0.1)); /* Bronze */
+            border-left: 3px solid rgba(205, 127, 50, 0.8);
+        }
+
+        /* Column specific styling */
+        .rank-col {
+            width: 60px;
+            font-weight: 600;
+        }
+
+        .player-col {
+            width: 180px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .team-col {
+            width: 120px;
+            text-align: left;
+        }
+
+        .stat-col {
+            width: 70px;
+            font-weight: 500;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Title slide */
+        .title-slide {
+            text-align: center;
+            animation: scaleIn 0.8s ease-out;
+        }
+
+        .title-slide h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            letter-spacing: -1px;
+        }
+
+        .title-slide h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 35px;
+            color: var(--text-secondary);
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .title-slide p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .title-slide .team-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 40px 0;
+        }
+
+        .title-slide .team-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .title-slide .team-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .title-slide .vs-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        /* Stats leaders */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .player-name {
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .player-team {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .player-stat {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+        }
+
+        /* Team comparison */
+        .team-comparison {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 25px;
+        }
+
+        .team-side {
+            flex: 1;
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-side:first-child {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .team-side:last-child {
+            animation: slideInRight 0.6s ease-out;
+        }
+
+        .team-side:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .team-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .team-side h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .captain-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .captain-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .captain-name {
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .captain-role {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .vs-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            animation: scaleIn 0.8s ease-out;
+        }
+
+        .vs-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(255, 61, 0, 0.3);
+        }
+
+        .vs-container p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .vs-container strong {
+            color: var(--accent-color);
+        }
+
+        .prediction-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+            line-height: 1.6;
+            animation: fadeIn 0.8s ease-out 0.3s both;
+        }
+
+        /* Head to head comparison */
+        .head-to-head {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.8s ease-out 0.5s both;
+        }
+
+        .head-to-head h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-size: 1.6rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .head-to-head h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .head-to-head-stats {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+            color: var(--primary-color);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Team overview */
+        .team-overview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .team-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .team-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-left: 20px;
+        }
+
+        .team-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 25px;
+            animation: fadeIn 0.8s ease-out 0.3s both;
+        }
+
+        .team-stat-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Weather and pitch conditions */
+        .venue-conditions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .condition-box {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .condition-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .condition-box:first-child {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .condition-box:last-child {
+            animation: slideInRight 0.6s ease-out;
+        }
+
+        .condition-box h3 {
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .condition-box h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .weather-icon {
+            font-size: 4rem;
+            text-align: center;
+            margin: 15px 0;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .weather-details, .pitch-details {
+            margin-top: 20px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .detail-row:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding-left: 8px;
+            border-radius: 5px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .detail-value {
+            font-weight: 500;
+            color: var(--accent-color);
+        }
+
+        /* Player gallery */
+        .player-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .player-card {
+            width: 170px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.8s ease-out calc(var(--i, 0) * 0.1s) both;
+        }
+
+        .player-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .player-image {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .player-card:hover .player-image {
+            transform: scale(1.1);
+        }
+
+        .player-card-details {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .player-card-details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+
+        .player-card-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--text-primary);
+        }
+
+        .player-card-team {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Background effects */
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px) brightness(0.3);
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+
+        /* Team-specific colors */
+        .team-colors {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            z-index: 0;
+        }
+
+        /* Additional styles for new slide types */
+        .detailed-comparison {
+            margin-top: 30px;
+            animation: fadeIn 0.8s ease-out 0.5s both;
+        }
+
+        .comparison-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+            gap: 8px;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .comparison-tab {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            border-radius: 25px;
+        }
+
+        .comparison-tab:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .comparison-tab:hover::before {
+            opacity: 0.2;
+        }
+
+        .comparison-tab.active {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 120, 255, 0.3);
+        }
+
+        .comparison-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .comparison-content.active {
+            display: block;
+        }
+
+        .stat-bar-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            padding: 8px 10px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .stat-bar-container:hover {
+            background-color: rgba(255, 255, 255, 0.06);
+            transform: translateX(5px);
+        }
+
+        .team-name {
+            flex: 2;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .bar-container {
+            flex: 5;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .bar {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-color), rgba(0, 150, 255, 0.7));
+            border-radius: 6px;
+            transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            box-shadow: 0 0 10px rgba(0, 120, 255, 0.5);
+        }
+
+        .stat-value {
+            flex: 1;
+            text-align: right;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .slide-content {
+                max-width: 95%;
+            }
+
+            .title-slide h1 {
+                font-size: 3.8rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .slide-content {
+                padding: 25px;
+            }
+
+            .title-slide h1 {
+                font-size: 3.2rem;
+            }
+
+            .title-slide h2 {
+                font-size: 1.8rem;
+            }
+
+            .team-comparison {
+                gap: 15px;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide-content {
+                padding: 20px;
+                max-height: 85vh;
+            }
+
+            .slide-title {
+                font-size: 1.8rem;
+            }
+
+            .title-slide h1 {
+                font-size: 2.8rem;
+            }
+
+            .title-slide h2 {
+                font-size: 1.5rem;
+            }
+
+            .title-slide .team-logos {
+                gap: 30px;
+            }
+
+            .title-slide .team-logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+
+            .team-comparison {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .vs-container {
+                margin: 10px 0;
+            }
+
+            .head-to-head-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .venue-conditions {
+                flex-direction: column;
+            }
+
+            .condition-box {
+                min-width: 100%;
+            }
+
+            .stats-tabs, .comparison-tabs {
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 5px 10px;
+            }
+
+            .stats-tab, .comparison-tab {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+                margin-bottom: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 20px 10px;
+            }
+
+            .slide-content {
+                padding: 15px;
+            }
+
+            .title-slide h1 {
+                font-size: 2.2rem;
+            }
+
+            .title-slide h2 {
+                font-size: 1.3rem;
+            }
+
+            .slide-title {
+                font-size: 1.5rem;
+            }
+
+            .team-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .prev-btn, .next-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .player-card {
+                width: 140px;
+            }
+
+            .player-image {
+                height: 140px;
+            }
+        }
+
+        /* Animations */
+        .animate-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .animate-in-delay-1 {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .animate-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        .animate-in-delay-3 {
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+
+        /* Team specific themes - will be customized by the generator */
+        /* 
+                :root {
+                    --primary-color: #3A225D;
+                    --secondary-color: #A5E0E5;
+                    --accent-color: #f1c40f;
+                    --gradient-start: #3A225D;
+                    --gradient-mid: #333333;
+                    --gradient-end: #A5E0E5;
+                }
+                 */
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slides will be dynamically generated here -->
+        <!-- Title Slide Template -->
+<div class="slide active" id="slide-0">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <div class="title-slide">
+            <h1>IPL Cricket Pre-Match Analysis</h1>
+            <h2>Kolkata Knight Riders vs Lucknow Super Giants</h2>
+
+            <div class="team-logos">
+                <img src="../team_data/kkr_logo.png" alt="Kolkata Knight Riders" class="team-logo animate-in-delay-1">
+                <div class="vs-text animate-in-delay-2">VS</div>
+                <img src="../team_data/lsg_logo.png" alt="Lucknow Super Giants" class="team-logo animate-in-delay-1">
+            </div>
+
+            <p class="animate-in-delay-3">06 April 2025</p>
+        </div>
+    </div>
+</div><!-- Points Table Slide Template -->
+<div class="slide" id="slide-1">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">IPL Points Table</h2>
+        <div class="points-table-container">
+            <table class="points-table">
+                <thead>
+                    <tr>
+                        <th class="pos-col">POS</th>
+                        <th class="logo-col"></th>
+                        <th class="team-col">Team</th>
+                        <th class="stat-col" title="Matches Played">P</th>
+                        <th class="stat-col" title="Matches Won">W</th>
+                        <th class="stat-col" title="Matches Lost">L</th>
+                        <th class="stat-col" title="No Result">NR</th>
+                        <th class="stat-col" title="Net Run Rate">NRR</th>
+                        <th class="pts-col" title="Points">PTS</th>
+                        <th class="form-col" title="Recent Form">Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                <tr>
+                    <td class="pos-col">1</td>
+                    <td class="logo-col"><img src="../team_data/pbks_logo.png" class="team-logo-small" alt="PBKS"></td>
+                    <td class="team-col">PBKS</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">1.485</td>
+                    <td class="pts-col">4</td>
+                    <td class="form-col"><span class="form-win">W</span><span class="form-win">W</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">2</td>
+                    <td class="logo-col"><img src="../team_data/dc_logo.png" class="team-logo-small" alt="DC"></td>
+                    <td class="team-col">DC</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">1.320</td>
+                    <td class="pts-col">4</td>
+                    <td class="form-col"><span class="form-win">W</span><span class="form-win">W</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">3</td>
+                    <td class="logo-col"><img src="../team_data/rcb_logo.png" class="team-logo-small" alt="RCB"></td>
+                    <td class="team-col">RCB</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">1.149</td>
+                    <td class="pts-col">4</td>
+                    <td class="form-col"><span class="form-loss">L</span><span class="form-win">W</span><span class="form-win">W</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">4</td>
+                    <td class="logo-col"><img src="../team_data/gt_logo.png" class="team-logo-small" alt="GT"></td>
+                    <td class="team-col">GT</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">0.807</td>
+                    <td class="pts-col">4</td>
+                    <td class="form-col"><span class="form-win">W</span><span class="form-win">W</span><span class="form-loss">L</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">5</td>
+                    <td class="logo-col"><img src="../team_data/mi_logo.png" class="team-logo-small" alt="MI"></td>
+                    <td class="team-col">MI</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">0.309</td>
+                    <td class="pts-col">2</td>
+                    <td class="form-col"><span class="form-win">W</span><span class="form-loss">L</span><span class="form-loss">L</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">6</td>
+                    <td class="logo-col"><img src="../team_data/lsg_logo.png" class="team-logo-small" alt="LSG"></td>
+                    <td class="team-col">LSG</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">-0.150</td>
+                    <td class="pts-col">2</td>
+                    <td class="form-col"><span class="form-loss">L</span><span class="form-win">W</span><span class="form-loss">L</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">7</td>
+                    <td class="logo-col"><img src="../team_data/csk_logo.png" class="team-logo-small" alt="CSK"></td>
+                    <td class="team-col">CSK</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">-0.771</td>
+                    <td class="pts-col">2</td>
+                    <td class="form-col"><span class="form-loss">L</span><span class="form-loss">L</span><span class="form-win">W</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">8</td>
+                    <td class="logo-col"><img src="../team_data/srh_logo.png" class="team-logo-small" alt="SRH"></td>
+                    <td class="team-col">SRH</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">-0.871</td>
+                    <td class="pts-col">2</td>
+                    <td class="form-col"><span class="form-loss">L</span><span class="form-loss">L</span><span class="form-win">W</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">9</td>
+                    <td class="logo-col"><img src="../team_data/rr_logo.png" class="team-logo-small" alt="RR"></td>
+                    <td class="team-col">RR</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">-1.112</td>
+                    <td class="pts-col">2</td>
+                    <td class="form-col"><span class="form-win">W</span><span class="form-loss">L</span><span class="form-loss">L</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="pos-col">10</td>
+                    <td class="logo-col"><img src="../team_data/kkr_logo.png" class="team-logo-small" alt="KKR"></td>
+                    <td class="team-col">KKR</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col">0</td>
+                    <td class="stat-col">-1.428</td>
+                    <td class="pts-col">2</td>
+                    <td class="form-col"><span class="form-loss">L</span><span class="form-win">W</span><span class="form-loss">L</span></td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        <div class="table-legend">
+            <div class="legend-item"><span class="legend-box qualification"></span> Qualification Zone</div>
+            <div class="legend-item"><span class="legend-box playoff"></span> Playoff Zone</div>
+            <div class="legend-item"><span class="legend-box elimination"></span> Elimination Zone</div>
+        </div>
+    </div>
+</div><!-- Today's Match Slide Template -->
+<div class="slide" id="slide-2">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Today's Match</h2>
+        <div class="team-comparison">
+            <div class="team-side">
+                <img src="" alt="Kolkata Knight Riders Logo" class="team-logo">
+                <h3>Kolkata Knight Riders</h3>
+                <div class="captain-info">
+                    <img src="../player_images/kkr/captain.jpg" alt="Captain" class="captain-image">
+                    <div class="captain-name">Captain</div>
+                    <div class="captain-role">Captain</div>
+                </div>
+            </div>
+            <div class="vs-container">
+                <div class="vs-text">VS</div>
+                <div>
+                    <p><strong>Today</strong></p>
+                    <p><strong>Venue:</strong> Kolkata</p>
+                    <p><strong>Time:</strong> 3:30 PM</p>
+                </div>
+            </div>
+            <div class="team-side">
+                <img src="" alt="Lucknow Super Giants Logo" class="team-logo">
+                <h3>Lucknow Super Giants</h3>
+                <div class="captain-info">
+                    <img src="../player_images/lsg/captain.jpg" alt="Captain" class="captain-image">
+                    <div class="captain-name">Captain</div>
+                    <div class="captain-role">Captain</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prediction-text">Given the lack of information about pitch, weather, and even team form this season, a prediction is nearly impossible. However, the head-to-head record (KKR 0, LSG 0) suggests it's a level playing field historically, meaning neither team has a distinct advantage based on past encounters with each other.
+</div>
+
+        <div class="head-to-head">
+            <h3>Head to Head</h3>
+            <div class="head-to-head-stats">
+                <div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+                <div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Matches Played</div>
+                </div>
+                <div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detailed-comparison">
+            <div class="comparison-tabs">
+                <button class="comparison-tab active" data-tab="batting">Batting</button>
+                <button class="comparison-tab" data-tab="bowling">Bowling</button>
+                <button class="comparison-tab" data-tab="form">Recent Form</button>
+            </div>
+
+            <div class="comparison-content active" id="batting">
+                <!-- Batting comparison -->
+                <!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Avg. Score</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Avg. Score</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Run Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Run Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Powerplay Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Powerplay Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Death Overs Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Death Overs Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div>
+            </div>
+
+            <div class="comparison-content" id="bowling">
+                <!-- Bowling comparison -->
+                <!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Economy Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Economy Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Bowling Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Bowling Avg.</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Strike Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Strike Rate</span>
+    <div class="bar-container">
+        <div class="bar" data-width="100.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Dot Ball %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Dot Ball %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div>
+            </div>
+
+            <div class="comparison-content" id="form">
+                <!-- Form comparison -->
+                <!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Last 5 Matches</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Last 5 Matches</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Home Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Home Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Kolkata Knight Riders Away Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div><!-- Comparison Bar Template -->
+<div class="stat-bar-container">
+    <span class="team-name">Lucknow Super Giants Away Win %</span>
+    <div class="bar-container">
+        <div class="bar" data-width="0.0"></div>
+    </div>
+    <span class="stat-value">0</span>
+</div>
+            </div>
+        </div>
+    </div>
+</div><!-- Venue and Pitch Conditions Slide Template -->
+<div class="slide" id="slide-3">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Kolkata - Pitch & Weather Analysis</h2>
+        
+        <div class="venue-conditions">
+            <div class="condition-box">
+                <h3>Weather Forecast</h3>
+                <div class="weather-icon">
+                    ☁️
+                </div>
+                <div class="weather-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Temperature</span>
+                        <span>39.35°C</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Humidity</span>
+                        <span>17%</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Wind Speed</span>
+                        <span>3.55 m/s</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Chance of Rain</span>
+                        <span>0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="condition-box">
+                <h3>Pitch Analysis</h3>
+                <div class="pitch-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Surface</span>
+                        <span>Batting friendly, Assists spin, Balanced for bat and ball</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Bounce</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Avg. 1st Innings Score</span>
+                        <span>153</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Toss Decision</span>
+                        <span>Field first</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Favors</span>
+                        <span>Batting friendly, Assists spin, Balanced for bat and ball</span>
+                    </div>
+                </div>
+                
+                <div class="pitch-summary">
+                    Venue Description:One of the biggest sporting centres, Kolkata's Eden Garden holds a special place of interest in the history of Indian cricket. Capable of holding more than one lakh people at one stage, the capacity has now been reduced to a little more than 66,000 after the stadium underwent renovation before the 2011 World Cup.Referred as "Cricket's answer to the Colosseum," the Eden Gardens, the largest cricket stadium in India, has hosted many prominent matches. The Eden Gardens crowd simply loves their sport. The first World Cup final outside Lord's was at this majestic venue. Anil Kumble's 6/12 against West Indies in the final of the 1993 Hero Cup was on this hallowed turf.Sachin Tendulkar's famous run-out during the Asian Test Championship match against Pakistan, resulted in Kolkata's mob fury in action once again - the match was eventually finished in front of empty stands. This wasn't the first time though - not to forget the previous instance, when India slumped to 120/8, chasing 252 against Sri Lanka in the semi-final of the 1996 World Cup.There have been happier times as well. The 376-run stand between VVS Laxman and Rahul Dravid during the famous 2001 Test series against Australia, which inspired a famous Indian victory, came here. Rohit Sharma's belligerent ODI world record, a 173-ball 264, against Sri Lanka, in Nov 2014, also came on this famous ground.The stadium hosted its first Test in 1934, with India hosting England. While the Test match came early, it had to wait until 1987 to host its first ODI, against Pakistan. While the stadium is synonymous with cricket, until 1984, it was also used as a football venue, with several of prominent derbies being held over the maidan.How does the pitch play?The Eden Gardens track is considered as one of the better batting surfaces although spinners tend to come into action as the match wears on. Spinners have enjoyed bowling here in IPL games as well.Stats and TriviaThe highest ODI score by any batsman was made on this ground. Rohit Sharma smashed 264 against Sri Lanka in November, 2014Eden Gardens has hosted as many as 39 Tests - the most by any venue in India.byPradeep Krishnamurthy
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <h3 style="text-align: center; margin-bottom: 15px;">Venue Statistics</h3>
+            <div class="stat-bar-container">
+                <span class="team-name">Batting First Wins</span>
+                <div class="bar-container">
+                    <div class="bar" data-width="38.46153846153847"></div>
+                </div>
+                <span class="stat-value">5/13</span>
+            </div>
+            <div class="stat-bar-container">
+                <span class="team-name">Chasing Wins</span>
+                <div class="bar-container">
+                    <div class="bar" data-width="61.53846153846154"></div>
+                </div>
+                <span class="stat-value">8/13</span>
+            </div>
+        </div>
+        
+        <div class="gemini-analysis">
+            <h3>Match Insight</h3>
+            <p>Here's a concise analysis of how the Kolkata conditions might affect the upcoming IPL match:
+
+**Conditions Impact:**
+
+*   **Pitch:** Batting-friendly with spin assistance implies a high-scoring game where spinners become crucial as the match progresses. Pacers with good variations might also find success.
+*   **Weather:** The high temperature and relatively low humidity, while potentially draining, shouldn't be a major factor. Dew is unlikely to be a significant influence with the low humidity.
+
+**Team Advantage:**
+
+A team with a strong batting lineup *and* quality spinners will likely have the edge. Teams with batters who are good at playing spin and pacers with slower balls will be at an advantage.
+
+**Key Players to Watch:**
+
+*   **Spinners:** Sunil Narine, Varun Chakravarthy, Kuldeep Yadav (if playing) - any spinner who can control line and length.
+*   **Top-Order Batsmen:** Good to see openers who can set a good foundation.
+*   **Middle-Order Batsmen:** All-rounders and middle-order batsmen who are adept at both power-hitting and rotating the strike against spin.
+
+**In Summary:** Expect a high-scoring game. The team that adapts best to the spin-friendly conditions and keeps wickets in hand will likely prevail.
+</p>
+        </div>
+    </div>
+</div><!-- Team Overview Slide Template -->
+<div class="slide" id="slide-4">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Kolkata Knight Riders - Team Overview</h2>
+        
+        <div class="team-overview">
+            <div class="team-header">
+                <img src="../team_data/kkr_logo.png" alt="Kolkata Knight Riders Logo" class="team-logo">
+                <h3>Kolkata Knight Riders</h3>
+            </div>
+
+            <div class="team-stats-grid">
+                
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Titles</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Final Appearances</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Win Rate</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Highest Score</div>
+            </div>
+            
+            </div>
+
+            <div style="margin-top: 30px; width: 100%;">
+                <h3 style="text-align: center; margin-bottom: 15px;">Key Players</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Player data not available</p>
+    <p></p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">{{player_stat1_label}}: <strong>{{player_stat1_value}}</strong></p>
+        <p style="font-size: 0.9rem;">{{player_stat2_label}}: <strong>{{player_stat2_value}}</strong></p>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Team Overview Slide Template -->
+<div class="slide" id="slide-5">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Lucknow Super Giants - Team Overview</h2>
+        
+        <div class="team-overview">
+            <div class="team-header">
+                <img src="../team_data/lsg_logo.png" alt="Lucknow Super Giants Logo" class="team-logo">
+                <h3>Lucknow Super Giants</h3>
+            </div>
+
+            <div class="team-stats-grid">
+                
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Titles</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Final Appearances</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Win Rate</div>
+            </div>
+            
+            <div class="team-stat-card">
+                <div class="team-stat-value">TBD</div>
+                <div class="team-stat-label">Highest Score</div>
+            </div>
+            
+            </div>
+
+            <div style="margin-top: 30px; width: 100%;">
+                <h3 style="text-align: center; margin-bottom: 15px;">Key Players</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <!-- Key Player Card Template -->
+<div style="background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; min-width: 200px; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.1rem;">Player data not available</p>
+    <p></p>
+    <div style="margin-top: 10px;">
+        <p style="font-size: 0.9rem;">{{player_stat1_label}}: <strong>{{player_stat1_value}}</strong></p>
+        <p style="font-size: 0.9rem;">{{player_stat2_label}}: <strong>{{player_stat2_value}}</strong></p>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Comprehensive Batting Stats Slide Template -->
+<div class="slide" id="slide-6">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">IPL Batting Statistics</h2>
+        
+        <div class="stats-tabs">
+            <button class="stats-tab active" data-tab="most-runs">Most Runs</button>
+            <button class="stats-tab" data-tab="most-sixes">Most Sixes</button>
+            <button class="stats-tab" data-tab="most-fours">Most Fours</button>
+            <button class="stats-tab" data-tab="highest-sr">Highest SR</button>
+            <button class="stats-tab" data-tab="most-fifties">Most 50s</button>
+            <button class="stats-tab" data-tab="most-hundreds">Most 100s</button>
+        </div>
+        
+        <div class="stats-content active" id="most-runs">
+            <h3>Top Run Scorers</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">Avg</th>
+                            <th class="stat-col">SR</th>
+                            <th class="stat-col">4s</th>
+                            <th class="stat-col">6s</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Virat Kohli</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">578</td>
+                    <td class="stat-col">48.17</td>
+                    <td class="stat-col">151.84</td>
+                    <td class="stat-col">52</td>
+                    <td class="stat-col">24</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">KL Rahul</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">522</td>
+                    <td class="stat-col">47.45</td>
+                    <td class="stat-col">143.8</td>
+                    <td class="stat-col">42</td>
+                    <td class="stat-col">22</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Shubman Gill</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">483</td>
+                    <td class="stat-col">40.25</td>
+                    <td class="stat-col">142.06</td>
+                    <td class="stat-col">44</td>
+                    <td class="stat-col">18</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Jos Buttler</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">465</td>
+                    <td class="stat-col">38.75</td>
+                    <td class="stat-col">149.52</td>
+                    <td class="stat-col">45</td>
+                    <td class="stat-col">20</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Faf du Plessis</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">450</td>
+                    <td class="stat-col">37.5</td>
+                    <td class="stat-col">157.89</td>
+                    <td class="stat-col">43</td>
+                    <td class="stat-col">21</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Suryakumar Yadav</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">424</td>
+                    <td class="stat-col">35.33</td>
+                    <td class="stat-col">168.25</td>
+                    <td class="stat-col">39</td>
+                    <td class="stat-col">25</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Sanju Samson</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">415</td>
+                    <td class="stat-col">34.58</td>
+                    <td class="stat-col">153.7</td>
+                    <td class="stat-col">38</td>
+                    <td class="stat-col">22</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">David Warner</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">409</td>
+                    <td class="stat-col">34.08</td>
+                    <td class="stat-col">131.09</td>
+                    <td class="stat-col">40</td>
+                    <td class="stat-col">15</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Ruturaj Gaikwad</td>
+                    <td class="team-col">Chennai Super Kings</td>
+                    <td class="stat-col">400</td>
+                    <td class="stat-col">33.33</td>
+                    <td class="stat-col">140.35</td>
+                    <td class="stat-col">42</td>
+                    <td class="stat-col">14</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Yashasvi Jaiswal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">392</td>
+                    <td class="stat-col">32.67</td>
+                    <td class="stat-col">160.66</td>
+                    <td class="stat-col">41</td>
+                    <td class="stat-col">19</td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-sixes">
+            <h3>Most Sixes</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">6s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Suryakumar Yadav</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">25</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Virat Kohli</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">24</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">KL Rahul</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">22</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Sanju Samson</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">22</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Faf du Plessis</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">21</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Jos Buttler</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">20</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Yashasvi Jaiswal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">19</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">Shubman Gill</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">18</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Nicholas Pooran</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">17</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Dinesh Karthik</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">16</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-fours">
+            <h3>Most Fours</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">4s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Virat Kohli</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">52</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Shubman Gill</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">44</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Jos Buttler</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">45</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Faf du Plessis</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">43</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">KL Rahul</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">42</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Ruturaj Gaikwad</td>
+                    <td class="team-col">Chennai Super Kings</td>
+                    <td class="stat-col">42</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Yashasvi Jaiswal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">41</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">David Warner</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">40</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Suryakumar Yadav</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">39</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Sanju Samson</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">38</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="highest-sr">
+            <h3>Highest Strike Rate</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">SR</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">Balls</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-fifties">
+            <h3>Most Fifties</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">50s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">HS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Virat Kohli</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">6</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">KL Rahul</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">4</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Jos Buttler</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">4</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Faf du Plessis</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">4</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Suryakumar Yadav</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">4</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">David Warner</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">4</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Shubman Gill</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">Sanju Samson</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Ruturaj Gaikwad</td>
+                    <td class="team-col">Chennai Super Kings</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Yashasvi Jaiswal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-hundreds">
+            <h3>Most Hundreds</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">100s</th>
+                            <th class="stat-col">Runs</th>
+                            <th class="stat-col">HS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">KL Rahul</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Shubman Gill</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Quinton de Kock</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Rajat Patidar</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Jos Buttler</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Comprehensive Bowling Stats Slide Template -->
+<div class="slide" id="slide-7">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">IPL Bowling Statistics</h2>
+        
+        <div class="stats-tabs">
+            <button class="stats-tab active" data-tab="most-wickets">Most Wickets</button>
+            <button class="stats-tab" data-tab="best-economy">Best Economy</button>
+            <button class="stats-tab" data-tab="best-average">Best Average</button>
+            <button class="stats-tab" data-tab="best-strike-rate">Best Strike Rate</button>
+            <button class="stats-tab" data-tab="most-maidens">Most Maidens</button>
+        </div>
+        
+        <div class="stats-content active" id="most-wickets">
+            <h3>Top Wicket Takers</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Wkts</th>
+                            <th class="stat-col">Econ</th>
+                            <th class="stat-col">Avg</th>
+                            <th class="stat-col">SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Yuzvendra Chahal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">23</td>
+                    <td class="stat-col">7.61</td>
+                    <td class="stat-col">16.09</td>
+                    <td class="stat-col">12.68</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Wanindu Hasaranga</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">21</td>
+                    <td class="stat-col">8.15</td>
+                    <td class="stat-col">16.33</td>
+                    <td class="stat-col">12.0</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Kuldeep Yadav</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">20</td>
+                    <td class="stat-col">8.43</td>
+                    <td class="stat-col">17.55</td>
+                    <td class="stat-col">12.5</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">T Natarajan</td>
+                    <td class="team-col">Sunrisers Hyderabad</td>
+                    <td class="stat-col">18</td>
+                    <td class="stat-col">9.42</td>
+                    <td class="stat-col">22.56</td>
+                    <td class="stat-col">14.33</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Kagiso Rabada</td>
+                    <td class="team-col">Punjab Kings</td>
+                    <td class="stat-col">18</td>
+                    <td class="stat-col">8.72</td>
+                    <td class="stat-col">19.89</td>
+                    <td class="stat-col">13.67</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Umran Malik</td>
+                    <td class="team-col">Sunrisers Hyderabad</td>
+                    <td class="stat-col">17</td>
+                    <td class="stat-col">9.03</td>
+                    <td class="stat-col">23.12</td>
+                    <td class="stat-col">15.33</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Mohammed Shami</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">16</td>
+                    <td class="stat-col">8.39</td>
+                    <td class="stat-col">24.31</td>
+                    <td class="stat-col">17.38</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">Jasprit Bumrah</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">15</td>
+                    <td class="stat-col">7.18</td>
+                    <td class="stat-col">25.73</td>
+                    <td class="stat-col">21.53</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Prasidh Krishna</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">15</td>
+                    <td class="stat-col">8.29</td>
+                    <td class="stat-col">26.87</td>
+                    <td class="stat-col">19.47</td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Harshal Patel</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">14</td>
+                    <td class="stat-col">9.47</td>
+                    <td class="stat-col">27.21</td>
+                    <td class="stat-col">17.21</td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="best-economy">
+            <h3>Best Economy Rate</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Econ</th>
+                            <th class="stat-col">Overs</th>
+                            <th class="stat-col">Wkts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Jasprit Bumrah</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">7.18</td>
+                    <td class="stat-col">56</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Sunil Narine</td>
+                    <td class="team-col">Kolkata Knight Riders</td>
+                    <td class="stat-col">7.24</td>
+                    <td class="stat-col">52</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Rashid Khan</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">7.46</td>
+                    <td class="stat-col">56</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Yuzvendra Chahal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">7.61</td>
+                    <td class="stat-col">56</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Ravichandran Ashwin</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">7.83</td>
+                    <td class="stat-col">56</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Washington Sundar</td>
+                    <td class="team-col">Sunrisers Hyderabad</td>
+                    <td class="stat-col">8.08</td>
+                    <td class="stat-col">36</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Wanindu Hasaranga</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">8.15</td>
+                    <td class="stat-col">56</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">Axar Patel</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">8.18</td>
+                    <td class="stat-col">52</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Prasidh Krishna</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">8.29</td>
+                    <td class="stat-col">56</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Mohammed Shami</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">8.39</td>
+                    <td class="stat-col">56</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="best-average">
+            <h3>Best Bowling Average</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Avg</th>
+                            <th class="stat-col">Wkts</th>
+                            <th class="stat-col">Runs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Jasprit Bumrah</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">16.73</td>
+                    <td class="stat-col">15</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Yuzvendra Chahal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">16.09</td>
+                    <td class="stat-col">23</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Wanindu Hasaranga</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">16.33</td>
+                    <td class="stat-col">21</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Kuldeep Yadav</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">17.55</td>
+                    <td class="stat-col">20</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Rashid Khan</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">18.87</td>
+                    <td class="stat-col">15</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Kagiso Rabada</td>
+                    <td class="team-col">Punjab Kings</td>
+                    <td class="stat-col">19.89</td>
+                    <td class="stat-col">18</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Ravichandran Ashwin</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">21.75</td>
+                    <td class="stat-col">12</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">Umran Malik</td>
+                    <td class="team-col">Sunrisers Hyderabad</td>
+                    <td class="stat-col">23.12</td>
+                    <td class="stat-col">17</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Mohammed Shami</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">24.31</td>
+                    <td class="stat-col">16</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Avesh Khan</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">25.21</td>
+                    <td class="stat-col">14</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="best-strike-rate">
+            <h3>Best Strike Rate</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">SR</th>
+                            <th class="stat-col">Wkts</th>
+                            <th class="stat-col">Balls</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Yuzvendra Chahal</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">12.68</td>
+                    <td class="stat-col">23</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Wanindu Hasaranga</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">12.0</td>
+                    <td class="stat-col">21</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Kuldeep Yadav</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">12.5</td>
+                    <td class="stat-col">20</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Kagiso Rabada</td>
+                    <td class="team-col">Punjab Kings</td>
+                    <td class="stat-col">13.67</td>
+                    <td class="stat-col">18</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">T Natarajan</td>
+                    <td class="team-col">Sunrisers Hyderabad</td>
+                    <td class="stat-col">14.33</td>
+                    <td class="stat-col">18</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Umran Malik</td>
+                    <td class="team-col">Sunrisers Hyderabad</td>
+                    <td class="stat-col">15.33</td>
+                    <td class="stat-col">17</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Rashid Khan</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">16.8</td>
+                    <td class="stat-col">15</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">Mohammed Shami</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">17.38</td>
+                    <td class="stat-col">16</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Harshal Patel</td>
+                    <td class="team-col">Royal Challengers Bangalore</td>
+                    <td class="stat-col">17.21</td>
+                    <td class="stat-col">14</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Prasidh Krishna</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">19.47</td>
+                    <td class="stat-col">15</td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stats-content" id="most-maidens">
+            <h3>Most Maiden Overs</h3>
+            <div class="stats-table-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">Rank</th>
+                            <th class="player-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="stat-col">Maidens</th>
+                            <th class="stat-col">Overs</th>
+                            <th class="stat-col">Wkts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="player-col">Mohammed Shami</td>
+                    <td class="team-col">Gujarat Titans</td>
+                    <td class="stat-col">3</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="player-col">Jasprit Bumrah</td>
+                    <td class="team-col">Mumbai Indians</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="player-col">Mukesh Choudhary</td>
+                    <td class="team-col">Chennai Super Kings</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="player-col">Prasidh Krishna</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="player-col">Trent Boult</td>
+                    <td class="team-col">Rajasthan Royals</td>
+                    <td class="stat-col">2</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="player-col">Avesh Khan</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="player-col">Umesh Yadav</td>
+                    <td class="team-col">Kolkata Knight Riders</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="player-col">Khaleel Ahmed</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="player-col">Anrich Nortje</td>
+                    <td class="team-col">Delhi Capitals</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="player-col">Dushmantha Chameera</td>
+                    <td class="team-col">Lucknow Super Giants</td>
+                    <td class="stat-col">1</td>
+                    <td class="stat-col"></td>
+                    <td class="stat-col"></td>
+                </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Player Stats Slide Template -->
+<div class="slide" id="slide-8">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Top Run Scorers</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div><!-- Player Stats Slide Template -->
+<div class="slide" id="slide-9">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Top Wicket Takers</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div><!-- Player Stats Slide Template -->
+<div class="slide" id="slide-10">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Most Sixes</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div><!-- Player Stats Slide Template -->
+<div class="slide" id="slide-11">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">Best Economy Rates</h2>
+        <div class="stats-container">
+            
+        </div>
+    </div>
+</div>
+
+        <div class="slide-controls">
+            <button class="prev-btn">Previous</button>
+            <button class="next-btn">Next</button>
+        </div>
+
+        <div class="slide-indicators">
+            <!-- Indicators will be dynamically generated here -->
+            <div class="indicator active" data-slide="0"></div>
+<div class="indicator" data-slide="1"></div>
+<div class="indicator" data-slide="2"></div>
+<div class="indicator" data-slide="3"></div>
+<div class="indicator" data-slide="4"></div>
+<div class="indicator" data-slide="5"></div>
+<div class="indicator" data-slide="6"></div>
+<div class="indicator" data-slide="7"></div>
+<div class="indicator" data-slide="8"></div>
+<div class="indicator" data-slide="9"></div>
+<div class="indicator" data-slide="10"></div>
+<div class="indicator" data-slide="11"></div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+
+            // Set dynamic backgrounds for slides
+            slides.forEach((slide, index) => {
+                // Background gradients will be populated by the generator
+                const colors = [
+                    'linear-gradient(135deg, #0a1929, #0d47a1)',
+                    'linear-gradient(135deg, #0a1929, #00695c)',
+                    'linear-gradient(135deg, #0a1929, #c62828)',
+                    'linear-gradient(135deg, #0a1929, #6a1b9a)',
+                    'linear-gradient(135deg, #0a1929, #ef6c00)',
+                    'linear-gradient(135deg, #0a1929, #ad1457)'
+                ];
+                // The line below will be replaced by the actual gradients
+                // 
+            'linear-gradient(45deg, #1a237e, #283593)',
+            'linear-gradient(45deg, #004d40, #00695c)',
+            'linear-gradient(45deg, #b71c1c, #c62828)',
+            'linear-gradient(45deg, #4a148c, #6a1b9a)',
+            'linear-gradient(45deg, #e65100, #ef6c00)',
+            'linear-gradient(45deg, #880e4f, #ad1457)'
+        
+
+                slide.querySelector('.slide-bg').style.background = colors[index % colors.length];
+            });
+
+            // Function to show a specific slide
+            function showSlide(n) {
+                // Validate slide index
+                if (n >= slides.length) {
+                    currentSlide = 0;
+                } else if (n < 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide = n;
+                }
+
+                // Update slide classes
+                slides.forEach((slide, index) => {
+                    if (index < currentSlide) {
+                        slide.className = 'slide prev';
+                    } else if (index === currentSlide) {
+                        slide.className = 'slide active';
+                    } else {
+                        slide.className = 'slide';
+                    }
+                });
+
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentSlide);
+                });
+
+                // Apply animations to elements in the current slide
+                const currentSlideElement = slides[currentSlide];
+                applyAnimations(currentSlideElement);
+            }
+
+            // Function to apply animations to elements in a slide
+            function applyAnimations(slideElement) {
+                // Apply bar widths for comparison bars
+                slideElement.querySelectorAll('.bar[data-width]').forEach((bar, index) => {
+                    setTimeout(() => {
+                        const width = bar.getAttribute('data-width');
+                        if (width) {
+                            bar.style.width = width + '%';
+                        }
+                    }, index * 100); // Stagger the animations
+                });
+
+                // Apply staggered animations to player cards
+                slideElement.querySelectorAll('.player-card').forEach((card, index) => {
+                    card.style.setProperty('--i', index);
+                });
+            }
+
+            // Function to go to the next slide
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            // Function to go to the previous slide
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+            });
+
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+            });
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    showSlide(index);
+                });
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            // Touch swipe functionality
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            document.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+
+            document.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    nextSlide(); // Swipe left
+                } else if (touchEndX > touchStartX + 50) {
+                    prevSlide(); // Swipe right
+                }
+            }
+
+            // Set up stats tabs
+            const statsTabs = document.querySelectorAll('.stats-tab');
+            statsTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Get the parent slide
+                    const slideContent = this.closest('.slide-content');
+
+                    // Remove active class from all tabs in this slide
+                    slideContent.querySelectorAll('.stats-tab').forEach(t => {
+                        t.classList.remove('active');
+                    });
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all content sections in this slide
+                    slideContent.querySelectorAll('.stats-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding content section
+                    const tabId = this.getAttribute('data-tab');
+                    slideContent.querySelector(`#${tabId}`).classList.add('active');
+                });
+            });
+
+            // Set up comparison tabs
+            const comparisonTabs = document.querySelectorAll('.comparison-tab');
+            comparisonTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Get the parent container
+                    const comparisonContainer = this.closest('.detailed-comparison');
+
+                    // Remove active class from all tabs
+                    comparisonContainer.querySelectorAll('.comparison-tab').forEach(t => {
+                        t.classList.remove('active');
+                    });
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all content sections
+                    comparisonContainer.querySelectorAll('.comparison-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding content section
+                    const tabId = this.getAttribute('data-tab');
+                    comparisonContainer.querySelector(`#${tabId}`).classList.add('active');
+
+                    // Apply animations to the newly visible content
+                    const activeContent = comparisonContainer.querySelector(`#${tabId}`);
+                    activeContent.querySelectorAll('.bar[data-width]').forEach((bar, index) => {
+                        setTimeout(() => {
+                            const width = bar.getAttribute('data-width');
+                            if (width) {
+                                bar.style.width = width + '%';
+                            }
+                        }, index * 100);
+                    });
+                });
+            });
+
+            // Initialize the first slide
+            showSlide(0);
+
+            // Add custom scripts if needed
+            /* Custom scripts will be inserted here */
+            // 
+        // JavaScript for comparison tabs
+        const tabBtns = document.querySelectorAll('.comparison-tab');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+
+                // Update active tab button
+                tabBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Update active content
+                const contents = document.querySelectorAll('.comparison-content');
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tabName) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        });
+    </script>
+</body>
+</html>
