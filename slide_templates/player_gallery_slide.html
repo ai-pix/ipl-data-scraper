@@ -1,0 +1,19 @@
+<!-- Player Gallery Slide Template -->
+<div class="slide" id="slide-{{slide_index}}">
+    <div class="slide-bg"></div>
+    <div class="slide-content">
+        <h2 class="slide-title">{{team_name}} Key Players</h2>
+        
+        <div class="player-gallery">
+            {{#players}}
+            <div class="player-card">
+                <img src="../player_images/{{team_abbr}}/{{image}}" alt="{{name}}" class="player-image">
+                <div class="player-card-details">
+                    <div class="player-card-name">{{name}}</div>
+                    <div class="player-card-team">{{role}}</div>
+                </div>
+            </div>
+            {{/players}}
+        </div>
+    </div>
+</div>

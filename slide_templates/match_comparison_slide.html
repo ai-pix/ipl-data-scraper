@@ -7,6 +7,11 @@
             <div class="team-side">
                 <img src="{{team1_logo}}" alt="{{team1_name}} Logo" class="team-logo">
                 <h3>{{team1_name}}</h3>
+                <div class="captain-info">
+                    <img src="../player_images/{{team1_abbr}}/{{team1_captain_image}}" alt="{{team1_captain}}" class="captain-image">
+                    <div class="captain-name">{{team1_captain}}</div>
+                    <div class="captain-role">Captain</div>
+                </div>
             </div>
             <div class="vs-container">
                 <div class="vs-text">VS</div>
@@ -19,11 +24,16 @@
             <div class="team-side">
                 <img src="{{team2_logo}}" alt="{{team2_name}} Logo" class="team-logo">
                 <h3>{{team2_name}}</h3>
+                <div class="captain-info">
+                    <img src="../player_images/{{team2_abbr}}/{{team2_captain_image}}" alt="{{team2_captain}}" class="captain-image">
+                    <div class="captain-name">{{team2_captain}}</div>
+                    <div class="captain-role">Captain</div>
+                </div>
             </div>
         </div>
-        
+
         <div class="prediction-text">{{match_prediction}}</div>
-        
+
         <div class="head-to-head">
             <h3>Head to Head</h3>
             <div class="head-to-head-stats">
@@ -41,24 +51,24 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="detailed-comparison">
             <div class="comparison-tabs">
                 <button class="comparison-tab active" data-tab="batting">Batting</button>
                 <button class="comparison-tab" data-tab="bowling">Bowling</button>
                 <button class="comparison-tab" data-tab="form">Recent Form</button>
             </div>
-            
+
             <div class="comparison-content active" id="batting">
                 <!-- Batting comparison -->
                 {{batting_comparison}}
             </div>
-            
+
             <div class="comparison-content" id="bowling">
                 <!-- Bowling comparison -->
                 {{bowling_comparison}}
             </div>
-            
+
             <div class="comparison-content" id="form">
                 <!-- Form comparison -->
                 {{form_comparison}}

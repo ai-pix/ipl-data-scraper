@@ -164,12 +164,15 @@ class IPLSlidesGenerator:
         # Configure Gemini API
         genai.configure(api_key=api_key)
 
-        # Try different model names in order of preference
+        # Try different model names in order of preference - prioritize Gemini 2.0 Flash as per user preference
         model_names = [
+            'gemini-2.0-flash',  # Preferred model
+            'gemini-1.5-flash',
             'gemini-1.5-pro',
             'gemini-1.0-pro',
             'gemini-pro',
-            'gemini-1.5-flash',
+            'models/gemini-2.0-flash',
+            'models/gemini-1.5-flash',
             'models/gemini-1.5-pro',
             'models/gemini-pro'
         ]
@@ -182,7 +185,7 @@ class IPLSlidesGenerator:
                 self.model = genai.GenerativeModel(model_name)
 
                 # Test with a simple prompt to verify it works
-                response = self.model.generate_content("Hello")
+                _ = self.model.generate_content("Hello")  # Discard response, just testing if it works
                 self.gemini_enabled = True
                 logger.info(f"Gemini API initialized successfully with model {model_name}")
                 break
@@ -285,11 +288,28 @@ class IPLSlidesGenerator:
             subtitle: Subtitle for the slide
             date: Date to display on the slide
         """
+        # Extract team names from subtitle (expected format: "Team1 vs Team2")
+        team_names = subtitle.split(" vs ")
+        team1 = team_names[0] if len(team_names) > 0 else ""
+        team2 = team_names[1] if len(team_names) > 1 else ""
+
+        # Get team abbreviations
+        team1_abbr = TEAM_ABBREVIATIONS.get(team1, team1)
+        team2_abbr = TEAM_ABBREVIATIONS.get(team2, team2)
+
+        # Convert to lowercase for file paths
+        team1_abbr_lower = team1_abbr.lower()
+        team2_abbr_lower = team2_abbr.lower()
+
         context = {
             "slide_index": self.slide_index,
             "main_title": title,
             "subtitle": subtitle,
-            "date": date
+            "date": date,
+            "team1": team1,
+            "team2": team2,
+            "team1_abbr": team1_abbr_lower,
+            "team2_abbr": team2_abbr_lower
         }
 
         rendered_slide = self.render_template("title_slide", context)
@@ -490,7 +510,21 @@ class IPLSlidesGenerator:
         else:
             team_data = self.load_json_data(team_data_file)
 
-        # Generate team stats HTML
+        # After loading team data, also add a player gallery slide
+        self.add_player_gallery_slide(team_name, team_abbr)
+
+        rendered_slide = self.render_template("team_overview_slide", {
+            "slide_index": self.slide_index,
+            "team_name": team_name,
+            "team_logo": team_data.get("logo", ""),
+            "team_stats": self.generate_team_stats_html(team_data),
+            "key_players": self.generate_key_players_html(team_data)
+        })
+        self.slides_content.append(rendered_slide)
+        self.slide_index += 1
+
+    def generate_team_stats_html(self, team_data: Dict[str, Any]) -> str:
+        """Generate HTML for team statistics."""
         team_stats = ""
         for stat_name, stat_value in team_data.get("statistics", {}).items():
             stat_html = f"""
@@ -500,29 +534,46 @@ class IPLSlidesGenerator:
             </div>
             """
             team_stats += stat_html
+        return team_stats
 
-        # Generate key players HTML
+    def generate_key_players_html(self, team_data: Dict[str, Any]) -> str:
+        """Generate HTML for key players."""
         key_players = ""
         for player in team_data.get("key_players", [])[:4]:  # Show top 4 key players
             context = {
                 "player_name": player.get("name", ""),
                 "player_role": player.get("role", ""),
-                "player_stat1_label": player.get("key_stat1_name", ""),
-                "player_stat1_value": player.get("key_stat1_value", ""),
-                "player_stat2_label": player.get("key_stat2_name", ""),
-                "player_stat2_value": player.get("key_stat2_value", "")
+                "player_stat_value": player.get("stat_value", ""),
+                "player_stat_unit": player.get("stat_unit", "")
             }
             key_players += self.render_partial("key_player_card", context)
+        return key_players
 
+    def add_player_gallery_slide(self, team_name: str, team_abbr: str):
+        """
+        Add a player gallery slide to the presentation.
+
+        Args:
+            team_name: Name of the team
+            team_abbr: Team abbreviation
+        """
+        # Get player images
+        players = self.get_player_images(team_abbr, count=8)  # Get up to 8 player images
+
+        if not players:
+            logger.warning(f"No player images found for {team_name}, skipping player gallery slide")
+            return
+
+        # Create context for the template
         context = {
             "slide_index": self.slide_index,
             "team_name": team_name,
-            "team_logo": team_data.get("logo", ""),
-            "team_stats": team_stats,
-            "key_players": key_players
+            "team_abbr": team_abbr.lower(),
+            "players": players
         }
 
-        rendered_slide = self.render_template("team_overview_slide", context)
+        # Render the template
+        rendered_slide = self.render_template("player_gallery_slide", context)
         self.slides_content.append(rendered_slide)
         self.slide_index += 1
 
@@ -752,6 +803,29 @@ class IPLSlidesGenerator:
         team1_data = self.load_json_data(team1_data_file) if team1_data_file.exists() else {}
         team2_data = self.load_json_data(team2_data_file) if team2_data_file.exists() else {}
 
+        # Get captain information
+        team1_captain = team1_data.get("captain", {}).get("name", "Captain")
+        team2_captain = team2_data.get("captain", {}).get("name", "Captain")
+
+        # Get captain images
+        team1_captain_image = team1_data.get("captain", {}).get("image", "captain.jpg")
+        team2_captain_image = team2_data.get("captain", {}).get("image", "captain.jpg")
+
+        # If captain image is not specified, try to find it from player images
+        if team1_captain_image == "captain.jpg":
+            # Try to find captain image in player_images directory
+            captain_images = list(PLAYER_IMAGES_DIR.glob(f"{team1_abbr.lower()}/captain*.jpg")) + \
+                            list(PLAYER_IMAGES_DIR.glob(f"{team1_abbr.lower()}/captain*.png"))
+            if captain_images:
+                team1_captain_image = captain_images[0].name
+
+        if team2_captain_image == "captain.jpg":
+            # Try to find captain image in player_images directory
+            captain_images = list(PLAYER_IMAGES_DIR.glob(f"{team2_abbr.lower()}/captain*.jpg")) + \
+                            list(PLAYER_IMAGES_DIR.glob(f"{team2_abbr.lower()}/captain*.png"))
+            if captain_images:
+                team2_captain_image = captain_images[0].name
+
         # Get head-to-head data
         head_to_head_file = MATCHES_DIR / f"{team1_abbr.lower()}_{team2_abbr.lower()}_h2h.json"
         if not head_to_head_file.exists():
@@ -915,6 +989,12 @@ class IPLSlidesGenerator:
             "team2_name": team2,
             "team1_logo": team1_data.get("logo", ""),
             "team2_logo": team2_data.get("logo", ""),
+            "team1_abbr": team1_abbr.lower(),
+            "team2_abbr": team2_abbr.lower(),
+            "team1_captain": team1_captain,
+            "team2_captain": team2_captain,
+            "team1_captain_image": team1_captain_image,
+            "team2_captain_image": team2_captain_image,
             "venue": venue,
             "match_time": match_time,
             "match_prediction": match_prediction,
@@ -1437,6 +1517,62 @@ class IPLSlidesGenerator:
         except (json.JSONDecodeError, FileNotFoundError) as e:
             logger.error(f"Error loading JSON file {file_path}: {e}")
             return {}
+
+    def get_player_images(self, team_abbr: str, count: int = 5) -> List[Dict[str, str]]:
+        """
+        Get player images for a team.
+
+        Args:
+            team_abbr: Team abbreviation
+            count: Number of player images to return
+
+        Returns:
+            List of dictionaries with player image information
+        """
+        team_abbr_lower = team_abbr.lower()
+        player_images_dir = PLAYER_IMAGES_DIR / team_abbr_lower
+
+        # Check if directory exists
+        if not player_images_dir.exists():
+            logger.warning(f"Player images directory not found: {player_images_dir}")
+            return []
+
+        # Get all image files
+        image_files = list(player_images_dir.glob("*.jpg")) + list(player_images_dir.glob("*.png"))
+
+        # Exclude captain images
+        image_files = [img for img in image_files if not img.name.startswith("captain")]
+
+        # Shuffle the list to get random players
+        import random
+        random.shuffle(image_files)
+
+        # Limit to requested count
+        image_files = image_files[:count]
+
+        # Create player info list
+        player_info = []
+        for img_file in image_files:
+            # Try to extract player name from filename
+            player_name = img_file.stem.replace("_", " ").title()
+
+            # Check if we have player data file
+            player_data_file = TEAM_DATA_DIR / team_abbr_lower / "players" / f"{img_file.stem}.json"
+            if player_data_file.exists():
+                player_data = self.load_json_data(player_data_file)
+                player_name = player_data.get("name", player_name)
+                player_role = player_data.get("role", "")
+            else:
+                player_role = ""
+
+            player_info.append({
+                "name": player_name,
+                "role": player_role,
+                "image": img_file.name,
+                "team": team_abbr
+            })
+
+        return player_info
 
 
 def generate_slides_for_today():
